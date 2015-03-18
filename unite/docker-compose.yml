@@ -9,18 +9,18 @@ tomcat7:
    - JAVA_OPTS=-Dunite.environment=acceptance
   links:
    - data
-   - mysql_unite
-   - mysql_jack
+   - unitedb
+   - jackrabbitdb
   ports:
    - "8888:8080"
-mysql_unite:
+unitedb:
   image: mysql:5.6
   expose:
     - "3306"
   environment:
     - MYSQL_ROOT_PASSWORD=password
     - MYSQL_DATABASE=unite
-mysql_jack:
+jackrabbitdb:
   image: mysql:5.6
   expose:
     - "3306"
