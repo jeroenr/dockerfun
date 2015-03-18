@@ -4,7 +4,6 @@ data:
    - "/tomcat"
 tomcat7:
   image: codenvy/jdk7_tomcat7
-  user: root
   volumes_from:
    - data
   environment:
