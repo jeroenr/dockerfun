@@ -1,0 +1,121 @@
+<?xml version="1.0" standalone="yes" ?>
+<definition>
+    <portal>
+        <context id="default" title="Algemeen" uri="/module/tra/action/SetMenuAction/menuId/600" collapsed="false">
+            <i18n>menuGeneral</i18n>
+            <role name="anonymous"/>
+        </context>
+        <context id="loggedin" title="Algemeen" uri="/module/tra/action/SetMenuAction/menuId/600" collapsed="false">
+            <i18n>menuGeneral</i18n>
+            <role name="everyone"/>
+        </context>        
+        <context id="tra" title="Taak risico analyse" uri="/module/tra/action/SetMenuAction/menuId/552" collapsed="false">
+            <i18n>menuTRA</i18n>
+            <role name="aanvrager"/>
+            <role name="verstrekker"/>
+            <role name="voorbereider"/>
+            <role name="tra_bekrachtiger"/>
+        </context>
+    </portal>
+
+    <menu>
+        <item id="600" title="TRA goedgekeurd">
+            <i18n>menuTRASigned</i18n>
+            <action name="Query">
+                <module>tra</module>
+                <objectClassName>ibanx.tra.TaskRiskAnalysisIF</objectClassName>
+                <key>form</key>
+                <form.lifecycleState.name>GOEDGEKEURD</form.lifecycleState.name>
+                <orderBy>dateModified</orderBy>
+                <ascending>false</ascending>
+            </action>
+            <context>default</context>
+        </item>
+        <item id="1010" title="Zoek taak risico analyse">
+            <i18n>query</i18n>
+            <action name="SearchObject">
+                <objectClassName>ibanx.tra.TaskRiskAnalysisIF</objectClassName>
+                <key>form</key>
+                <form.businessObjectType.aaV1>TRA</form.businessObjectType.aaV1>
+            </action>
+            <context>default</context>
+            <context>loggedin</context>
+        </item>
+
+        <item id="387" advanced="true" title="Nieuwe taak risico analyse (TRA)" tooltip="Maak nieuwe Taak Risico Analyse" orgcontextrequired="true">
+            <i18n>menuNewTRA</i18n>
+            <action name="tra.TRAAction">
+                <eventSubmit_doNew>true</eventSubmit_doNew>
+                <objectClassName>ibanx.tra.TaskRiskAnalysisIF</objectClassName>
+                <boType>TASK_RISK_ANALYSIS</boType>
+            </action>
+            <context>tra</context>
+        </item>
+        <item id="388" title="TRA in bewerking">
+            <i18n>menuTRAInBewerking</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.tra.TaskRiskAnalysisIF</objectClassName>
+                <key>form</key>
+                <form.lifecycleState.name>IN_BEWERKING</form.lifecycleState.name>
+            </action>
+            <context>default</context>
+            <context>tra</context>
+        </item>
+        <item id="389" title="TRA te ondertekenen">
+            <i18n>menuTRAToBeSigned</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.tra.TaskRiskAnalysisIF</objectClassName>
+                <key>form</key>
+                <form.lifecycleState.name>BEKRACHTIGEN</form.lifecycleState.name>
+            </action>
+            <context>default</context>
+            <context>tra</context>
+        </item>
+        <item id="390" title="TRA goedgekeurd">
+            <i18n>menuTRASigned</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.tra.TaskRiskAnalysisIF</objectClassName>
+                <key>form</key>
+                <form.lifecycleState.name>GOEDGEKEURD</form.lifecycleState.name>
+                <orderBy>dateModified</orderBy>
+                <ascending>false</ascending>
+            </action>
+            <context>default</context>
+            <context>tra</context>            
+        </item>
+        <item id="391" title="TRA afgekeurd">
+            <i18n>menuTRARejected</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.tra.TaskRiskAnalysisIF</objectClassName>
+                <key>form</key>
+                <form.lifecycleState.name>AFGEKEURD</form.lifecycleState.name>
+                <orderBy>dateModified</orderBy>
+                <ascending>false</ascending>
+            </action>
+            <context>default</context>
+            <context>tra</context>
+        </item>
+        <item id="392" title="TRA geevalueerd">
+            <i18n>menuTRAEvaluated</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.tra.TaskRiskAnalysisIF</objectClassName>
+                <key>form</key>
+                <form.lifecycleState.name>GEEVALUEERD</form.lifecycleState.name>
+                <orderBy>dateModified</orderBy>
+                <ascending>false</ascending>
+            </action>
+            <context>default</context>
+            <context>tra</context>
+        </item>
+        <item id="393" title="Standaard TRA">
+            <i18n>menuTRAStandard</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.tra.TaskRiskAnalysisIF</objectClassName>
+                <key>form</key>
+                <form.lifecycleState.name>TEMPLATE</form.lifecycleState.name>
+            </action>
+            <context>default</context>
+            <context>tra</context>
+        </item>
+    </menu>
+</definition>

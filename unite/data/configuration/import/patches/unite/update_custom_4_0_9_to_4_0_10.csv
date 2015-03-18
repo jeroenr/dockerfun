@@ -1,0 +1,25 @@
+################################ INCIDENT CLIQ #####################################################
+
+vlist,incident_category,Incident categorie,Keuzelijst incident categorie
+vitem,incident_category,NEARMISS,Near miss
+vitem,incident_category,INCIDENT,Incident
+
+vlist,incident_class,Incident classificatie,Keuzelijst incident classificatie
+vitem,incident_class,FIRE,Brand/explosie
+vitem,incident_class,SPILL,Lekkage/emissie
+vitem,incident_class,DAMAGE,Schade
+vitem,incident_class,HEALTH,Gezondheid
+
+vlist,incident_injuries,Incident verwondingen,Keuzelijst incident verwondingen
+vitem,incident_injuries,ABRASION,Schaafwond
+vitem,incident_injuries,CUT,Snee
+vitem,incident_injuries,AMPUTATION,Amputatie
+vitem,incident_injuries,BROKENBONE,Botbreuk
+vitem,incident_injuries,BURN,Brandwond
+
+vlist,incident_severity,Incident ernst ongeval,Keuzelijst ernst ongeval
+vitem,incident_severity,NOLEAVE,Geen verzuim
+vitem,incident_severity,LEAVE,Verzuim
+vitem,incident_severity,GAO,Gedeeltelijk arbeidsongeschikt
+vitem,incident_severity,AO,Geheel arbeidsongeschikt
+vitem,incident_severity,DEATH,Overlijden

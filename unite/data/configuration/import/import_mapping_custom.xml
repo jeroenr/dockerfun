@@ -1,0 +1,1503 @@
+<?xml version="1.0" standalone="yes" ?>
+
+<mapping-definition>
+
+    <!-- START (DPRECATED) SOME CUSTOM PERMITCLIQ MAPPINGS -->
+    <class-descriptor name="organization-pcq-2.x" class-name="ibanx.org.Organization" identifiable-by="number"
+                      deprecated="true" deprecated-message="use classdescriptor organization instead">
+        <field-descriptor id="0" name="number"/>
+        <field-descriptor id="1" name="name"/>
+        <field-descriptor id="2" name="dateCreated"/>
+        <field-descriptor id="3" name="dateModified"/>
+        <field-descriptor id="4" name="createdBy"/>
+        <field-descriptor id="5" name="modifiedBy"/>
+        <field-descriptor id="6" name="businessObjectTypeId" default-value="ORG" reference="fk-by-business-identity"
+                          class-name="ibanx.object.BusinessObjectType"/>
+        <field-descriptor id="7" name="lifecycleId" reference="fk-by-business-identity"
+                          class-name="ibanx.lifecycle.Lifecycle"/>
+        <field-descriptor id="8" name="lifecycleStateId" reference="imp-fk-by-unique-attribute"
+                          class-name="ibanx.lifecycle.LifecycleState"
+                          attribute-name="name"/>
+        <field-descriptor id="9" name="description"/>
+        <field-descriptor id="10" name="homepage"/>
+        <field-descriptor id="11" name="contact"/>
+        <field-descriptor id="12" name="orgContext" default-value="GLOBAL"/>
+        <field-descriptor id="13" name="enabled" default-value="true"/>
+        <field-descriptor id="14" name="system" default-value="false"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="createPlant" class-name="ibanx.org.Organization" identifiable-by="number"
+                      deprecated="true" deprecated-message="use classdescriptor organization instead">
+        <field-descriptor id="0" name="number"/>
+        <field-descriptor id="1" name="name"/>
+        <field-descriptor id="2" name="description"/>
+        <field-descriptor id="3" name="homepage"/>
+        <field-descriptor id="4" name="orgContext"/>
+        <field-descriptor id="5" name="enabled" default-value="true"/>
+        <field-descriptor id="6" name="system" default-value="false"/>
+        <field-descriptor id="7" name="businessObjectTypeId" default-value="ORG" reference="fk-by-business-identity"
+                          class-name="ibanx.object.BusinessObjectType"/>
+        <field-descriptor id="8" name="lifecycleId" default-value="ORG_STATE" reference="fk-by-business-identity"
+                          class-name="ibanx.lifecycle.Lifecycle"/>
+        <field-descriptor id="9" name="lifecycleStateId" default-value="ORG_STATE,ACTIVE"
+                          reference="fk-by-identifiable-fields"
+                          class-descriptor="lifecyclestate"/>
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="assignRoleToUnit" class-name="ibanx.org.OrganizationRoleMapping" deprecated="true"
+                      deprecated-message="use classdescriptor orgrolemap instead (do not use meaningfull PBS levelnames in classdescriptor names, this mapping does not make sense when used for plants with this name) ">
+        <field-descriptor id="0" name="roleId" reference="fk-by-unique-attribute" attribute-name="name"
+                          class-name="ibanx.org.Role"/>
+        <field-descriptor id="1" name="orgId" reference="fk-by-business-identity"
+                          class-name="ibanx.org.OrganizationIF"/>
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="createSystemUser" class-name="ibanx.org.UserImpl" identifiable-by="number"
+                      deprecated="true"
+                      deprecated-message="use classdescriptor systemuser instead (since these mappings are alos used for updating having create in the name does not make sense)">
+        <field-descriptor id="0" name="number"/>
+        <field-descriptor id="1" name="loginName"/>
+        <field-descriptor id="2" name="password"/>
+        <field-descriptor id="3" name="firstName"/>
+        <field-descriptor id="4" name="lastName"/>
+        <field-descriptor id="5" name="email" default-value=""/>
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="6" name="phone" default-value=""/>
+        <field-descriptor id="7" name="company" default-value=""/>
+        <field-descriptor id="8" name="confirmed" default-value="true"/>
+        <field-descriptor id="9" name="orgContext" default-value="GLOBAL"/>
+        <field-descriptor id="10" name="enabled" default-value="true"/>
+        <field-descriptor id="11" name="system" default-value="true"/>
+        <field-descriptor id="12" name="lifecycleId" default-value="SYSTEM_USER_STATE"
+                          reference="fk-by-business-identity"
+                          class-name="ibanx.lifecycle.Lifecycle"/>
+        <field-descriptor id="13" name="lifecycleStateId" default-value="VALID" reference="imp-fk-by-unique-attribute"
+                          class-name="ibanx.lifecycle.LifecycleState" attribute-name="name"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="createUser" class-name="ibanx.org.UserImpl" identifiable-by="number"
+                      deprecated="true"
+                      deprecated-message="use classdescriptor simpleuser instead (since these mappings are also used for updating having create in the name does not make sense)">
+        <field-descriptor id="0" name="number"/>
+        <field-descriptor id="1" name="loginName"/>
+        <field-descriptor id="2" name="password"/>
+        <field-descriptor id="3" name="firstName"/>
+        <field-descriptor id="4" name="lastName"/>
+        <field-descriptor id="5" name="email" default-value=""/>
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="6" name="phone" default-value=""/>
+        <field-descriptor id="7" name="company" default-value=""/>
+        <field-descriptor id="8" name="confirmed" default-value="true"/>
+        <field-descriptor id="9" name="orgContext" default-value="GLOBAL"/>
+        <field-descriptor id="10" name="enabled" default-value="true"/>
+        <field-descriptor id="11" name="system" default-value="false"/>
+        <field-descriptor id="12" name="lifecycleId" default-value="USER_STATE" reference="fk-by-business-identity"
+                          class-name="ibanx.lifecycle.Lifecycle"/>
+        <field-descriptor id="13" name="lifecycleStateId" default-value="VALID" reference="imp-fk-by-unique-attribute"
+                          class-name="ibanx.lifecycle.LifecycleState" attribute-name="name"/>
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="user-pcq-2.x" class-name="ibanx.org.UserImpl" identifiable-by="number"
+                      deprecated="true" deprecated-message="use classdescriptor simpleuser instead">
+        <field-descriptor id="0" name="number"/>
+        <field-descriptor id="1" name="dateCreated"/>
+        <field-descriptor id="2" name="dateModified"/>
+        <field-descriptor id="3" name="createdBy"/>
+        <field-descriptor id="4" name="modifiedBy"/>
+        <field-descriptor id="5" name="lifecycleId" reference="fk-by-business-identity"
+                          class-name="ibanx.lifecycle.Lifecycle"/>
+        <field-descriptor id="6" name="lifecycleStateId" reference="imp-fk-by-unique-attribute"
+                          class-name="ibanx.lifecycle.LifecycleState"
+                          attribute-name="name"/>
+        <field-descriptor id="7" name="loginName"/>
+        <field-descriptor id="8" name="password"/>
+        <field-descriptor id="9" name="firstName"/>
+        <field-descriptor id="10" name="lastName"/>
+        <field-descriptor id="11" name="email"/>
+        <field-descriptor id="12" name="confirmed" default-value="true"/>
+        <field-descriptor id="13" name="lastAccessDate"/>
+        <field-descriptor id="14" name="createDate"/>
+        <field-descriptor id="15" name="lastLogin"/>
+        <field-descriptor id="16" name="orgContext" default-value="GLOBAL"/>
+        <field-descriptor id="17" name="enabled" default-value="true"/>
+        <field-descriptor id="18" name="system" default-value="false"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <!--field-descriptor id="19" name="company"/ -->
+
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="formtemplate-pcq-2.x" class-name="ibanx.form.FormTemplate" identifiable-by="number"
+                      deprecated="true" deprecated-message="use classdescriptor formtemplate instead">
+        <field-descriptor id="0" name="dateCreated"/>
+        <field-descriptor id="1" name="dateModified"/>
+        <field-descriptor id="2" name="createdBy"/>
+        <field-descriptor id="3" name="modifiedBy"/>
+        <field-descriptor id="4" name="number"/>
+        <field-descriptor id="5" name="name"/>
+        <field-descriptor id="6" name="description"/>
+        <field-descriptor id="7" name="fileNamePath"/>
+        <field-descriptor id="8" name="fileName"/>
+        <field-descriptor id="9" name="relativePath"/>
+        <field-descriptor id="10" name="key"/>
+        <field-descriptor id="11" name="picklists"/>
+        <field-descriptor id="12" name="orgContext"/>
+        <field-descriptor id="13" name="enabled"/>
+        <field-descriptor id="14" name="system" default-value="false"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="businessobjecttype-pcq-2.x" class-name="ibanx.object.BusinessObjectType"
+                      identifiable-by="number" deprecated="true"
+                      deprecated-message="use classdescriptor businessobjecttype instead">
+        <field-descriptor id="0" name="dateCreated"/>
+        <field-descriptor id="1" name="dateModified"/>
+        <field-descriptor id="2" name="createdBy"/>
+        <field-descriptor id="3" name="modifiedBy"/>
+        <field-descriptor id="4" name="number"/>
+        <field-descriptor id="5" name="name"/>
+        <field-descriptor id="6" name="description"/>
+        <field-descriptor id="7" name="objectClass"/>
+        <field-descriptor id="8" name="lifecycleId" reference="fk-by-business-identity"
+                          class-name="ibanx.lifecycle.Lifecycle"/>
+        <field-descriptor id="9" name="defaultTemplateId" reference="fk-by-business-identity"
+                          class-name="ibanx.form.FormTemplate"/>
+        <field-descriptor id="10" name="defaultClassificationSchemeId" reference="fk-by-business-identity"
+                          class-name="ibanx.classification.ClassificationScheme"/>
+        <field-descriptor id="11" name="defaultClassificationSchemeName"/>
+        <field-descriptor id="12" name="orgContext"/>
+        <field-descriptor id="13" name="enabled"/>
+        <field-descriptor id="14" name="createTemplate"/>
+        <field-descriptor id="15" name="copyTemplate"/>
+        <field-descriptor id="16" name="viewTemplate"/>
+        <field-descriptor id="17" name="editTemplate"/>
+        <field-descriptor id="18" name="searchTemplate"/>
+        <field-descriptor id="19" name="system" default-value="false"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+        <method-descriptor id="1" name="setRepeating">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="queryspec-pcq-2.x" class-name="ibanx.report.QuerySpec" identifiable-by="number"
+                      deprecated="true" deprecated-message="use classdescriptor queryspec instead">
+        <!-- *** CONCRETE ATTRIBUTES *** -->
+        <field-descriptor id="0" name="dateCreated"/>
+        <field-descriptor id="1" name="dateModified"/>
+        <field-descriptor id="2" name="createdBy"/>
+        <field-descriptor id="3" name="modifiedBy"/>
+        <field-descriptor id="4" name="number"/>
+        <field-descriptor id="5" name="name"/>
+        <field-descriptor id="6" name="description"/>
+        <field-descriptor id="7" name="owner"/>
+        <field-descriptor id="8" name="objectClassName"/>
+        <field-descriptor id="9" name="privateSpec"/>
+        <field-descriptor id="10" name="querySpecType"/>
+        <field-descriptor id="11" name="orgContext" default-value="GLOBAL"/>
+        <field-descriptor id="12" name="system" default-value="false"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="addColumn">
+            <arg id="0" type="java.lang.String"/>
+        </method-descriptor>
+        <method-descriptor id="1" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+        <method-descriptor id="2" name="setRepeating">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="vitem_category" class-name="ibanx.object.ValueItem" identifiable-by="groupName,value">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+        <field-descriptor id="3" name="type" default-value=""/>
+
+        <field-descriptor id="4" name="abbreviation" default-value=""/>
+
+        <field-descriptor id="5" name="ordering" default-value=""/>
+
+        <field-descriptor id="6" name="enabled" default-value="true"/>
+        <field-descriptor id="7" name="system" default-value="false"/>
+        <field-descriptor id="8" name="owner" default-value=""/>
+        <field-descriptor id="9" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valuelist-pcq-2.x" class-name="ibanx.object.ValueList" identifiable-by="group"
+                      deprecated="true" deprecated-message="use classdescriptor vlist instead">
+        <field-descriptor id="0" name="dateCreated"/>
+        <field-descriptor id="1" name="dateModified"/>
+        <field-descriptor id="2" name="createdBy"/>
+        <field-descriptor id="3" name="modifiedBy"/>
+        <field-descriptor id="4" name="group"/>
+        <field-descriptor id="5" name="name"/>
+        <field-descriptor id="6" name="description"/>
+        <field-descriptor id="7" name="owner"/>
+        <field-descriptor id="8" name="orgContext"/>
+        <field-descriptor id="9" name="enabled"/>
+        <field-descriptor id="10" name="system" default-value="false"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem-pcq-2.x" class-name="ibanx.object.ValueItem" identifiable-by="groupName,value"
+                      deprecated="true" deprecated-message="use classdescriptor vitem instead">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+        <field-descriptor id="3" name="enabled"/>
+        <field-descriptor id="4" name="system" default-value="false"/>
+        <field-descriptor id="5" name="owner"/>
+        <field-descriptor id="6" name="orgContext"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="numberingscheme-pcq-2.x" class-name="ibanx.services.numbering.NumberingScheme"
+                      identifiable-by="name" deprecated="true"
+                      deprecated-message="use classdescriptor numberingscheme instead">
+        <field-descriptor id="0" name="name"/>
+        <field-descriptor id="1" name="sequence"/>
+        <field-descriptor id="2" name="startValue"/>
+        <field-descriptor id="3" name="increment"/>
+        <field-descriptor id="4" name="bufferSize"/>
+
+        <field-descriptor id="5" name="prefix"/>
+        <field-descriptor id="6" name="postfix"/>
+        <field-descriptor id="7" name="nrLeadingZeros"/>
+        <field-descriptor id="8" name="useLeadingZeros"/>
+        <field-descriptor id="9" name="storedProcedure"/>
+
+        <field-descriptor id="10" name="orgContext" default-value="GLOBAL"/>
+        <field-descriptor id="11" name="enabled" default-value="true"/>
+        <field-descriptor id="12" name="system" default-value="false"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+    <class-descriptor name="sequence-pcq-2.x" class-name="ibanx.services.numbering.Sequence"
+                      identifiable-by="name" deprecated="true"
+                      deprecated-message="use classdescriptor sequence instead">
+        <field-descriptor id="0" name="name"/>
+        <field-descriptor id="1" name="currentValue"/>
+        <field-descriptor id="2" name="increment"/>
+        <field-descriptor id="3" name="bufferSize"/>
+        <field-descriptor id="4" name="system" default-value="false"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+
+    <class-descriptor name="state-pcq-2.5" class-name="ibanx.lifecycle.LifecycleState"
+                      identifiable-by="lifecycleId,name">
+        <field-descriptor id="0" name="lifecycleId" reference="fk-by-business-identity"
+                          class-name="ibanx.lifecycle.Lifecycle"/>
+        <field-descriptor id="1" name="name"/>
+        <field-descriptor id="2" name="description"/>
+        <field-descriptor id="3" name="templateId" reference="fk-by-business-identity"
+                          class-name="ibanx.form.FormTemplate"/>
+        <field-descriptor id="4" name="exceptionState"/>
+        <field-descriptor id="5" name="signatureRequired"/>
+        <field-descriptor id="6" name="sequentialOrder"/>
+        <field-descriptor id="7" name="stateAclId" reference="fk-by-identity" class-name="ibanx.security.Acl"/>
+
+        <field-descriptor id="8" name="group"/>
+
+        <field-descriptor id="9" name="entityClass" default-value="ibanx.lifecycle.LifecycleState"/>
+        <field-descriptor id="10" name="enabled" default-value="false"/>
+        <field-descriptor id="11" name="system" default-value="false"/>
+        <field-descriptor id="12" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+        <method-descriptor id="1" name="setRepeating">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <!-- END (DPRECATED) SOME CUSTOM PERMITCLIQ MAPPINGS -->
+
+
+    <class-descriptor name="bot-update" class-name="ibanx.object.BusinessObjectType" identifiable-by="number">
+        <!--bot-update,DELTALINQS_PERMIT,Deltalinqs Werkvergunning,Deltalinqs Werkvergunning,DELTALINQS_PERMIT_PROCESS,TEMPLATE_DELTALINQS_PERMIT -->
+        <field-descriptor id="0" name="number"/>
+        <field-descriptor id="1" name="name"/>
+        <field-descriptor id="2" name="description"/>
+        <field-descriptor id="3" name="lifecycleId" reference="fk-by-business-identity"
+                          class-name="ibanx.lifecycle.Lifecycle"/>
+        <field-descriptor id="4" name="defaultTemplateId" reference="fk-by-business-identity"
+                          class-name="ibanx.form.FormTemplate"/>
+        <!-- *** METHODS *** -->
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+        <method-descriptor id="1" name="setRepeating">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+
+    <class-descriptor name="valueitem_printTargets" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value,printTarget">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <field-descriptor id="3" name="printTarget"/>
+
+        <field-descriptor id="4" name="abbreviation" default-value=""/>
+
+        <field-descriptor id="5" name="enabled" default-value="true"/>
+        <field-descriptor id="6" name="system" default-value="false"/>
+        <field-descriptor id="7" name="owner" default-value=""/>
+        <field-descriptor id="8" name="orgContext" default-value="GLOBAL"/>
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="sequence-link" class-name="ibanx.link.Link"
+                      identifiable-by="linkTypeID,roleAObjectID,roleBObjectID">
+        <field-descriptor id="0" name="linkTypeID" reference="fk-by-unique-attribute" class-name="ibanx.link.LinkType"
+                          attribute-name="name"/>
+        <field-descriptor id="1" name="linkTypeName"/>
+        <field-descriptor id="2" name="roleAObjectID" reference="fk-by-identifiable-fields" class-descriptor="shift"/>
+        <field-descriptor id="3" name="roleAName"/>
+        <field-descriptor id="4" name="roleBObjectID" reference="fk-by-identifiable-fields" class-descriptor="shift"/>
+        <field-descriptor id="5" name="roleBName"/>
+        <field-descriptor id="6" name="groupA"/>
+        <field-descriptor id="7" name="groupB"/>
+
+        <!-- *** METHODS *** -->
+
+    </class-descriptor>
+    <class-descriptor name="consolidation-link" class-name="ibanx.link.Link"
+                      identifiable-by="linkTypeID,roleAObjectID,roleBObjectID">
+        <field-descriptor id="0" name="linkTypeID" reference="fk-by-unique-attribute" class-name="ibanx.link.LinkType"
+                          attribute-name="name"/>
+        <field-descriptor id="1" name="linkTypeName"/>
+        <field-descriptor id="2" name="roleAObjectID" reference="fk-by-identifiable-fields"
+                          class-descriptor="logevent"/>
+        <field-descriptor id="3" name="roleAName"/>
+        <field-descriptor id="4" name="roleBObjectID" reference="fk-by-identifiable-fields"
+                          class-descriptor="logevent"/>
+        <field-descriptor id="5" name="roleBName"/>
+        <field-descriptor id="6" name="groupA"/>
+        <field-descriptor id="7" name="groupB"/>
+
+        <!-- *** METHODS *** -->
+
+    </class-descriptor>
+    <class-descriptor name="source-link" class-name="ibanx.link.Link"
+                      identifiable-by="linkTypeID,roleAObjectID,roleBObjectID">
+        <field-descriptor id="0" name="linkTypeID" reference="fk-by-unique-attribute" class-name="ibanx.link.LinkType"
+                          attribute-name="name"/>
+        <field-descriptor id="1" name="linkTypeName"/>
+        <field-descriptor id="2" name="roleAObjectID" reference="fk-by-identifiable-fields"
+                          class-descriptor="logevent"/>
+        <field-descriptor id="3" name="roleAName"/>
+        <field-descriptor id="4" name="roleBObjectID" reference="fk-by-identifiable-fields"
+                          class-descriptor="deviation"/>
+        <field-descriptor id="5" name="roleBName"/>
+        <field-descriptor id="6" name="groupA"/>
+        <field-descriptor id="7" name="groupB"/>
+
+        <!-- *** METHODS *** -->
+
+    </class-descriptor>
+    <class-descriptor name="audit-link" class-name="ibanx.link.Link"
+                      identifiable-by="linkTypeID,roleAObjectID,roleBObjectID">
+        <field-descriptor id="0" name="linkTypeID" reference="fk-by-unique-attribute" class-name="ibanx.link.LinkType"
+                          attribute-name="name"/>
+        <field-descriptor id="1" name="linkTypeName"/>
+        <field-descriptor id="2" name="roleAObjectID" reference="fk-by-identifiable-fields"
+                          class-descriptor="deviation"/>
+        <field-descriptor id="3" name="roleAName"/>
+        <field-descriptor id="4" name="roleBObjectID" reference="fk-by-identifiable-fields"
+                          class-descriptor="logevent"/>
+        <field-descriptor id="5" name="roleBName"/>
+        <field-descriptor id="6" name="groupA"/>
+        <field-descriptor id="7" name="groupB"/>
+
+        <!-- *** METHODS *** -->
+
+    </class-descriptor>
+    <class-descriptor name="causality-link" class-name="ibanx.link.Link"
+                      identifiable-by="linkTypeID,roleAObjectID,roleBObjectID">
+        <field-descriptor id="0" name="linkTypeID" reference="fk-by-unique-attribute" class-name="ibanx.link.LinkType"
+                          attribute-name="name"/>
+        <field-descriptor id="1" name="linkTypeName"/>
+        <field-descriptor id="2" name="roleAObjectID" reference="fk-by-identifiable-fields"
+                          class-descriptor="deviation"/>
+        <field-descriptor id="3" name="roleAName"/>
+        <field-descriptor id="4" name="roleBObjectID" reference="fk-by-identifiable-fields"
+                          class-descriptor="logevent"/>
+        <field-descriptor id="5" name="roleBName"/>
+        <field-descriptor id="6" name="groupA"/>
+        <field-descriptor id="7" name="groupB"/>
+
+        <!-- *** METHODS *** -->
+
+    </class-descriptor>
+
+    <class-descriptor name="action-audit-link" class-name="ibanx.link.Link"
+                      identifiable-by="linkTypeID,roleAObjectID,roleBObjectID">
+        <field-descriptor id="0" name="linkTypeID" reference="fk-by-unique-attribute" class-name="ibanx.link.LinkType"
+                          attribute-name="name"/>
+        <field-descriptor id="1" name="linkTypeName"/>
+        <field-descriptor id="2" name="roleAObjectID" reference="fk-by-identifiable-fields"
+                          class-descriptor="plantitem"/>
+        <field-descriptor id="3" name="roleAName"/>
+        <field-descriptor id="4" name="roleBObjectID" reference="fk-by-identifiable-fields"
+                          class-descriptor="logevent"/>
+        <field-descriptor id="5" name="roleBName"/>
+        <field-descriptor id="6" name="groupA"/>
+        <field-descriptor id="7" name="groupB"/>
+
+        <!-- *** METHODS *** -->
+
+    </class-descriptor>
+
+
+    <class-descriptor name="menuQSpec" class-name="ibanx.report.QuerySpec">
+        <field-descriptor id="0" name="number"/>
+        <field-descriptor id="1" name="objectClassName"/>
+        <field-descriptor id="2" name="privateSpec" default-value="false"/>
+        <field-descriptor id="3" name="querySpecType" default-value="1"/>
+        <field-descriptor id="4" name="orgContext" default-value="GLOBAL"/>
+        <field-descriptor id="5" name="system" default-value="true"/>
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+        <method-descriptor id="1" name="setRepeating">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+
+    <class-descriptor name="valueitem_category" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value,funcLevelOne">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="funcLevelOne"/>
+        <field-descriptor id="4" name="abbreviation"/>
+
+        <!-- *** OPTIONAL MODELLED ATTRIBUTES *** -->
+        <field-descriptor id="5" name="enabled" default-value="true"/>
+        <field-descriptor id="6" name="system" default-value="false"/>
+        <field-descriptor id="7" name="owner" default-value=""/>
+        <field-descriptor id="8" name="orgContext" default-value="GLOBAL"/>
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_category_dep" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value,funcLevelOne,businessObjectType">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="funcLevelOne"/>
+        <field-descriptor id="4" name="abbreviation"/>
+
+        <field-descriptor id="5" name="businessObjectType"/>
+
+        <!-- *** OPTIONAL MODELLED ATTRIBUTES *** -->
+        <field-descriptor id="6" name="enabled" default-value="true"/>
+        <field-descriptor id="7" name="system" default-value="false"/>
+        <field-descriptor id="8" name="owner" default-value=""/>
+        <field-descriptor id="9" name="orgContext" default-value="GLOBAL"/>
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_followup" class-name="ibanx.object.ValueItem" identifiable-by="groupName,value">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="abbreviation"/>
+
+        <!-- *** OPTIONAL MODELLED ATTRIBUTES *** -->
+        <field-descriptor id="4" name="enabled" default-value="true"/>
+        <field-descriptor id="5" name="system" default-value="false"/>
+        <field-descriptor id="6" name="owner" default-value=""/>
+        <field-descriptor id="7" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_subType" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value,businessObjectType">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="businessObjectType"/>
+
+        <!-- *** OPTIONAL MODELLED ATTRIBUTES *** -->
+        <field-descriptor id="4" name="enabled" default-value="true"/>
+        <field-descriptor id="5" name="system" default-value="false"/>
+        <field-descriptor id="6" name="owner" default-value=""/>
+        <field-descriptor id="7" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_subStatus" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value,businessObjectType">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="businessObjectType"/>
+
+        <!-- *** OPTIONAL MODELLED ATTRIBUTES *** -->
+        <field-descriptor id="4" name="enabled" default-value="true"/>
+        <field-descriptor id="5" name="system" default-value="false"/>
+        <field-descriptor id="6" name="owner" default-value=""/>
+        <field-descriptor id="7" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_orgleveltwo_version_peta" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value,orgLevelOne">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="orgLevelOne"/>
+
+        <field-descriptor id="4" name="ordering"/>
+
+        <!-- *** OPTIONAL MODELLED ATTRIBUTES *** -->
+        <field-descriptor id="5" name="enabled" default-value="true"/>
+        <field-descriptor id="6" name="system" default-value="false"/>
+        <field-descriptor id="7" name="owner" default-value=""/>
+        <field-descriptor id="8" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_orglevelthree_version_peta" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value,orgLevelOne,orgLevelTwo"> <!-- peta-mutatio -->
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="orgLevelOne"/>
+        <field-descriptor id="4" name="orgLevelTwo"/>
+
+        <!-- *** MODELLED CORE ATTRIBUTES *** -->
+        <field-descriptor id="5" name="enabled" default-value="true"/>
+        <field-descriptor id="6" name="system" default-value="false"/>
+        <field-descriptor id="7" name="owner"/>
+        <field-descriptor id="8" name="orgContext" default-value="GLOBAL"/>
+
+
+        <!--<field-descriptor id="8" name="map_gridName"/> -->
+        <!--<field-descriptor id="9" name="map_x"/> -->
+        <!--<field-descriptor id="10" name="map_y"/> -->
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_orglevelfour_version_peta" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value,orgLevelOne,orgLevelTwo,orgLevelThree">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="orgLevelOne"/>
+        <field-descriptor id="4" name="orgLevelTwo"/>
+        <field-descriptor id="5" name="orgLevelThree"/>
+
+        <field-descriptor id="6" name="ordering"/>
+
+        <!-- *** OPTIONAL MODELLED ATTRIBUTES *** -->
+        <field-descriptor id="7" name="enabled" default-value="true"/>
+        <field-descriptor id="8" name="system" default-value="false"/>
+        <field-descriptor id="9" name="owner" default-value=""/>
+        <field-descriptor id="10" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_orgLevelThree" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value">
+        <field-descriptor id="0" name="groupName" />
+        <field-descriptor id="1" name="value" />
+        <field-descriptor id="2" name="description" />
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="funcLevelOne" />
+
+        <!-- *** MODELLED CORE ATTRIBUTES *** -->
+        <field-descriptor id="4" name="enabled" default-value="true" />
+        <field-descriptor id="5" name="system" default-value="false" />
+        <field-descriptor id="6" name="owner" />
+        <field-descriptor id="7" name="orgContext" default-value="GLOBAL" />
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String" />
+            <arg id="1" type="java.lang.String" />
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_orgLevelFour" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value">
+        <field-descriptor id="0" name="groupName" />
+        <field-descriptor id="1" name="value" />
+        <field-descriptor id="2" name="description" />
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="funcLevelOne" />
+        <field-descriptor id="4" name="orgLevelThree" />
+
+        <!-- *** MODELLED CORE ATTRIBUTES *** -->
+        <field-descriptor id="5" name="enabled" default-value="true" />
+        <field-descriptor id="6" name="system" default-value="false" />
+        <field-descriptor id="7" name="owner" />
+        <field-descriptor id="8" name="orgContext" default-value="GLOBAL" />
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String" />
+            <arg id="1" type="java.lang.String" />
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_geoLevelThree" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value,funcLevelOne">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="funcLevelOne"/>
+
+        <!-- *** MODELLED CORE ATTRIBUTES *** -->
+        <field-descriptor id="4" name="enabled" default-value="true"/>
+        <field-descriptor id="5" name="system" default-value="false"/>
+        <field-descriptor id="6" name="owner"/>
+        <field-descriptor id="7" name="orgContext" default-value="GLOBAL"/>
+
+
+        <!--<field-descriptor id="8" name="map_gridName"/> -->
+        <!--<field-descriptor id="9" name="map_x"/> -->
+        <!--<field-descriptor id="10" name="map_y"/> -->
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_floc" class-name="ibanx.object.ValueItem" identifiable-by="groupName,value">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="funcLevelOne"/>
+
+        <!-- *** MODELLED CORE ATTRIBUTES *** -->
+        <field-descriptor id="4" name="enabled" default-value="true"/>
+        <field-descriptor id="5" name="system" default-value="false"/>
+        <field-descriptor id="6" name="owner"/>
+        <field-descriptor id="7" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_funcleveltwo" class-name="ibanx.object.ValueItem">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="funcLevelOne"/>
+        <field-descriptor id="4" name="ordering"/>
+
+        <!-- *** OPTIONAL MODELLED ATTRIBUTES *** -->
+        <field-descriptor id="5" name="enabled" default-value="true"/>
+        <field-descriptor id="6" name="system" default-value="false"/>
+        <field-descriptor id="7" name="owner" default-value=""/>
+        <field-descriptor id="8" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_funclevelthree" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value,funcLevelOne">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="funcLevelOne"/>
+        <field-descriptor id="4" name="funcLevelTwo"/>
+
+        <field-descriptor id="5" name="ordering"/>
+
+        <!-- *** OPTIONAL MODELLED ATTRIBUTES *** -->
+        <field-descriptor id="6" name="enabled" default-value="true"/>
+        <field-descriptor id="7" name="system" default-value="false"/>
+        <field-descriptor id="8" name="owner" default-value=""/>
+        <field-descriptor id="9" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_funclevelfour" class-name="ibanx.object.ValueItem">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="funcLevelThree"/>
+
+        <!-- *** OPTIONAL MODELLED ATTRIBUTES *** -->
+        <field-descriptor id="4" name="enabled" default-value="true"/>
+        <field-descriptor id="5" name="system" default-value="false"/>
+        <field-descriptor id="6" name="owner" default-value=""/>
+        <field-descriptor id="7" name="orgContext" default-value="GLOBAL"/>
+
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_tag" class-name="ibanx.object.ValueItem">
+        <field-descriptor id="0" name="groupName" />
+        <field-descriptor id="1" name="value" />
+        <field-descriptor id="2" name="description" />
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="funcLevelThree" />
+        <field-descriptor id="4" name="funcLevelTwo" default-value="" />
+        <field-descriptor id="5" name="funcLevelOne" default-value="" />
+        <field-descriptor id="6" name="geoLevelThree" default-value="" />
+
+        <field-descriptor id="7" name="map_gridName"/>
+        <field-descriptor id="8" name="map_x"/>
+        <field-descriptor id="9" name="map_y"/>
+
+        <!-- *** OPTIONAL MODELLED ATTRIBUTES *** -->
+        <field-descriptor id="10" name="enabled" default-value="true" />
+        <field-descriptor id="11" name="system" default-value="false" />
+        <field-descriptor id="12" name="owner" default-value="" />
+        <field-descriptor id="13" name="orgContext" default-value="GLOBAL" />
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String" />
+            <arg id="1" type="java.lang.String" />
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_location" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value,funcLevelOne">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+        <field-descriptor id="3" name="enabled" default-value="true"/>
+        <field-descriptor id="4" name="system" default-value="false"/>
+        <field-descriptor id="5" name="owner"/>
+        <field-descriptor id="6" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="7" name="funcLevelOne"/>
+
+        <field-descriptor id="8" name="map_gridName"/>
+        <field-descriptor id="9" name="map_x"/>
+        <field-descriptor id="10" name="map_y"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_equipment" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value,funcLevelOne">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+        <field-descriptor id="3" name="enabled" default-value="true"/>
+        <field-descriptor id="4" name="system" default-value="false"/>
+        <field-descriptor id="5" name="owner"/>
+        <field-descriptor id="6" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="7" name="funcLevelOne"/>
+        <field-descriptor id="8" name="geoLevelThree"/>
+
+        <field-descriptor id="9" name="map_gridName"/>
+        <field-descriptor id="10" name="map_x"/>
+        <field-descriptor id="11" name="map_y"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_equipment_version_peta" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value,funcLevelOne">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="funcLevelOne"/>
+        <field-descriptor id="4" name="geoLevelThree"/>
+
+        <!-- *** MODELLED CORE ATTRIBUTES *** -->
+        <field-descriptor id="5" name="enabled" default-value="true"/>
+        <field-descriptor id="6" name="system" default-value="false"/>
+        <field-descriptor id="7" name="owner"/>
+        <field-descriptor id="8" name="orgContext" default-value="GLOBAL"/>
+
+        <!--<field-descriptor id="9" name="map_gridName"/> -->
+        <!--<field-descriptor id="10" name="map_x"/> -->
+        <!--<field-descriptor id="11" name="map_y"/> -->
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_logdefinitions" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value,funcLevelOne">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="funcLevelOne"/>
+        <field-descriptor id="4" name="shiftType"/>
+        <field-descriptor id="5" name="funcLevelTwo"/>
+        <field-descriptor id="6" name="logBusinessObjectType"/>
+        <field-descriptor id="7" name="autoGenerateLog"/>
+
+        <!-- *** OPTIONAL MODELLED ATTRIBUTES *** -->
+        <field-descriptor id="8" name="enabled" default-value="true"/>
+        <field-descriptor id="9" name="system" default-value="false"/>
+        <field-descriptor id="10" name="owner" default-value=""/>
+        <field-descriptor id="11" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="logdefinitions_v1_3" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value,funcLevelOne">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <field-descriptor id="3" name="funcLevelOne"/>
+        <field-descriptor id="4" name="shiftType"/>
+        <field-descriptor id="5" name="shiftDefinition"/>
+        <field-descriptor id="6" name="funcLevelTwo"/>
+        <field-descriptor id="7" name="logBusinessObjectType"/>
+        <field-descriptor id="8" name="autoGenerateLog"/>
+
+        <!-- *** OPTIONAL MODELLED ATTRIBUTES *** -->
+        <field-descriptor id="9" name="enabled" default-value="true"/>
+        <field-descriptor id="10" name="system" default-value="false"/>
+        <field-descriptor id="11" name="owner" default-value=""/>
+        <field-descriptor id="12" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="autocreate_logevents" class-name="ibanx.object.ValueItem">
+
+        <field-descriptor id="0" name="value"/>
+        <field-descriptor id="1" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <!-- log -->
+        <field-descriptor id="2" name="logPBSAttributeLevelOne"/>
+        <field-descriptor id="3" name="logPBSAttributeLevelTwo"/>
+        <field-descriptor id="4" name="logDefinitionKey"/>
+
+        <!-- logevent -->
+        <field-descriptor id="5" name="logEventBusinessObjectType"/>
+        <field-descriptor id="6" name="logEventCategories"/>
+        <field-descriptor id="7" name="logEventTitle"/>
+        <field-descriptor id="8" name="logEventDescription"/>
+        <field-descriptor id="9" name="logEventPBSAttributeLevelTwo"/>
+        <field-descriptor id="10" name="logEventPBSAttributeLevelThree"/>
+        <field-descriptor id="11" name="logEventPBSAttributeLevelFour"/>
+        <field-descriptor id="12" name="logEventPBSAttributeLevelTag"/>
+
+        <field-descriptor id="13" name="groupName" default-value="autocreate-logevents"/>
+
+        <!-- *** OPTIONAL MODELLED ATTRIBUTES *** -->
+        <field-descriptor id="14" name="enabled" default-value="true"/>
+        <field-descriptor id="15" name="system" default-value="false"/>
+        <field-descriptor id="16" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="valueitem_autocreate_logevents" class-name="ibanx.object.ValueItem">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+        <!-- log -->
+        <field-descriptor id="3" name="logPBSAttributeLevelOne"/>
+        <field-descriptor id="4" name="logPBSAttributeLevelTwo"/>
+        <field-descriptor id="5" name="logBusinessObjectType"/>
+        <field-descriptor id="6" name="logDefinitionKey"/>
+
+        <!-- logevent -->
+        <field-descriptor id="7" name="logEventBusinessObjectType"/>
+        <field-descriptor id="8" name="logEventCategories"/>
+        <field-descriptor id="9" name="logEventTitle"/>
+        <field-descriptor id="10" name="logEventDescription"/>
+        <field-descriptor id="11" name="logEventPBSAttributeLevelTwo"/>
+        <field-descriptor id="12" name="logEventPBSAttributeLevelThree"/>
+        <field-descriptor id="13" name="logEventPBSAttributeLevelFour"/>
+        <field-descriptor id="14" name="logEventPBSAttributeLevelTag"/>
+
+        <!-- *** OPTIONAL MODELLED ATTRIBUTES *** -->
+        <field-descriptor id="15" name="enabled" default-value="true"/>
+        <field-descriptor id="16" name="system" default-value="false"/>
+        <field-descriptor id="17" name="owner" default-value=""/>
+        <field-descriptor id="18" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="moctype" class-name="ibanx.object.ValueItem"
+                      identifiable-by="groupName,value,businessObjectType">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <field-descriptor id="3" name="abbreviation" default-value=""/>
+
+        <field-descriptor id="4" name="businessObjectType" default-value=""/>
+
+        <field-descriptor id="5" name="enabled" default-value="true"/>
+        <field-descriptor id="6" name="system" default-value="false"/>
+        <field-descriptor id="7" name="owner" default-value=""/>
+        <field-descriptor id="8" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="resolution" class-name="ibanx.object.ValueItem" identifiable-by="groupName,value,type">
+        <field-descriptor id="0" name="groupName"/>
+        <field-descriptor id="1" name="value"/>
+        <field-descriptor id="2" name="description"/>
+
+        <field-descriptor id="3" name="abbreviation" default-value=""/>
+
+        <field-descriptor id="4" name="type" default-value=""/>
+
+        <field-descriptor id="5" name="enabled" default-value="true"/>
+        <field-descriptor id="6" name="system" default-value="false"/>
+        <field-descriptor id="7" name="owner" default-value=""/>
+        <field-descriptor id="8" name="orgContext" default-value="GLOBAL"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="notificationRule" class-name="ibanx.rules.NotificationRule" identifiable-by="number">
+        <field-descriptor id="0" name="number"/>
+        <field-descriptor id="1" name="name"/>
+        <field-descriptor id="2" name="eventType"/>
+        <field-descriptor id="3" name="from"/>
+        <field-descriptor id="4" name="messageTitle"/>
+        <field-descriptor id="5" name="messageBody"/>
+
+        <field-descriptor id="6" name="orgContext" default-value="GLOBAL"/>
+        <field-descriptor id="7" name="system" default-value="false"/>
+        <field-descriptor id="8" name="enabled" default-value="true"/>
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="notificationCondition" class-name="ibanx.rules.Condition"
+                      identifiable-by="ruleId,attributeName,attributeValue">
+        <field-descriptor id="0" name="attributeName"/>
+        <field-descriptor id="1" name="attributeValue"/>
+        <field-descriptor id="2" name="ruleId" reference="fk-by-business-identity"
+                          class-name="ibanx.rules.NotificationRule"/>
+
+        <field-descriptor id="3" name="system" default-value="false"/>
+        <field-descriptor id="4" name="enabled" default-value="true"/>
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="recipient" class-name="ibanx.rules.Recipient"
+                      identifiable-by="ruleId,recipient,recipientType">
+        <field-descriptor id="0" name="recipient"/>
+        <field-descriptor id="1" name="recipientType"/>
+        <field-descriptor id="2" name="ruleId" reference="fk-by-business-identity"
+                          class-name="ibanx.rules.NotificationRule"/>
+
+        <field-descriptor id="3" name="system" default-value="false"/>
+        <field-descriptor id="4" name="enabled" default-value="true"/>
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="changeactivity" class-name="ibanx.moc.ChangeActivity" identifiable-by="number">
+        <field-descriptor id="0" name="number"/>
+        <field-descriptor id="1" name="businessObjectTypeId" default-value="TASK_CA" reference="fk-by-business-identity"
+                          class-name="ibanx.object.BusinessObjectType"/>
+        <field-descriptor id="2" name="name"/>
+        <field-descriptor id="3" name="title"/>
+        <field-descriptor id="4" name="description"/>
+        <field-descriptor id="5" name="phase"/>
+        <field-descriptor id="6" name="assignee" default-value=""/>
+        <field-descriptor id="7" name="owner" default-value=""/>
+        <field-descriptor id="8" name="generated" default-value="false"/>
+        <field-descriptor id="9" name="orgContext" default-value="GLOBAL"/>
+        <field-descriptor id="10" name="enabled" default-value="true"/>
+        <field-descriptor id="11" name="system" default-value="false"/>
+
+        <field-descriptor id="12" name="lifecycleId" default-value="DEFAULT_CA_PROCESS"
+                          reference="fk-by-business-identity"
+                          class-name="ibanx.lifecycle.Lifecycle"/>
+        <field-descriptor id="13" name="lifecycleStateId" default-value="DEFAULT_CA_PROCESS,CA_DRAFT"
+                          reference="imp-fk-by-identifiable-fields" class-descriptor="lifecyclestate"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+        <method-descriptor id="1" name="setRepeating">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+    <class-descriptor name="changeactivity-template" class-name="ibanx.moc.ChangeActivity"
+                      identifiable-by="number">
+        <field-descriptor id="0" name="number"/>
+        <field-descriptor id="1" name="businessObjectTypeId" default-value="TASK_CA" reference="fk-by-business-identity"
+                          class-name="ibanx.object.BusinessObjectType"/>
+        <field-descriptor id="2" name="name"/>
+        <field-descriptor id="3" name="title"/>
+        <field-descriptor id="4" name="description"/>
+        <field-descriptor id="5" name="phase"/>
+        <field-descriptor id="6" name="assignee" default-value=""/>
+        <field-descriptor id="7" name="owner" default-value=""/>
+        <field-descriptor id="8" name="orgContext" default-value="GLOBAL"/>
+        <field-descriptor id="9" name="enabled" default-value="true"/>
+        <field-descriptor id="10" name="system" default-value="false"/>
+
+
+        <field-descriptor id="11" name="lifecycleId" default-value="CA_TEMPLATE_PROCESS"
+                          reference="fk-by-business-identity"
+                          class-name="ibanx.lifecycle.Lifecycle"/>
+        <field-descriptor id="12" name="lifecycleStateId" default-value="CA_TEMPLATE_PROCESS,CA_TEMPLATE_ACTIVE"
+                          reference="imp-fk-by-identifiable-fields" class-descriptor="lifecyclestate"/>
+        <field-descriptor id="13" name="isTemplate" default-value="true"/>
+        <field-descriptor id="14" name="generated" default-value="false"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+        <method-descriptor id="1" name="setRepeating">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="approval-template" class-name="ibanx.moc.ChangeActivity"
+                      identifiable-by="number">
+        <field-descriptor id="0" name="number"/>
+        <field-descriptor id="1" name="name"/>
+        <field-descriptor id="2" name="title"/>
+        <field-descriptor id="3" name="description"/>
+        <field-descriptor id="4" name="phase"/>
+        <field-descriptor id="5" name="releaseInStep"/>
+        <field-descriptor id="6" name="finishInStep"/>
+        <field-descriptor id="7" name="assignee" default-value=""/>
+        <field-descriptor id="8" name="executedByRole" default-value=""/>
+        <field-descriptor id="9" name="skill" default-value=""/>
+        <field-descriptor id="10" name="skillRequired" default-value="false"/>
+        <field-descriptor id="11" name="orgLevelThree" default-value=""/>
+        <field-descriptor id="12" name="mandatory" default-value="false"/>
+
+        <field-descriptor id="13" name="orgContext" default-value="GLOBAL"/>
+        <field-descriptor id="14" name="enabled" default-value="true"/>
+        <field-descriptor id="15" name="system" default-value="false"/>
+        <field-descriptor id="16" name="businessObjectTypeId" default-value="APPROVAL_CA"
+                          reference="fk-by-business-identity"
+                          class-name="ibanx.object.BusinessObjectType"/>
+        <field-descriptor id="17" name="lifecycleId" default-value="CA_TEMPLATE_PROCESS"
+                          reference="fk-by-business-identity"
+                          class-name="ibanx.lifecycle.Lifecycle"/>
+        <field-descriptor id="18" name="lifecycleStateId" default-value="CA_TEMPLATE_PROCESS,CA_TEMPLATE_ACTIVE"
+                          reference="imp-fk-by-identifiable-fields" class-descriptor="lifecyclestate"/>
+        <field-descriptor id="19" name="isTemplate" default-value="true"/>
+        <field-descriptor id="20" name="generated" default-value="false"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+        <method-descriptor id="1" name="setRepeating">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <class-descriptor name="standard-activity-template" class-name="ibanx.moc.ChangeActivity"
+                      identifiable-by="number">
+        <field-descriptor id="0" name="number"/>
+        <field-descriptor id="1" name="name"/>
+        <field-descriptor id="2" name="title"/>
+        <field-descriptor id="3" name="description"/>
+        <field-descriptor id="4" name="phase"/>
+        <field-descriptor id="5" name="releaseInStep"/>
+        <field-descriptor id="6" name="finishInStep"/>
+        <field-descriptor id="7" name="assignee" default-value=""/>
+        <field-descriptor id="8" name="executedByRole" default-value=""/>
+        <field-descriptor id="9" name="skill" default-value=""/>
+        <field-descriptor id="10" name="skillRequired" default-value="false"/>
+
+        <field-descriptor id="11" name="orgContext" default-value="GLOBAL"/>
+        <field-descriptor id="12" name="enabled" default-value="true"/>
+        <field-descriptor id="13" name="system" default-value="false"/>
+        <field-descriptor id="14" name="businessObjectTypeId" default-value="TASK_CA"
+                          reference="fk-by-business-identity"
+                          class-name="ibanx.object.BusinessObjectType"/>
+        <field-descriptor id="15" name="lifecycleId" default-value="CA_TEMPLATE_PROCESS"
+                          reference="fk-by-business-identity"
+                          class-name="ibanx.lifecycle.Lifecycle"/>
+        <field-descriptor id="16" name="lifecycleStateId" default-value="CA_TEMPLATE_PROCESS,CA_TEMPLATE_ACTIVE"
+                          reference="imp-fk-by-identifiable-fields" class-descriptor="lifecyclestate"/>
+        <field-descriptor id="17" name="isTemplate" default-value="true"/>
+        <field-descriptor id="18" name="generated" default-value="false"/>
+
+        <!-- *** METHODS *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+        <method-descriptor id="1" name="setRepeating">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+
+    <!--
+       Proof of concept with trensient import + post processing : this means the import itself will not result in
+       persisting any data, it all stays in-memory; then some post processing is triggered with the in-memory data;
+       in this case axon command handling is triggered, with the proper eventhandlers, it may lead to persisting
+       data, in any repository (axon, db, solr, reporting-index, etc...)
+    -->
+    <class-descriptor
+            name="igestop"
+            class-name="ibanx.incident.Incident"
+            identifiable-by="number"
+
+            transient="transient"
+            post-process="nl.ibanx.importing.TriggerImportIncidentCommand"
+            >
+        <!-- *** CONCRETE ATTRIBUTES          *** -->
+        <field-descriptor id="0" name="number"/>
+        <field-descriptor id="1" name="dateCreated"/>
+        <field-descriptor id="2" name="dateModified"/>
+        <field-descriptor id="3" name="createdBy"/>
+        <field-descriptor id="4" name="modifiedBy"/>
+
+        <field-descriptor id="5" name="assignee"/>
+        <field-descriptor id="6" name="description"/>
+        <field-descriptor id="7" name="owner"/>
+        <field-descriptor id="8" name="reporterId"
+                          reference="fk-by-business-identity"
+                          class-name="ibanx.org.UserImpl"
+                />
+        <field-descriptor id="9" name="state"/>
+        <field-descriptor id="10" name="title"/>
+
+        <!--
+           Proof of concept with multi value fields! Default separator is a ";".
+           Demo data : category has just one value, classification has multiple values.
+        -->
+        <field-descriptor id="11" name="category" multi-value="true" multi-value-sep=";"/>
+        <field-descriptor id="12" name="classification" multi-value="true" multi-value-sep=";"/>
+
+        <field-descriptor id="13" name="incidentDate"/>
+        <field-descriptor id="14" name="dueDate"/>
+        <field-descriptor id="15" name="activitiesExecutedDate"/>
+        <field-descriptor id="16" name="evaluatedAndClosedDate"/>
+        <field-descriptor id="17" name="confidential" default-value="false"/>
+
+        <field-descriptor id="18" name="orgContext" default-value="GLOBAL"/>
+        <field-descriptor id="19" name="enabled" default-value="true"/>
+        <field-descriptor id="20" name="system" default-value="false"/>
+        <field-descriptor id="21" name="archived" default-value="true"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+
+        <!-- *** METHODS                      *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+        <method-descriptor id="1" name="setRepeating">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+    <class-descriptor
+            name="igestopa"
+            class-name="ibanx.incident.IncidentAbstractAttribute"
+            >
+        <field-descriptor id="0" name="oid"
+                          reference="fk-by-business-identity"
+                          class-name="ibanx.incident.Incident"
+                />
+        <field-descriptor id="1" name="name"/>
+        <field-descriptor id="2" name="description"/>
+        <field-descriptor id="3" name="value"/>
+        <field-descriptor id="4" name="enabled" default-value="true"/>
+    </class-descriptor>
+
+    <class-descriptor
+            name="agestop"
+            class-name="ibanx.incident.IncidentActivity"
+            identifiable-by="number"
+
+            transient="transient"
+            post-process="nl.ibanx.importing.TriggerImportIncidentActivityCommand"
+            >
+        <!-- *** CONCRETE ATTRIBUTES          *** -->
+        <field-descriptor id="0" name="number"/>
+        <field-descriptor id="1" name="dateCreated"/>
+        <field-descriptor id="2" name="dateModified"/>
+        <field-descriptor id="3" name="createdBy"/>
+        <field-descriptor id="4" name="modifiedBy"/>
+        <field-descriptor id="5" name="assignee"/>
+        <field-descriptor id="6" name="dueDate"/>
+        <field-descriptor id="7" name="incidentNumber"/>
+        <field-descriptor id="8" name="incidentId"
+                          reference="fk-by-business-identity"
+                          class-name="ibanx.incident.Incident"
+                />
+        <field-descriptor id="9" name="state"/>
+        <field-descriptor id="10" name="title"/>
+        <field-descriptor id="11" name="approveDate"/>
+        <field-descriptor id="12" name="startDate"/>
+
+        <field-descriptor id="13" name="orgContext" default-value="GLOBAL"/>
+        <field-descriptor id="14" name="enabled" default-value="true"/>
+        <field-descriptor id="15" name="system" default-value="false"/>
+        <field-descriptor id="16" name="archived" default-value="true"/>
+
+        <!-- *** MODELLED ABSTRACT ATTRIBUTES *** -->
+
+        <!-- *** METHODS                      *** -->
+        <method-descriptor id="0" name="set">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+        <method-descriptor id="1" name="setRepeating">
+            <arg id="0" type="java.lang.String"/>
+            <arg id="1" type="java.lang.String"/>
+        </method-descriptor>
+    </class-descriptor>
+    <class-descriptor
+            name="agestopa"
+            class-name="ibanx.incident.IncidentActivityAbstractAttribute"
+            >
+        <field-descriptor id="0" name="oid"
+                          reference="fk-by-business-identity"
+                          class-name="ibanx.incident.Incident"
+                />
+        <field-descriptor id="1" name="name"/>
+        <field-descriptor id="2" name="description"/>
+        <field-descriptor id="3" name="value"/>
+        <field-descriptor id="4" name="enabled" default-value="true"/>
+    </class-descriptor>
+</mapping-definition>

@@ -1,0 +1,508 @@
+<column-definitions>
+  <column-definition key="aantalUitvoerenden" attribute="aantalUitvoerenden" attributeRendererName="null" sortAttribute="null" colspan="1"/>
+  <column-definition key="aclDomain" attribute="aclDomain" attributeRendererName="null" sortAttribute="aclDomain" colspan="1"/>
+  <column-definition key="activity" attribute="name" attributeRendererName="null" sortAttribute="name" width="5%" colspan="1">
+    <localizationCode>activity</localizationCode>
+  </column-definition>
+  <column-definition key="activityState" attribute="lifecycleState.name" attributeRendererName="activityStateRenderer" sortAttribute="lifecycleState.description" width="150px" colspan="1">
+    <localizationCode>activityState</localizationCode>
+  </column-definition>
+  <column-definition key="activityTitle" attribute="description" attributeRendererName="activityTitleRenderer" sortAttribute="description" colspan="1">
+    <localizationCode>description</localizationCode>
+  </column-definition>
+  <column-definition key="additionalActivityInfo" attribute="additionalActivityInfo" attributeRendererName="additionalActivityInfoRenderer" sortAttribute="additionalActivityInfo" width="70px" colspan="1"/>
+  <column-definition key="bcc" attribute="bcc" attributeRendererName="listRenderer" sortAttribute="bcc" colspan="1">
+    <localizationCode>bcc</localizationCode>
+  </column-definition>
+  <column-definition key="businessObjectType" attribute="businessObjectType.name" attributeRendererName="typeRenderer" sortAttribute="businessObjectType.name" colspan="1"/>
+  <column-definition key="category" attribute="category" attributeRendererName="null" sortAttribute="category" colspan="1"/>
+  <column-definition key="cc" attribute="cc" attributeRendererName="listRenderer" sortAttribute="cc" colspan="1">
+    <localizationCode>cc</localizationCode>
+  </column-definition>
+  <column-definition key="checkboxMapping" attribute="checkboxMapping" attributeRendererName="null" sortAttribute="checkboxMapping" colspan="1"/>
+  <column-definition key="context" attribute="funcLevelOne" attributeRendererName="orgNameRenderer" sortAttribute="funcLevelOne" colspan="1"/>
+  <column-definition key="createdBy" attribute="createdBy" attributeRendererName="userRenderer" sortAttribute="createdBy" colspan="1"/>
+  <column-definition key="dateCreated" attribute="dateCreated" attributeRendererName="dateRenderer" sortAttribute="dateCreated" colspan="1"/>
+  <column-definition key="dateModified" attribute="dateModified" attributeRendererName="dateRenderer" sortAttribute="dateModified" colspan="1"/>
+  <column-definition key="dependentConditions" attribute="id" attributeRendererName="dependentConditionsRenderer" sortAttribute="null" colspan="1">
+    <localizationCode>dependentConditions</localizationCode>
+  </column-definition>
+  <column-definition key="description" attribute="description" attributeRendererName="null" sortAttribute="description" colspan="1"/>
+  <column-definition key="diameter" attribute="diameter" attributeRendererName="null" sortAttribute="diameter" colspan="1">
+    <pickListName>lotoDiameter</pickListName>
+  </column-definition>
+  <column-definition key="discipline" attribute="discipline" attributeRendererName="picklistItemAttrRendererDorC" sortAttribute="discipline" width="100px" colspan="1">
+    <pickListName>lotoDiscipline</pickListName>
+  </column-definition>
+  <column-definition key="duration" attribute="duration" attributeRendererName="null" sortAttribute="duration" width="1%" colspan="1"/>
+  <column-definition key="editable" attribute="editable" attributeRendererName="booleanRenderer" sortAttribute="editable" colspan="1"/>
+  <column-definition key="email" attribute="email" attributeRendererName="null" sortAttribute="email" colspan="1"/>
+  <column-definition key="embClaimedByOtherLists" attribute="pointNumber" attributeRendererName="claimedByOtherListsRenderer" sortAttribute="null" width="5%" colspan="1">
+    <localizationCode>otherListPoint</localizationCode>
+  </column-definition>
+  <column-definition key="embeddedActivityActionsSmall" attribute="action" attributeRendererName="embeddedActivityActionsRenderer" sortAttribute="null" width="50px" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>action</localizationCode>
+  </column-definition>
+  <column-definition key="embIsolationState" attribute="lifecycleState.name" attributeRendererName="isolationStateRenderer" sortAttribute="null" width="5%" colspan="1">
+    <localizationCode>isolationState</localizationCode>
+  </column-definition>
+  <column-definition key="embOperationalState" attribute="operationalState" attributeRendererName="operationalStateRenderer" sortAttribute="operationalState" width="100px" colspan="1">
+    <localizationCode>operationalState</localizationCode>
+  </column-definition>
+  <column-definition key="embPointState" attribute="lifecycleState.name" attributeRendererName="stateRenderer" sortAttribute="lifecycleState.description" width="5%" colspan="1">
+    <localizationCode>embPointState</localizationCode>
+  </column-definition>
+  <column-definition key="enabled" attribute="enabled" attributeRendererName="booleanRenderer" sortAttribute="enabled" colspan="1"/>
+  <column-definition key="entityClass" attribute="entityClass" attributeRendererName="null" sortAttribute="entityClass" colspan="1"/>
+  <column-definition key="equipment" attribute="equipment" attributeRendererName="pbsAttrRenderer" sortAttribute="equipment" colspan="1"/>
+  <column-definition key="equipmentCode" attribute="equipment" attributeRendererName="null" sortAttribute="equipment" colspan="1"/>
+  <column-definition key="equipmentCodeSmall" attribute="equipment" attributeRendererName="null" sortAttribute="equipment" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>equipment</localizationCode>
+  </column-definition>
+  <column-definition key="equipmentDorC" attribute="equipment" attributeRendererName="pbsAttrRendererDorC" sortAttribute="equipment" colspan="1"/>
+  <column-definition key="equipmentNr" attribute="tag" attributeRendererName="null" sortAttribute="tag" colspan="1"/>
+  <column-definition key="equipmentSmall" attribute="equipment" attributeRendererName="pbsAttrRenderer" sortAttribute="equipment" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>equipment</localizationCode>
+  </column-definition>
+  <column-definition key="equipmentSmallDorC" attribute="equipment" attributeRendererName="pbsAttrRendererDorC" sortAttribute="equipment" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>equipment</localizationCode>
+  </column-definition>
+  <column-definition key="errorCount" attribute="errorCount" attributeRendererName="null" sortAttribute="errorCount" colspan="1"/>
+  <column-definition key="errorMessage" attribute="errorMessage" attributeRendererName="null" sortAttribute="null" colspan="1"/>
+  <column-definition key="errorMessageHTML" attribute="errorMessage" attributeRendererName="htmlRenderer" sortAttribute="null" colspan="1"/>
+  <column-definition key="errorMessageHTMLSmall" attribute="errorMessage" attributeRendererName="htmlRenderer" sortAttribute="null" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>errorMessage</localizationCode>
+  </column-definition>
+  <column-definition key="errorMessageMax" attribute="errorMessage" attributeRendererName="max200CharsRenderer" sortAttribute="null" colspan="1"/>
+  <column-definition key="errorMessageMaxSmall" attribute="errorMessage" attributeRendererName="max200CharsRenderer" sortAttribute="null" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>errorMessage</localizationCode>
+  </column-definition>
+  <column-definition key="errorMessageSmall" attribute="errorMessage" attributeRendererName="null" sortAttribute="null" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>errorMessage</localizationCode>
+  </column-definition>
+  <column-definition key="fileName" attribute="fileName" attributeRendererName="fileName" sortAttribute="null" width="50" colspan="1"/>
+  <column-definition key="firstName" attribute="firstName" attributeRendererName="null" sortAttribute="firstName" colspan="1"/>
+  <column-definition key="from" attribute="from" attributeRendererName="null" sortAttribute="from" colspan="1">
+    <localizationCode>from</localizationCode>
+  </column-definition>
+  <column-definition key="funcLevelFive" attribute="funcLevelFive" attributeRendererName="null" sortAttribute="funcLevelFive" colspan="1"/>
+  <column-definition key="funcLevelFiveDorC" attribute="funcLevelFive" attributeRendererName="pbsAttrRendererDorC" sortAttribute="funcLevelFive" colspan="1"/>
+  <column-definition key="funcLevelFiveSmall" attribute="funcLevelFive" attributeRendererName="null" sortAttribute="funcLevelFive" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>funcLevelFive</localizationCode>
+  </column-definition>
+  <column-definition key="funcLevelFiveSmallDorC" attribute="funcLevelFive" attributeRendererName="pbsAttrRendererDorC" sortAttribute="funcLevelFive" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>funcLevelFive</localizationCode>
+  </column-definition>
+  <column-definition key="funcLevelFour" attribute="funcLevelFour" attributeRendererName="null" sortAttribute="funcLevelFour" colspan="1"/>
+  <column-definition key="funcLevelFourDesc" attribute="funcLevelFourDesc" attributeRendererName="null" sortAttribute="null" colspan="1">
+    <localizationCode>funcLevelFourDesc</localizationCode>
+  </column-definition>
+  <column-definition key="funcLevelFourDescSmall" attribute="funcLevelFourDesc" attributeRendererName="null" sortAttribute="null" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>funcLevelFourDesc</localizationCode>
+  </column-definition>
+  <column-definition key="funcLevelFourDorC" attribute="funcLevelFour" attributeRendererName="pbsAttrRendererDorC" sortAttribute="funcLevelFour" colspan="1"/>
+  <column-definition key="funcLevelFourSmall" attribute="funcLevelFour" attributeRendererName="null" sortAttribute="funcLevelFour" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>funcLevelFour</localizationCode>
+  </column-definition>
+  <column-definition key="funcLevelFourSmallDorC" attribute="funcLevelFour" attributeRendererName="pbsAttrRendererDorC" sortAttribute="funcLevelFour" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>funcLevelFour</localizationCode>
+  </column-definition>
+  <column-definition key="funcLevelOne" attribute="funcLevelOne" attributeRendererName="orgNameRenderer" sortAttribute="funcLevelOne" colspan="1"/>
+  <column-definition key="funcLevelOne1" attribute="orgContext" attributeRendererName="orgNameRenderer" sortAttribute="orgContext" colspan="1"/>
+  <column-definition key="funcLevelOne1Small" attribute="orgContext" attributeRendererName="orgNameRenderer" sortAttribute="orgContext" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>funcLevelOne</localizationCode>
+  </column-definition>
+  <column-definition key="funcLevelOneSmall" attribute="funcLevelOne" attributeRendererName="orgNameRenderer" sortAttribute="funcLevelOne" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>funcLevelOne</localizationCode>
+  </column-definition>
+  <column-definition key="funcLevelSeven" attribute="funcLevelSeven" attributeRendererName="null" sortAttribute="funcLevelSeven" colspan="1"/>
+  <column-definition key="funcLevelSevenDorC" attribute="funcLevelSeven" attributeRendererName="pbsAttrRendererDorC" sortAttribute="funcLevelSeven" colspan="1"/>
+  <column-definition key="funcLevelSevenSmall" attribute="funcLevelSeven" attributeRendererName="null" sortAttribute="funcLevelSeven" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>funcLevelSeven</localizationCode>
+  </column-definition>
+  <column-definition key="funcLevelSevenSmallDorC" attribute="funcLevelSeven" attributeRendererName="pbsAttrRendererDorC" sortAttribute="funcLevelSeven" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>funcLevelSeven</localizationCode>
+  </column-definition>
+  <column-definition key="funcLevelSix" attribute="funcLevelSix" attributeRendererName="null" sortAttribute="funcLevelSix" colspan="1"/>
+  <column-definition key="funcLevelSixDorC" attribute="funcLevelSix" attributeRendererName="pbsAttrRendererDorC" sortAttribute="funcLevelSix" colspan="1"/>
+  <column-definition key="funcLevelSixSmall" attribute="funcLevelSix" attributeRendererName="null" sortAttribute="funcLevelSix" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>funcLevelSix</localizationCode>
+  </column-definition>
+  <column-definition key="funcLevelSixSmallDorC" attribute="funcLevelSix" attributeRendererName="pbsAttrRendererDorC" sortAttribute="funcLevelSix" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>funcLevelSix</localizationCode>
+  </column-definition>
+  <column-definition key="funcLevelThree" attribute="funcLevelThree" attributeRendererName="pbsAttrRenderer" sortAttribute="funcLevelThree" colspan="1"/>
+  <column-definition key="funcLevelThreeDorC" attribute="funcLevelThree" attributeRendererName="pbsAttrRendererDorC" sortAttribute="funcLevelThree" colspan="1"/>
+  <column-definition key="funcLevelThreeSmall" attribute="funcLevelThree" attributeRendererName="pbsAttrRenderer" sortAttribute="funcLevelThree" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>funcLevelThree</localizationCode>
+  </column-definition>
+  <column-definition key="funcLevelThreeSmallDorC" attribute="funcLevelThree" attributeRendererName="pbsAttrRendererDorC" sortAttribute="funcLevelThree" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>funcLevelThree</localizationCode>
+  </column-definition>
+  <column-definition key="funcLevelTwo" attribute="funcLevelTwo" attributeRendererName="pbsAttrRenderer" sortAttribute="funcLevelTwo" colspan="1"/>
+  <column-definition key="funcLevelTwoDorC" attribute="funcLevelTwo" attributeRendererName="pbsAttrRendererDorC" sortAttribute="funcLevelTwo" colspan="1"/>
+  <column-definition key="funcLevelTwoSmall" attribute="funcLevelTwo" attributeRendererName="pbsAttrRenderer" sortAttribute="funcLevelTwo" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>funcLevelTwo</localizationCode>
+  </column-definition>
+  <column-definition key="funcLevelTwoSmallDorC" attribute="funcLevelTwo" attributeRendererName="pbsAttrRendererDorC" sortAttribute="funcLevelTwo" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>funcLevelTwo</localizationCode>
+  </column-definition>
+  <column-definition key="gasketType" attribute="gasketType" attributeRendererName="null" sortAttribute="gasketType" colspan="1">
+    <pickListName>lotoGasketType</pickListName>
+  </column-definition>
+  <column-definition key="geoLevelFive" attribute="geoLevelFive" attributeRendererName="null" sortAttribute="geoLevelFive" colspan="1"/>
+  <column-definition key="geoLevelFiveDorC" attribute="geoLevelFive" attributeRendererName="pbsAttrRendererDorC" sortAttribute="geoLevelFive" colspan="1"/>
+  <column-definition key="geoLevelFiveSmall" attribute="geoLevelFive" attributeRendererName="null" sortAttribute="geoLevelFive" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>geoLevelFive</localizationCode>
+  </column-definition>
+  <column-definition key="geoLevelFiveSmallDorC" attribute="geoLevelFive" attributeRendererName="pbsAttrRendererDorC" sortAttribute="geoLevelFive" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>geoLevelFive</localizationCode>
+  </column-definition>
+  <column-definition key="geoLevelFour" attribute="geoLevelFour" attributeRendererName="null" sortAttribute="geoLevelFour" colspan="1"/>
+  <column-definition key="geoLevelFourDorC" attribute="geoLevelFour" attributeRendererName="pbsAttrRendererDorC" sortAttribute="geoLevelFour" colspan="1"/>
+  <column-definition key="geoLevelFourSmall" attribute="geoLevelFour" attributeRendererName="null" sortAttribute="geoLevelFour" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>geoLevelFour</localizationCode>
+  </column-definition>
+  <column-definition key="geoLevelFourSmallDorC" attribute="geoLevelFour" attributeRendererName="pbsAttrRendererDorC" sortAttribute="geoLevelFour" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>geoLevelFour</localizationCode>
+  </column-definition>
+  <column-definition key="geoLevelSeven" attribute="geoLevelSeven" attributeRendererName="null" sortAttribute="geoLevelSeven" colspan="1"/>
+  <column-definition key="geoLevelSevenDorC" attribute="geoLevelSeven" attributeRendererName="pbsAttrRendererDorC" sortAttribute="geoLevelSeven" colspan="1"/>
+  <column-definition key="geoLevelSevenSmall" attribute="geoLevelSeven" attributeRendererName="null" sortAttribute="geoLevelSeven" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>geoLevelSeven</localizationCode>
+  </column-definition>
+  <column-definition key="geoLevelSevenSmallDorC" attribute="geoLevelSeven" attributeRendererName="pbsAttrRendererDorC" sortAttribute="geoLevelSeven" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>geoLevelSeven</localizationCode>
+  </column-definition>
+  <column-definition key="geoLevelSix" attribute="geoLevelSix" attributeRendererName="null" sortAttribute="geoLevelSix" colspan="1"/>
+  <column-definition key="geoLevelSixDorC" attribute="geoLevelSix" attributeRendererName="pbsAttrRendererDorC" sortAttribute="geoLevelSix" colspan="1"/>
+  <column-definition key="geoLevelSixSmall" attribute="geoLevelSix" attributeRendererName="null" sortAttribute="geoLevelSix" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>geoLevelSix</localizationCode>
+  </column-definition>
+  <column-definition key="geoLevelSixSmallDorC" attribute="geoLevelSix" attributeRendererName="pbsAttrRendererDorC" sortAttribute="geoLevelSix" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>geoLevelSix</localizationCode>
+  </column-definition>
+  <column-definition key="geoLevelThree" attribute="geoLevelThree" attributeRendererName="pbsAttrRenderer" sortAttribute="geoLevelThree" colspan="1"/>
+  <column-definition key="geoLevelThreeDorC" attribute="geoLevelThree" attributeRendererName="pbsAttrRendererDorC" sortAttribute="geoLevelThree" colspan="1"/>
+  <column-definition key="geoLevelThreeSmall" attribute="geoLevelThree" attributeRendererName="pbsAttrRenderer" sortAttribute="geoLevelThree" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>geoLevelThree</localizationCode>
+  </column-definition>
+  <column-definition key="geoLevelThreeSmallDorC" attribute="geoLevelThree" attributeRendererName="pbsAttrRendererDorC" sortAttribute="geoLevelThree" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>geoLevelThree</localizationCode>
+  </column-definition>
+  <column-definition key="geoLevelTwo" attribute="geoLevelTwo" attributeRendererName="pbsAttrRenderer" sortAttribute="geoLevelTwo" colspan="1"/>
+  <column-definition key="geoLevelTwoDorC" attribute="geoLevelTwo" attributeRendererName="pbsAttrRendererDorC" sortAttribute="geoLevelTwo" colspan="1"/>
+  <column-definition key="geoLevelTwoSmall" attribute="geoLevelTwo" attributeRendererName="pbsAttrRenderer" sortAttribute="geoLevelTwo" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>geoLevelTwo</localizationCode>
+  </column-definition>
+  <column-definition key="geoLevelTwoSmallDorC" attribute="geoLevelTwo" attributeRendererName="pbsAttrRendererDorC" sortAttribute="geoLevelTwo" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>geoLevelTwo</localizationCode>
+  </column-definition>
+  <column-definition key="gridName" attribute="map_gridName" attributeRendererName="null" sortAttribute="null" colspan="1"/>
+  <column-definition key="groupName" attribute="groupName" attributeRendererName="valueItemGroupRenderer" sortAttribute="null" width="100" colspan="1"/>
+  <column-definition key="homepage" attribute="homepage" attributeRendererName="urlRenderer" sortAttribute="homepage" colspan="1"/>
+  <column-definition key="houderFirm" attribute="houderFirm" attributeRendererName="null" sortAttribute="houderFirm" colspan="1"/>
+  <column-definition key="houderNaam" attribute="houderName" attributeRendererName="null" sortAttribute="houderName" colspan="1"/>
+  <column-definition key="icqAccess" attribute="icqEnabledOn" attributeRendererName="enabledProductRenderer" sortAttribute="icqEnabledOn" colspan="1"/>
+  <column-definition key="id" attribute="id" attributeRendererName="null" sortAttribute="id" colspan="1"/>
+  <column-definition key="inOutBoxDateRead" attribute="dateRead" attributeRendererName="dateTimeRenderer" sortAttribute="dateRead" colspan="1"/>
+  <column-definition key="inOutBoxDateSent" attribute="dateSent" attributeRendererName="dateTimeRenderer" sortAttribute="dateSent" colspan="1"/>
+  <column-definition key="inOutBoxFrom" attribute="from" attributeRendererName="userRenderer" sortAttribute="from" colspan="1"/>
+  <column-definition key="inOutBoxIsDeleted" attribute="deleted" attributeRendererName="booleanRenderer" sortAttribute="deleted" colspan="1"/>
+  <column-definition key="inOutBoxIsRead" attribute="read" attributeRendererName="booleanRenderer" sortAttribute="read" colspan="1"/>
+  <column-definition key="inOutBoxSubject" attribute="subject" attributeRendererName="renderLineIfEmptyTextRenderer" sortAttribute="null" colspan="1"/>
+  <column-definition key="inOutBoxTo" attribute="to" attributeRendererName="recipientRenderer" sortAttribute="to" colspan="1"/>
+  <column-definition key="isolatedState" attribute="isolatedState" attributeRendererName="picklistItemAttrRendererDorC" sortAttribute="isolatedState" width="85px" colspan="1">
+    <localizationCode>isolatedState</localizationCode>
+    <pickListName>isolatedState</pickListName>
+  </column-definition>
+  <column-definition key="isolationDate" attribute="transitionDate" attributeRendererName="dateRenderer" sortAttribute="transitionDate" width="5%" colspan="1">
+    <localizationCode>isolationDate</localizationCode>
+  </column-definition>
+  <column-definition key="isolationState" attribute="lifecycleState.name" attributeRendererName="isolationStateRenderer" sortAttribute="null" width="5%" colspan="1">
+    <localizationCode>isolationState</localizationCode>
+  </column-definition>
+  <column-definition key="lastName" attribute="lastName" attributeRendererName="null" sortAttribute="lastName" colspan="1"/>
+  <column-definition key="lifecycleStateDescription" attribute="lifecycleState.description" attributeRendererName="null" sortAttribute="lifecycleState.description" colspan="1"/>
+  <column-definition key="lifecycleStateName" attribute="lifecycleState.name" attributeRendererName="stateRenderer" sortAttribute="lifecycleState.description" colspan="1"/>
+  <column-definition key="localizedDescription" attribute="description" attributeRendererName="localizedValueAttrRenderer" sortAttribute="description" colspan="1">
+    <localizationCode>description</localizationCode>
+  </column-definition>
+  <column-definition key="localizedName" attribute="name" attributeRendererName="localizedValueAttrRenderer" sortAttribute="name" colspan="1">
+    <localizationCode>name</localizationCode>
+  </column-definition>
+  <column-definition key="localizedValue" attribute="value" attributeRendererName="localizedValueAttrRenderer" sortAttribute="value" colspan="1">
+    <localizationCode>value</localizationCode>
+  </column-definition>
+  <column-definition key="location" attribute="geoLevelThree" attributeRendererName="null" sortAttribute="geoLevelThree" colspan="1"/>
+  <column-definition key="loginName" attribute="loginName" attributeRendererName="null" sortAttribute="loginName" colspan="1"/>
+  <column-definition key="lotoAccess" attribute="lotoEnabledOn" attributeRendererName="enabledProductRenderer" sortAttribute="lotoEnabledOn" colspan="1"/>
+  <column-definition key="lotoListActions" attribute="action" attributeRendererName="lotoListActionRenderer" sortAttribute="null" width="10%" colspan="1">
+    <localizationCode>action</localizationCode>
+  </column-definition>
+  <column-definition key="lotoListClassification" attribute="classification" attributeRendererName="localizedPicklistItemAttrRenderer" sortAttribute="classification" colspan="1">
+    <localizationCode>classification</localizationCode>
+    <pickListName>isoListClassification</pickListName>
+  </column-definition>
+  <column-definition key="lotoPointActivityType" attribute="lotoPointActivityType" attributeRendererName="lotoPointActivityTypeRenderer" sortAttribute="null" width="20px" colspan="1"/>
+  <column-definition key="mainPermit" attribute="number" attributeRendererName="null" sortAttribute="sequenceNumber" colspan="1">
+    <localizationCode>mainPermit</localizationCode>
+  </column-definition>
+  <column-definition key="maxFields" attribute="maxFields" attributeRendererName="null" sortAttribute="maxFields" colspan="1"/>
+  <column-definition key="medium" attribute="medium" attributeRendererName="null" sortAttribute="medium" colspan="1"/>
+  <column-definition key="message" attribute="message" attributeRendererName="null" sortAttribute="null" colspan="1"/>
+  <column-definition key="messageClassification" attribute="classification" attributeRendererName="messageClassificationRenderer" sortAttribute="null" colspan="1">
+    <localizationCode>classification</localizationCode>
+  </column-definition>
+  <column-definition key="messageHTML" attribute="message" attributeRendererName="htmlRenderer" sortAttribute="null" colspan="1"/>
+  <column-definition key="messageHTMLSmall" attribute="message" attributeRendererName="htmlRenderer" sortAttribute="null" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>message</localizationCode>
+  </column-definition>
+  <column-definition key="messageMax" attribute="message" attributeRendererName="max200CharsRenderer" sortAttribute="null" colspan="1"/>
+  <column-definition key="messageMaxSmall" attribute="message" attributeRendererName="max200CharsRenderer" sortAttribute="null" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>message</localizationCode>
+  </column-definition>
+  <column-definition key="messageSmall" attribute="message" attributeRendererName="null" sortAttribute="null" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>message</localizationCode>
+  </column-definition>
+  <column-definition key="mocAccess" attribute="mocEnabledOn" attributeRendererName="enabledProductRenderer" sortAttribute="mocEnabledOn" colspan="1"/>
+  <column-definition key="modifiedBy" attribute="modifiedBy" attributeRendererName="userRenderer" sortAttribute="modifiedBy" colspan="1"/>
+  <column-definition key="mvDatum" attribute="plannedStartDate" attributeRendererName="dateRenderer" sortAttribute="plannedStartDate" colspan="1"/>
+  <column-definition key="name" attribute="name" attributeRendererName="null" sortAttribute="name" colspan="1"/>
+  <column-definition key="number" attribute="number" attributeRendererName="null" sortAttribute="dateCreated" colspan="1"/>
+  <column-definition key="numberFlashUrl" attribute="number" attributeRendererName="flashUrlRenderer" sortAttribute="dateCreated" colspan="1"/>
+  <column-definition key="objectClass" attribute="objectClass" attributeRendererName="null" sortAttribute="objectClass" colspan="1"/>
+  <column-definition key="operationalState" attribute="operationalState" attributeRendererName="picklistItemAttrRendererDorC" sortAttribute="operationalState" width="85px" colspan="1">
+    <localizationCode>operationalState</localizationCode>
+    <pickListName>operationalState</pickListName>
+  </column-definition>
+  <column-definition key="orgContext" attribute="orgContext" attributeRendererName="orgNameRenderer" sortAttribute="orgContext" colspan="1"/>
+  <column-definition key="orgContextSmall" attribute="orgContext" attributeRendererName="orgNameRenderer" sortAttribute="orgContext" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>funcLevelOne</localizationCode>
+  </column-definition>
+  <column-definition key="orgLevelFive" attribute="orgLevelFive" attributeRendererName="null" sortAttribute="orgLevelFive" colspan="1"/>
+  <column-definition key="orgLevelFiveDorC" attribute="orgLevelFive" attributeRendererName="pbsAttrRendererDorC" sortAttribute="orgLevelFive" colspan="1"/>
+  <column-definition key="orgLevelFiveSmall" attribute="orgLevelFive" attributeRendererName="null" sortAttribute="orgLevelFive" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>orgLevelFive</localizationCode>
+  </column-definition>
+  <column-definition key="orgLevelFiveSmallDorC" attribute="orgLevelFive" attributeRendererName="pbsAttrRendererDorC" sortAttribute="orgLevelFive" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>orgLevelFive</localizationCode>
+  </column-definition>
+  <column-definition key="orgLevelFour" attribute="orgLevelFour" attributeRendererName="null" sortAttribute="orgLevelFour" colspan="1"/>
+  <column-definition key="orgLevelFourDorC" attribute="orgLevelFour" attributeRendererName="pbsAttrRendererDorC" sortAttribute="orgLevelFour" colspan="1"/>
+  <column-definition key="orgLevelFourSmall" attribute="orgLevelFour" attributeRendererName="null" sortAttribute="orgLevelFour" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>orgLevelFour</localizationCode>
+  </column-definition>
+  <column-definition key="orgLevelFourSmallDorC" attribute="orgLevelFour" attributeRendererName="pbsAttrRendererDorC" sortAttribute="orgLevelFour" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>orgLevelFour</localizationCode>
+  </column-definition>
+  <column-definition key="orgLevelSeven" attribute="orgLevelSeven" attributeRendererName="null" sortAttribute="orgLevelSeven" colspan="1"/>
+  <column-definition key="orgLevelSevenDorC" attribute="orgLevelSeven" attributeRendererName="pbsAttrRendererDorC" sortAttribute="orgLevelSeven" colspan="1"/>
+  <column-definition key="orgLevelSevenSmall" attribute="orgLevelSeven" attributeRendererName="null" sortAttribute="orgLevelSeven" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>orgLevelSeven</localizationCode>
+  </column-definition>
+  <column-definition key="orgLevelSevenSmallDorC" attribute="orgLevelSeven" attributeRendererName="pbsAttrRendererDorC" sortAttribute="orgLevelSeven" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>orgLevelSeven</localizationCode>
+  </column-definition>
+  <column-definition key="orgLevelSix" attribute="orgLevelSix" attributeRendererName="null" sortAttribute="orgLevelSix" colspan="1"/>
+  <column-definition key="orgLevelSixDorC" attribute="orgLevelSix" attributeRendererName="pbsAttrRendererDorC" sortAttribute="orgLevelSix" colspan="1"/>
+  <column-definition key="orgLevelSixSmall" attribute="orgLevelSix" attributeRendererName="null" sortAttribute="orgLevelSix" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>orgLevelSix</localizationCode>
+  </column-definition>
+  <column-definition key="orgLevelSixSmallDorC" attribute="orgLevelSix" attributeRendererName="pbsAttrRendererDorC" sortAttribute="orgLevelSix" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>orgLevelSix</localizationCode>
+  </column-definition>
+  <column-definition key="orgLevelThree" attribute="orgLevelThree" attributeRendererName="pbsAttrRenderer" sortAttribute="orgLevelThree" colspan="1"/>
+  <column-definition key="orgLevelThreeDorC" attribute="orgLevelThree" attributeRendererName="pbsAttrRendererDorC" sortAttribute="orgLevelThree" colspan="1"/>
+  <column-definition key="orgLevelThreeSmall" attribute="orgLevelThree" attributeRendererName="pbsAttrRenderer" sortAttribute="orgLevelThree" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>orgLevelThree</localizationCode>
+  </column-definition>
+  <column-definition key="orgLevelThreeSmallDorC" attribute="orgLevelThree" attributeRendererName="pbsAttrRendererDorC" sortAttribute="orgLevelThree" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>orgLevelThree</localizationCode>
+  </column-definition>
+  <column-definition key="orgLevelTwo" attribute="orgLevelTwo" attributeRendererName="pbsAttrRenderer" sortAttribute="orgLevelTwo" colspan="1"/>
+  <column-definition key="orgLevelTwoDorC" attribute="orgLevelTwo" attributeRendererName="pbsAttrRendererDorC" sortAttribute="orgLevelTwo" colspan="1"/>
+  <column-definition key="orgLevelTwoSmall" attribute="orgLevelTwo" attributeRendererName="pbsAttrRenderer" sortAttribute="orgLevelTwo" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>orgLevelTwo</localizationCode>
+  </column-definition>
+  <column-definition key="orgLevelTwoSmallDorC" attribute="orgLevelTwo" attributeRendererName="pbsAttrRendererDorC" sortAttribute="orgLevelTwo" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>orgLevelTwo</localizationCode>
+  </column-definition>
+  <column-definition key="orgUnit" attribute="orgLevelThree" attributeRendererName="null" sortAttribute="orgLevelThree" colspan="1"/>
+  <column-definition key="owner" attribute="owner" attributeRendererName="userRenderer" sortAttribute="owner" colspan="1"/>
+  <column-definition key="pcqAccess" attribute="pcqEnabledOn" attributeRendererName="enabledProductRenderer" sortAttribute="pcqEnabledOn" colspan="1"/>
+  <column-definition key="permanent" attribute="permanent" attributeRendererName="booleanRenderer" sortAttribute="permanent" colspan="1"/>
+  <column-definition key="permitListActions" attribute="action" attributeRendererName="permitListActionRenderer" sortAttribute="null" width="10%" colspan="1">
+    <localizationCode>action</localizationCode>
+  </column-definition>
+  <column-definition key="pickListName" attribute="pickListName" attributeRendererName="localizationRenderer" sortAttribute="pickListName" colspan="1"/>
+  <column-definition key="plannedDeisolationDate" attribute="plannedDeisolationDate" attributeRendererName="dateRenderer" sortAttribute="plannedDeisolationDate" colspan="1"/>
+  <column-definition key="plannedEndDate" attribute="plannedEndDate" attributeRendererName="dateRenderer" sortAttribute="plannedEndDate" colspan="1"/>
+  <column-definition key="plannedEndDateTime" attribute="plannedEndDate" attributeRendererName="plannedEndDateTimeRenderer" sortAttribute="plannedEndDate" colspan="1"/>
+  <column-definition key="plannedIsolationDate" attribute="plannedIsolationDate" attributeRendererName="dateRenderer" sortAttribute="plannedIsolationDate" colspan="1"/>
+  <column-definition key="plannedIsolationDateTo" attribute="plannedIsolationDateTo" attributeRendererName="dateRenderer" sortAttribute="plannedIsolationDateTo" colspan="1"/>
+  <column-definition key="plannedStartDate" attribute="plannedStartDate" attributeRendererName="dateRenderer" sortAttribute="plannedStartDate" colspan="1"/>
+  <column-definition key="plannedStartDateTime" attribute="plannedStartDate" attributeRendererName="plannedStartDateTimeRenderer" sortAttribute="plannedStartDate" colspan="1"/>
+  <column-definition key="plant" attribute="orgContext" attributeRendererName="orgNameRenderer" sortAttribute="orgContext" colspan="1"/>
+  <column-definition key="plantName" attribute="orgContext" attributeRendererName="orgNameRenderer" sortAttribute="orgContext" colspan="1"/>
+  <column-definition key="pointClaimedByOtherLists" attribute="isolationListNumbers" attributeRendererName="null" sortAttribute="null" width="150px" colspan="1">
+    <localizationCode>otherListPoint</localizationCode>
+  </column-definition>
+  <column-definition key="pointName" attribute="pointName" attributeRendererName="null" sortAttribute="pointName" width="100px" colspan="1"/>
+  <column-definition key="pointNameOrActivityDescription" attribute="name" attributeRendererName="pointNameOrActivityDescriptionRenderer" sortAttribute="name" width="200px" colspan="1">
+    <localizationCode>pointNameOrActivityDescription</localizationCode>
+  </column-definition>
+  <column-definition key="pointNumber" attribute="pointNumber" attributeRendererName="null" sortAttribute="pointNumber" width="100px" colspan="1"/>
+  <column-definition key="pointNumberOnActivity" attribute="pointNumber" attributeRendererName="pointNumberOnActivityRenderer" sortAttribute="pointNumber" width="150px" colspan="1"/>
+  <column-definition key="pointOnOtherLists" attribute="pointNumber" attributeRendererName="pointOnOtherListsRenderer" sortAttribute="null" width="150px" colspan="1">
+    <localizationCode>otherActiveListPoint</localizationCode>
+  </column-definition>
+  <column-definition key="pointState" attribute="pointState" attributeRendererName="pointStateOnActivityRenderer" sortAttribute="pointState" width="85px" colspan="1">
+    <localizationCode>pointState</localizationCode>
+  </column-definition>
+  <column-definition key="pressureClass" attribute="pressureClass" attributeRendererName="null" sortAttribute="pressureClass" colspan="1">
+    <pickListName>lotoPressureClass</pickListName>
+  </column-definition>
+  <column-definition key="printBatchLabel" attribute="printBatchLabelValue" attributeRendererName="null" sortAttribute="printBatchLabelValue" colspan="1"/>
+  <column-definition key="privateSpec" attribute="privateSpec" attributeRendererName="privateSpecRenderer" sortAttribute="privateSpec" colspan="1"/>
+  <column-definition key="querySpecType" attribute="querySpecType" attributeRendererName="querySpecTypeRenderer" sortAttribute="querySpecType" colspan="1"/>
+  <column-definition key="raWorkDesc" attribute="workDescription" attributeRendererName="null" sortAttribute="null" colspan="1"/>
+  <column-definition key="remark" attribute="remark" attributeRendererName="null" sortAttribute="remark" colspan="1"/>
+  <column-definition key="remarks" attribute="remarks" attributeRendererName="null" sortAttribute="remarks" colspan="1"/>
+  <column-definition key="renderedBusinessObjectType" attribute="businessObjectType.number" attributeRendererName="i18nBotRenderer" sortAttribute="businessObjectType.name" colspan="1"/>
+  <column-definition key="renderedBusinessObjectTypeAbbr" attribute="businessObjectType.number" attributeRendererName="i18nAbbrBotRenderer" sortAttribute="businessObjectType.name" colspan="1"/>
+  <column-definition key="renderedBusinessObjectTypeAbbrSmall" attribute="businessObjectType.number" attributeRendererName="i18nAbbrBotRenderer" sortAttribute="businessObjectType.name" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>businessObjectTypeAbbr</localizationCode>
+  </column-definition>
+  <column-definition key="renderedBusinessObjectTypeId" attribute="businessObjectType" attributeRendererName="i18nBotRenderer" sortAttribute="businessObjectType" colspan="1"/>
+  <column-definition key="renderedBusinessObjectTypeIdSmall" attribute="businessObjectType" attributeRendererName="i18nBotRenderer" sortAttribute="businessObjectType" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>businessObjectType</localizationCode>
+  </column-definition>
+  <column-definition key="renderedBusinessObjectTypeSmall" attribute="businessObjectType.number" attributeRendererName="i18nBotRenderer" sortAttribute="businessObjectType.name" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>businessObjectType</localizationCode>
+  </column-definition>
+  <column-definition key="riscCategory" attribute="riscCategory" attributeRendererName="permitRiskRenderer" sortAttribute="riscCategory" colspan="1"/>
+  <column-definition key="risk" attribute="riscCategory" attributeRendererName="permitRiskRenderer" sortAttribute="riscCategory" colspan="1"/>
+  <column-definition key="riskValue" attribute="riskValue" attributeRendererName="raRiskRenderer" sortAttribute="riskValue" colspan="1"/>
+  <column-definition key="scqAccess" attribute="scqEnabledOn" attributeRendererName="enabledProductRenderer" sortAttribute="scqEnabledOn" colspan="1"/>
+  <column-definition key="sequenceNumber" attribute="number" attributeRendererName="null" sortAttribute="sequenceNumber" colspan="1"/>
+  <column-definition key="site" attribute="orgContext" attributeRendererName="orgNameRenderer" sortAttribute="orgContext" colspan="1"/>
+  <column-definition key="siteName" attribute="orgContext" attributeRendererName="orgNameRenderer" sortAttribute="orgContext" colspan="1"/>
+  <column-definition key="specialActions" attribute="specialActions" attributeRendererName="specialActionsRenderer" sortAttribute="null" colspan="1">
+    <localizationCode>specialActions</localizationCode>
+  </column-definition>
+  <column-definition key="srcConditions" attribute="id" attributeRendererName="srcConditionsRenderer" sortAttribute="null" colspan="1">
+    <localizationCode>srcConditions</localizationCode>
+  </column-definition>
+  <column-definition key="standard" attribute="standard" attributeRendererName="booleanRenderer" sortAttribute="standard" colspan="1"/>
+  <column-definition key="subject" attribute="subject" attributeRendererName="renderLineIfEmptyTextRenderer" sortAttribute="subject" colspan="1">
+    <localizationCode>subject</localizationCode>
+  </column-definition>
+  <column-definition key="subjectHTML" attribute="subject" attributeRendererName="htmlRenderer" sortAttribute="null" colspan="1"/>
+  <column-definition key="subjectHTMLSmall" attribute="subject" attributeRendererName="htmlRenderer" sortAttribute="null" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>subject</localizationCode>
+  </column-definition>
+  <column-definition key="subjectMax" attribute="messageTitle" attributeRendererName="max200CharsRenderer" sortAttribute="null" colspan="1"/>
+  <column-definition key="subjectMaxSmall" attribute="subject" attributeRendererName="max200CharsRenderer" sortAttribute="null" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>subject</localizationCode>
+  </column-definition>
+  <column-definition key="subjectSmall" attribute="subject" attributeRendererName="null" sortAttribute="null" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>subject</localizationCode>
+  </column-definition>
+  <column-definition key="subType" attribute="subType" attributeRendererName="picklistItemAttrRendererDorC" sortAttribute="subType" width="150px" colspan="1">
+    <pickListName>lotoSubType</pickListName>
+  </column-definition>
+  <column-definition key="system" attribute="system" attributeRendererName="booleanRenderer" sortAttribute="system" colspan="1"/>
+  <column-definition key="tag" attribute="tag" attributeRendererName="pbsAttrRenderer" sortAttribute="tag" colspan="1"/>
+  <column-definition key="tagCode" attribute="tag" attributeRendererName="null" sortAttribute="tag" colspan="1"/>
+  <column-definition key="tagCodeSmall" attribute="tag" attributeRendererName="null" sortAttribute="tag" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>tag</localizationCode>
+  </column-definition>
+  <column-definition key="tagDorC" attribute="tag" attributeRendererName="pbsAttrRendererDorC" sortAttribute="tag" colspan="1"/>
+  <column-definition key="tagSmall" attribute="tag" attributeRendererName="pbsAttrRenderer" sortAttribute="tag" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>tag</localizationCode>
+  </column-definition>
+  <column-definition key="tagSmallDorC" attribute="tag" attributeRendererName="pbsAttrRendererDorC" sortAttribute="tag" colspan="1">
+    <styleClassName>smallText</styleClassName>
+    <localizationCode>tag</localizationCode>
+  </column-definition>
+  <column-definition key="title" attribute="title" attributeRendererName="null" sortAttribute="title" colspan="1"/>
+  <column-definition key="titleMapping" attribute="titleMapping" attributeRendererName="null" sortAttribute="titleMapping" colspan="1"/>
+  <column-definition key="to" attribute="to" attributeRendererName="listRenderer" sortAttribute="to" colspan="1">
+    <localizationCode>to</localizationCode>
+  </column-definition>
+  <column-definition key="tryOut" attribute="tryOut" attributeRendererName="null" sortAttribute="tryOut" width="85px" colspan="1"/>
+  <column-definition key="value" attribute="value" attributeRendererName="null" sortAttribute="value" colspan="1"/>
+  <column-definition key="verifiedBy" attribute="createdBy" attributeRendererName="verifiedByRenderer" sortAttribute="null" colspan="1">
+    <localizationCode>verifiedBy</localizationCode>
+  </column-definition>
+  <column-definition key="workDescription" attribute="workDescription" attributeRendererName="null" sortAttribute="null" colspan="1"/>
+  <column-definition key="workDescriptionStripped" attribute="workDescription" attributeRendererName="stripHtmlRenderer" sortAttribute="null" colspan="1"/>
+  <column-definition key="workHoursFrom" attribute="workHoursFrom" attributeRendererName="timeRenderer" sortAttribute="workHoursFrom" width="1%" colspan="1">
+    <localizationCode>workHours</localizationCode>
+  </column-definition>
+  <column-definition key="workHoursTo" attribute="workHoursTo" attributeRendererName="timeRenderer" sortAttribute="workHoursTo" width="1%" colspan="1">
+    <localizationCode>workHours</localizationCode>
+  </column-definition>
+  <column-definition key="workOrderNr" attribute="workOrderNr" attributeRendererName="null" sortAttribute="workOrderNr" colspan="1"/>
+  <column-definition key="x" attribute="map_x" attributeRendererName="null" sortAttribute="null" colspan="1"/>
+  <column-definition key="y" attribute="map_y" attributeRendererName="null" sortAttribute="null" colspan="1"/>
+</column-definitions>

@@ -1,0 +1,20 @@
+<rules>
+    <!--
+        Cancel all messages with referentie code
+        0
+        250290	Engineeringactiviteit
+        250302	Huur
+        250701	Zwaar transport
+        250801	Laboratoriumanalyses
+        250911	Herstellen magazijngoederen
+        251412	Definitief keuringsverslag ontvangen
+        252301	Veiligheidscontrolelijsten
+        280000	Labo
+        361201	Hijskabels kranen
+    -->
+    <rule>
+        <condition fieldName="KTSCH" operator="isnotempty"/>
+        <condition fieldName="KTSCH" value="0;250290;250302;250701;250801;250911;251412;252301;280000;361201" multiValueSeparator=";"/>
+        <consequence value="false" type="boolean" />
+    </rule>
+</rules>

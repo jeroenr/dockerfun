@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+    <fieldset name="GENERIC:SECTION:PBS" label="GENERIC-SECTION-PBS">
+        <hidden name="funcLevelOne" restricts="funcLevelTwo,funcLevelThree,tag"/>
+        <suggest name="funcLevelTwo" minLength="0" required="true" maxLength="50" cssClass="uppercase" restricts="funcLevelThree,tag">
+            <source class="valuelist" valuelistNameRef="funcLevelTwo" display="value,description"/>
+        </suggest>
+        <suggest name="funcLevelThree" minLength="0" maxLength="50" cssClass="uppercase" restricts="tag">
+            <source class="valuelist" valuelistNameRef="funcLevelThree" display="value,description"/>
+        </suggest>
+        <suggest name="tag" minLength="0" freeText="true" cssClass="uppercase" maxLength="50">
+            <source class="valuelist" valuelistNameRef="tag" display="value,description"/>
+        </suggest>
+    </fieldset>
+
+    <fieldset name="GENERIC_SEARCH_SECTION_PBS" label="GENERIC-SECTION-PBS">
+        <suggest name="funcLevelOne" restricts="funcLevelTwo,funcLevelThree,tag" minLength="0" operator="equals" maxLength="50">
+            <source class="plantlist" display="description"/>
+        </suggest>
+        <suggest name="funcLevelTwo" minLength="0" operator="equals" cssClass="uppercase" restricts="funcLevelThree,tag" maxLength="50">
+            <source class="valuelist" valuelistNameRef="funcLevelTwo" display="value,description" filter="all"/>
+        </suggest>
+        <suggest name="funcLevelThree" minLength="0" operator="equals" cssClass="uppercase" restricts="tag" maxLength="50">
+            <source class="valuelist" valuelistNameRef="funcLevelThree" display="value,description" filter="all"/>
+        </suggest>
+        <suggest name="tag" minLength="0" freeText="true" cssClass="uppercase" maxLength="50">
+            <source class="valuelist" valuelistNameRef="tag" display="value,description" filter="all"/>
+        </suggest>
+    </fieldset>
+
+    <fieldset name="GENERIC_SEARCH_SECTION_PBS_NO_FUNCLEVEL_ONE" label="GENERIC-SECTION-PBS">
+        <suggest name="funcLevelTwo" minLength="0" operator="equals" cssClass="uppercase" restricts="funcLevelThree,tag" maxLength="50">
+            <source class="valuelist" valuelistNameRef="funcLevelTwo" display="value,description" filter="all"/>
+        </suggest>
+        <suggest name="funcLevelThree" minLength="0" operator="equals" cssClass="uppercase" restricts="tag" maxLength="50">
+            <source class="valuelist" valuelistNameRef="funcLevelThree" display="value,description" filter="all"/>
+        </suggest>
+        <suggest name="tag" minLength="0" freeText="true" cssClass="uppercase" maxLength="50">
+            <source class="valuelist" valuelistNameRef="tag" display="value,description" filter="all"/>
+        </suggest>
+    </fieldset>
+
+    <fieldset name="GENERIC:SECTION:FLOC" label="SECTION-FLOC">
+        <hidden name="funcLevelOne" restricts="geoLevelThree,tag"/>
+        <hidden name="orgContext"/>
+        <suggest name="geoLevelThree" minLength="0" required="true" cssClass="uppercase" maxLength="50">
+            <source class="valuelist" valuelistNameRef="geoLevelThree" display="value,description"/>
+        </suggest>
+        <suggest name="tag" freeText="true" minLength="0" required="true" cssClass="uppercase" maxLength="50">
+            <source class="valuelist" valuelistNameRef="tag" display="value,description"/>
+        </suggest>
+    </fieldset>
+
+    <fieldset name="GENERIC:SEARCH:SECTION:FLOC" label="SECTION-FLOC">
+        <suggest name="funcLevelOne" label="orgContext" restricts="geoLevelThree,tag" minLength="0" operator="equals" maxLength="50">
+            <source class="plantlist" display="description"/>
+        </suggest>
+        <suggest name="geoLevelThree" minLength="0" cssClass="uppercase" operator="equals" maxLength="50">
+            <source class="valuelist" valuelistNameRef="geoLevelThree" display="description" filter="all"/>
+        </suggest>
+        <suggest name="tag" freeText="true" minLength="0" cssClass="uppercase" maxLength="50">
+            <source class="valuelist" valuelistNameRef="tag" display="value,description" filter="all"/>
+        </suggest>
+    </fieldset>
+
+    <fieldset name="GENERIC:SECTION:PBS:CHANGEREQUEST" label="GENERIC-SECTION-PBS">
+        <suggest name="funcLevelTwo" minLength="0" operator="equals" cssClass="uppercase" restricts="funcLevelThree,tag" maxLength="50" required="true">
+            <source class="valuelist" valuelistNameRef="funcLevelTwo" display="value,description"/>
+        </suggest>
+        <suggest name="funcLevelThree" minLength="0" operator="equals" cssClass="uppercase" restricts="tag" maxLength="50" required="true">
+            <source class="valuelist" valuelistNameRef="funcLevelThree" display="value,description"/>
+        </suggest>
+        <suggest name="tag" minLength="0" freeText="true" cssClass="uppercase" maxLength="50">
+            <source class="valuelist" valuelistNameRef="tag" display="value,description"/>
+        </suggest>
+        <suggest name="equipment" minLength="0" freeText="true" cssClass="uppercase" maxLength="50">
+            <source class="valuelist" valuelistNameRef="equipment" display="value,description"/>
+        </suggest>
+    </fieldset>
+</forms>

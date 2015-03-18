@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+
+    <!-- PERMIT -->
+    <form style="search" name="EDIT_STORED_QUERY:PERMIT" generatetag="false">
+        <fieldsetref name="GENERIC:SEARCH:SECTION:FLOC"/>
+        <fieldsetref name="ADVANCED_PERMIT_SEARCH:PROPERTIES"/>
+        <fieldsetref name="ADVANCED_PERMIT_SEARCH:SIGN"/>
+
+        <fieldsetref name="ADVANCED_PERMIT_SEARCH:RESULT_PROPERTIES"/>
+
+        <hidden name="objectClassName" value="ibanx.permit.PermitIF"/>
+        <hidden name="key" value="form"/>
+
+        <button name="eventSubmit_doView" label="BUTTON_SEARCH_PREVIEW"/>
+        <button name="eventSubmit_doDelete" label="actionButtonDelete"/>
+        <button name="eventSubmit_doCopycreate"/>
+        <button name="eventSubmit_doSave" label="BUTTON_SEARCH_SAVE"/>
+        <button name="eventSubmit_doCancel" label="actionButtonCancel"/>
+
+        <whitelist names="searchResultList name description objectKey privateSpec queryspec"/>
+    </form>
+
+    <form style="search" name="SEARCH:SIMPLE:PERMIT" generatetag="false">
+        <hidden name="tab" value="1" persist="false"/>
+
+        <fieldsetref name="HIDDEN:AND:WHITELISTING:PROPERTIES"/>
+        <hidden name="objectClassName" value="ibanx.permit.PermitIF"/>
+
+        <fieldsetref name="GENERIC:SEARCH:SECTION:FLOC"/>
+        <fieldsetref name="ADVANCED_PERMIT_SEARCH:PROPERTIES"/>
+        <fieldsetref name="ADVANCED_PERMIT_SEARCH:RESULT_PROPERTIES"/>
+
+        <button type="submit" name="eventSubmit_doSearch" label="BUTTON_SEARCH"/>
+        <button type="reset" name="BUTTON_RESET"/>
+    </form>
+
+    <form style="search" name="SEARCH:PERMIT:FORLOTO" generatetag="false">
+        <hidden name="tab" value="1" persist="false"/>
+
+        <fieldsetref name="HIDDEN:AND:WHITELISTING:PROPERTIES"/>
+        <hidden name="objectClassName" value="ibanx.permit.PermitIF"/>
+
+        <fieldsetref name="GENERIC:SEARCH:SECTION:FLOC"/>
+        <fieldsetref name="ADVANCED_PERMIT_SEARCH:PROPERTIES"/>
+        <fieldsetref name="ADVANCED_PERMIT_SEARCH:RESULT_PROPERTIES"/>
+
+        <whitelist names="pipeline" />
+    </form>
+
+    <form style="search" name="SEARCH:PERMIT" generatetag="false">
+        <hidden name="tab" value="2" persist="false"/>
+
+        <fieldsetref name="HIDDEN:AND:WHITELISTING:PROPERTIES"/>
+        <hidden name="objectClassName" value="ibanx.permit.PermitIF"/>
+
+        <fieldsetref name="GENERIC:SEARCH:SECTION:FLOC"/>
+        <fieldsetref name="ADVANCED_PERMIT_SEARCH:PROPERTIES"/>
+        <fieldsetref name="ADVANCED_PERMIT_SEARCH:SIGN"/>
+
+        <fieldsetref name="ADVANCED_PERMIT_SEARCH:RESULT_PROPERTIES"/>
+
+        <button type="submit" name="eventSubmit_doSearch" label="BUTTON_SEARCH"/>
+        <button type="reset" name="BUTTON_RESET"/>
+    </form>
+
+    <fieldset name="ADVANCED_PERMIT_SEARCH:PROPERTIES" label="searchCriteria">
+        <multiselect name="businessObjectType.number" operator="equals" label="businessObjectType.number">
+            <source class="businessobjecttypelist" valuelistNameRef="ibanx.permit.PermitIF"/>
+        </multiselect>
+
+        <textfield name="number" operator="freetext" label="number"/>
+
+        <select name="zone">
+            <source class="valuelist" valuelistNameRef="zone" display="description" filter="all"/>
+        </select>
+        <textfield name="workOrderNr" cssClass="uppercase"/>
+        <select name="orgLevelThree">
+            <source class="valuelist" valuelistNameRef="orgLevelThree" display="description" filter="all"/>
+        </select>
+        <textfield name="workDescription"/>
+
+        <select name="riscCategory" operator="equals">
+            <source class="riskcategory"/>
+        </select>
+
+        <select name="product">
+            <source class="valuelist" valuelistNameRef="product" display="description" filter="all"/>
+        </select>
+        <textfield name="houderFirm"/>
+
+        <daterange name="plannedStartDate"/>
+        <daterange name="plannedEndDate"/>
+        <select type="radio" name="inWeek" persist="false" operator="inweek">
+            <source class="inline" translationPattern="inWeek.%s">
+                <option value="all"/>
+                <option value="0"/>
+                <option value="1"/>
+                <option value="2"/>
+            </source>
+        </select>
+
+        <multiselect name="lifecycleState.name" operator="match" type="list">
+            <source class="lifecyclestatelist" valuelistNameRef="DELTALINQS_PERMIT_PROCESS,DELTALINQS_PERMIT_TRANS_PROCESS,PRESENCE_PERMIT_PROCESS,DELTALINQS_STOP_PERMIT_PROCESS" />
+        </multiselect>
+
+        <select name="issuePoint" label="LABEL_PLANNING_ISSUE_POINT">
+            <source class="valuelist" valuelistNameRef="issuePoint" display="description" filter="all"/>
+        </select>
+    </fieldset>
+
+    <fieldset name="ADVANCED_PERMIT_SEARCH:SIGN" label="searchSign">
+        <textfield name="signature.name" label="name"/>
+        <daterange name="signature.signDate" label="signDate"/>
+    </fieldset>
+
+    <fieldset name="ADVANCED_PERMIT_SEARCH:RESULT_PROPERTIES" label="searchCriteriaOther">
+        <orderby values="dateCreated,number,orgLevelThree,workOrderNr,geoLevelThree,tag,plannedStartDate,plannedEndDate" label="searchOrderBy"/>
+        <layout values="R1,R1STD,R2,R3,PTYPE,print,PCOND" label="searchLayout"/>
+    </fieldset>
+
+    <!-- RISKASSESSMENT -->
+    <form style="search" name="SEARCH:RISKASSESSMENT" generatetag="false">
+        <hidden name="tab" value="2" persist="false"/>
+
+        <fieldsetref name="HIDDEN:AND:WHITELISTING:PROPERTIES"/>
+        <hidden name="objectClassName" value="ibanx.tra.RiskAssessmentIF"/>
+
+        <fieldsetref name="GENERIC:SEARCH:SECTION:FLOC"/>
+        <fieldsetref name="RISKASSESSMENT_SEARCH:ADVANCED:PROPERTIES"/>
+        <fieldsetref name="RISKASSESSMENT_SEARCH:OTHER_PROPERTIES"/>
+
+        <button type="submit" name="eventSubmit_doSearch" label="BUTTON_SEARCH"/>
+        <button type="reset" name="BUTTON_RESET"/>
+    </form>
+    <form style="search" name="SEARCH:SIMPLE:RISKASSESSMENT" generatetag="false">
+        <hidden name="tab" value="1" persist="false"/>
+
+        <fieldsetref name="HIDDEN:AND:WHITELISTING:PROPERTIES"/>
+        <hidden name="objectClassName" value="ibanx.tra.RiskAssessmentIF"/>
+
+        <fieldsetref name="GENERIC:SEARCH:SECTION:FLOC"/>
+        <fieldsetref name="RISKASSESSMENT_SEARCH:SIMPLE:PROPERTIES"/>
+
+        <button type="submit" name="eventSubmit_doSearch" label="BUTTON_SEARCH"/>
+        <button type="reset" name="BUTTON_RESET"/>
+    </form>
+
+    <form style="search" name="EDIT_STORED_QUERY:RISKASSESSMENT" generatetag="false">
+        <fieldsetref name="GENERIC:SEARCH:SECTION:FLOC"/>
+        <fieldsetref name="RISKASSESSMENT_SEARCH:ADVANCED:PROPERTIES"/>
+        <fieldsetref name="RISKASSESSMENT_SEARCH:OTHER_PROPERTIES"/>
+
+        <hidden name="objectClassName" value="ibanx.tra.RiskAssessmentIF"/>
+        <hidden name="key" value="form"/>
+
+        <button name="eventSubmit_doView" label="BUTTON_SEARCH_PREVIEW"/>
+        <button name="eventSubmit_doDelete" label="actionButtonDelete"/>
+        <button name="eventSubmit_doCopycreate"/>
+        <button name="eventSubmit_doSave" label="BUTTON_SEARCH_SAVE"/>
+        <button name="eventSubmit_doCancel" label="actionButtonCancel"/>
+
+        <whitelist names="searchResultList name description objectKey privateSpec queryspec"/>
+    </form>
+
+    <fieldset name="RISKASSESSMENT_SEARCH:ADVANCED:PROPERTIES" label="searchCriteria">
+        <textfield name="number" operator="freetext" label="number"/>
+
+        <select name="zone">
+            <source class="valuelist" valuelistNameRef="zone" display="description" filter="all"/>
+        </select>
+        <textfield name="workOrderNr" cssClass="uppercase"/>
+        <select name="orgLevelThree">
+            <source class="valuelist" valuelistNameRef="orgLevelThree" display="description" filter="all"/>
+        </select>
+
+        <suggest name="createdBy" freeText="true">
+            <source class="userlist"/>
+        </suggest>
+
+        <daterange name="dateCreated"/>
+    </fieldset>
+
+
+    <fieldset name="RISKASSESSMENT_SEARCH:SIMPLE:PROPERTIES" label="searchCriteria">
+        <textfield name="number" operator="freetext" label="number"/>
+
+        <select name="zone">
+            <source class="valuelist" valuelistNameRef="zone" display="description" filter="all"/>
+        </select>
+
+        <suggest name="createdBy" freeText="true">
+            <source class="userlist"/>
+        </suggest>
+
+        <daterange name="dateCreated"/>
+    </fieldset>
+
+    <fieldset name="RISKASSESSMENT_SEARCH:OTHER_PROPERTIES" label="searchCriteriaOther">
+        <multiselect name="lifecycleState.name" operator="match" type="list">
+            <source class="lifecyclestatelist" valuelistNameRef="IBANX_RA_BP1_PROCESS"/>
+        </multiselect>
+        <orderby values="number,createdBy" label="searchOrderBy"/>
+    </fieldset>
+
+
+    <!-- TASKRISKANALYSIS -->
+    <form style="search" name="SEARCH:TASKRISKANALYSIS" generatetag="false">
+        <hidden name="tab" value="2" persist="false"/>
+
+        <fieldsetref name="HIDDEN:AND:WHITELISTING:PROPERTIES"/>
+        <hidden name="objectClassName" value="ibanx.tra.TaskRiskAnalysisIF"/>
+
+        <fieldsetref name="GENERIC:SEARCH:SECTION:FLOC"/>
+        <fieldsetref name="TASKRISKANALYSIS_SEARCH:ADVANCED:PROPERTIES"/>
+        <fieldsetref name="TASKRISKANALYSIS_SEARCH:OTHER_PROPERTIES"/>
+
+        <button type="submit" name="eventSubmit_doSearch" label="BUTTON_SEARCH"/>
+        <button type="reset" name="BUTTON_RESET"/>
+    </form>
+    <form style="search" name="SEARCH:SIMPLE:TASKRISKANALYSIS" generatetag="false">
+        <hidden name="tab" value="1" persist="false"/>
+
+        <fieldsetref name="HIDDEN:AND:WHITELISTING:PROPERTIES"/>
+        <hidden name="objectClassName" value="ibanx.tra.TaskRiskAnalysisIF"/>
+
+        <fieldsetref name="GENERIC:SEARCH:SECTION:FLOC"/>
+        <fieldsetref name="TASKRISKANALYSIS_SEARCH:SIMPLE:PROPERTIES"/>
+
+        <button type="submit" name="eventSubmit_doSearch" label="BUTTON_SEARCH"/>
+        <button type="reset" name="BUTTON_RESET"/>
+    </form>
+
+    <form style="search" name="EDIT_STORED_QUERY:TASKRISKANALYSIS" generatetag="false">
+        <fieldsetref name="GENERIC:SEARCH:SECTION:FLOC"/>
+        <fieldsetref name="TASKRISKANALYSIS_SEARCH:ADVANCED:PROPERTIES"/>
+        <fieldsetref name="TASKRISKANALYSIS_SEARCH:OTHER_PROPERTIES"/>
+
+        <hidden name="objectClassName" value="ibanx.tra.TaskRiskAnalysisIF"/>
+        <hidden name="key" value="form"/>
+
+        <button name="eventSubmit_doView" label="BUTTON_SEARCH_PREVIEW"/>
+        <button name="eventSubmit_doDelete" label="actionButtonDelete"/>
+        <button name="eventSubmit_doCopycreate"/>
+        <button name="eventSubmit_doSave" label="BUTTON_SEARCH_SAVE"/>
+        <button name="eventSubmit_doCancel" label="actionButtonCancel"/>
+
+        <whitelist names="searchResultList name description objectKey privateSpec queryspec"/>
+    </form>
+
+    <fieldset name="TASKRISKANALYSIS_SEARCH:ADVANCED:PROPERTIES" label="searchCriteria">
+        <textfield name="number" operator="freetext" label="number"/>
+
+        <select name="zone">
+            <source class="valuelist" valuelistNameRef="zone" display="description" filter="all"/>
+        </select>
+
+        <textfield name="description"/>
+        <textfield name="remark"/>
+
+        <multiselect name="lifecycleState.name" operator="match" type="list">
+            <source class="lifecyclestatelist" valuelistNameRef="TASK_RISK_ANALYSIS_LIFECYCLE"/>
+        </multiselect>
+        <suggest name="createdBy" freeText="true">
+            <source class="userlist"/>
+        </suggest>
+
+        <daterange name="dateCreated"/>
+
+        <textfield name="signature.name" label="name"/>
+        <daterange name="signature.signDate" label="signDate"/>
+    </fieldset>
+
+
+    <fieldset name="TASKRISKANALYSIS_SEARCH:SIMPLE:PROPERTIES" label="searchCriteria">
+        <textfield name="number" operator="freetext" label="number"/>
+
+        <textfield name="workDescription"/>
+        <textfield name="remark"/>
+
+        <multiselect name="lifecycleState.name" operator="match" type="list">
+            <source class="lifecyclestatelist" valuelistNameRef="TASK_RISK_ANALYSIS_LIFECYCLE"/>
+        </multiselect>
+
+    </fieldset>
+
+    <fieldset name="TASKRISKANALYSIS_SEARCH:OTHER_PROPERTIES" label="searchCriteriaOther">
+        <orderby values="dateCreated,number,createdBy" label="searchOrderBy"/>
+        <layout values="RTRA" label="searchLayout"/>
+    </fieldset>
+
+</forms>
+	

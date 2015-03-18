@@ -1,0 +1,8 @@
+
+## attribute documentReferences was renamed to documentReference
+
+@SQL,UPDATE IBANX_PERMIT_AA SET NAME='documentReference' WHERE NAME = 'documentReferences'
+@SQL,UPDATE IBANX_RA_AA SET NAME='documentReference' WHERE NAME = 'documentReferences'
+@SQL,UPDATE IBANX_TRA_AA SET NAME='documentReference' WHERE NAME = 'documentReferences'
+
+

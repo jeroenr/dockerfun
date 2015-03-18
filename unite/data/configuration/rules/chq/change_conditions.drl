@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<rule-set name="default_cr_conditions"
+          xmlns="http://drools.org/rules"
+          xmlns:java="http://drools.org/semantics/java"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+          xs:schemaLocation="http://drools.org/rules rules.xsd
+                             http://drools.org/semantics/java java.xsd">
+
+    <java:import>java.lang.String</java:import>
+    <java:import>java.util.Iterator</java:import>
+
+    <java:import>ibanx.persistence.object.PersistableIF</java:import>
+    <java:import>ibanx.lifecycle.LifecycleStateIF</java:import>
+    <java:import>ibanx.condition.ConditionIF</java:import>
+    <java:import>ibanx.util.ObjectUtil</java:import>
+    <java:import>ibanx.condition.ConditionCheckResult</java:import>
+
+    <application-data identifier="log">org.apache.log4j.Logger</application-data>
+    <application-data identifier="context">ibanx.context.UserActionContext</application-data>
+    <application-data identifier="i18n">nl.ibanx.i18n.Internationalisation</application-data>
+
+</rule-set>

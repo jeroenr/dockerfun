@@ -1,0 +1,55 @@
+@offsetdate,07-06-2013
+
+@SQL,DELETE FROM DOMAIN_EVENT_ENTRY WHERE AGGREGATE_IDENTIFIER = '3142f082-c3e0-49f0-897f-48d13aa90ec5'
+@delete,incident,number,IN-8,=
+@delete,incident-activity,number,IA-2,=
+@delete,incident-activity,number,IA-3,=
+
+!ph1,incident,IN-8,null,2013-06-07 09:13:03,2013-06-07 09:17:30,ibanxadmin,ibanxadmin,3142f082-c3e0-49f0-897f-48d13aa90ec5,null,Nice description,ibanxadmin,IBANXADMIN,ANALYZED_AND_PLANNED,Nice title,07-06-2013 00:00:00,30-06-2013 00:00:00,null,null,null,null,null,null,null,null,null,false,0,0,0,0,0,PLANT1,PLANT1,true,false
+
+@startTransaction
+@method,set,incident,IN-8,analysisRecommendations,UUUUU
+@method,set,incident,IN-8,audit,Audit
+@method,set,incident,IN-8,category,INCIDENT
+@method,set,incident,IN-8,causeOfIncident,TTTT
+@method,set,incident,IN-8,circumstances,BBBB
+@method,set,incident,IN-8,classification,DAMAGE
+@method,set,incident,IN-8,communicatedWith,ARBEIDSINSPECTIE
+@method,set,incident,IN-8,costOfDamage,20
+@method,set,incident,IN-8,cssClass,executing
+@method,set,incident,IN-8,directCauseDamage,Cause
+@method,set,incident,IN-8,downtime,
+@method,set,incident,IN-8,executingDepartment,
+@method,set,incident,IN-8,findings,SSSS
+@method,set,incident,IN-8,funcLevelOne,PLANT1
+@method,set,incident,IN-8,funcLevelThree,30-100-0100
+@method,set,incident,IN-8,funcLevelTwo,30-100
+@method,set,incident,IN-8,geoLevelThree,10100-0200
+@method,set,incident,IN-8,incidentMeasures,Actions
+@method,set,incident,IN-8,incidentPrevention,Preventions
+@method,set,incident,IN-8,incidentReporterDepartment,Development
+@method,set,incident,IN-8,incidentReporterName,ibanxadmin
+@method,set,incident,IN-8,preventionMeasures,CCCC
+@method,set,incident,IN-8,requiredMeasures,DDDD
+@method,set,incident,IN-8,riskValue,05
+@method,set,incident,IN-8,tag,30-100-0100-LT10020
+@method,setRepeating,incident,IN-8,typeOfDamage,APPARATUUR
+@method,setRepeating,incident,IN-8,typeOfDamage,IMAGE
+@method,set,incident,IN-8,witnessDescription,Witnesses
+@method,set,incident,IN-8,work,AAAAA
+@endTransaction-with,nl.ibanx.importing.TriggerImportIncidentCommand
+
+!ph2,incident-activity,IA-2,null,2013-06-07 11:13:42,2013-06-07 11:17:07,ibanxadmin,ibanxadmin,3142f082-c3e0-49f0-897f-48d13aa90ec5,ibanxadmin,2013-06-13,IN-8,IN-8,APPROVED,Activity title 1,Activity description 1,07-06-2013 00:00:00,07-06-2013 00:00:00,,,,,PLANT1,PLANT1,true,false
+@startTransaction
+@method,set,incident-activity,IA-2,cssClass,executing
+@method,set,incident-activity,IA-2,description,Description 1
+@method,set,incident-activity,IA-2,orgLevelThree,ENG
+@endTransaction-with,nl.ibanx.importing.TriggerImportIncidentActivityCommand
+
+!ph3,incident-activity,IA-3,null,2013-06-07 11:14:05,2013-06-07 11:17:30,ibanxadmin,ibanxadmin,3142f082-c3e0-49f0-897f-48d13aa90ec5,ibanxadmin,2013-06-21,IN-8,IN-8,COMPLETED,Activity title 2,Activity description 2,07-06-2013 00:00:00,07-06-2013 00:00:00,,,,,PLANT1,PLANT1,true,false
+@startTransaction
+@method,set,incident-activity,IA-3,cssClass,closed
+@method,set,incident-activity,IA-3,description,Description 2
+@method,set,incident-activity,IA-3,orgLevelThree,MAIN
+@endTransaction-with,nl.ibanx.importing.TriggerImportIncidentActivityCommand
+

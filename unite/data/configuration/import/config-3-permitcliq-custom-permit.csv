@@ -1,0 +1,391 @@
+############### PERMISSIONS ####################################
+# 1,CREATE,Create,GLOBAL,true,true
+# 2,BROWSE,Browse,GLOBAL,true,true
+# 3,READ,Read,GLOBAL,true,true
+# 4,COPY,Copy,GLOBAL,true,true
+# 5,UPDATE,Update,GLOBAL,true,true
+# 6,DELETE,Delete,GLOBAL,true,true
+# 7,CHANGESTATE,Change state,GLOBAL,true,true
+# 8,VIEWACL,View ACL,GLOBAL,true,true
+# 9,CHANGEACL,Change ACL,GLOBAL,true,true
+# 10,VIEWAUDITTRAIL,View audittrail,GLOBAL,true,true
+
+########### FORMTEMPLATES DEFINITIONS #########################
+
+@delete,formtemplate-pcq-2.x,number,TEMPLATE_DELTALINQS_PERMIT,0
+formtemplate-pcq-2.x,NULL,NULL,NULL,NULL,TEMPLATE_DELTALINQS_PERMIT,Deltalinqs Werkvergunning,Deltalinqs Werkvergunning,PDFs/DELTALINQS_PERMIT.pdf,DELTALINQS_PERMIT.pdf,/PDFs,Permit,OrgUnit,GLOBAL,true,false
+
+########### LIFECYCLE DEFINITIONS #########################
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,0
+!ph_acl_dp_I_AW,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,aanvrager,CREATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,aanvrager,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,aanvrager,DELETE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,aanvrager,CHANGESTATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,verstrekker,CREATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,verstrekker,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,verstrekker,DELETE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AW,verstrekker,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-I_MH,0
+!ph_acl_dp_I_MH,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-I_MH,StateAcl DELTALINQS_PERMIT_PROCESS-I_MH,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MH,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MH,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MH,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MH,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MH,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MH,aanvrager,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MH,aanvrager,DELETE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MH,aanvrager,CHANGESTATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MH,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MH,verstrekker,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MH,verstrekker,DELETE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MH,verstrekker,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-B_AV,0
+!ph_acl_dp_B_AV,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-B_AV,StateAcl DELTALINQS_PERMIT_PROCESS-B_AV,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_AV,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_AV,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_AV,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_AV,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_AV,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_AV,aanvrager,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_AV,aanvrager,DELETE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_AV,aanvrager,CHANGESTATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_AV,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_AV,verstrekker,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_AV,verstrekker,DELETE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_AV,verstrekker,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-I_BR,0
+!ph_acl_dp_I_BR,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-I_BR,StateAcl DELTALINQS_PERMIT_PROCESS-I_BR,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_BR,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_BR,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_BR,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_BR,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_BR,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_BR,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_BR,verstrekker,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_BR,verstrekker,DELETE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_BR,verstrekker,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-I_AMH,0
+!ph_acl_dp_I_AMH,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-I_AMH,StateAcl DELTALINQS_PERMIT_PROCESS-I_AMH,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AMH,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AMH,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AMH,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AMH,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AMH,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AMH,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AMH,verstrekker,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AMH,verstrekker,DELETE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_AMH,verstrekker,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-I_MV,0
+!ph_acl_dp_I_MV,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-I_MV,StateAcl DELTALINQS_PERMIT_PROCESS-I_MV,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MV,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MV,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MV,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MV,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MV,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MV,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MV,verstrekker,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MV,verstrekker,DELETE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_MV,verstrekker,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-B_OB,0
+!ph_acl_dp_B_OB,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-B_OB,StateAcl DELTALINQS_PERMIT_PROCESS-B_OB,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_OB,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_OB,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_OB,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_OB,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_OB,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_OB,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_OB,operationeel_beheerder,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_OB,operationeel_beheerder,CHANGESTATE
+
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO1,0
+!ph_acl_dp_B_MO1,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO1,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO1,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO1,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO1,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO1,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO1,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO1,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO1,verstrekker,COPY
+#roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO1,verstrekker,UPDATE
+#roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO1,verstrekker,DELETE
+#roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO1,verstrekker,CHANGESTATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO1,mede_ondertekenaar1,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO1,mede_ondertekenaar1,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO1,mede_ondertekenaar1,DELETE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO1,mede_ondertekenaar1,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,0
+!ph_acl_dp_B_MO2,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,verstrekker,COPY
+#roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,verstrekker,UPDATE
+#roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,verstrekker,DELETE
+#roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,verstrekker,CHANGESTATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,mede_ondertekenaar2,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,mede_ondertekenaar2,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,mede_ondertekenaar2,DELETE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,mede_ondertekenaar2,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO3,0
+!ph_acl_dp_B_MO3,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO3,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO3,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO3,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO3,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO3,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO3,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO3,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO3,verstrekker,COPY
+#roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,verstrekker,UPDATE
+#roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,verstrekker,DELETE
+#roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO2,verstrekker,CHANGESTATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO3,mede_ondertekenaar3,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO3,mede_ondertekenaar3,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO3,mede_ondertekenaar3,DELETE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_MO3,mede_ondertekenaar3,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-I_VV,0
+!ph_acl_dp_I_VV,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-I_VV,StateAcl DELTALINQS_PERMIT_PROCESS-I_VV,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_VV,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_VV,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_VV,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_VV,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_VV,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_VV,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_VV,verstrekker,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_VV,verstrekker,CHANGESTATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_VV,voorbereider,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_VV,voorbereider,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-I_VV,voorbereider,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-B_VV,0
+!ph_acl_dp_B_VV,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-B_VV,StateAcl DELTALINQS_PERMIT_PROCESS-B_VV,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VV,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VV,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VV,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VV,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VV,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VV,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VV,verstrekker,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VV,verstrekker,CHANGESTATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VV,voorbereider,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VV,voorbereider,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VV,voorbereider,CHANGESTATE
+
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-B_VS,0
+!ph_acl_dp_B_VS,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-B_VS,StateAcl DELTALINQS_PERMIT_PROCESS-B_VS ,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VS,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VS,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VS,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VS,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VS,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VS,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VS,verstrekker,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VS,verstrekker,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-O_KVU,0
+!ph_acl_dp_O_KVU,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-O_KVU,StateAcl DELTALINQS_PERMIT_PROCESS-O_KVU,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_KVU,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_KVU,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_KVU,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_KVU,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_KVU,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_KVU,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_KVU,verstrekker,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_KVU,verstrekker,CHANGESTATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_KVU,uitgever,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_KVU,uitgever,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_KVU,uitgever,CHANGESTATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_KVU,permit_administrator,SAVE_AS_TEMPLATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-O_AC,0
+!ph_acl_dp_O_AC,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-O_AC,StateAcl DELTALINQS_PERMIT_PROCESS-O_AC,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_AC,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_AC,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_AC,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_AC,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_AC,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_AC,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_AC,verstrekker,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_AC,verstrekker,CHANGESTATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_AC,permit_administrator,SAVE_AS_TEMPLATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-B_VL,0
+!ph_acl_dp_B_VL,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-B_VL,StateAcl DELTALINQS_PERMIT_PROCESS-B_VL,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VL,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VL,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VL,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VL,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VL,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VL,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VL,verstrekker,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VL,verstrekker,CHANGESTATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VL,permit_administrator,SAVE_AS_TEMPLATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-B_VA,0
+!ph_acl_dp_B_VA,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-B_VA,StateAcl DELTALINQS_PERMIT_PROCESS-B_VA,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VA,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VA,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VA,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VA,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VA,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VA,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VA,verstrekker,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VA,verstrekker,CHANGESTATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-B_VA,permit_administrator,SAVE_AS_TEMPLATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-O_VA,0
+!ph_acl_dp_O_VA,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-O_VA,StateAcl DELTALINQS_PERMIT_PROCESS-O_VA,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_VA,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_VA,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_VA,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_VA,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_VA,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_VA,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-O_VA,permit_administrator,SAVE_AS_TEMPLATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-E_I,0
+!ph_acl_dp_E_I,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-E_I,StateAcl DELTALINQS_PERMIT_PROCESS-E_I,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_I,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_I,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_I,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_I,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_I,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_I,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_I,verstrekker,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_I,verstrekker,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-E_V,0
+!ph_acl_dp_E_V,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-E_V,StateAcl DELTALINQS_PERMIT_PROCESS-E_V,null,2,GLOBAL,true,true,false
+## uncomment if everyone may see removed permits
+#roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_V,everyone,BROWSE
+#roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_V,everyone,READ
+#roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_V,aanvrager,COPY
+#roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_V,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_V,application_administrator,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_V,application_administrator,READ
+#roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_V,application_administrator,COPY
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-E_T,0
+!ph_acl_dp_E_T,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-E_T,StateAcl DELTALINQS_PERMIT_PROCESS-E_T,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_T,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_T,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_T,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_T,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_T,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_T,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_T,permit_administrator,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_T,permit_administrator,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_T,permit_administrator,DELETE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_T,permit_administrator,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl DELTALINQS_PERMIT_PROCESS-E_G,0
+!ph_acl_dp_E_G,acl_v2,StateAcl DELTALINQS_PERMIT_PROCESS-E_G,StateAcl DELTALINQS_PERMIT_PROCESS-E_G,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_G,everyone,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_G,everyone,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_G,anonymous,BROWSE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_G,anonymous,READ
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_G,aanvrager,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_G,aanvrager,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_G,aanvrager,CHANGESTATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_G,verstrekker,COPY
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_G,verstrekker,UPDATE
+roleperm,StateAcl DELTALINQS_PERMIT_PROCESS-E_G,verstrekker,CHANGESTATE
+
+
+@delete,lifecycle_v2,number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,I_AW,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,I_MH,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,B_AV,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,I_BR,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,I_AMH,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,I_MV,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,B_OB,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,B_MO1,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,B_MO2,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,B_MO3,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,I_VV,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,B_VV,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,B_VS,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,O_KVU,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,O_AC,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,B_VL,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,B_VA,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,O_VA,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,B_VL,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,E_I,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,E_V,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,E_T,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+@delete,lifecyclestate_v2,name,E_G,0,lifecycle.number,DELTALINQS_PERMIT_PROCESS,0
+
+lifecycle_v2,DELTALINQS_PERMIT_PROCESS,ibanx.lifecycle.Lifecycle,Proces Deltalinqs Werkvergunning,The processing of an DELTALINQS_PERMIT permit!,GLOBAL,true,false
+@method,setRepeating,lifecycle_v2,DELTALINQS_PERMIT_PROCESS,permission,SAVE_AS_TEMPLATE
+
+!ph_lifecyclestate_dp_I_AW,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,I_AW,Aanvraag Werkzaamheden,TEMPLATE_DELTALINQS_PERMIT,false,false,1,!ph_acl_dp_I_AW,green
+!ph_lifecyclestate_dp_I_MH,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,I_MH,Maatregelen Houder,TEMPLATE_DELTALINQS_PERMIT,false,false,2,!ph_acl_dp_I_MH,green
+!ph_lifecyclestate_dp_B_AV,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,B_AV,Handtekening Aanvrager,TEMPLATE_DELTALINQS_PERMIT,false,true,3,!ph_acl_dp_B_AV,green
+
+!ph_lifecyclestate_dp_I_BR,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,I_BR,Bepaal Risico,TEMPLATE_DELTALINQS_PERMIT,false,false,4,!ph_acl_dp_I_BR,yellow
+##@startTransaction
+##@method,set,state-pcq-2.5,!ph_lifecyclestate_dp_I_BR,isRiskDeterminationState,true
+##@endTransaction
+!ph_lifecyclestate_dp_I_MV,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,I_MV,Maatregelen Verstrekkende Afdeling,TEMPLATE_DELTALINQS_PERMIT,false,false,5,!ph_acl_dp_I_MV,yellow
+!ph_lifecyclestate_dp_I_AMH,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,I_AMH,Accordering Maatregelen Houder,TEMPLATE_DELTALINQS_PERMIT,false,false,6,!ph_acl_dp_I_AMH,yellow
+
+!ph_lifecyclestate_dp_B_MO1,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,B_MO1,Handtekening Mede-ondertekenaar 1,TEMPLATE_DELTALINQS_PERMIT,false,true,7,!ph_acl_dp_B_MO1,orange
+!ph_lifecyclestate_dp_B_MO2,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,B_MO2,Handtekening Mede-ondertekenaar 2,TEMPLATE_DELTALINQS_PERMIT,false,true,8,!ph_acl_dp_B_MO2,orange
+!ph_lifecyclestate_dp_B_MO3,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,B_MO3,Handtekening Mede-ondertekenaar 3,TEMPLATE_DELTALINQS_PERMIT,false,true,9,!ph_acl_dp_B_MO3,orange
+!ph_lifecyclestate_dp_B_OB,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,B_OB,Handtekening Operationeel Beheerder,TEMPLATE_DELTALINQS_PERMIT,false,true,10,!ph_acl_dp_B_OB,orange
+
+!ph_lifecyclestate_dp_I_VV,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,I_VV,Uitvoeren Voorbereidende Werkzaamheden,TEMPLATE_DELTALINQS_PERMIT,false,false,11,!ph_acl_dp_I_VV,pink
+!ph_lifecyclestate_dp_B_VV,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,B_VV,Handtekening Vergunning Veiligsteller,TEMPLATE_DELTALINQS_PERMIT,false,true,12,!ph_acl_dp_B_VV,pink
+
+!ph_lifecyclestate_dp_B_VS,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,B_VS,Handtekening Verstrekker,TEMPLATE_DELTALINQS_PERMIT,false,true,13,!ph_acl_dp_B_VS,blue
+!ph_lifecyclestate_dp_O_KVU,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,O_KVU,Klaar voor Uitgifte,TEMPLATE_DELTALINQS_PERMIT,false,false,14,!ph_acl_dp_O_KVU,blue
+
+!ph_lifecyclestate_dp_O_AC,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,O_AC,Actief,TEMPLATE_DELTALINQS_PERMIT,false,false,15,!ph_acl_dp_O_AC
+@startTransaction
+@method,set,state-pcq-2.5,!ph_lifecyclestate_dp_O_AC,isHandoutState,true
+@endTransaction
+
+!ph_lifecyclestate_dp_B_VA,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,B_VA,Handtekening Afsluiten vergunning,TEMPLATE_DELTALINQS_PERMIT,false,true,16,!ph_acl_dp_B_VA
+!ph_lifecyclestate_dp_O_VA,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,O_VA,Afgesloten,TEMPLATE_DELTALINQS_PERMIT,false,false,17,!ph_acl_dp_O_VA
+@startTransaction
+@method,set,state-pcq-2.5,!ph_lifecyclestate_dp_O_AC,isFinishedState,true
+@endTransaction
+!ph_lifecyclestate_dp_B_VL,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,B_VL,Handtekening Verlenging,TEMPLATE_DELTALINQS_PERMIT,true,true,1,!ph_acl_dp_B_VL
+!ph_lifecyclestate_dp_E_I,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,E_I,Ingetrokken,TEMPLATE_DELTALINQS_PERMIT,true,false,2,!ph_acl_dp_E_I
+!ph_lifecyclestate_dp_E_V,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,E_V,Verwijderd,TEMPLATE_DELTALINQS_PERMIT,true,false,3,!ph_acl_dp_E_V
+!ph_lifecyclestate_dp_E_T,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,E_T,Template,TEMPLATE_DELTALINQS_PERMIT,true,false,4,!ph_acl_dp_E_T
+!ph_lifecyclestate_dp_E_G,state-pcq-2.5,DELTALINQS_PERMIT_PROCESS,E_G,Geweigerd,TEMPLATE_DELTALINQS_PERMIT,true,false,5,!ph_acl_dp_E_G
+
+########### B O TYPES DEFINITIONS #########################W
+@delete,businessobjecttype-pcq-2.x,number,DELTALINQS_PERMIT,0
+businessobjecttype-pcq-2.x,,,,,DELTALINQS_PERMIT,Deltalinqs Werkvergunning,Deltalinqs Werkvergunning,ibanx.permit.PermitIF,DELTALINQS_PERMIT_PROCESS,TEMPLATE_DELTALINQS_PERMIT,-1,null,GLOBAL,true,null,null,null,null,null,false
+@startTransaction
+@method,set,businessobjecttype-pcq-2.x,DELTALINQS_PERMIT,class0,PERMIT
+@method,set,businessobjecttype-pcq-2.x,DELTALINQS_PERMIT,class3,WORKPERMIT
+@method,set,businessobjecttype-pcq-2.x,DELTALINQS_PERMIT,defaultLotoType,MULTI_DISCIPLINE_ISOLATION_LIST
+@method,set,businessobjecttype-pcq-2.x,DELTALINQS_PERMIT,createDeIsolationVerficationTaskOnTakein,true
+@endTransaction
+
+########### NUMBERING AND SEQUENCES DEFINITIONS #########################
+
+numberingscheme,,,,,identity-permit,identity-permit,0,1,1,WVG-,,0,true,,GLOBAL,true,false
+sequence,identity-permit,0,1,1,false

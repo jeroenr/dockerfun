@@ -1,0 +1,49 @@
+## defines which roles are denied access to a module
+#configurationSetting,moc.denyAccess,contractor;everyone
+
+#### MOC
+
+configurationSetting,moc.change.CHANGE.auto-reject-from-state-group.FRONTENDDESIGN.to-state,CHANGE_PREPARATIONINCOMPLETE
+configurationSetting,moc.change.CHANGE.auto-reject-from-state-group.BASICDESIGN.to-state,CHANGE_PREPARE_BD_INCOMPLETE
+configurationSetting,moc.change.CHANGE.auto-reject-from-state-group.DETAILDESIGN.to-state,CHANGE_PREPARE_DD_INCOMPLETE
+
+configurationSetting,moc.change.CHANGE.auto-promote-in-states,CHANGE_FORAPPROVAL_FED_PRE_3;CHANGE_FORAPPROVAL_FED_PRE_2;CHANGE_FORAPPROVAL_FED_PRE_1;CHANGE_FORAPPROVAL_FED;CHANGE_FORAPPROVAL_BD_PRE_3;CHANGE_FORAPPROVAL_BD_PRE_2;CHANGE_FORAPPROVAL_BD_PRE_1;CHANGE_FORAPPROVAL_BD;CHANGE_FORAPPROVAL_DD_PRE_3;CHANGE_FORAPPROVAL_DD_PRE_2;CHANGE_FORAPPROVAL_DD_PRE_1;CHANGE_FORAPPROVAL_DD
+configurationSetting,moc.change.CHANGE.no-default-activity-filter-in-states,CHANGE_NEW;CHANGE_INCOMPLETE;CHANGE_SUBMITTED;CHANGE_PREPARATION_BD;CHANGE_PREPARATION_DD
+
+
+configurationSetting,moc.gatekeeper.prio3.estimatedcosts.limit,250
+configurationSetting,moc.gatekeeper.estimatedcosts.limit,500
+configurationSetting,moc.gatekeeper.estimatedhours.limit,40
+
+
+##
+## TWO SETTINGS BELOW ARE USED BY JOB notify_activity_holder
+##
+## defines how long before the duedate of an activity is reached, a notification will be send to the activityholder (assignee)
+## the offset list is a comma seperated list, and each offset has its own localized notification
+## IMPORTANT : modifying/adding date offsets, you need to search the resource bundles for
+##             notificationTitleNotifyActivityHolder and notificationSubjectNotifyActivityHolder and apply
+##             the same modifications in this file
+configurationSetting,moc.notifications.notify_activity_holder.offset,2d\,3d
+## defines the states the activities have to be in for notifications to be send
+configurationSetting,moc.notifications.notify_activity_holder.for_activities_in_state,CA_OPEN
+
+##
+## TWO SETTINGS BELOW ARE USED BY JOB notify_moc_owner
+##
+## defines how long before the duedate of an activity is reached, a notification will be send to the projectleader (MoC owner)
+## the offset list is a comma seperated list, and each offset has its own localized notification
+configurationSetting,moc.notifications.notify_moc_owner.offset,1d
+## defines the states the activities have to be in for notifications to be send
+configurationSetting,moc.notifications.notify_moc_owner.for_activities_in_state,CA_OPEN
+## defines the state the CR has to be in for notifications to be send
+configurationSetting,moc.notifications.notify_moc_owner.for_changerequests_in_state,CHANGE_STARTUP
+
+
+##
+## FOUR SETTINGS BELOW ARE USED BY LISTENER decorateduedate
+##
+## defines the offset to use when calculating the duedate of the activities
+configurationSetting,moc.activity.decorate_due_date.offset,5d
+## defines the states the CR's have to be in for triggering decoration
+configurationSetting,moc.activity.decorate_due_date.for_changerequests_in_state,CHANGE_STARTUP

@@ -1,0 +1,58 @@
+## configure tra transition groups - outcomment if not present
+@setplaceholder,!ph_state_inbew,state-pcq-2.5,lifecycle.number,TASK_RISK_ANALYSIS_LIFECYCLE,=,name,IN_BEWERKING,=
+@method,set,state-pcq-2.5,!ph_state_inbew,group,preparation
+
+@setplaceholder,!ph_state_inbekr,state-pcq-2.5,lifecycle.number,TASK_RISK_ANALYSIS_LIFECYCLE,=,name,BEKRACHTIGEN,=
+@method,set,state-pcq-2.5,!ph_state_inbekr,group,preparation
+
+@setplaceholder,!ph_state_gg,state-pcq-2.5,lifecycle.number,TASK_RISK_ANALYSIS_LIFECYCLE,=,name,GOEDGEKEURD,=
+@method,set,state-pcq-2.5,!ph_state_gg,group,finalization
+
+@setplaceholder,!ph_state_eval,state-pcq-2.5,lifecycle.number,TASK_RISK_ANALYSIS_LIFECYCLE,=,name,GEEVALUEERD,=
+@method,set,state-pcq-2.5,!ph_state_eval,group,finalization
+
+@setplaceholder,!ph_state_afg,state-pcq-2.5,lifecycle.number,TASK_RISK_ANALYSIS_LIFECYCLE,=,name,AFGEKEURD,=
+@method,set,state-pcq-2.5,!ph_state_afg,group,exception
+
+@setplaceholder,!ph_state_template,state-pcq-2.5,lifecycle.number,TASK_RISK_ANALYSIS_LIFECYCLE,=,name,TEMPLATE,=
+@method,set,state-pcq-2.5,!ph_state_template,group,exception
+
+@setplaceholder,!ph_state_verw,state-pcq-2.5,lifecycle.number,TASK_RISK_ANALYSIS_LIFECYCLE,=,name,VERWIJDERD,=
+@method,set,state-pcq-2.5,!ph_state_verw,group,exception
+
+
+## configure presence permit transition groups  - outcomment if not present
+@setplaceholder,!ph_state_pp_kvu,state-pcq-2.5,lifecycle.number,PRESENCE_PERMIT_PROCESS,=,name,O_KVU,=
+@method,set,state-pcq-2.5,!ph_state_pp_kvu,group,preparation
+
+@setplaceholder,!ph_state_pp_ac,state-pcq-2.5,lifecycle.number,PRESENCE_PERMIT_PROCESS,=,name,O_AC,=
+@method,set,state-pcq-2.5,!ph_state_pp_ac,group,handed-out
+
+@setplaceholder,!ph_state_pp_va,state-pcq-2.5,lifecycle.number,PRESENCE_PERMIT_PROCESS,=,name,O_VA,=
+@method,set,state-pcq-2.5,!ph_state_pp_va,group,closed
+
+@setplaceholder,!ph_state_pp_ei,state-pcq-2.5,lifecycle.number,PRESENCE_PERMIT_PROCESS,=,name,E_I,=
+@method,set,state-pcq-2.5,!ph_state_pp_ei,group,exception
+
+@setplaceholder,!ph_state_pp_ev,state-pcq-2.5,lifecycle.number,PRESENCE_PERMIT_PROCESS,=,name,E_V,=
+@method,set,state-pcq-2.5,!ph_state_pp_ev,group,exception
+
+@setplaceholder,!ph_state_pp_eg,state-pcq-2.5,lifecycle.number,PRESENCE_PERMIT_PROCESS,=,name,E_G,=
+@method,set,state-pcq-2.5,!ph_state_pp_eg,group,exception
+
+
+## add template state for presence permit - outcomment if not present
+@delete,acl_v2,name,StateAcl PRESENCE_PERMIT_PROCESS-E_T,=
+!ph_acl_pp_E_T,acl_v2,StateAcl PRESENCE_PERMIT_PROCESS-E_T,StateAcl PRESENCE_PERMIT_PROCESS-E_T,null,2,GLOBAL,true,true,false
+roleperm,StateAcl PRESENCE_PERMIT_PROCESS-E_T,everyone,BROWSE
+roleperm,StateAcl PRESENCE_PERMIT_PROCESS-E_T,everyone,READ
+roleperm,StateAcl PRESENCE_PERMIT_PROCESS-E_T,anonymous,BROWSE
+roleperm,StateAcl PRESENCE_PERMIT_PROCESS-E_T,anonymous,READ
+roleperm,StateAcl PRESENCE_PERMIT_PROCESS-E_T,aanvrager,UPDATE
+roleperm,StateAcl PRESENCE_PERMIT_PROCESS-E_T,verstrekker,UPDATE
+roleperm,StateAcl PRESENCE_PERMIT_PROCESS-E_T,permit_administrator,COPY
+roleperm,StateAcl PRESENCE_PERMIT_PROCESS-E_T,permit_administrator,UPDATE
+roleperm,StateAcl PRESENCE_PERMIT_PROCESS-E_T,permit_administrator,DELETE
+roleperm,StateAcl PRESENCE_PERMIT_PROCESS-E_T,permit_administrator,CHANGESTATE
+
+state-pcq-2.5,PRESENCE_PERMIT_PROCESS,E_T,Template,TEMPLATE_PRESENCE_PERMIT,true,false,4,!ph_acl_pp_E_T,exception

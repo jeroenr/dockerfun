@@ -1,0 +1,104 @@
+@stopaudittrail
+## register this import batch so it can only be imported once
+@register,config-2-changecliq
+
+role,moc_initiator,moc,nl::moc initiator;en::moc initiator
+role,supervisor,moc,nl::supervisor;en::supervisor
+role,moc_coordinator,moc,nl::moc coordinator;en::moc coordinator
+role,principal,moc,nl::principal;en::principal
+
+
+role,hse_manager,moc,nl::hse manager;en::hse manager
+role,site_manager,moc,nl::site manager;en::site manager
+role,auditor,moc,nl::moc auditeur;en::moc auditor
+
+role,approver,moc,nl::moc initiator;en::moc initiator
+role,preparator,moc,nl::moc initiator;en::moc initiator
+
+## todo : who put this one back again and why is it needed?
+role,supergroover,,nl::supergroover;en::supergroover
+
+############ LINKS ########################################
+
+!ph_has_analysis,roleinfo,has-analysis,has-analysis,ibanx.moc.ChangeRequestIF,null
+!ph_is_analysis_of,roleinfo,is-analysis-of,is-analysis-of,ibanx.moc.ChangeAnalysisIF,null
+linktype,null,null,null,null,request-analysis,true,ibanx.link.ChangeRequestLink,!ph_has_analysis,!ph_is_analysis_of,GLOBAL,true
+
+!ph_has_activity,roleinfo,has-activity,has-activity,ibanx.moc.ChangeRequestIF,null
+!ph_is_activity_of,roleinfo,is-activity-of,is-activity-of,ibanx.moc.ChangeActivityIF,null
+linktype,null,null,null,null,request-activity,true,ibanx.link.ChangeRequestLink,!ph_has_activity,!ph_is_activity_of,GLOBAL,true
+
+
+########### MENU DEFINITIONS ##############################
+
+@delete,menuQSpec,number,menuAssignedChangeRequests,0
+
+menuQSpec,menuAssignedChangeRequests,ibanx.moc.ChangeRequestIF
+@startTransaction
+@method,set,menuQSpec,menuAssignedChangeRequests,key,form
+@method,set,menuQSpec,menuAssignedChangeRequests,form.assignee,$user
+@endTransaction
+
+###########################################################
+
+@delete,valueitem,groupName,eventType,0
+@delete,valuelist,group,eventType,0
+valuelist,,,,,eventType,Eventtypes notificatieregels,Keuzelijst eventtypes notificatieregels,,GLOBAL,true,true
+
+vitem,eventType,CREATE,Nieuw object,Nieuw object,,true,false,nl::Nieuw object;en::New object;de::New object
+vitem,eventType,CHANGE_STATE,Wijziging status,Wijziging status,,true,false,nl::Wijziging status;en::State change;de::State change
+vitem,eventType,SAVE,Wijziging eigenschappen,Wijziging eigenschappen,,true,false,nl::Wijziging eigenschappen;en::Property modification;de::Property modification
+
+@delete,valueitem,groupName,notificationRuleEntityClass,0
+@delete,valuelist,group,notificationRuleEntityClass,0
+valuelist,,,,,notificationRuleEntityClass,Entiteiten voor notificatie regels,Ondersteunde entiteiten voor notificatie regels,,GLOBAL,true,true
+
+vitem,notificationRuleEntityClass,ibanx.moc.ChangeRequest,Changerequest,Changerequest,Changerequest,true,false
+vitem,notificationRuleEntityClass,ibanx.moc.ChangeActivity,Activiteit,Activiteit,Activiteit,true,false
+vitem,notificationRuleEntityClass,ibanx.moc.ChangeAnalysis,Analyse,Analyse,Analyse,true,false
+
+#############################################################
+
+@delete,queryspec,number,CA-TYPES,0
+queryspec,CA-TYPES,,CA Types,,,,,Default picklist CA Types,sysadmin,ibanx.moc.ChangeActivityIF,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,CA-TYPES,number
+@method,addColumn,queryspec,CA-TYPES,description
+@method,set,queryspec,CA-TYPES,key,form
+@endTransaction
+
+@delete,queryspec,number,ACTIVE-TEMPLATE-ACTIVITIES,0
+queryspec,ACTIVE-TEMPLATE-ACTIVITIES,,Template Activities,,,,,Template Activities,sysadmin,ibanx.moc.ChangeActivityIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,ACTIVE-TEMPLATE-ACTIVITIES,key,form
+@method,set,queryspec,ACTIVE-TEMPLATE-ACTIVITIES,form.isTemplate,true
+@method,set,queryspec,ACTIVE-TEMPLATE-ACTIVITIES,form.lifecycleState.name,CA_TEMPLATE_ACTIVE
+@method,set,queryspec,ACTIVE-TEMPLATE-ACTIVITIES,form.orgContext,GLOBAL
+@endTransaction
+
+@delete,queryspec,number,REQUEST-TYPES-IDENTITY,0
+queryspec,REQUEST-TYPES-IDENTITY,,CR businessobjecttyes,,,,,Default picklist all CR businessobject types,sysadmin,ibanx.object.BusinessObjectTypeIF,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,REQUEST-TYPES-IDENTITY,number
+@method,addColumn,queryspec,REQUEST-TYPES-IDENTITY,description
+@method,set,queryspec,REQUEST-TYPES-IDENTITY,key,form
+@method,set,queryspec,REQUEST-TYPES-IDENTITY,form.objectClass,ibanx.moc.ChangeRequestIF
+@endTransaction
+
+@delete,queryspec,number,ACTIVITY-TYPES-IDENTITY,0
+queryspec,ACTIVITY-TYPES-IDENTITY,,Activity businessobjecttyes,,,,,Default picklist all activity businessobject types,sysadmin,ibanx.object.BusinessObjectTypeIF,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ACTIVITY-TYPES-IDENTITY,number
+@method,addColumn,queryspec,ACTIVITY-TYPES-IDENTITY,description
+@method,set,queryspec,ACTIVITY-TYPES-IDENTITY,key,form
+@method,set,queryspec,ACTIVITY-TYPES-IDENTITY,form.objectClass,ibanx.moc.ChangeActivityIF
+@endTransaction
+
+@delete,queryspec,number,ANALYSIS-TYPES-IDENTITY,0
+queryspec,ANALYSIS-TYPES-IDENTITY,,Analysis businessobjecttyes,,,,,Default picklist all analysis businessobject types,sysadmin,ibanx.object.BusinessObjectTypeIF,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ANALYSIS-TYPES-IDENTITY,number
+@method,addColumn,queryspec,ANALYSIS-TYPES-IDENTITY,description
+@method,set,queryspec,ANALYSIS-TYPES-IDENTITY,key,form
+@method,set,queryspec,ANALYSIS-TYPES-IDENTITY,form.objectClass,ibanx.moc.ChangeAnalysisIF
+@endTransaction

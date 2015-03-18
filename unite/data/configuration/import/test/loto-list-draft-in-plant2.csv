@@ -1,0 +1,14 @@
+@offsetdate,06-06-2013
+
+@delete,lotolist,number,MULT-T987,=
+
+lotolist,MULTI_DISCIPLINE_ISOLATION_LIST,DEFAULT_LOTO_LIST_PROCESS,DEFAULT_LOTO_LIST_PROCESS,DRAFT,-1,null,2013-06-06 14:45:41,2013-06-06 14:45:41,ibanxadmin,ibanxadmin,06-06-2013 14:45:41,false,null,8871,WO-0333,null,INSPECTION,null,null,null,null,PLANT2,30-500,,null,null,,null,PLANT2,MULT-T987,5,true,false
+@startTransaction
+@method,set,lotolist,MULT-T987,documentReference,
+@method,set,lotolist,MULT-T987,lockboxNr,
+@method,set,lotolist,MULT-T987,lockNrEI,
+@method,set,lotolist,MULT-T987,lockNrMechanical,
+@method,set,lotolist,MULT-T987,lockNrProduction,
+@endTransaction
+!ph1,signature_lotolist,null,null,null,null,null,MULT-T987,ISOLATE,null,null,null,null,false,Yes
+!ph2,audit,CREATE_EVENT,MULT-T987 created,ibanxadmin,2013-06-06,ibanx.loto.IsolationList,MULT-T987

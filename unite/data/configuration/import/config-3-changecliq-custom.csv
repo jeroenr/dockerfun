@@ -1,0 +1,21 @@
+@stopaudittrail
+
+## Riskmatrix settings
+configurationSetting,riskmatrix.lowerThreshold,10
+configurationSetting,riskmatrix.middleThreshold,100
+configurationSetting,riskmatrix.upperThreshold,1000
+
+role,site_responsible_engineer,moc,nl::site responsible engineer;en::site responsible engineer
+role,site_mt,moc,nl::site mt;en::site mt
+
+## include the type configuration
+@include,inc_changecliq_type_config.csv
+
+## include template activities
+@include,inc_template_activities.csv
+
+## include the picklists
+@include,inc_kpi_queries.csv
+
+## include the notification rules
+@include,inc_notification_rules.csv

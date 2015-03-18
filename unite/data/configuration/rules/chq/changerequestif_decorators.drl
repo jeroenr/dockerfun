@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+
+
+<rule-set name="changerequestif_decorators"
+          xmlns="http://drools.org/rules"
+          xmlns:java="http://drools.org/semantics/java"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+          xs:schemaLocation="http://drools.org/rules rules.xsd
+                             http://drools.org/semantics/java java.xsd">
+
+    <java:import>ibanx.persistence.object.PersistableIF</java:import>
+    <java:import>ibanx.object.BusinessObjectIF</java:import>
+    <java:import>ibanx.lifecycle.SignatureIF</java:import>
+    <java:import>java.lang.String</java:import>
+    <java:import>ibanx.util.ValueListUtil</java:import>
+    <java:import>ibanx.util.ObjectUtil</java:import>
+
+
+    <application-data identifier="log">org.apache.log4j.Logger</application-data>
+    <application-data identifier="errors">java.util.Hashtable</application-data>
+    <application-data identifier="applicationSettings">ibanx.configuration.ApplicationSettings</application-data>
+
+
+    <rule name="decorate supervisor stage not required">
+        <parameter identifier="p">
+            <class>PersistableIF</class>
+        </parameter>
+        <java:condition>ObjectUtil.hasValue(p, "orgLevelThree", "DEP2")</java:condition>
+        <java:consequence>
+            log.debug("***** decorate supervisor stage not required");
+
+            SignatureIF sig = ((BusinessObjectIF)p).getSignature("CR_PROPOSED");
+
+            if(sig!=null)
+            {
+                sig.setApplicable(false);
+            }
+        </java:consequence>
+    </rule>
+
+    <rule name="decorate supervisor stage required">
+        <parameter identifier="p">
+            <class>PersistableIF</class>
+        </parameter>
+        <java:condition>ObjectUtil.notHasValue(p, "orgLevelThree", "DEP2")</java:condition>
+        <java:consequence>
+            log.debug("***** decorate supervisor stage not required");
+
+            SignatureIF sig = ((BusinessObjectIF)p).getSignature("CR_PROPOSED");
+
+            if(sig!=null)
+            {
+                sig.setApplicable(true);
+            }
+        </java:consequence>
+    </rule>
+
+</rule-set>

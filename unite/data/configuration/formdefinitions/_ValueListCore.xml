@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+    <fieldset name="LISTITEM:MAP" label="gridProperties">
+        <select name="map_gridName">
+            <source class="grids" display="description"/>
+        </select>
+        <space name="name"/>
+        <textfield name="map_x" maxLength="50"/>
+        <space name="name"/>
+        <textfield name="map_y" maxLength="50"/>
+    </fieldset>
+
+    <fieldset name="LISTITEM:CREATE:DETAILS" label="properties">
+        <hidden name="groupName"/>
+        <textfield name="value" required="true" maxLength="50"/>
+        <space name="name"/>
+        <localizedtextfield name="description" maxLength="100"/>
+        <space name="name"/>
+        <select name="enabled" type="radio">
+            <source class="valuelist" valuelistNameRef="boolean" display="description"/>
+        </select>
+    </fieldset>
+
+    <form name="LISTITEM:CREATE:DEFAULT">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+
+
+    <fieldset name="LISTITEM:EDIT:DETAILS" label="properties">
+        <hidden name="groupName"/>
+        <textfield name="value" required="true" maxLength="50"/>
+        <space name="name"/>
+        <localizedtextfield name="description" maxLength="100"/>
+        <space name="name"/>
+        <select name="enabled" type="radio">
+            <source class="valuelist" valuelistNameRef="boolean" display="description"/>
+        </select>
+    </fieldset>
+    <fieldset name="LISTITEM:SYSTEM:EDIT:DETAILS" label="properties">
+        <hidden name="groupName"/>
+        <textfield name="value" required="true" maxLength="50" mode="view"/>
+        <space name="name"/>
+        <localizedtextfield name="description" translationsOnly="true" maxLength="100"/>
+        <space name="name"/>
+        <select name="enabled" type="radio" mode="view">
+            <source class="valuelist" valuelistNameRef="boolean" display="description"/>
+        </select>
+    </fieldset>
+    <fieldset name="LISTITEM:EDIT:FIXEDVALUE:DETAILS" label="properties">
+        <hidden name="groupName"/>
+        <textfield name="value" mode="view"/>
+        <space name="name"/>
+        <localizedtextfield name="description" maxLength="100"/>
+        <space name="name"/>
+        <select name="enabled" type="radio">
+            <source class="valuelist" valuelistNameRef="boolean" display="description"/>
+        </select>
+    </fieldset>
+
+    <form name="LISTITEM:EDIT:DEFAULT">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:SYSTEM:EDIT:DEFAULT">
+        <fieldsetref name="LISTITEM:SYSTEM:EDIT:DETAILS"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:DEFAULT">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+
+    <form name="LISTITEM:CREATE:BOOLEAN">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:BOOLEAN">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:BOOLEAN">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+
+    <fieldset name="LIST:EDIT:DETAILS" label="properties">
+        <textfield name="group" required="true" maxLength="50" mode="view" label="groupName"/>
+        <space name="dummyname"/>
+        <localizedtextfield name="name" maxLength="50"/>
+        <space name="dummyname"/>
+        <textfield name="description" maxLength="100"/>
+        <space name="dummyname"/>
+        <select name="enabled" type="radio">
+            <source class="valuelist" valuelistNameRef="boolean" display="description"/>
+        </select>
+        <space name="dummyname"/>
+        <select name="system" type="radio" mode="view">
+            <source class="valuelist" valuelistNameRef="boolean" display="description"/>
+        </select>
+    </fieldset>
+    <form name="LIST:EDIT:DEFAULT">
+        <fieldsetref name="LIST:EDIT:DETAILS"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LIST:VIEW:DEFAULT">
+        <fieldsetref name="LIST:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+</forms>

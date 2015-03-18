@@ -1,0 +1,14 @@
+#set($htmlResult=$msgBody)
+<html>
+<head></head>
+<body>
+	<link rel="stylesheet" href="${contextPath}/res/stylesheet/unite.css"/>
+	<link rel="stylesheet" href="${contextPath}/res/stylesheet/email.css"/>
+	<div id="bodycol">
+	    <p style="font-family:verdana;">$htmlResult</p>
+	    <p style="font-family:verdana;"><a href="${contextPath}">Or click here to go to the dashboard.</a></p>
+	    <hr>
+	    <p style="font-family:verdana;font-style:italic;">ChangeCliq/IncidentCliq - module of Unite suite</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+###### KERNEL UPDATE
+
+@register,kernel
+
+permission,,,,,ibanx.security.Permission,14,UPDATE_OWNER,Update Owner,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,15,UPDATE_ASSIGNEE,Update ASSIGNEE,GLOBAL,true,true
+
+permission,,,,,ibanx.security.Permission,50,FIRE_TRANSITION,Fire transition,GLOBAL,true,true
+
+permission,,,,,ibanx.security.Permission,150,SAVE_AS_TEMPLATE,Save as template,GLOBAL,true,true
+
+permission,,,,,ibanx.security.Permission,160,PROPAGATE_MEASURES,Propagate measures,GLOBAL,true,true
+
+
+permission,,,,,ibanx.security.Permission,175,CREATE_CONDITION,Create a condition,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,176,EDIT_CONDITION,Modify a condition properties,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,177,DELETE_CONDITION,Delete a condition,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,178,OVERRIDE_CONDITION,Override a condition,GLOBAL,true,true
+
+permission,,,,,ibanx.security.Permission,300,CREATE_ISOLATION_ACTIVITIES,Create isolatie activities on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,305,CREATE_DE_ISOLATION_ACTIVITIES,Create de-isolatie activities on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,310,UPDATE_ISOLATION_ACTIVITIES,Update isolatie activities on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,315,UPDATE_DE_ISOLATION_ACTIVITIES,Update de-isolatie activities on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,320,EXECUTE_ISOLATION_ACTIVITIES,Execute isolatie activities on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,325,EXECUTE_DE_ISOLATION_ACTIVITIES,Execute de-isolatie activities on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,330,REMOVE_ISOLATION_ACTIVITIES,Remove isolatie activities on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,335,REMOVE_DE_ISOLATION_ACTIVITIES,Remove de-isolatie activities on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,340,CREATE_CLAIMS,Create claims on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,345,UPDATE_CLAIMS,Update claims on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,350,REMOVE_CLAIMS,Remove claims on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,355,MOVE_CLAIMS,Move claims on an isolationlist,GLOBAL,true,true
+
+permission,,,,,ibanx.security.Permission,200,CREATE_ACTIVITY,Create activity,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,210,CREATE_ANALYSIS,Create analysis,GLOBAL,true,true
+
+corerole,1,everyone,nl::iedereen;en::everyone;de::jedermann;es::todo el mundo;fr::tous
+corerole,2,anonymous,nl::anoniem;en::anonymous;de::anonym;es::anónimo;fr::anonyme
+corerole,3,owner,nl::eigenaar;en::owner;de::inhaber;es::poseedor;fr::anonyme
+corerole,4,assignee,nl::gemachtigde;en::assignee,true,true
+corerole,5,creator,nl::maker;en::creator;de::autor;es::creador;fr::auteur
+
+
+## change acl names to strict use of naming regime
+## mysql
+@SQL,UPDATE IBANX_ACL AS ACL\, IBANX_LIFECYCLE_STATE AS STATE\, IBANX_LIFECYCLE AS LC SET ACL.NAME = CONCAT('StateAcl '\, LC.NR\,'-'\,STATE.NAME) WHERE ACL.ID = STATE.STATE_ACL_ID AND STATE.LIFECYCLE_ID = LC.ID,mysql
+## oracle
+@SQL,MERGE INTO IBANX_ACL N_ACL USING (SELECT ACL.ID ID\,  CONCAT('StateAcl '\, CONCAT(LC.NR\, CONCAT('-'\,STATE.NAME))) NEW_NAME FROM IBANX_ACL ACL\, IBANX_LIFECYCLE_STATE STATE\, IBANX_LIFECYCLE LC WHERE ACL.ID = STATE.STATE_ACL_ID AND STATE.LIFECYCLE_ID = LC.ID) T_ACL ON (N_ACL.ID = T_ACL.ID) WHEN MATCHED THEN UPDATE SET N_ACL.NAME = T_ACL.NEW_NAME,oracle
+## mssql
+@SQL,UPDATE IBANX_ACL SET NAME = 'StateAcl ' + LC.NR + '-' + STATE.NAME FROM IBANX_ACL ACL\, IBANX_LIFECYCLE_STATE STATE\, IBANX_LIFECYCLE LC WHERE ACL.ID = STATE.STATE_ACL_ID AND STATE.LIFECYCLE_ID = LC.ID,mssql
+
+
+!phmessage,acl,,,,,ibanx.security.Acl,Message ACL,Generated Master ACL describing permissions for roles/users on messages,ibanx.message.Message,2,GLOBAL,true,true,true
+roleperm,Message ACL,everyone,CREATE
+roleperm,Message ACL,system_administrator,BROWSE
+roleperm,Message ACL,system_administrator,READ
+roleperm,Message ACL,system_administrator,UPDATE
+roleperm,Message ACL,system_administrator,DELETE
+roleperm,Message ACL,owner,BROWSE
+roleperm,Message ACL,owner,READ
+roleperm,Message ACL,owner,UPDATE
+roleperm,Message ACL,owner,DELETE
+
+!phnotificationrule,acl,,,,,ibanx.security.Acl,Notification Rule ACL,Generated Master ACL describing permissions for roles/users on notificationrule,ibanx.rules.NotificationRuleIF,2,GLOBAL,true,true,true
+roleperm,Notification Rule ACL,everyone,BROWSE
+roleperm,Notification Rule ACL,everyone,READ
+roleperm,Notification Rule ACL,system_administrator,CREATE
+roleperm,Notification Rule ACL,system_administrator,BROWSE
+roleperm,Notification Rule ACL,system_administrator,READ
+roleperm,Notification Rule ACL,system_administrator,UPDATE
+roleperm,Notification Rule ACL,system_administrator,DELETE
+roleperm,Notification Rule ACL,application_administrator,CREATE
+roleperm,Notification Rule ACL,application_administrator,BROWSE
+roleperm,Notification Rule ACL,application_administrator,READ
+roleperm,Notification Rule ACL,application_administrator,UPDATE
+roleperm,Notification Rule ACL,application_administrator,DELETE
+
+!phConditionType,acl,,,,,ibanx.security.Acl,DefaultConditionType,Generated ACL describing permissions for roles/users on conditiontype's,ibanx.condition.ConditionTypeIF,2,GLOBAL,true,true,true
+trusteepermission,ibanx.security.RolePermission,!phConditionType,system_administrator,1,2
+trusteepermission,ibanx.security.RolePermission,!phConditionType,system_administrator,2,2
+trusteepermission,ibanx.security.RolePermission,!phConditionType,system_administrator,3,2
+trusteepermission,ibanx.security.RolePermission,!phConditionType,system_administrator,4,2
+trusteepermission,ibanx.security.RolePermission,!phConditionType,system_administrator,5,2
+trusteepermission,ibanx.security.RolePermission,!phConditionType,system_administrator,6,2
+trusteepermission,ibanx.security.RolePermission,!phConditionType,system_administrator,7,2
+trusteepermission,ibanx.security.RolePermission,!phConditionType,everyone,2,2
+trusteepermission,ibanx.security.RolePermission,!phConditionType,everyone,3,2
+trusteepermission,ibanx.security.RolePermission,!phConditionType,anonymous,2,2
+trusteepermission,ibanx.security.RolePermission,!phConditionType,anonymous,3,2
+
+acl,,,,,ibanx.security.Acl,DefaultTransition,Generated ACL describing permissions for roles/users on transitions,ibanx.lifecycle.TransitionIF,2,GLOBAL,true,true,true
+tpermission_acl,ibanx.security.RolePermission,DefaultTransition,system_administrator,1,2
+tpermission_acl,ibanx.security.RolePermission,DefaultTransition,system_administrator,4,2
+tpermission_acl,ibanx.security.RolePermission,DefaultTransition,system_administrator,5,2
+tpermission_acl,ibanx.security.RolePermission,DefaultTransition,system_administrator,6,2
+tpermission_acl,ibanx.security.RolePermission,DefaultTransition,system_administrator,7,2
+tpermission_acl,ibanx.security.RolePermission,DefaultTransition,everyone,2,2
+tpermission_acl,ibanx.security.RolePermission,DefaultTransition,everyone,3,2
+tpermission_acl,ibanx.security.RolePermission,DefaultTransition,anonymous,2,2
+tpermission_acl,ibanx.security.RolePermission,DefaultTransition,anonymous,3,2
+
+
+queryspec,ALL-NONSYSTEM-ORGS,,Non system organizations,,,,,Non system organizations,sysadmin,ibanx.org.Organization,true,1,GLOBAL,true
+
+
+@delete,vitem,groupName,boolean,0
+vitem,boolean,true,Yes,Yes,Yes,true,false,nl::Ja;en::Yes;de::Ja
+vitem,boolean,false,No,No,No,true,false,nl::Nee;en::No;de::Nein
+
+
+@delete,queryspec,number,Q-LCS,0
+queryspec,Q-LCS,,Lifecycle States (instances),,,,,Default query for all lifecycle states,sysadmin,ibanx.lifecycle.LifecycleStateIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,Q-LCS,key,state
+@method,set,queryspec,Q-LCS,operator.state.lifecycleId,0
+@endTransaction
+
+@delete,queryspec,number,PL-BOT,0
+queryspec,PL-BOT,,Business Object Types,,,,,Default picklist all businessobject types,sysadmin,ibanx.object.BusinessObjectTypeIF,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,PL-BOT,number
+@method,addColumn,queryspec,PL-BOT,description
+@method,set,queryspec,PL-BOT,key,form
+@endTransaction

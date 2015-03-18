@@ -1,0 +1,53 @@
+<!-- 
+    when tab should not be shown for a certain businessobject leave entry in tabs empty, f.i: tabs="1,,3,,,6"
+    when not making use of states to put certain tabs in certain modes, add one state with name="" (also used as default when specific entry cannot be found for current state) 
+  -->
+<tabs>
+	<configuration botypenumber="DELTALINQS_PERMIT" tabs="tabTitleOverview,tabTitleRequestWork,tabTitleMeasuresIssuer,tabTitleMeasureHolder,tabTitleSignatures,tabTitleHistory">
+		<state name="I_AW" edittab="2" editabletabs="4" />
+		<state name="I_MH" edittab="4" editabletabs="2" />		
+		<state name="B_AV" editabletabs="2 4" />				
+		<state name="I_MV" edittab="3" editabletabs="2 4" />		
+		<state name="I_AMH" edittab="4" editabletabs="2 3" />				
+		<state name="B_OB" editabletabs="4" />				
+		<state name="B_MO1" editabletabs="4" />
+		<state name="B_MO2" editabletabs="4" />								
+		<state name="B_MO3" editabletabs="4" />
+		<state name="B_VS" editabletabs="2 4" />
+		<state name="I_VV" edittab="3" editabletabs="2" />
+		<state name="E_T" edittab="-1" />
+	</configuration>
+	<configuration botypenumber="DELTALINQS_PERMIT_TRANS" tabs="tabTitleOverview,tabTitleRequestWork,tabTitleMeasuresIssuer,tabTitleMeasureHolder,tabTitleSignatures,tabTitleConditions,tabTitleHistory">
+		<state name="I_AW" edittab="2" editabletabs="4" />
+		<state name="I_MH" edittab="4" editabletabs="2" />		
+		<state name="B_AV" editabletabs="2 4" />
+		<state name="I_MV" edittab="3" editabletabs="2 4" />
+		<state name="I_AMH" edittab="4" editabletabs="2 3" />				
+		<state name="B_OB" editabletabs="4" />				
+		<state name="B_MO1" editabletabs="4" />
+		<state name="B_MO2" editabletabs="4" />					
+		<state name="B_VS" editabletabs="2 4" />
+		<state name="I_VV" edittab="3" editabletabs="2" />
+		<state name="E_T" edittab="-1" />
+	</configuration>
+	<configuration botypenumber="DELTALINQS_STOP_PERMIT" tabs="tabTitleOverview,tabTitleRequestWork,tabTitleMeasuresIssuer,tabTitleMeasureHolder,tabTitleSignatures,tabTitleHistory">
+		<state name="I_AW" edittab="2" editabletabs="4" />
+		<state name="I_MH" edittab="4" editabletabs="2" />		
+		<state name="B_AV" editabletabs="2 4" />									
+		<state name="I_MV" edittab="3" editabletabs="2 4" />		
+		<state name="I_AMH" edittab="4" editabletabs="2 3" />				
+		<state name="B_OB" editabletabs="4" />				
+		<state name="B_MO1" editabletabs="4" />
+		<state name="B_MO2" editabletabs="4" />								
+		<state name="B_MO3" editabletabs="4" />
+		<state name="B_VS" editabletabs="2 4" />
+		<state name="I_VV" edittab="3" editabletabs="2" />
+		<state name="E_T" edittab="-1" />
+	</configuration>
+	<configuration botypenumber="PRESENCE_PERMIT" tabs="tabTitleOverview,tabTitleRequestWork,tabTitleHistory">
+		<state name="O_KVU" editabletabs="2" />
+	</configuration>
+	<configuration botypenumber="CHANGE" tabs="tabTitleOverview,tabTitleDetails,tabTitleChangeAnalysis,tabTitleBudget,tabTitleHistory">
+		<state name="" edittab="2" editabletabs="2" />
+	</configuration>
+</tabs>

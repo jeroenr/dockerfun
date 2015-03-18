@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:PROPERTIES" label="SECTION-PROPERTIES">
+        <select name="zone">
+            <source class="valuelist" valuelistNameRef="zone" display="description"/>
+        </select>
+        <textfield name="workOrderNr" required="true" cssClass="uppercase" maxLength="50"/>
+        <select name="orgLevelThree">
+            <source class="valuelist" valuelistNameRef="orgLevelThree" display="description"/>
+        </select>
+        <textarea name="workDescription" width="wide" required="true" maxLength="250"/>
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:DOCUMENT" label="LABEL_SECTION_DOCUMENT">
+        <document qualifier="Permit"/>
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT_TEMPLATE:SECTION:PROPERTIES" label="SECTION-PROPERTIES">
+        <select name="zone">
+            <source class="valuelist" valuelistNameRef="zone" display="description"/>
+        </select>
+        <textfield name="workOrderNr" cssClass="uppercase" maxLength="50"/>
+        <select name="orgLevelThree">
+            <source class="valuelist" valuelistNameRef="orgLevelThree" display="description"/>
+        </select>
+        <textarea name="workDescription" width="wide" required="true" maxLength="250"/>
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:PLANNING" label="SECTION-PLANNING">
+        <textfield name="houderFirm" maxLength="50"/>
+        <textfield name="houderName" maxLength="50"/>
+        <textfield name="aantalUitvoerenden" maxLength="4" maskref="number"/>
+        <space name="space"/>
+        <date name="plannedStartDate" required="true"/>
+        <date name="plannedEndDate" required="true"/>
+        <timerange name="workHours" from="7:00" to="17:00"/>
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:PLANNING:HANDOUT" label="SECTION-PLANNING">
+        <textfield name="houderFirm" maxLength="50"/>
+        <textfield name="houderName" maxLength="50" required="true"/>
+        <textfield name="aantalUitvoerenden" maxLength="4" required="true"/>
+        <space name="space"/>
+        <date name="plannedStartDate" required="true"/>
+        <date name="plannedEndDate" required="true"/>
+        <timerange name="workHours"/>
+
+        <hidden name="doExecute_handout.stateIdentity" value="O_AC" persist="false"/>
+        <hidden name="confirm" value="false" persist="false"/>
+
+    </fieldset>
+    <fieldset name="GENERIC_PERMIT:SECTION:PLANNING:PROLONG" label="SECTION-PLANNING">
+        <date name="plannedStartDate" required="true"/>
+        <space name="space"/>
+        <date name="plannedEndDate" required="true"/>
+    </fieldset>
+    <fieldset name="GENERIC_PERMIT:SECTION:SIGNATURES" label="SECTION-SIGNATURES">
+        <staticlabel name="permitSignaturesAlwaysRequiredFor"/>
+        <staticlabel name="permitSignaturesOtionalFor"/>
+        <signaturerequired name="B_AV" enforcedForRiskCategory="0,1,5,10,11" label="LABEL_SIG_APPLICANT"/>
+
+        <signaturerequired name="B_OB" enforcedForRiskCategory="10,11" optionalUncheckedForRiskCategory="0,1,5"
+                           label="LABEL_SIG_OB"/>
+
+        <signaturerequired name="B_VL" enforcedForRiskCategory="0,1,5,10,11" label="LABEL_SIG_HOLDER"/>
+
+        <signaturerequired name="B_MO1" label="LABEL_SIG_MO1"/>
+
+        <signaturerequired name="B_VS" enforcedForRiskCategory="0,1,5,10,11" label="LABEL_SIG_VS"/>
+
+        <signaturerequired name="B_MO2" label="LABEL_SIG_MO2"/>
+        <signaturerequired name="B_MO3" optionalUncheckedForRiskCategory="0,1,5,10,11" label="LABEL_SIG_MO3"/>
+
+        <space name="space"/>
+
+        <signaturerequired name="B_VV" label="LABEL_SIG_VV"/>
+
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:SIGNATURE_USER" label="SECTION-SIGNATURE_USER">
+        <hidden name="Signature.name"/>
+        <textfield name="signatureName" label="name" mode="view"/>
+        <space name="name"/>
+        <textfield name="Signature.phone" label="phone"/>
+        <space name="name"/>
+        <textfield name="Signature.firm" label="firm"/>
+    </fieldset>
+    <fieldset name="GENERIC_PERMIT:SECTION:SIGNATURE_SIGN" label="SECTION-SIGNATURE_SIGN">
+        <staticlabel name="signatureRequiredDescription" width="wide"/>
+        <date name="signDate" value="today" mode="view"/>
+        <space name="name"/>
+        <textfield name="userName" mode="view" label="logonUsername"/>
+        <space name="name"/>
+        <password name="verificatie" maxLength="20" label="logonPassword" required="true"/>
+        <!-- <checkbox name="signatureVerified" />  -->
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:EDIT:OVERVIEW" label="SECTION-OVERVIEW">
+        <textfield name="riscCategory" translate="true" label="risk"/>
+        <textfield name="timesIssued"/>
+        <select name="zone">
+            <source class="valuelist" valuelistNameRef="zone" display="description"/>
+        </select>
+        <textfield name="workOrderNr" required="true" cssClass="uppercase" maxLength="50"/>
+        <select name="orgLevelThree">
+            <source class="valuelist" valuelistNameRef="orgLevelThree" display="description"/>
+        </select>
+        <space name="space"/>
+        <textarea name="workDescription" width="wide"/>
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:OVERVIEW" label="SECTION-OVERVIEW">
+        <textfield name="riscCategory" translate="true" label="risk"/>
+        <textfield name="timesIssued"/>
+        <select name="zone">
+            <source class="valuelist" valuelistNameRef="zone" display="description"/>
+        </select>
+        <textfield name="workOrderNr" url="/relatedpermitlist/workorder/"/>
+        <select name="orgLevelThree">
+            <source class="valuelist" valuelistNameRef="orgLevelThree" display="description"/>
+        </select>
+        <space name="space"/>
+        <date name="plannedStartDate"/>
+        <date name="plannedEndDate"/>
+        <textarea name="workDescription" width="wide"/>
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:PRECAUTION_MEASURES" label="SECTION:PRECAUTION_MEASURES">
+        <checkboxwithtextfield name="vzmPuttenGotenRiolenAfdekken"/>
+        <checkbox name="vzmVonkafschermingGebruikenRequired"/>
+        <checkbox name="vzmWerkplekAfzettenRequired"/>
+        <checkboxwithtextfield name="vzmBrandwachtInzetten"/>
+        <checkboxwithtextfield name="vzmMangatwachtInzetten"/>
+        <checkboxwithtextfield name="vzmCommunicatiemiddelen"/>
+        <checkbox name="vzmBrandwaterslangGereedRequired"/>
+        <checkboxwithtextfield name="vzmPoederblusser"/>
+        <checkboxwithtextfield name="vzmOverigeBlusmiddelen"/>
+        <checkbox name="vzmWerkplekEnWerkstukNathoudenRequired"/>
+        <checkboxwithtextfield name="vzmWerkplekBeveiligenValgevaar"/>
+        <checkbox name="vzmGeforceerdeVentilatieRequired"/>
+        <checkboxwithtextfield name="vzmVrijeTekst1"/>
+        <checkboxwithtextfield name="vzmVrijeTekst2"/>
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:PERSONAL_PROTECTIVE_EQUIPMENT" label="SECTION:PERSONAL_PROTECTIVE_EQUIPMENT">
+        <checkbox name="pbmRuimzichtZuurbrilRequired"/>
+        <checkbox name="pbmGelaatschermRequired"/>
+        <checkbox name="pbmGehoorbeschermingRequired"/>
+        <checkbox name="pbmValbeschermingRequired"/>
+        <checkboxwithtextfield name="pbmHandArmbescherming"/>
+        <checkboxwithtextfield name="pbmBeschermendeKleding"/>
+        <checkbox name="pbmVluchtmaskerBinnenHandbereikRequired"/>
+        <checkboxwithtextfield name="pbmGasalarmering"/>
+        <selectwithcheckbox name="pbmAdembescherming" label="pbmAdembeschermingRequired">
+            <source class="valuelist" valuelistNameRef="pbmAdembescherming" display="description"/>
+        </selectwithcheckbox>
+        <checkboxwithtextfield name="pbmVrijeTekst1" label="pbmVrijeTekst1"/>
+        <checkboxwithtextfield name="pbmVrijeTekst2" label="pbmVrijeTekst2"/>
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:ADDITIONAL_REQUIREMENTS" label="SECTION:ADDITIONAL_REQUIREMENTS">
+        <textarea name="extraEisen" maxLength="250" width="wide"/>
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:CLOSE_TOGETHER" label="SECTION:CLOSE_TOGETHER">
+        <select type="radio" name="gezamenlijkAfsluiten">
+            <source class="valuelist" valuelistNameRef="boolean" display="description" order="value"/>
+        </select>
+    </fieldset>
+    <fieldset name="GENERIC_PERMIT:SECTION:WORKFLOWCOMMENT" label="SECTION:WORKFLOWCOMMENT">
+        <textarea name="markup.body" maxLength="250"/>
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:RISK_ASPECTS" label="SECTION:RISK_ASPECTS">
+        <select name="product">
+            <source class="valuelist" valuelistNameRef="product" display="description"/>
+        </select>
+        <textarea name="productinformatiekaart" maxLength="250" width="wide"/>
+        <textarea name="invloedNaburigeWerkzaamheden" maxLength="250" width="wide"/>
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:RISK" label="SECTION-RISK">
+        <checkbox name="riscCategory_1" label="risk_1"/>
+        <checkbox name="riscCategory_3" label="risk_3"/>
+        <checkbox name="riscCategory_2" label="risk_2"/>
+        <checkbox name="riscCategory_0" label="risk_0"/>
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:OPERATIONAL_ATTENTION" label="SECTION:OPERATIONAL_ATTENTION">
+        <textarea name="specialeOperationeleAandachtspuntenVrijeTekst1" maxLength="250" width="wide"/>
+        <textarea name="mogelijkeRisicos" maxLength="250" width="wide"/>
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:PRECAUTION_MEASURES:HANDOUT" label="SECTION:PRECAUTION_MEASURES">
+        <checkboxwithtextfield name="vzmBrandwachtInzetten" checkboxdisabled="true" required="true"/>
+        <checkboxwithtextfield name="vzmMangatwachtInzetten" checkboxdisabled="true" required="true"/>
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:MEASURES" label="SECTION-MEASURES">
+        <measurecheckboxheader name="mv1"/>
+        <measurecheckboxheader name="mv2"/>
+        <measurecheckbox name="mvFlenzenLabelen" requiredEditable="I_MV I_AMH E_T" readyEditable="I_VV"/>
+        <measurecheckbox name="mvSpoelen" requiredEditable="I_MV I_AMH E_T" readyEditable="I_VV"/>
+        <measurecheckbox name="mvAftappen" requiredEditable="I_MV I_AMH E_T" readyEditable="I_VV"/>
+        <measurecheckbox name="mvStomen" requiredEditable="I_MV I_AMH E_T" readyEditable="I_VV"/>
+        <measurecheckbox name="mvInblokken" requiredEditable="I_MV I_AMH E_T" readyEditable="I_VV"/>
+        <measurecheckbox name="mvAfsteken" requiredEditable="I_MV I_AMH E_T" readyEditable="I_VV"/>
+        <measurecheckbox name="mvAfkoppelen" requiredEditable="I_MV I_AMH E_T" readyEditable="I_VV"/>
+        <measurecheckbox name="mvDrukvrij" requiredEditable="I_MV I_AMH E_T" readyEditable="I_VV"/>
+        <measurecheckbox name="mvProduktvrij" requiredEditable="I_MV I_AMH E_T" readyEditable="I_VV"/>
+        <measurecheckbox name="mvControlerenOpToxischeStoffen" requiredEditable="I_MV I_AMH E_T" readyEditable="I_VV"/>
+        <measurecheckbox name="mvFireDetectionSysteemUitgeschakeld" requiredEditable="I_MV I_AMH E_T"
+                         readyEditable="I_VV"/>
+
+        <!-- For customers without LoTo (contains readyEditable)
+        <measurecheckbox name="avMechanicalLOTO" requiredEditable="I_MV I_AMH E_T" readyEditable="I_VV" includeText="true" maxLength="50" />
+        <measurecheckbox name="avMultiDisciplineLOTO" requiredEditable="I_MV I_AMH E_T" readyEditable="I_VV" includeText="true" maxLength="50" />
+        <measurecheckbox name="avEILOTO" requiredEditable="I_MV I_AMH E_T" readyEditable="I_VV" includeText="true" maxLength="50" />
+        <measurecheckbox name="avSafetiesLOTO" requiredEditable="I_MV I_AMH E_T" readyEditable="I_VV" includeText="true" maxLength="50" />
+        -->
+        <measurecheckbox name="avMultiDisciplineLOTO" requiredEditable="I_MV I_AMH E_T" includeText="true"
+                         maxLength="50"/>
+        <!-- Only MultiDiscipline lotolist is configured for the core version, commented the rest
+        <measurecheckbox name="avMechanicalLOTO" requiredEditable="I_MV I_AMH E_T" includeText="true" maxLength="50"/>
+        <measurecheckbox name="avEILOTO" requiredEditable="I_MV I_AMH E_T" includeText="true" maxLength="50"/>
+        <measurecheckbox name="avSafetiesLOTO" requiredEditable="I_MV I_AMH E_T" includeText="true" maxLength="50"/>
+        -->
+        <measurecheckbox name="mvControleOmgevingOpBrandbaarMateriaal" readyEnabled="true"
+                         requiredEditable="I_MV I_AMH E_T" readyEditable="I_VV" maxLength="50"/>
+        <measurecheckbox name="mvPanelDCSOverbruggingen" readyEnabled="true" requiredEditable="I_MV I_AMH E_T"
+                         readyEditable="I_VV" includeText="true" maxLength="50"/>
+        <measurecheckbox name="mvAppElectrischBlokkeren" readyEnabled="true" requiredEditable="I_MV I_AMH E_T"
+                         readyEditable="I_VV" includeText="true" textEditable="I_MV I_AMH E_T I_VV" maxLength="50"/>
+        <measurecheckbox name="mvAppElectrischVrijschakelen" readyEnabled="true" requiredEditable="I_MV I_AMH E_T"
+                         readyEditable="I_VV" includeText="true" textEditable="I_MV I_AMH E_T I_VV" maxLength="50"/>
+        <measurecheckbox name="mvAppMechanischBlokkeren" readyEnabled="true" requiredEditable="I_MV I_AMH E_T"
+                         readyEditable="I_VV" includeText="true" textEditable="I_MV I_AMH E_T I_VV" maxLength="50"/>
+        <measurecheckbox name="mvBeslotenRuimteConditieRapport" readyEnabled="true" requiredEditable="I_MV I_AMH E_T"
+                         readyEditable="I_VV" includeText="true" maxLength="50"/>
+        <measurecheckbox name="mvMilieubeschermendeMaatregelen" readyEnabled="true" requiredEditable="I_MV I_AMH E_T"
+                         readyEditable="I_VV" includeText="true" maxLength="50"/>
+        <measurecheckbox name="mvVrijeMaatregel1" readyEnabled="true" requiredEditable="I_MV I_AMH E_T"
+                         readyEditable="I_VV" includeText="true" maxLength="50"/>
+        <measurecheckbox name="mvVrijeMaatregel2" readyEnabled="false" requiredEditable="I_MV I_AMH E_T"
+                         readyEditable="I_VV" includeText="true" maxLength="50"/>
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:GAS_MEASURES" label="SECTION-GAS-MEASUREMENTS">
+        <staticlabel name="oxygen" width="wide"/>
+        <selectwithcheckbox name="gmZuurstof" label="required">
+            <source class="valuelist" valuelistNameRef="frequency" display="description"/>
+        </selectwithcheckbox>
+
+        <staticlabel name="explosiviteit" width="wide"/>
+        <selectwithcheckbox name="gmExplosiviteit" label="required">
+            <source class="valuelist" valuelistNameRef="frequency" display="description"/>
+        </selectwithcheckbox>
+
+        <staticlabel name="toxic" width="wide"/>
+        <selectwithcheckbox name="gmToxisch" label="required">
+            <source class="valuelist" valuelistNameRef="frequency" display="description"/>
+        </selectwithcheckbox>
+        <space name="name"/>
+        <textfield name="gmToxischStof" label="substance"/>
+        <space name="name"/>
+        <textfield name="gmToxischMAC" label="mac"/>
+    </fieldset>
+
+    <fieldset name="GENERIC_PERMIT:SECTION:GAS_MEASURES:AUDIT" label="SECTION-GAS-MEASUREMENTS">
+        <checkbox name="gmZuurstofRequired"/>
+        <checkbox name="gmExplosiviteitRequired"/>
+        <checkbox name="gmToxischRequired"/>
+        <textfield name="gmToxischStof"/>
+        <textfield name="gmToxischMAC"/>
+    </fieldset>
+
+    <!-- enable to turn autoprint off
+    <fieldset name="GENERIC_PERMIT:SECTION:DIRECT_PRINTING" label="SECTION-DIRECT-PRINTING" showlegend="false"></fieldset>
+    -->
+
+    <fieldset name="GENERIC_PERMIT:SECTION:DIRECT_PRINTING" label="PRINT">
+        <select name="issuePoint" label="LABEL_PLANNING_ISSUE_POINT">
+            <source class="valuelist" valuelistNameRef="issuePoint" display="description"/>
+        </select>
+    </fieldset>
+</forms>

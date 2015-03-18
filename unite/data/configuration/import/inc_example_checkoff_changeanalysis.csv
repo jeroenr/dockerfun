@@ -1,0 +1,5 @@
+@delete,businessobjecttype,number,EXAMPLE_CHECKOFF_CHECKLIST,0
+businessobjecttype,EXAMPLE_CHECKOFF_CHECKLIST,,Example Checkoff Checklist,,,,,Example Chckoff Checklist,ibanx.moc.ChangeAnalysisIF,DEFAULT_CL_PROCESS,,,,GLOBAL,true,,,,,,false
+@startTransaction
+@method,set,businessobjecttype,EXAMPLE_CHECKOFF_CHECKLIST,class0,CL
+@endTransaction

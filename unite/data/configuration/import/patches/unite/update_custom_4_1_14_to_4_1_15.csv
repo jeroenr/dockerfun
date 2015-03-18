@@ -1,0 +1,15 @@
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,application_administrator,EXECUTE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,application_administrator,MOVE_CLAIMS
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,loto_splitter,MOVE_CLAIMS
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,loto_issuer,EXECUTE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,application_administrator,EXECUTE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,loto_issuer,EXECUTE_DE_ISOLATION_ACTIVITIES
+
+## HIM-864 - Remove unused permissions for Verified Executed state ACL
+@delete,roleperm,acl.name,StateAcl DEFAULT_LOTO_ACTIVITY_PROCESS-VERIFIEDEXECUTED,=,permission,320,=
+@delete,roleperm,acl.name,StateAcl DEFAULT_LOTO_ACTIVITY_PROCESS-VERIFIEDEXECUTED,=,permission,7,=
+@delete,roleperm,acl.name,StateAcl DEFAULT_LOTO_ACTIVITY_PROCESS-VERIFIEDEXECUTED,=,permission,6,=
+@delete,roleperm,acl.name,StateAcl DEFAULT_LOTO_ACTIVITY_PROCESS-VERIFIEDEXECUTED,=,permission,5,=
+
+## fix for wrong transition acl being used
+@SQL,UPDATE IBANX_TRANSITION SET TRANS_ACL_ID=(SELECT ID FROM IBANX_ACL WHERE NAME='TransitionACL t2e1') WHERE NAME='t2e1'

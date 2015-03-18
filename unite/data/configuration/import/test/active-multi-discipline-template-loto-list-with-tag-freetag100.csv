@@ -1,0 +1,18 @@
+## when you incomment the date offset below then on import all dates will be time-shifted
+## to a date relative to the offset date and the import date
+@offsetdate,25-06-2013 09:07:08
+
+@delete,lotolist,number,MULT-11007,=
+
+lotolist,MULTI_DISCIPLINE_ISOLATION_LIST,TEMPLATE_LOTO_LIST_PROCESS,TEMPLATE_LOTO_LIST_PROCESS,TEMPLATE_ACTIVE,TEMPLATE_LOTO_LIST_PROCESS,TEMPLATE_DRAFT,null,2013-06-25 09:06:33,2013-06-25 09:06:52,ibanxadmin,ibanxadmin,25-06-2013 09:06:52,true,null,myTemplate,WO100,null,MAINTENANCE,null,null,null,null,PLANT1,30-100,30-100-0120,null,null,FREETAG100,null,PLANT1,MULT-11007,10007,true,false
+@startTransaction
+@method,set,lotolist,MULT-11007,documentReference,
+@method,set,lotolist,MULT-11007,lockboxNr,
+@method,set,lotolist,MULT-11007,lockNrEI,
+@method,set,lotolist,MULT-11007,lockNrMechanical,
+@method,set,lotolist,MULT-11007,lockNrProduction,
+@method,set,lotolist,MULT-11007,tagDescription,null
+@endTransaction
+!ph1,audit,CREATE_EVENT,MULT-11007 created,ibanxadmin,2013-06-25,ibanx.loto.IsolationList,MULT-11007
+!ph2,audit,SETSTATE_EVENT,Status of MULT-11007 changed into Standard active,ibanxadmin,2013-06-25,ibanx.loto.IsolationList,MULT-11007
+!ph3,audit,SAVE_EVENT,Properties of MULT-11007 changed,ibanxadmin,2013-06-25,ibanx.loto.IsolationList,MULT-11007

@@ -1,7 +1,9 @@
 
 FROM busybox
 
-VOLUME ["/tomcat"]
+ADD ./configuration /configuration
 ADD ./tomcat /tomcat
+
+VOLUME ["/tomcat","/configuration"]
 
 CMD /bin/sh

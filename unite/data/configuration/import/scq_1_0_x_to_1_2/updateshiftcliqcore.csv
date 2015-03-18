@@ -1,0 +1,452 @@
+#######################################################################################
+#                           FOR MIGRATION PURPOSES                                    #
+#                                                                                     #
+#  CONTAINS OLNY THE DIFFS BETWEEN THE NEW SHIFTCLIQ CORE CONFIGURATION IN FILE       #
+#  config-2-shiftcliq.csv AND THE OLD CONFIGURATION IN THE CURRENT DATABASE INSTANCE  #
+#######################################################################################
+
+## register this import batch so it can only be imported once
+@register,scq1.0-1.2-scqcoreupdate
+
+@register,config-2-shiftcliq
+
+permission,,,,,ibanx.security.Permission,71,CLEAR_LOG,Clear log,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,72,RESTORE_LOG,RESTORE log,GLOBAL,true,true
+
+permission,,,,,ibanx.security.Permission,93,PROPAGATE,Propagate task,GLOBAL,true,true
+
+permission,,,,,ibanx.security.Permission,100,CREATE_INSTRUCTION,Create instruction,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,101,MODIFY_INSTRUCTION,Modify instruction,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,102,DELETE_INSTRUCTION,Delete instruction,GLOBAL,true,true
+
+permission,,,,,ibanx.security.Permission,120,MODIFY_WHITEBOARD,Whiteboard wijzigen,GLOBAL,true,true
+
+permission,,,,,ibanx.security.Permission,130,CREATE_FOLLOWUP,Create followup,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,131,MODIFY_FOLLOWUP,Modify followup,GLOBAL,true,true
+
+role,productie_assistent
+
+tpermission_acl,ibanx.security.RolePermission,DefaultTaskDefinition,wachtverantwoordelijke,1,2
+tpermission_acl,ibanx.security.RolePermission,DefaultTaskDefinition,wachtverantwoordelijke,4,2
+tpermission_acl,ibanx.security.RolePermission,DefaultTaskDefinition,wachtverantwoordelijke,5,2
+tpermission_acl,ibanx.security.RolePermission,DefaultTaskDefinition,wachtverantwoordelijke,6,2
+
+tpermission_acl,ibanx.security.RolePermission,Org - ACTIVE,wachtverantwoordelijke,120,2
+tpermission_acl,ibanx.security.RolePermission,Org - DEFINITION,wachtverantwoordelijke,120,2
+tpermission_acl,ibanx.security.RolePermission,Org - ACTIVE,productie_assistent,120,2
+tpermission_acl,ibanx.security.RolePermission,Org - DEFINITION,productie_assistent,120,2
+
+tpermission_acl,ibanx.security.RolePermission,Org - ACTIVE,productie_assistent,101,2
+tpermission_acl,ibanx.security.RolePermission,Org - DEFINITION,productie_assistent,101,2
+tpermission_acl,ibanx.security.RolePermission,Org - ACTIVE,productie_assistent,102,2
+tpermission_acl,ibanx.security.RolePermission,Org - DEFINITION,productie_assistent,102,2
+tpermission_acl,ibanx.security.RolePermission,Org - ACTIVE,productie_assistent,103,2
+tpermission_acl,ibanx.security.RolePermission,Org - DEFINITION,productie_assistent,103,2
+
+tpermission_acl,ibanx.security.RolePermission,StateAcl DEFAULT_SHIFT_PROC - ACTIEF,wachtverantwoordelijke,96,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl DEFAULT_SHIFT_PROC - ACTIEF,wachtverantwoordelijke,97,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl DEFAULT_SHIFT_PROC - ACTIEF,wachtverantwoordelijke,98,2
+
+
+tpermission_acl,ibanx.security.RolePermission,StateAcl WACHTVERSLAG_PROC - VERWIJDERD,supergroover,4,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl WACHTVERSLAG_PROC - VERWIJDERD,supergroover,5,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl WACHTVERSLAG_PROC - VERWIJDERD,supergroover,7,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl WACHTVERSLAG_PROC - OPEN,supergroover,71,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl WACHTVERSLAG_PROC - OPEN,supergroover,72,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl WACHTVERSLAG_PROC - HEROPEND,supergroover,71,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl WACHTVERSLAG_PROC - HEROPEND,supergroover,72,2
+
+tpermission_acl,ibanx.security.RolePermission,StateAcl OPERATORVERSLAG_PROC - VERWIJDERD,supergroover,4,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl OPERATORVERSLAG_PROC - VERWIJDERD,supergroover,5,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl OPERATORVERSLAG_PROC - VERWIJDERD,supergroover,7,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl OPERATORVERSLAG_PROC - OPEN,supergroover,71,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl OPERATORVERSLAG_PROC - OPEN,supergroover,72,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl OPERATORVERSLAG_PROC - HEROPEND,supergroover,71,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl OPERATORVERSLAG_PROC - HEROPEND,supergroover,72,2
+
+tpermission_acl,ibanx.security.RolePermission,StateAcl WACHTVERSLAG_PROC - VERWIJDERD,supergroover,4,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl WACHTVERSLAG_PROC - VERWIJDERD,supergroover,5,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl WACHTVERSLAG_PROC - VERWIJDERD,supergroover,7,2
+
+
+tpermission_acl,ibanx.security.RolePermission,StateAcl DEFAULT_LOGEVENT_PROC - WIJZIGBAAR,ploegmedewerker,4,2
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC - WIJZIGBAAR,ploegmedewerker,MODIFY_FOLLOWUP
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC - NIETWIJZIGBAAR,ploegmedewerker,MODIFY_FOLLOWUP
+
+roleperm,StateAcl DEFAULT_DEVIATION_PROC - OPGEHEVEN,ploegmedewerker,MODIFY_FOLLOWUP
+
+##@setplaceholder,!ph0041,acl,name,StateAcl DEFAULT_DEVIATION_PROC - GEPLAND,=
+##lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_DEVIATION_PROC,GEPLAND,Gepland,-1,false,false,1,!ph0041,true,GLOBAL,false
+
+tpermission_acl,ibanx.security.RolePermission,StateAcl DEFAULT_TASK_PROC - OPEN,ploegmedewerker,93,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl DEFAULT_TASK_PROC - OPEN,productie_assistent,1,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl DEFAULT_TASK_PROC - OPEN,productie_assistent,4,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl DEFAULT_TASK_PROC - OPEN,productie_assistent,5,2
+
+tpermission_acl,ibanx.security.RolePermission,StateAcl DEFAULT_TASK_PROC - INUITVOERING,ploegmedewerker,93,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl DEFAULT_TASK_PROC - INUITVOERING,productie_assistent,1,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl DEFAULT_TASK_PROC - INUITVOERING,productie_assistent,4,2
+tpermission_acl,ibanx.security.RolePermission,StateAcl DEFAULT_TASK_PROC - INUITVOERING,productie_assistent,5,2
+
+tpermission_acl,ibanx.security.RolePermission,StateAcl DEFAULT_TASK_PROC - AFGEROND,ploegmedewerker,7,2
+roleperm,StateAcl DEFAULT_TASK_PROC - AFGEROND,ploegmedewerker,MODIFY_FOLLOWUP
+
+@method,set,numberingscheme,identity-logevent,storedProcedure,ibanx.ext.stproc.identity.LogEventIdentity
+@method,set,numberingscheme,identity-deviation,storedProcedure,ibanx.ext.stproc.identity.DeviationIdentity
+@method,set,numberingscheme,identity-task,storedProcedure,ibanx.ext.stproc.identity.TaskIdentity
+@method,set,numberingscheme,identity-log,storedProcedure,ibanx.ext.stproc.identity.LogIdentity
+
+@delete,queryspec,number,ALL-SHIFT-TYPES,0
+queryspec,ALL-SHIFT-TYPES,,All sites,,,,,All sites,sysadmin,ibanx.object.BusinessObjectTypeIF,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-SHIFT-TYPES,number
+@method,addColumn,queryspec,ALL-SHIFT-TYPES,name
+@method,set,queryspec,ALL-SHIFT-TYPES,key,form
+@method,set,queryspec,ALL-SHIFT-TYPES,form.system,false
+@method,set,queryspec,ALL-SHIFT-TYPES,operator.form.system,0
+@method,set,queryspec,ALL-SHIFT-TYPES,form.objectClass,ibanx.logbook.ShiftIF
+@method,set,queryspec,ALL-SHIFT-TYPES,operator.form.objectClass,0
+@method,set,queryspec,ALL-SHIFT-TYPES,disableAccessControl,true
+@endTransaction
+
+
+## rename autocreate-logs into logdefinitions .... or something else
+@delete,vlist,group,logdefinitions,0
+vlist,logdefinitions,Mogelijke verslag typen,Configuratie settings mogelijke verslag typen
+@delete,valuelist,group,autocreate-logs,0
+
+
+@delete,queryspec,number,FUNCLEVELTWO,0
+queryspec,FUNCLEVELTWO,,Query sectie's,,,,,Query sectie's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,FUNCLEVELTWO,value
+#@method,addColumn,queryspec,FUNCLEVELTWO,description
+#@method,addColumn,queryspec,FUNCLEVELTWO,ordering
+@method,set,queryspec,FUNCLEVELTWO,orderBy,description
+@method,set,queryspec,FUNCLEVELTWO,key,form
+@method,set,queryspec,FUNCLEVELTWO,form.groupName,funcLevelTwo
+@method,set,queryspec,FUNCLEVELTWO,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,FUNCLEVELTHREE,0
+queryspec,FUNCLEVELTHREE,,Query unit's,,,,,Query unit's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,FUNCLEVELTHREE,value
+#@method,addColumn,queryspec,FUNCLEVELTHREE,description
+#@method,addColumn,queryspec,FUNCLEVELTHREE,ordering
+@method,set,queryspec,FUNCLEVELTHREE,orderBy,description
+@method,set,queryspec,FUNCLEVELTHREE,key,form
+@method,set,queryspec,FUNCLEVELTHREE,form.groupName,funcLevelThree
+@method,set,queryspec,FUNCLEVELTHREE,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,FUNCLEVELFOUR,0
+queryspec,FUNCLEVELFOUR,,Query tag's,,,,,Query tag's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,FUNCLEVELFOUR,value
+#@method,addColumn,queryspec,FUNCLEVELFOUR,description
+#@method,addColumn,queryspec,FUNCLEVELFOUR,ordering
+@method,set,queryspec,FUNCLEVELFOUR,orderBy,description
+@method,set,queryspec,FUNCLEVELFOUR,key,form
+@method,set,queryspec,FUNCLEVELFOUR,form.groupName,funcLevelFour
+@method,set,queryspec,FUNCLEVELFOUR,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,FUNCLEVELFIVE,0
+queryspec,FUNCLEVELFIVE,,Query funcLevelFive's,,,,,Query funcLevelFive's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,FUNCLEVELFIVE,value
+#@method,addColumn,queryspec,FUNCLEVELFIVE,description
+#@method,addColumn,queryspec,FUNCLEVELFIVE,ordering
+@method,set,queryspec,FUNCLEVELFIVE,orderBy,description
+@method,set,queryspec,FUNCLEVELFIVE,key,form
+@method,set,queryspec,FUNCLEVELFIVE,form.groupName,funcLevelFive
+@method,set,queryspec,FUNCLEVELFIVE,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,FUNCLEVELSIX,0
+queryspec,FUNCLEVELSIX,,Query funcLevelSix's,,,,,Query funcLevelSix's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,FUNCLEVELSIX,value
+#@method,addColumn,queryspec,FUNCLEVELSIX,description
+#@method,addColumn,queryspec,FUNCLEVELSIX,ordering
+@method,set,queryspec,FUNCLEVELSIX,orderBy,description
+@method,set,queryspec,FUNCLEVELSIX,key,form
+@method,set,queryspec,FUNCLEVELSIX,form.groupName,funcLevelSix
+@method,set,queryspec,FUNCLEVELSIX,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,FUNCLEVELSEVEN,0
+queryspec,FUNCLEVELSEVEN,,Query funcLevelSeven's,,,,,Query funcLevelSeven's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,FUNCLEVELSEVEN,value
+#@method,addColumn,queryspec,FUNCLEVELSEVEN,description
+#@method,addColumn,queryspec,FUNCLEVELSEVEN,ordering
+@method,set,queryspec,FUNCLEVELSEVEN,orderBy,description
+@method,set,queryspec,FUNCLEVELSEVEN,key,form
+@method,set,queryspec,FUNCLEVELSEVEN,form.groupName,funcLevelSeven
+@method,set,queryspec,FUNCLEVELSEVEN,operator.form.groupName,0
+@endTransaction
+
+
+@delete,queryspec,number,GEOLEVELTWO,0
+queryspec,GEOLEVELTWO,,Query geoLevelTwo's,,,,,Query geoLevelTwo's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,GEOLEVELTWO,value
+#@method,addColumn,queryspec,GEOLEVELTWO,description
+#@method,addColumn,queryspec,GEOLEVELTWO,ordering
+@method,set,queryspec,GEOLEVELTWO,orderBy,description
+@method,set,queryspec,GEOLEVELTWO,key,form
+@method,set,queryspec,GEOLEVELTWO,form.groupName,geoLevelTwo
+@method,set,queryspec,GEOLEVELTWO,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,GEOLEVELTHREE,0
+queryspec,GEOLEVELTHREE,,Query geoLevelThree's,,,,,Query geoLevelThree's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,GEOLEVELTHREE,value
+#@method,addColumn,queryspec,GEOLEVELTHREE,description
+#@method,addColumn,queryspec,GEOLEVELTHREE,ordering
+@method,set,queryspec,GEOLEVELTHREE,orderBy,description
+@method,set,queryspec,GEOLEVELTHREE,key,form
+@method,set,queryspec,GEOLEVELTHREE,form.groupName,geoLevelThree
+@method,set,queryspec,GEOLEVELTHREE,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,GEOLEVELFOUR,0
+queryspec,GEOLEVELFOUR,,Query geoLevelFour's,,,,,Query geoLevelFour's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,GEOLEVELFOUR,value
+#@method,addColumn,queryspec,GEOLEVELFOUR,description
+#@method,addColumn,queryspec,GEOLEVELFOUR,ordering
+@method,set,queryspec,GEOLEVELFOUR,orderBy,description
+@method,set,queryspec,GEOLEVELFOUR,key,form
+@method,set,queryspec,GEOLEVELFOUR,form.groupName,geoLevelFour
+@method,set,queryspec,GEOLEVELFOUR,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,GEOLEVELFIVE,0
+queryspec,GEOLEVELFIVE,,Query geoLevelFive's,,,,,Query geoLevelFive's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,GEOLEVELFIVE,value
+#@method,addColumn,queryspec,GEOLEVELFIVE,description
+#@method,addColumn,queryspec,GEOLEVELFIVE,ordering
+@method,set,queryspec,GEOLEVELFIVE,orderBy,description
+@method,set,queryspec,GEOLEVELFIVE,key,form
+@method,set,queryspec,GEOLEVELFIVE,form.groupName,geoLevelFive
+@method,set,queryspec,GEOLEVELFIVE,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,GEOLEVELSIX,0
+queryspec,GEOLEVELSIX,,Query geoLevellSix's,,,,,Query geoLevelSix's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,GEOLEVELSIX,value
+#@method,addColumn,queryspec,GEOLEVELSIX,description
+#@method,addColumn,queryspec,GEOLEVELSIX,ordering
+@method,set,queryspec,GEOLEVELSIX,orderBy,description
+@method,set,queryspec,GEOLEVELSIX,key,form
+@method,set,queryspec,GEOLEVELSIX,form.groupName,ggeoLevelSix
+@method,set,queryspec,GEOLEVELSIX,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,GEOLEVELSEVEN,0
+queryspec,GEOLEVELSEVEN,,Query geoLevelSeven's,,,,,Query geoLevelSeven's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,GEOLEVELSEVEN,value
+#@method,addColumn,queryspec,GEOLEVELSEVEN,description
+#@method,addColumn,queryspec,GEOLEVELSEVEN,ordering
+@method,set,queryspec,GEOLEVELSEVEN,orderBy,description
+@method,set,queryspec,GEOLEVELSEVEN,key,form
+@method,set,queryspec,GEOLEVELSEVEN,form.groupName,geoLevelSeven
+@method,set,queryspec,GEOLEVELSEVEN,operator.form.groupName,0
+@endTransaction
+
+
+@delete,queryspec,number,ALL-ACTIVE-SITES,0
+queryspec,ALL-ACTIVE-SITES,,All active sites,,,,,All active sites,sysadmin,ibanx.org.Organization,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-ACTIVE-SITES,id
+@method,addColumn,queryspec,ALL-ACTIVE-SITES,name
+@method,set,queryspec,ALL-ACTIVE-SITES,key,form
+@method,set,queryspec,ALL-ACTIVE-SITES,form.system,false
+@method,set,queryspec,ALL-ACTIVE-SITES,operator.form.system,0
+@method,set,queryspec,ALL-ACTIVE-SITES,form.entityClass,ibanx.org.Organization
+@method,set,queryspec,ALL-ACTIVE-SITES,operator.form.entityClass,0
+@method,set,queryspec,ALL-ACTIVE-SITES,form.businessObjectType.number,DEFAULT_SITE
+@method,set,queryspec,ALL-ACTIVE-SITES,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-ACTIVE-SITES,form.lifecycleState.name,ACTIVE
+@method,set,queryspec,ALL-ACTIVE-SITES,operator.form.lifecycleState.name,0
+@method,set,queryspec,ALL-ACTIVE-SITES,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,ALL-ACTIVE-SITES-IDENTITY,0
+queryspec,ALL-ACTIVE-SITES-IDENTITY,,All active sites,,,,,All active sites,sysadmin,ibanx.org.Organization,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-ACTIVE-SITES-IDENTITY,number
+@method,addColumn,queryspec,ALL-ACTIVE-SITES-IDENTITY,name
+@method,set,queryspec,ALL-ACTIVE-SITES-IDENTITY,key,form
+@method,set,queryspec,ALL-ACTIVE-SITES-IDENTITY,form.system,false
+@method,set,queryspec,ALL-ACTIVE-SITES-IDENTITY,operator.form.system,0
+@method,set,queryspec,ALL-ACTIVE-SITES-IDENTITY,form.entityClass,ibanx.org.Organization
+@method,set,queryspec,ALL-ACTIVE-SITES-IDENTITY,operator.form.entityClass,0
+@method,set,queryspec,ALL-ACTIVE-SITES-IDENTITY,form.businessObjectType.number,DEFAULT_SITE
+@method,set,queryspec,ALL-ACTIVE-SITES-IDENTITY,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-ACTIVE-SITES-IDENTITY,form.lifecycleState.name,ACTIVE
+@method,set,queryspec,ALL-ACTIVE-SITES-IDENTITY,operator.form.lifecycleState.name,0
+@method,set,queryspec,ALL-ACTIVE-SITES-IDENTITY,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,ALL-ACTIVE-PLANTS,0
+queryspec,ALL-ACTIVE-PLANTS,,All active plants,,,,,All active plants,sysadmin,ibanx.org.Organization,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-ACTIVE-PLANTS,id
+@method,addColumn,queryspec,ALL-ACTIVE-PLANTS,number
+@method,addColumn,queryspec,ALL-ACTIVE-PLANTS,name
+@method,addColumn,queryspec,ALL-ACTIVE-PLANTS,description
+@method,set,queryspec,ALL-ACTIVE-PLANTS,key,form
+@method,set,queryspec,ALL-ACTIVE-PLANTS,form.system,false
+@method,set,queryspec,ALL-ACTIVE-PLANTS,form.entityClass,ibanx.org.Organization
+@method,set,queryspec,ALL-ACTIVE-PLANTS,operator.form.entityClass,0
+@method,set,queryspec,ALL-ACTIVE-PLANTS,operator.form.system,0
+@method,set,queryspec,ALL-ACTIVE-PLANTS,form.businessObjectType.number,DEFAULT_PLANT
+@method,set,queryspec,ALL-ACTIVE-PLANTS,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-ACTIVE-PLANTS,form.lifecycleState.name,ACTIVE
+@method,set,queryspec,ALL-ACTIVE-PLANTS,operator.form.lifecycleState.name,0
+@method,set,queryspec,ALL-ACTIVE-PLANTS,disableAccessControl,false
+@endTransaction
+
+@delete,queryspec,number,ALL-ACTIVE-PLANTS-IDENTITY,0
+queryspec,ALL-ACTIVE-PLANTS-IDENTITY,,All active plants,,,,,All active plants,sysadmin,ibanx.org.Organization,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-ACTIVE-PLANTS-IDENTITY,number
+@method,addColumn,queryspec,ALL-ACTIVE-PLANTS-IDENTITY,name
+@method,set,queryspec,ALL-ACTIVE-PLANTS-IDENTITY,key,form
+@method,set,queryspec,ALL-ACTIVE-PLANTS-IDENTITY,form.system,false
+@method,set,queryspec,ALL-ACTIVE-PLANTS-IDENTITY,operator.form.system,0
+@method,set,queryspec,ALL-ACTIVE-PLANTS-IDENTITY,form.entityClass,ibanx.org.Organization
+@method,set,queryspec,ALL-ACTIVE-PLANTS-IDENTITY,operator.form.entityClass,0
+@method,set,queryspec,ALL-ACTIVE-PLANTS-IDENTITY,form.businessObjectType.number,DEFAULT_PLANT
+@method,set,queryspec,ALL-ACTIVE-PLANTS-IDENTITY,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-ACTIVE-PLANTS-IDENTITY,form.lifecycleState.name,ACTIVE
+@method,set,queryspec,ALL-ACTIVE-PLANTS-IDENTITY,operator.form.lifecycleState.name,0
+@method,set,queryspec,ALL-ACTIVE-PLANTS-IDENTITY,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,ALL-ACTIVE-SHIFT-TEAMS,0
+queryspec,ALL-ACTIVE-SHIFT-TEAMS,,All active shifts,,,,,All active shifts,sysadmin,ibanx.org.Team,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-ACTIVE-SHIFT-TEAMS,id
+@method,addColumn,queryspec,ALL-ACTIVE-SHIFT-TEAMS,name
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,key,form
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,form.system,false
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,operator.form.system,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,form.entityClass,ibanx.org.Team
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,operator.form.entityClass,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,form.businessObjectType.number,DEFAULT_SHIFT_TEAM
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,form.lifecycleState.name,ACTIVE
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,operator.form.lifecycleState.name,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,0
+queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,,All active shifts,,,,,All active shifts,sysadmin,ibanx.org.Team,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,number
+@method,addColumn,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,name
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,key,form
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,form.system,false
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,operator.form.system,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,form.entityClass,ibanx.org.Team
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,operator.form.entityClass,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,form.businessObjectType.number,DEFAULT_SHIFT_TEAM
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,form.lifecycleState.name,ACTIVE
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,operator.form.lifecycleState.name,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,0
+queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,,All active shifts,,,,,All active shifts,sysadmin,ibanx.org.Team,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,id
+@method,addColumn,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,name
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,key,form
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,form.system,false
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,operator.form.system,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,form.entityClass,ibanx.org.Team
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,operator.form.entityClass,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,form.businessObjectType.number,DEFAULT_SHIFT_TEAM
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,form.lifecycleState.name,ACTIVE
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,operator.form.lifecycleState.name,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,disableAccessControl,true
+@endTransaction
+
+
+@delete,queryspec,number,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,0
+queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,,All active shifts,,,,,All active shifts,sysadmin,ibanx.org.Team,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,number
+@method,addColumn,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,name
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,key,form
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,form.system,false
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,operator.form.system,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,form.entityClass,ibanx.org.Team
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,operator.form.entityClass,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,form.businessObjectType.number,DEFAULT_SHIFT_TEAM
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,form.lifecycleState.name,ACTIVE
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,operator.form.lifecycleState.name,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,0
+queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,,All active shifts,,,,,All active shifts,sysadmin,ibanx.org.TeamPreviewList,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,key,form
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,form.system,false
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,operator.form.system,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,form.entityClass,ibanx.org.Team
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,operator.form.entityClass,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,form.businessObjectType.number,DEFAULT_SHIFT_TEAM
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,form.lifecycleState.name,ACTIVE
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,operator.form.lifecycleState.name,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,disableAccessControl,true
+@endTransaction
+
+## use startdate of shift in rosterviews
+@delete,queryspec,number,SHIFT-OVERVIEW,0
+queryspec,SHIFT-OVERVIEW,,Shift overview,,,,,Shift overview,sysadmin,ibanx.logbook.ShiftIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,SHIFT-OVERVIEW,key,form
+@method,set,queryspec,SHIFT-OVERVIEW,form.startDate,$yesterday
+@method,set,queryspec,SHIFT-OVERVIEW,between.form.startDate,$next14days
+@method,set,queryspec,SHIFT-OVERVIEW,operator.form.startDate,16
+@method,set,queryspec,SHIFT-OVERVIEW,objectClassName,ibanx.logbook.ShiftIF
+@method,set,queryspec,SHIFT-OVERVIEW,orderBy,startDate
+@method,set,queryspec,SHIFT-OVERVIEW,ascending,true
+@method,set,queryspec,SHIFT-OVERVIEW,reportSpecId,shift2
+@endTransaction
+
+## use enddate of shifts in rosterviews
+@delete,queryspec,number,SHIFT-OVERVIEW-ALT1,0
+queryspec,SHIFT-OVERVIEW-ALT1,,Shift overview by enddate,,,,,Shift overview by enddate,sysadmin,ibanx.logbook.ShiftIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,key,form
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,form.endDate,$today
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,between.form.endDate,$next14days
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,operator.form.endDate,16
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,objectClassName,ibanx.logbook.ShiftIF
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,orderBy,startDate
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,ascending,true
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,reportSpecId,shift2
+@endTransaction
+
+## update relation types
+
+!ph6015d,roleinfo,leads-to,leidt tot,ibanx.logbook.LogEventIF,true
+!ph6016d,roleinfo,is-caused-by,veroorzaakt door,ibanx.logbook.InstructionIF,true
+linktype,,,,,link-logevent-instruction,true,ibanx.link.Link,!ph6015d,!ph6016d,GLOBAL,true
+linktypereg,link-logevent-instruction,ibanx.link.LinkType

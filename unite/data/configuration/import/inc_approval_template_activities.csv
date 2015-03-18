@@ -1,0 +1,60 @@
+## Supervisor approval templates
+
+## Front End Engineering
+approval-template,SUP-MECH-FED,Supervisor Mechanical Approval FED,Supervisor Mechanical Approval,Supervisor Mechanical Approval Template.,FRONTENDDESIGN,CHANGE_FORAPPROVAL_FED_PRE_3,CHANGE_FORAPPROVAL_FED_PRE_3,supmech1,supervisor,MECHANICAL,true
+approval-template,SUP-ELEC-FED,Supervisor Electrical Approval FED,Supervisor Electrical Approval,Supervisor Electrical Approval Template.,FRONTENDDESIGN,CHANGE_FORAPPROVAL_FED_PRE_3,CHANGE_FORAPPROVAL_FED_PRE_3,supelec1,supervisor,ELECTRICAL,true
+approval-template,SUP-INSTR-FED,Supervisor Instrumentation Approval FED,Supervisor Instrumentation Approval,Supervisor Instrumentation Approval Template.,FRONTENDDESIGN,CHANGE_FORAPPROVAL_FED_PRE_3,CHANGE_FORAPPROVAL_FED_PRE_3,supinstr1,supervisor,INSTRUMENTATION,true
+approval-template,SUP-CIV-FED,Supervisor Civil Approval FED,Supervisor Civil Approval,Supervisor Civil Approval Template.,FRONTENDDESIGN,CHANGE_FORAPPROVAL_FED_PRE_3,CHANGE_FORAPPROVAL_FED_PRE_3,,supervisor,CIVIL,true
+approval-template,SUP-PROC-FED,Supervisor Process Approval FED,Supervisor Process Approval,Supervisor Process Approval Template.,FRONTENDDESIGN,CHANGE_FORAPPROVAL_FED_PRE_3,CHANGE_FORAPPROVAL_FED_PRE_3,,supervisor,PROCESS,true
+approval-template,SUP-LAB-FED,Supervisor Laboratory Approval FED,Supervisor Laboratory Approval,Supervisor Laboratory Approval Template.,FRONTENDDESIGN,CHANGE_FORAPPROVAL_FED_PRE_3,CHANGE_FORAPPROVAL_FED_PRE_3,suplab1,supervisor,LAB,true
+approval-template,SUP-LOG-FED,Supervisor Logistics Approval FED,Supervisor Logistics Approval,Supervisor Logistics Approval Template.,FRONTENDDESIGN,CHANGE_FORAPPROVAL_FED_PRE_3,CHANGE_FORAPPROVAL_FED_PRE_3,suplog1,supervisor,LOGISTICS,true
+
+approval-template,SUPERVISOR-SMALL,Supervisor,Supervisor,Supervisor (small change) Template.,FRONTENDDESIGN,CHANGE_FORAPPROVAL_FED_PRE_3,CHANGE_FORAPPROVAL_FED_PRE_3,,supervisor,,true,,true
+
+approval-template,SRE1-FED,Site Responsible Engineer - Process FED,Site Responsible Engineer - Process,Site Responsible Engineer - Process Template.,FRONTENDDESIGN,CHANGE_FORAPPROVAL_FED_PRE_2,CHANGE_FORAPPROVAL_FED_PRE_2,sitere1,site_responsible_engineer,,false,,true
+approval-template,SRE2-FED,Site Responsible Engineer - Maintenance FED,Site Responsible Engineer - Maintenance,Site Responsible Engineer - Maintenance Template.,FRONTENDDESIGN,CHANGE_FORAPPROVAL_FED_PRE_2,CHANGE_FORAPPROVAL_FED_PRE_2,sitemtall,site_responsible_engineer,,false,,true
+
+approval-template,SMT1-FED,Site MT - Production FED,Site MT - Production,Site MT - Production Template.,FRONTENDDESIGN,CHANGE_FORAPPROVAL_FED_PRE_1,CHANGE_FORAPPROVAL_FED_PRE_1,sitemtprod,site_mt,PROD,true,,true
+approval-template,SMT2-FED,Site MT - Maintenance FED,Site MT - Maintenance,Site MT - Maintenance Template.,FRONTENDDESIGN,CHANGE_FORAPPROVAL_FED_PRE_1,CHANGE_FORAPPROVAL_FED_PRE_1,sitemtall,site_mt,,false,,true
+approval-template,SMT3-FED,Site MT - QHSE&S FED,Site MT - QHSE&S,Site MT - QHSE&S Template.,FRONTENDDESIGN,CHANGE_FORAPPROVAL_FED_PRE_1,CHANGE_FORAPPROVAL_FED_PRE_1,sitemtqhse,site_mt,QHSE,true,,true
+approval-template,SMT4-FED,Site MT - Senior Process Engineer FED,Site MT - Senior Process Engineer,Site MT - Senior Process Engineer Template.,FRONTENDDESIGN,CHANGE_FORAPPROVAL_FED_PRE_1,CHANGE_FORAPPROVAL_FED_PRE_1,sitemtproc,site_mt,PROCESS,true,,true
+
+approval-template,SM-FED,Site Manager,Site Manager,Site Manager Template.,FRONTENDDESIGN,CHANGE_FORAPPROVAL_FED,CHANGE_FORAPPROVAL_FED,,site_manager,,false,,true
+
+## Basic Design
+approval-template,SUP-MECH-BD,Supervisor Mechanical Approval BD,Supervisor Mechanical Approval,Supervisor Mechanical Approval Template.,BASICDESIGN,CHANGE_FORAPPROVAL_BD_PRE_3,CHANGE_FORAPPROVAL_BD_PRE_3,supmech1,supervisor,MECHANICAL,true
+approval-template,SUP-ELEC-BD,Supervisor Electrical Approval BD,Supervisor Electrical Approval,Supervisor Electrical Approval Template.,BASICDESIGN,CHANGE_FORAPPROVAL_BD_PRE_3,CHANGE_FORAPPROVAL_BD_PRE_3,supelec1,supervisor,ELECTRICAL,true
+approval-template,SUP-INSTR-BD,Supervisor Instrumentation Approval BD,Supervisor Instrumentation Approval,Supervisor Instrumentation Approval Template.,BASICDESIGN,CHANGE_FORAPPROVAL_BD_PRE_3,CHANGE_FORAPPROVAL_BD_PRE_3,supinstr1,supervisor,INSTRUMENTATION,true
+approval-template,SUP-CIV-BD,Supervisor Civil Approval BD,Supervisor Civil Approval,Supervisor Civil Approval Template.,BASICDESIGN,CHANGE_FORAPPROVAL_BD_PRE_3,CHANGE_FORAPPROVAL_BD_PRE_3,,supervisor,CIVIL,true
+approval-template,SUP-PROC-BD,Supervisor Process Approval BD,Supervisor Process Approval,Supervisor Process Approval Template.,BASICDESIGN,CHANGE_FORAPPROVAL_BD_PRE_3,CHANGE_FORAPPROVAL_BD_PRE_3,,supervisor,PROCESS,true
+approval-template,SUP-LAB-BD,Supervisor Laboratory Approval BD,Supervisor Laboratory Approval,Supervisor Laboratory Approval Template.,BASICDESIGN,CHANGE_FORAPPROVAL_BD_PRE_3,CHANGE_FORAPPROVAL_BD_PRE_3,suplab1,supervisor,LAB,true
+approval-template,SUP-LOG-BD,Supervisor Logistics Approval BD,Supervisor Logistics Approval,Supervisor Logistics Approval Template.,BASICDESIGN,CHANGE_FORAPPROVAL_BD_PRE_3,CHANGE_FORAPPROVAL_BD_PRE_3,suplog1,supervisor,LOGISTICS,true
+
+approval-template,SRE1-BD,Site Responsible Engineer - Process BD,Site Responsible Engineer - Process,Site Responsible Engineer - Process Template.,BASICDESIGN,CHANGE_FORAPPROVAL_BD_PRE_2,CHANGE_FORAPPROVAL_BD_PRE_2,sitere1,site_responsible_engineer,,false,,true
+approval-template,SRE2-BD,Site Responsible Engineer - Maintenance BD,Site Responsible Engineer - Maintenance,Site Responsible Engineer - Maintenance Template.,BASICDESIGN,CHANGE_FORAPPROVAL_BD_PRE_2,CHANGE_FORAPPROVAL_BD_PRE_2,sitemtall,site_responsible_engineer,,false,,true
+
+approval-template,SMT1-BD,Site MT - Production BD,Site MT - Production,Site MT - Production Template.,BASICDESIGN,CHANGE_FORAPPROVAL_BD_PRE_1,CHANGE_FORAPPROVAL_BD_PRE_1,sitemtprod,site_mt,PROD,true,,true
+approval-template,SMT2-BD,Site MT - Maintenance BD,Site MT - Maintenance,Site MT - Maintenance Template.,BASICDESIGN,CHANGE_FORAPPROVAL_BD_PRE_1,CHANGE_FORAPPROVAL_BD_PRE_1,sitemtall,site_mt,,false,,true
+approval-template,SMT3-BD,Site MT - QHSE&S BD,Site MT - QHSE&S,Site MT - QHSE&S Template.,BASICDESIGN,CHANGE_FORAPPROVAL_BD_PRE_1,CHANGE_FORAPPROVAL_BD_PRE_1,sitemtqhse,site_mt,QHSE,true,,true
+approval-template,SMT4-BD,Site MT - Senior Process Engineer BD,Site MT - Senior Process Engineer,Site MT - Senior Process Engineer Template.,BASICDESIGN,CHANGE_FORAPPROVAL_BD_PRE_1,CHANGE_FORAPPROVAL_BD_PRE_1,sitemtproc,site_mt,PROCESS,true,,true
+
+approval-template,SM-BD,Site Manager,Site Manager,Site Manager Template.,BASICDESIGN,CHANGE_FORAPPROVAL_BD,CHANGE_FORAPPROVAL_BD,,site_manager,,false,,true
+
+## Detail Design
+approval-template,SUP-MECH-DD,Supervisor Mechanical Approval DD,Supervisor Mechanical Approval,Supervisor Mechanical Approval Template.,DETAILDESIGN,CHANGE_FORAPPROVAL_DD_PRE_3,CHANGE_FORAPPROVAL_DD_PRE_3,supmech1,supervisor,MECHANICAL,true
+approval-template,SUP-ELEC-DD,Supervisor Electrical Approval DD,Supervisor Electrical Approval,Supervisor Electrical Approval Template.,DETAILDESIGN,CHANGE_FORAPPROVAL_DD_PRE_3,CHANGE_FORAPPROVAL_DD_PRE_3,supelec1,supervisor,ELECTRICAL,true
+approval-template,SUP-INSTR-DD,Supervisor Instrumentation Approval DD,Supervisor Instrumentation Approval,Supervisor Instrumentation Approval Template.,DETAILDESIGN,CHANGE_FORAPPROVAL_DD_PRE_3,CHANGE_FORAPPROVAL_DD_PRE_3,supinstr1,supervisor,INSTRUMENTATION,true
+approval-template,SUP-CIV-DD,Supervisor Civil Approval DD,Supervisor Civil Approval,Supervisor Civil Approval Template.,DETAILDESIGN,CHANGE_FORAPPROVAL_DD_PRE_3,CHANGE_FORAPPROVAL_DD_PRE_3,,supervisor,CIVIL,true
+approval-template,SUP-PROC-DD,Supervisor Process Approval DD,Supervisor Process Approval,Supervisor Process Approval Template.,DETAILDESIGN,CHANGE_FORAPPROVAL_DD_PRE_3,CHANGE_FORAPPROVAL_DD_PRE_3,,supervisor,PROCESS,true
+approval-template,SUP-LAB-DD,Supervisor Laboratory Approval DD,Supervisor Laboratory Approval,Supervisor Laboratory Approval Template.,DETAILDESIGN,CHANGE_FORAPPROVAL_DD_PRE_3,CHANGE_FORAPPROVAL_DD_PRE_3,suplab1,supervisor,LAB,true
+approval-template,SUP-LOG-DD,Supervisor Logistics Approval DD,Supervisor Logistics Approval,Supervisor Logistics Approval Template.,DETAILDESIGN,CHANGE_FORAPPROVAL_DD_PRE_3,CHANGE_FORAPPROVAL_DD_PRE_3,suplog1,supervisor,LOGISTICS,true
+
+approval-template,SRE1-DD,Site Responsible Engineer - Process DD,Site Responsible Engineer - Process,Site Responsible Engineer - Process Template.,DETAILDESIGN,CHANGE_FORAPPROVAL_DD_PRE_2,CHANGE_FORAPPROVAL_DD_PRE_2,sitere1,site_responsible_engineer,,false,,true
+approval-template,SRE2-DD,Site Responsible Engineer - Maintenance DD,Site Responsible Engineer - Maintenance,Site Responsible Engineer - Maintenance Template.,DETAILDESIGN,CHANGE_FORAPPROVAL_DD_PRE_2,CHANGE_FORAPPROVAL_DD_PRE_2,sitemtall,site_responsible_engineer,,false,,true
+
+approval-template,SMT1-DD,Site MT - Production DD,Site MT - Production,Site MT - Production Template.,DETAILDESIGN,CHANGE_FORAPPROVAL_DD_PRE_1,CHANGE_FORAPPROVAL_DD_PRE_1,sitemtprod,site_mt,PROD,true,,true
+approval-template,SMT2-DD,Site MT - Maintenance DD,Site MT - Maintenance,Site MT - Maintenance Template.,DETAILDESIGN,CHANGE_FORAPPROVAL_DD_PRE_1,CHANGE_FORAPPROVAL_DD_PRE_1,sitemtall,site_mt,,false,,true
+approval-template,SMT3-DD,Site MT - QHSE&S DD,Site MT - QHSE&S,Site MT - QHSE&S Template.,DETAILDESIGN,CHANGE_FORAPPROVAL_DD_PRE_1,CHANGE_FORAPPROVAL_DD_PRE_1,sitemtqhse,site_mt,QHSE,true,,true
+approval-template,SMT4-DD,Site MT - Senior Process Engineer DD,Site MT - Senior Process Engineer,Site MT - Senior Process Engineer Template.,DETAILDESIGN,CHANGE_FORAPPROVAL_DD_PRE_1,CHANGE_FORAPPROVAL_DD_PRE_1,sitemtproc,site_mt,PROCESS,true,,true
+
+approval-template,SM-DD,Site Manager,Site Manager,Site Manager Template.,DETAILDESIGN,CHANGE_FORAPPROVAL_DD,CHANGE_FORAPPROVAL_DD,,site_manager,,false,,true

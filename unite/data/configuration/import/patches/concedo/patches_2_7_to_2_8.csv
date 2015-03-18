@@ -1,0 +1,9 @@
+
+## import core updates
+@include,patches/concedo/update_core_2_7_to_2_8.csv
+
+## import customized updates
+@include,patches/concedo/update_custom_2_7_to_2_8.csv
+
+
+

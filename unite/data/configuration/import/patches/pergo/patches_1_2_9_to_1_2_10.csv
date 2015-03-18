@@ -1,0 +1,7 @@
+## include this in local patch or un directly from import console with: @include,patches/patches_1_2_9_to_1_2_10.csv
+
+
+@include,patches/pergo/update_core_1_2_9_to_1_2_10.csv
+@include,patches/pergo/update_appsettings_1_2_9_to_1_2_10.csv
+
+@include,patches/pergo/update_screendefs_1_2_9_to_1_2_10.csv

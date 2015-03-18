@@ -1,0 +1,34 @@
+<rules>
+    <!-- discipline decorators -->
+    <rule>
+        <condition fieldName="ARBPL" value="5603;6600;6601;6603" multiValueSeparator=";"/>
+        <consequence fieldName="orgLevelThree" value="Civiel" type="decorator"/>
+    </rule>
+
+    <rule>
+        <condition fieldName="ARBPL" value="1000;1001;1100;1600;1601;4600;5605;5606"/>
+        <consequence fieldName="orgLevelThree" value="E&amp;I" type="decorator"/>
+    </rule>
+
+    <rule>
+         <condition fieldName="ARBPL" value="5000;5001;5003;5100;5600;5604;5607;5608"/>
+         <consequence fieldName="orgLevelThree" value="Mechanisch" type="decorator"/>
+    </rule>
+
+    <rule>
+         <condition fieldName="ARBPL" value="5601"/>
+         <consequence fieldName="orgLevelThree" value="Isolatie" type="decorator"/>
+    </rule>
+    <rule>
+         <condition fieldName="ARBPL" value="5602"/>
+         <consequence fieldName="orgLevelThree" value="Stellingen" type="decorator"/>
+    </rule>
+    <rule>
+         <condition fieldName="ARBPL" value="5609"/>
+         <consequence fieldName="orgLevelThree" value="Inspectie" type="decorator"/>
+    </rule>
+    <rule>
+        <condition fieldName="ARBPL" value="6602"/>
+        <consequence fieldName="orgLevelThree" value="Airco &amp; verwarming" type="decorator"/>
+    </rule>
+</rules>

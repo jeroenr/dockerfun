@@ -1,0 +1,1052 @@
+@stopaudittrail
+## register this import batch so it can only be imported once
+@register,config-2-shiftcliq
+
+############ ROLES
+## todo : these names are a mess!
+role,productionassistant,scq,nl::productie assistent;en::production assistant
+role,shiftresponsible,scq,nl::wachtverantwoordelijke;en::shift responsible person
+role,shiftemployee,scq,nl::dienst medewerker;en::shift employee
+role,teamleader,scq,nl::wachtchef;en::team lead
+role,teammember,scq,nl::ploeglid;en::team member
+
+############ Extend permissions for taskdefinitions
+
+tpermission_acl,ibanx.security.RolePermission,DefaultTaskDefinition,shiftresponsible,1,2
+tpermission_acl,ibanx.security.RolePermission,DefaultTaskDefinition,shiftresponsible,4,2
+tpermission_acl,ibanx.security.RolePermission,DefaultTaskDefinition,shiftresponsible,5,2
+tpermission_acl,ibanx.security.RolePermission,DefaultTaskDefinition,shiftresponsible,6,2
+
+############ Extend permissions for organizaties like plants with whiteboard permissions
+
+roleperm,StateAcl ORG_STATE-DEFINITION,shiftresponsible,MODIFY_WHITEBOARD
+roleperm,StateAcl ORG_STATE-DEFINITION,productionassistant,MODIFY_WHITEBOARD
+roleperm,StateAcl ORG_STATE-ACTIVE,shiftresponsible,MODIFY_WHITEBOARD
+roleperm,StateAcl ORG_STATE-ACTIVE,productionassistant,MODIFY_WHITEBOARD
+roleperm,StateAcl ORG_STATE-DEFINITION,everyone,MODIFY_WHITEBOARD
+roleperm,StateAcl ORG_STATE-ACTIVE,everyone,MODIFY_WHITEBOARD
+
+############ Extend permissions for organizaties like plants with instruction permissions
+
+roleperm,StateAcl ORG_STATE-DEFINITION,productionassistant,CREATE_INSTRUCTION
+roleperm,StateAcl ORG_STATE-DEFINITION,productionassistant,MODIFY_INSTRUCTION
+roleperm,StateAcl ORG_STATE-DEFINITION,productionassistant,DELETE_INSTRUCTION
+roleperm,StateAcl ORG_STATE-ACTIVE,productionassistant,CREATE_INSTRUCTION
+roleperm,StateAcl ORG_STATE-ACTIVE,productionassistant,MODIFY_INSTRUCTION
+roleperm,StateAcl ORG_STATE-ACTIVE,productionassistant,DELETE_INSTRUCTION
+
+############ SHIFT LIFECYCLE ###################
+
+!ph0001,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_SHIFT_PROC-GEPLAND,State ACL describing permissions for roles/users on Shift's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_SHIFT_PROC-GEPLAND,shiftresponsible,CREATE
+roleperm,StateAcl DEFAULT_SHIFT_PROC-GEPLAND,everyone,BROWSE
+roleperm,StateAcl DEFAULT_SHIFT_PROC-GEPLAND,everyone,READ
+roleperm,StateAcl DEFAULT_SHIFT_PROC-GEPLAND,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_SHIFT_PROC-GEPLAND,anonymous,READ
+
+!ph0002,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,State ACL describing permissions for roles/users on Shift's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,shiftresponsible,CREATE
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,shiftresponsible,UPDATE
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,system_administrator,CREATE
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,system_administrator,DELETE
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,application_administrator,CREATE
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,application_administrator,DELETE
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,shiftemployee,CREATE_DEVIATION
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,shiftemployee,MODIFY_DEVIATION
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,shiftemployee,DELETE_DEVIATION
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,shiftemployee,CREATE_TASK
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,shiftemployee,MODIFY_TASK
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,shiftemployee,DELETE_TASK
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,shiftresponsible,CREATE_TASK_DEFINITION
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,shiftresponsible,MODIFY_TASK_DEFINITION
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,shiftresponsible,DELETE_TASK_DEFINITION
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,everyone,BROWSE
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,everyone,READ
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_SHIFT_PROC-ACTIEF,anonymous,READ
+
+!ph0003,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_SHIFT_PROC-AFGESLOTEN,State ACL describing permissions for roles/users on Shift's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_SHIFT_PROC-AFGESLOTEN,everyone,BROWSE
+roleperm,StateAcl DEFAULT_SHIFT_PROC-AFGESLOTEN,everyone,READ
+roleperm,StateAcl DEFAULT_SHIFT_PROC-AFGESLOTEN,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_SHIFT_PROC-AFGESLOTEN,anonymous,READ
+
+!ph0004,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_SHIFT_PROC-TOEKOMST,State ACL describing permissions for roles/users on Shift's,,2,GLOBAL,true,true,false
+
+lifecycle,DEFAULT_SHIFT_PROC,,Dienst levenscyclus,,,,,ibanx.lifecycle.Lifecycle,De levenscyclus van een dienst,GLOBAL,true,false
+@startTransaction
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,CREATE_DEVIATION
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,MODIFY_DEVIATION
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,DELETE_DEVIATION
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,CREATE_TASK
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,MODIFY_TASK
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,DELETE_TASK
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,CREATE_TASK_DEFINITION
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,MODIFY_TASK_DEFINITION
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,DELETE_TASK_DEFINITION
+@endTransaction
+
+
+# normal states
+!ph006,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_SHIFT_PROC,ACTIEF,Actief,-1,false,false,1,!ph0002,true,GLOBAL,false
+!ph007,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_SHIFT_PROC,AFGESLOTEN,Afgesloten,-1,false,false,2,!ph0003,true,GLOBAL,false
+# exception states
+!ph005,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_SHIFT_PROC,GEPLAND,Gepland,-1,true,false,1,!ph0001,true,GLOBAL,false
+!ph008,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_SHIFT_PROC,TOEKOMST,Toekomst,-1,true,false,2,!ph0004,true,GLOBAL,false
+
+
+############ LOG LIFECYCLE - WACHTVERSLAG ###################
+
+!ph0010,acl,,,,,ibanx.security.Acl,StateAcl WACHTVERSLAG_PROC-OPEN,State ACL describing permissions for roles/users on Log's,,2,GLOBAL,true,true,false
+roleperm,StateAcl WACHTVERSLAG_PROC-OPEN,shiftresponsible,CREATE
+roleperm,StateAcl WACHTVERSLAG_PROC-OPEN,shiftresponsible,COPY
+roleperm,StateAcl WACHTVERSLAG_PROC-OPEN,shiftresponsible,UPDATE
+roleperm,StateAcl WACHTVERSLAG_PROC-OPEN,shiftresponsible,CHANGESTATE
+roleperm,StateAcl WACHTVERSLAG_PROC-OPEN,shiftresponsible,CREATE_LOGITEM
+roleperm,StateAcl WACHTVERSLAG_PROC-OPEN,shiftresponsible,MODIFY_LOGITEM
+roleperm,StateAcl WACHTVERSLAG_PROC-OPEN,shiftresponsible,DELETE_LOGITEM
+roleperm,StateAcl WACHTVERSLAG_PROC-OPEN,everyone,BROWSE
+roleperm,StateAcl WACHTVERSLAG_PROC-OPEN,everyone,READ
+roleperm,StateAcl WACHTVERSLAG_PROC-OPEN,anonymous,BROWSE
+roleperm,StateAcl WACHTVERSLAG_PROC-OPEN,anonymous,READ
+
+!ph0011,acl,,,,,ibanx.security.Acl,StateAcl WACHTVERSLAG_PROC-AFGESLOTEN,State ACL describing permissions for roles/users on Log's,,2,GLOBAL,true,true,false
+roleperm,StateAcl WACHTVERSLAG_PROC-AFGESLOTEN,shiftresponsible,CHANGESTATE
+roleperm,StateAcl WACHTVERSLAG_PROC-AFGESLOTEN,everyone,BROWSE
+roleperm,StateAcl WACHTVERSLAG_PROC-AFGESLOTEN,everyone,READ
+roleperm,StateAcl WACHTVERSLAG_PROC-AFGESLOTEN,anonymous,BROWSE
+roleperm,StateAcl WACHTVERSLAG_PROC-AFGESLOTEN,anonymous,READ
+
+!ph0012,acl,,,,,ibanx.security.Acl,StateAcl WACHTVERSLAG_PROC-HEROPEND,State ACL describing permissions for roles/users on Log's,,2,GLOBAL,true,true,false
+roleperm,StateAcl WACHTVERSLAG_PROC-HEROPEND,shiftresponsible,COPY
+roleperm,StateAcl WACHTVERSLAG_PROC-HEROPEND,shiftresponsible,UPDATE
+roleperm,StateAcl WACHTVERSLAG_PROC-HEROPEND,shiftresponsible,CHANGESTATE
+roleperm,StateAcl WACHTVERSLAG_PROC-HEROPEND,shiftresponsible,CREATE_LOGITEM
+roleperm,StateAcl WACHTVERSLAG_PROC-HEROPEND,shiftresponsible,MODIFY_LOGITEM
+roleperm,StateAcl WACHTVERSLAG_PROC-HEROPEND,shiftresponsible,DELETE_LOGITEM
+roleperm,StateAcl WACHTVERSLAG_PROC-HEROPEND,everyone,BROWSE
+roleperm,StateAcl WACHTVERSLAG_PROC-HEROPEND,everyone,READ
+roleperm,StateAcl WACHTVERSLAG_PROC-HEROPEND,anonymous,BROWSE
+roleperm,StateAcl WACHTVERSLAG_PROC-HEROPEND,anonymous,READ
+
+!ph0013,acl,,,,,ibanx.security.Acl,StateAcl WACHTVERSLAG_PROC-VERWIJDERD,State ACL describing permissions for roles/users on Log's,,2,GLOBAL,true,true,false
+roleperm,StateAcl WACHTVERSLAG_PROC-VERWIJDERD,system_administrator,COPY
+roleperm,StateAcl WACHTVERSLAG_PROC-VERWIJDERD,system_administrator,UPDATE
+roleperm,StateAcl WACHTVERSLAG_PROC-VERWIJDERD,system_administrator,CHANGESTATE
+
+lifecycle,WACHTVERSLAG_PROC,,Verslag levenscyclus,,,,,ibanx.lifecycle.Lifecycle,De levenscyclus van een verslag,GLOBAL,true,false
+@startTransaction
+@method,setRepeating,lifecycle,WACHTVERSLAG_PROC,permission,CLEAR_LOG
+@method,setRepeating,lifecycle,WACHTVERSLAG_PROC,permission,RESTORE_LOG
+@method,setRepeating,lifecycle,WACHTVERSLAG_PROC,permission,CREATE_LOGITEM
+@method,setRepeating,lifecycle,WACHTVERSLAG_PROC,permission,MODIFY_LOGITEM
+@method,setRepeating,lifecycle,WACHTVERSLAG_PROC,permission,DELETE_LOGITEM
+@endTransaction
+
+# normal states
+!ph0014,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,WACHTVERSLAG_PROC,OPEN,Open,-1,false,false,1,!ph0010,true,GLOBAL,false
+!ph0015,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,WACHTVERSLAG_PROC,AFGESLOTEN,Afgesloten,-1,false,false,2,!ph0011,true,GLOBAL,false
+# exception states
+!ph0016,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,WACHTVERSLAG_PROC,HEROPEND,Heropend,-1,true,false,1,!ph0012,true,GLOBAL,false
+!ph0017,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,WACHTVERSLAG_PROC,VERWIJDERD,Verwijderd,-1,true,false,2,!ph0013,true,GLOBAL,false
+
+
+############ LOG LIFECYCLE - OPERATORVERSLAG ###################
+
+!ph0110,acl,,,,,ibanx.security.Acl,StateAcl OPERATORVERSLAG_PROC-OPEN,State ACL describing permissions for roles/users on Log's,,2,GLOBAL,true,true,false
+roleperm,StateAcl OPERATORVERSLAG_PROC-OPEN,shiftemployee,CREATE
+roleperm,StateAcl OPERATORVERSLAG_PROC-OPEN,shiftemployee,COPY
+roleperm,StateAcl OPERATORVERSLAG_PROC-OPEN,shiftemployee,UPDATE
+roleperm,StateAcl OPERATORVERSLAG_PROC-OPEN,shiftemployee,CHANGESTATE
+roleperm,StateAcl OPERATORVERSLAG_PROC-OPEN,shiftemployee,CREATE_LOGITEM
+roleperm,StateAcl OPERATORVERSLAG_PROC-OPEN,shiftemployee,MODIFY_LOGITEM
+roleperm,StateAcl OPERATORVERSLAG_PROC-OPEN,shiftemployee,DELETE_LOGITEM
+roleperm,StateAcl OPERATORVERSLAG_PROC-OPEN,everyone,BROWSE
+roleperm,StateAcl OPERATORVERSLAG_PROC-OPEN,everyone,READ
+roleperm,StateAcl OPERATORVERSLAG_PROC-OPEN,anonymous,BROWSE
+roleperm,StateAcl OPERATORVERSLAG_PROC-OPEN,anonymous,READ
+
+!ph0111,acl,,,,,ibanx.security.Acl,StateAcl OPERATORVERSLAG_PROC-AFGESLOTEN,State ACL describing permissions for roles/users on Log's,,2,GLOBAL,true,true,false
+roleperm,StateAcl OPERATORVERSLAG_PROC-AFGESLOTEN,shiftemployee,CHANGESTATE
+roleperm,StateAcl OPERATORVERSLAG_PROC-AFGESLOTEN,everyone,BROWSE
+roleperm,StateAcl OPERATORVERSLAG_PROC-AFGESLOTEN,everyone,READ
+roleperm,StateAcl OPERATORVERSLAG_PROC-AFGESLOTEN,anonymous,BROWSE
+roleperm,StateAcl OPERATORVERSLAG_PROC-AFGESLOTEN,anonymous,READ
+
+!ph0112,acl,,,,,ibanx.security.Acl,StateAcl OPERATORVERSLAG_PROC-HEROPEND,State ACL describing permissions for roles/users on Log's,,2,GLOBAL,true,true,false
+roleperm,StateAcl OPERATORVERSLAG_PROC-HEROPEND,shiftemployee,COPY
+roleperm,StateAcl OPERATORVERSLAG_PROC-HEROPEND,shiftemployee,UPDATE
+roleperm,StateAcl OPERATORVERSLAG_PROC-HEROPEND,shiftemployee,CHANGESTATE
+roleperm,StateAcl OPERATORVERSLAG_PROC-HEROPEND,shiftemployee,CREATE_LOGITEM
+roleperm,StateAcl OPERATORVERSLAG_PROC-HEROPEND,shiftemployee,MODIFY_LOGITEM
+roleperm,StateAcl OPERATORVERSLAG_PROC-HEROPEND,shiftemployee,DELETE_LOGITEM
+roleperm,StateAcl OPERATORVERSLAG_PROC-HEROPEND,everyone,BROWSE
+roleperm,StateAcl OPERATORVERSLAG_PROC-HEROPEND,everyone,READ
+roleperm,StateAcl OPERATORVERSLAG_PROC-HEROPEND,anonymous,BROWSE
+roleperm,StateAcl OPERATORVERSLAG_PROC-HEROPEND,anonymous,READ
+
+!ph0113,acl,,,,,ibanx.security.Acl,StateAcl OPERATORVERSLAG_PROC-VERWIJDERD,State ACL describing permissions for roles/users on Log's,,2,GLOBAL,true,true,false
+roleperm,StateAcl OPERATORVERSLAG_PROC-VERWIJDERD,system_administrator,COPY
+roleperm,StateAcl OPERATORVERSLAG_PROC-VERWIJDERD,system_administrator,UPDATE
+roleperm,StateAcl OPERATORVERSLAG_PROC-VERWIJDERD,system_administrator,CHANGESTATE
+
+
+lifecycle,OPERATORVERSLAG_PROC,,Verslag levenscyclus,,,,,ibanx.lifecycle.Lifecycle,De levenscyclus van een verslag,GLOBAL,true,false
+@startTransaction
+@method,setRepeating,lifecycle,OPERATORVERSLAG_PROC,permission,CLEAR_LOG
+@method,setRepeating,lifecycle,OPERATORVERSLAG_PROC,permission,RESTORE_LOG
+@method,setRepeating,lifecycle,OPERATORVERSLAG_PROC,permission,CREATE_LOGITEM
+@method,setRepeating,lifecycle,OPERATORVERSLAG_PROC,permission,MODIFY_LOGITEM
+@method,setRepeating,lifecycle,OPERATORVERSLAG_PROC,permission,DELETE_LOGITEM
+@endTransaction
+
+# normal states
+!ph0114,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,OPERATORVERSLAG_PROC,OPEN,Open,-1,false,false,1,!ph0110,true,GLOBAL,false
+!ph0115,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,OPERATORVERSLAG_PROC,AFGESLOTEN,Afgesloten,-1,false,false,2,!ph0111,true,GLOBAL,false
+# exception states
+!ph0116,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,OPERATORVERSLAG_PROC,HEROPEND,Heropend,-1,true,false,1,!ph0112,true,GLOBAL,false
+!ph0117,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,OPERATORVERSLAG_PROC,VERWIJDERD,Verwijderd,-1,true,false,2,!ph0113,true,GLOBAL,false
+
+
+############ LOGITEM LIFECYCLE ###################
+
+!ph0021,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_LOGEVENT_PROC-WIJZIGBAAR,State ACL describing permissions for roles/users on Log item's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC-WIJZIGBAAR,shiftemployee,CREATE
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC-WIJZIGBAAR,shiftemployee,COPY
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC-WIJZIGBAAR,shiftemployee,UPDATE
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC-WIJZIGBAAR,shiftemployee,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC-WIJZIGBAAR,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC-WIJZIGBAAR,everyone,BROWSE
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC-WIJZIGBAAR,everyone,READ
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC-WIJZIGBAAR,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC-WIJZIGBAAR,anonymous,READ
+
+!ph0022,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_LOGEVENT_PROC-NIETWIJZIGBAAR,State ACL describing permissions for roles/users on Log item's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC-NIETWIJZIGBAAR,shiftemployee,MODIFY_FOLLOWUP
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC-NIETWIJZIGBAAR,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC-NIETWIJZIGBAAR,everyone,BROWSE
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC-NIETWIJZIGBAAR,everyone,READ
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC-NIETWIJZIGBAAR,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_LOGEVENT_PROC-NIETWIJZIGBAAR,anonymous,READ
+
+!ph0023,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_LOGEVENT_PROC-VERWIJDERD,State ACL describing permissions for roles/users on Log item's,,2,GLOBAL,true,true,false
+
+lifecycle,DEFAULT_LOGEVENT_PROC,,Melding levenscyclus,,,,,ibanx.lifecycle.Lifecycle,De levenscyclus van een melding.,GLOBAL,true,false
+@startTransaction
+@method,setRepeating,lifecycle,DEFAULT_LOGEVENT_PROC,permission,MODIFY_FOLLOWUP
+@method,setRepeating,lifecycle,DEFAULT_LOGEVENT_PROC,permission,FLAG_HIGHLITE
+@endTransaction
+
+
+# normal states
+!ph0030,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_LOGEVENT_PROC,WIJZIGBAAR,Wijzigbaar,-1,false,false,1,!ph0021,true,GLOBAL,false
+!ph0031,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_LOGEVENT_PROC,NIETWIJZIGBAAR,Niet wijzigbaar,-1,false,false,2,!ph0022,true,GLOBAL,false
+# exception states
+!ph0032,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_LOGEVENT_PROC,VERWIJDERD,Verwijderd,-1,true,false,1,!ph0023,true,GLOBAL,false
+
+############ DEVIATION LIFECYCLE ###################
+
+!ph0041,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_DEVIATION_PROC-GEPLAND,State ACL describing permissions for roles/users on Deviation's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-GEPLAND,shiftemployee,CREATE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-GEPLAND,shiftemployee,COPY
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-GEPLAND,shiftemployee,UPDATE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-GEPLAND,shiftemployee,CHANGESTATE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-GEPLAND,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-GEPLAND,everyone,BROWSE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-GEPLAND,everyone,READ
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-GEPLAND,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-GEPLAND,anonymous,READ
+
+!ph0042,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_DEVIATION_PROC-ACTIEF,State ACL describing permissions for roles/users on Deviation's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-ACTIEF,shiftemployee,CREATE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-ACTIEF,shiftemployee,COPY
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-ACTIEF,shiftemployee,UPDATE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-ACTIEF,shiftemployee,CHANGESTATE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-ACTIEF,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-ACTIEF,everyone,BROWSE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-ACTIEF,everyone,READ
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-ACTIEF,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-ACTIEF,anonymous,READ
+
+
+!ph0043,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_DEVIATION_PROC-OPGEHEVEN,State ACL describing permissions for roles/users on Deviation's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-OPGEHEVEN,shiftemployee,MODIFY_FOLLOWUP
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-OPGEHEVEN,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-OPGEHEVEN,everyone,BROWSE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-OPGEHEVEN,everyone,READ
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-OPGEHEVEN,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-OPGEHEVEN,anonymous,READ
+
+!ph0044,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_DEVIATION_PROC-CANCELED,State ACL describing permissions for roles/users on Deviation's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-CANCELED,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-CANCELED,everyone,BROWSE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-CANCELED,everyone,READ
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-CANCELED,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_DEVIATION_PROC-CANCELED,anonymous,READ
+
+lifecycle,DEFAULT_DEVIATION_PROC,,Afwijking levenscyclus,,,,,ibanx.lifecycle.Lifecycle,De levenscyclus van een afwijking.,GLOBAL,true,false
+@startTransaction
+@method,setRepeating,lifecycle,DEFAULT_DEVIATION_PROC,permission,FLAG_HIGHLITE
+@method,setRepeating,lifecycle,DEFAULT_DEVIATION_PROC,permission,MODIFY_FOLLOWUP
+@endTransaction
+
+
+# normal states
+!ph0050,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_DEVIATION_PROC,GEPLAND,Gepland,-1,false,false,1,!ph0041,true,GLOBAL,false
+!ph0051,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_DEVIATION_PROC,ACTIEF,Actief,-1,false,false,2,!ph0042,true,GLOBAL,false
+!ph0052,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_DEVIATION_PROC,OPGEHEVEN,Opgeheven,-1,false,false,3,!ph0043,true,GLOBAL,false
+# exception states
+!ph0053,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_DEVIATION_PROC,CANCELED,Geannuleerd,-1,true,false,1,!ph0044,true,GLOBAL,false
+
+############ TASK LIFECYCLE ###################
+
+!phtask41,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_TASK_PROC-OPEN,State ACL describing permissions for roles/users on Task's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_TASK_PROC-OPEN,shiftemployee,CREATE
+roleperm,StateAcl DEFAULT_TASK_PROC-OPEN,shiftemployee,COPY
+roleperm,StateAcl DEFAULT_TASK_PROC-OPEN,shiftemployee,UPDATE
+roleperm,StateAcl DEFAULT_TASK_PROC-OPEN,shiftemployee,CHANGESTATE
+roleperm,StateAcl DEFAULT_TASK_PROC-OPEN,shiftemployee,PROPAGATE
+roleperm,StateAcl DEFAULT_TASK_PROC-OPEN,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_TASK_PROC-OPEN,productionassistant,CREATE
+roleperm,StateAcl DEFAULT_TASK_PROC-OPEN,productionassistant,COPY
+roleperm,StateAcl DEFAULT_TASK_PROC-OPEN,productionassistant,UPDATE
+roleperm,StateAcl DEFAULT_TASK_PROC-OPEN,productionassistant,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_TASK_PROC-OPEN,everyone,BROWSE
+roleperm,StateAcl DEFAULT_TASK_PROC-OPEN,everyone,READ
+roleperm,StateAcl DEFAULT_TASK_PROC-OPEN,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_TASK_PROC-OPEN,anonymous,READ
+
+!phtask42,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_TASK_PROC-INUITVOERING,State ACL describing permissions for roles/users on Task's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_TASK_PROC-INUITVOERING,shiftemployee,CREATE
+roleperm,StateAcl DEFAULT_TASK_PROC-INUITVOERING,shiftemployee,COPY
+roleperm,StateAcl DEFAULT_TASK_PROC-INUITVOERING,shiftemployee,UPDATE
+roleperm,StateAcl DEFAULT_TASK_PROC-INUITVOERING,shiftemployee,CHANGESTATE
+roleperm,StateAcl DEFAULT_TASK_PROC-INUITVOERING,shiftemployee,PROPAGATE
+roleperm,StateAcl DEFAULT_TASK_PROC-INUITVOERING,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_TASK_PROC-INUITVOERING,productionassistant,CREATE
+roleperm,StateAcl DEFAULT_TASK_PROC-INUITVOERING,productionassistant,COPY
+roleperm,StateAcl DEFAULT_TASK_PROC-INUITVOERING,productionassistant,UPDATE
+roleperm,StateAcl DEFAULT_TASK_PROC-INUITVOERING,productionassistant,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_TASK_PROC-INUITVOERING,everyone,BROWSE
+roleperm,StateAcl DEFAULT_TASK_PROC-INUITVOERING,everyone,READ
+roleperm,StateAcl DEFAULT_TASK_PROC-INUITVOERING,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_TASK_PROC-INUITVOERING,anonymous,READ
+
+
+!phtask43,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_TASK_PROC-AFGEROND,State ACL describing permissions for roles/users on Task's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_TASK_PROC-AFGEROND,everyone,BROWSE
+roleperm,StateAcl DEFAULT_TASK_PROC-AFGEROND,everyone,READ
+roleperm,StateAcl DEFAULT_TASK_PROC-AFGEROND,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_TASK_PROC-AFGEROND,anonymous,READ
+roleperm,StateAcl DEFAULT_TASK_PROC-AFGEROND,shiftemployee,CHANGESTATE
+roleperm,StateAcl DEFAULT_TASK_PROC-AFGEROND,shiftemployee,MODIFY_FOLLOWUP
+roleperm,StateAcl DEFAULT_TASK_PROC-AFGEROND,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_TASK_PROC-AFGEROND,productionassistant,FLAG_HIGHLITE
+
+!phtask44,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_TASK_PROC-CANCELED,State ACL describing permissions for roles/users on Task's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_TASK_PROC-CANCELED,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_TASK_PROC-CANCELED,productionassistant,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_TASK_PROC-CANCELED,everyone,BROWSE
+roleperm,StateAcl DEFAULT_TASK_PROC-CANCELED,everyone,READ
+roleperm,StateAcl DEFAULT_TASK_PROC-CANCELED,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_TASK_PROC-CANCELED,anonymous,READ
+
+lifecycle,DEFAULT_TASK_PROC,,Taak levenscyclus,,,,,ibanx.lifecycle.Lifecycle,De levenscyclus van een taak.,GLOBAL,true,false
+@startTransaction
+@method,setRepeating,lifecycle,DEFAULT_TASK_PROC,permission,PROPAGATE
+@method,setRepeating,lifecycle,DEFAULT_TASK_PROC,permission,MODIFY_FOLLOWUP
+@method,setRepeating,lifecycle,DEFAULT_TASK_PROC,permission,FLAG_HIGHLITE
+@endTransaction
+
+
+# normal states
+!phtask50,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_TASK_PROC,OPEN,Open,-1,false,false,1,!phtask41,true,GLOBAL,false
+!phtask51,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_TASK_PROC,INUITVOERING,In uitvoering,-1,false,false,2,!phtask42,true,GLOBAL,false
+!phtask52,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_TASK_PROC,AFGEROND,Afgerond,-1,false,false,3,!phtask43,true,GLOBAL,false
+# exception states
+!phtask53,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_TASK_PROC,CANCELED,Geannuleerd,-1,true,false,1,!phtask44,true,GLOBAL,false
+
+############ EVALUATE_PERMIT_TASK LIFECYCLE ###################
+
+!phevptaskopen,acl,,,,,ibanx.security.Acl,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,State ACL describing permissions for roles/users on permit evaluation task's,,2,GLOBAL,true,true,false
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,shiftemployee,COPY
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,shiftemployee,UPDATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,shiftemployee,CHANGESTATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,shiftemployee,PROPAGATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,productionassistant,COPY
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,productionassistant,UPDATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,productionassistant,FLAG_HIGHLITE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,everyone,BROWSE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,everyone,READ
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,anonymous,BROWSE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,anonymous,READ
+
+!phevptaskinprogress,acl,,,,,ibanx.security.Acl,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,State ACL describing permissions for roles/users on permit evaluation task's,,2,GLOBAL,true,true,false
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,shiftemployee,COPY
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,shiftemployee,UPDATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,shiftemployee,CHANGESTATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,shiftemployee,PROPAGATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,productionassistant,COPY
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,productionassistant,UPDATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,productionassistant,FLAG_HIGHLITE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,everyone,BROWSE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,everyone,READ
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,anonymous,BROWSE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,anonymous,READ
+
+
+!phevptaskclosed,acl,,,,,ibanx.security.Acl,StateAcl EVALUATE_PERMIT_TASK_PROC-AFGEROND,State ACL describing permissions for roles/users on permit evaluation task's,,2,GLOBAL,true,true,false
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-AFGEROND,everyone,BROWSE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-AFGEROND,everyone,READ
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-AFGEROND,shiftemployee,CHANGESTATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-AFGEROND,shiftemployee,MODIFY_FOLLOWUP
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-AFGEROND,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-AFGEROND,productionassistant,FLAG_HIGHLITE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-AFGEROND,anonymous,BROWSE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-AFGEROND,anonymous,READ
+
+!phevptaskcanceled,acl,,,,,ibanx.security.Acl,StateAcl EVALUATE_PERMIT_TASK_PROC-CANCELED,State ACL describing permissions for roles/users on permit evaluation task's,,2,GLOBAL,true,true,false
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-CANCELED,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-CANCELED,productionassistant,FLAG_HIGHLITE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-CANCELED,everyone,BROWSE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-CANCELED,everyone,READ
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-CANCELED,anonymous,BROWSE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-CANCELED,anonymous,READ
+
+
+lifecycle,EVALUATE_PERMIT_TASK_PROC,,Taak levenscyclus,,,,,ibanx.lifecycle.Lifecycle,De levenscyclus van een vergunning evaluatie taak.,GLOBAL,true,false
+
+lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,EVALUATE_PERMIT_TASK_PROC,OPEN,Open,-1,false,false,1,!phevptaskopen,true,GLOBAL,false
+lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,EVALUATE_PERMIT_TASK_PROC,INUITVOERING,In uitvoering,-1,false,false,2,!phevptaskinprogress,true,GLOBAL,false
+lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,EVALUATE_PERMIT_TASK_PROC,AFGEROND,Afgerond,-1,false,false,3,!phevptaskclosed,true,GLOBAL,false
+# exception states
+lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,EVALUATE_PERMIT_TASK_PROC,CANCELED,Geannuleerd,-1,true,false,1,!phevptaskcanceled,true,GLOBAL,false
+
+
+############ INSTRUCTION LIFECYCLE ###################
+
+!phinstr1,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_INSTRUCTION_PROC-GEPLAND,State ACL describing permissions for roles/users on Instruction's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-GEPLAND,productionassistant,CREATE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-GEPLAND,productionassistant,COPY
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-GEPLAND,productionassistant,UPDATE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-GEPLAND,productionassistant,CHANGESTATE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-GEPLAND,productionassistant,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-GEPLAND,everyone,BROWSE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-GEPLAND,everyone,READ
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-GEPLAND,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-GEPLAND,anonymous,READ
+
+!phinstr2,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_INSTRUCTION_PROC-ACTIEF,State ACL describing permissions for roles/users on Instruction's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-ACTIEF,productionassistant,CREATE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-ACTIEF,productionassistant,COPY
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-ACTIEF,productionassistant,UPDATE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-ACTIEF,productionassistant,CHANGESTATE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-ACTIEF,productionassistant,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-ACTIEF,everyone,BROWSE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-ACTIEF,everyone,READ
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-ACTIEF,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-ACTIEF,anonymous,READ
+
+!phinstr3,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_INSTRUCTION_PROC-OPGEHEVEN,State ACL describing permissions for roles/users on Instruction's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-OPGEHEVEN,productionassistant,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-OPGEHEVEN,everyone,BROWSE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-OPGEHEVEN,everyone,READ
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-OPGEHEVEN,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-OPGEHEVEN,anonymous,READ
+
+!phinstr4,acl,,,,,ibanx.security.Acl,StateAcl DEFAULT_INSTRUCTION_PROC-CANCELED,State ACL describing permissions for roles/users on Instruction's,,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-CANCELED,productionassistant,FLAG_HIGHLITE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-CANCELED,everyone,BROWSE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-CANCELED,everyone,READ
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-CANCELED,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_INSTRUCTION_PROC-CANCELED,anonymous,READ
+
+lifecycle,DEFAULT_INSTRUCTION_PROC,,Instructie levenscyclus,,,,,ibanx.lifecycle.Lifecycle,De levenscyclus van een instructie.,GLOBAL,true,false
+@startTransaction
+@method,setRepeating,lifecycle,DEFAULT_INSTRUCTION_PROC,permission,FLAG_HIGHLITE
+@endTransaction
+
+# normal states
+!phinstr50,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_INSTRUCTION_PROC,GEPLAND,Gepland,-1,false,false,1,!phinstr1,true,GLOBAL,false
+!phinstr51,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_INSTRUCTION_PROC,ACTIEF,Actief,-1,false,false,2,!phinstr2,true,GLOBAL,false
+!phinstr52,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_INSTRUCTION_PROC,OPGEHEVEN,Opgeheven,-1,false,false,3,!phinstr3,true,GLOBAL,false
+# exception states
+!phinstr53,lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,DEFAULT_INSTRUCTION_PROC,CANCELED,Geannuleerd,-1,true,false,1,!phinstr4,true,GLOBAL,false
+
+##################################### LINKTYPE DEFINITIONS
+
+!ph6010,roleinfo,is-successor-of,volgt op,ibanx.logbook.ShiftIF,true
+!ph6011,roleinfo,is-predecessor-of,gaat vooraf aan,ibanx.logbook.ShiftIF,true
+linktype,,,,,sequence-link,true,ibanx.link.Link,!ph6011,!ph6010,GLOBAL,true
+
+!ph6005,roleinfo,creates,creeert,ibanx.logbook.DeviationIF,true
+!ph6006,roleinfo,is-created-by,is gecreeerd door,ibanx.logbook.LogEventIF,true
+linktype,,,,,audit-link-dev,true,ibanx.link.Link,!ph6005,!ph6006,GLOBAL,true
+
+!ph6005a,roleinfo,creates,creeert,ibanx.task.TaskIF,true
+!ph6006a,roleinfo,is-created-by,is gecreeerd door,ibanx.logbook.LogEventIF,true
+linktype,,,,,audit-link-task,true,ibanx.link.Link,!ph6005a,!ph6006a,GLOBAL,true
+
+!ph6015,roleinfo,is-caused-by,wordt veroorzaakt door,ibanx.logbook.DeviationIF,true
+!ph6016,roleinfo,causes,veroorzaakt,ibanx.logbook.LogEventIF,true
+linktype,,,,,causality-link-logevent,true,ibanx.link.Link,!ph6016,!ph6015,GLOBAL,true
+
+!ph6015a,roleinfo,is-caused-by,wordt veroorzaakt door,ibanx.logbook.DeviationIF,true
+!ph6016a,roleinfo,causes,veroorzaakt,ibanx.task.TaskIF,true
+linktype,,,,,causality-link-task,true,ibanx.link.Link,!ph6016a,!ph6015a,GLOBAL,true
+
+!ph6015b,roleinfo,leads-to,leidt tot,ibanx.logbook.DeviationIF,true
+!ph6016b,roleinfo,is-caused-by,veroorzaakt door,ibanx.task.TaskIF,true
+linktype,,,,,link-dev-task,true,ibanx.link.Link,!ph6015b,!ph6016b,GLOBAL,true
+
+!ph6015c,roleinfo,leads-to,leidt tot,ibanx.logbook.LogEventIF,true
+!ph6016c,roleinfo,is-caused-by,veroorzaakt door,ibanx.task.TaskIF,true
+linktype,,,,,link-logevent-task,true,ibanx.link.Link,!ph6015c,!ph6016c,GLOBAL,true
+
+!ph6015d,roleinfo,leads-to,leidt tot,ibanx.logbook.LogEventIF,true
+!ph6016d,roleinfo,is-caused-by,veroorzaakt door,ibanx.logbook.InstructionIF,true
+linktype,,,,,link-logevent-instruction,true,ibanx.link.Link,!ph6015d,!ph6016d,GLOBAL,true
+
+!ph6020,roleinfo,is-consolidated-by,wordt geconsolideerd door,ibanx.logbook.LogEventIF,true
+!ph6021,roleinfo,consolidates,consolideert,ibanx.logbook.LogEventIF,true
+linktype,,,,,consolidation-link,true,ibanx.logbook.ConsolidationLink,!ph6020,!ph6021,GLOBAL,true
+
+!ph6025,roleinfo,reports,rapporteert,ibanx.object.PlantItemIF,true
+!ph6026,roleinfo,is-reported-by,is gerapporteerd door,ibanx.logbook.LogEventIF,true
+linktype,,,,,action-audit-link,true,ibanx.link.Link,!ph6025,!ph6026,GLOBAL,true
+
+@delete,queryspec,number,ALL-SHIFT-TYPES,0
+queryspec,ALL-SHIFT-TYPES,,All sites,,,,,All sites,sysadmin,ibanx.object.BusinessObjectTypeIF,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-SHIFT-TYPES,number
+@method,addColumn,queryspec,ALL-SHIFT-TYPES,name
+@method,set,queryspec,ALL-SHIFT-TYPES,key,form
+@method,set,queryspec,ALL-SHIFT-TYPES,form.system,false
+@method,set,queryspec,ALL-SHIFT-TYPES,operator.form.system,0
+@method,set,queryspec,ALL-SHIFT-TYPES,form.objectClass,ibanx.logbook.ShiftIF
+@method,set,queryspec,ALL-SHIFT-TYPES,operator.form.objectClass,0
+@method,set,queryspec,ALL-SHIFT-TYPES,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,DEVIATIONS,0
+queryspec,DEVIATIONS,,Deviations,,,,,Deviations,sysadmin,ibanx.logbook.DeviationIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,DEVIATIONS,key,form
+@method,set,queryspec,DEVIATIONS,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,LOGEVENTS,0
+queryspec,LOGEVENTS,,Logevents,,,,,Logevents,sysadmin,ibanx.logbook.LogEventIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,LOGEVENTS,key,form
+@method,set,queryspec,LOGEVENTS,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,INSTRUCTIONS,0
+queryspec,INSTRUCTIONS,,Instructions,,,,,Instructions,sysadmin,ibanx.logbook.InstructionIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,INSTRUCTIONS,key,form
+@method,set,queryspec,INSTRUCTIONS,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,ALL-LOG-BOTS,0
+queryspec,ALL-LOG-BOTS,,Log businessobjecttypes,,,,,Log businessobjecttypes,sysadmin,ibanx.object.BusinessObjectTypeIF,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-LOG-BOTS,number
+@method,addColumn,queryspec,ALL-LOG-BOTS,description
+@method,set,queryspec,ALL-LOG-BOTS,key,form
+@method,set,queryspec,ALL-LOG-BOTS,form.objectClass,ibanx.logbook.LogIF
+@method,set,queryspec,ALL-LOG-BOTS,operator.form.objectClass,0
+@endTransaction
+
+@delete,queryspec,number,ALL-LOGEVENT-BOTS,0
+queryspec,ALL-LOGEVENT-BOTS,,Logevent businessobjecttypes,,,,,Logevent businessobjecttypes,sysadmin,ibanx.object.BusinessObjectTypeIF,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-LOGEVENT-BOTS,number
+@method,addColumn,queryspec,ALL-LOGEVENT-BOTS,description
+@method,set,queryspec,ALL-LOGEVENT-BOTS,key,form
+@method,set,queryspec,ALL-LOGEVENT-BOTS,form.objectClass,ibanx.logbook.LogEventIF
+@method,set,queryspec,ALL-LOGEVENT-BOTS,operator.form.objectClass,0
+@endTransaction
+
+@delete,queryspec,number,ALL-DEVIATION-BOTS,0
+queryspec,ALL-DEVIATION-BOTS,,Deviation businessobjecttypes,,,,,Deviation businessobjecttypes,sysadmin,ibanx.object.BusinessObjectTypeIF,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-DEVIATION-BOTS,number
+@method,addColumn,queryspec,ALL-DEVIATION-BOTS,description
+@method,set,queryspec,ALL-DEVIATION-BOTS,key,form
+@method,set,queryspec,ALL-DEVIATION-BOTS,form.objectClass,ibanx.logbook.DeviationIF
+@method,set,queryspec,ALL-DEVIATION-BOTS,operator.form.objectClass,0
+@endTransaction
+
+@delete,queryspec,number,ALL-INSTRUCTION-BOTS,0
+queryspec,ALL-INSTRUCTION-BOTS,,Instruction businessobjecttypes,,,,,Instruction businessobjecttypes,sysadmin,ibanx.object.BusinessObjectTypeIF,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-INSTRUCTION-BOTS,number
+@method,addColumn,queryspec,ALL-INSTRUCTION-BOTS,description
+@method,set,queryspec,ALL-INSTRUCTION-BOTS,key,form
+@method,set,queryspec,ALL-INSTRUCTION-BOTS,form.objectClass,ibanx.logbook.InstructionIF
+@method,set,queryspec,ALL-INSTRUCTION-BOTS,operator.form.objectClass,0
+@endTransaction
+
+
+
+######### NUMBERING SCHEMES
+
+@delete,numberingscheme,name,identity-deviation,0
+numberingscheme,,,,,identity-deviation,identity-deviation,0,1,1,AFW,,0,false,ibanx.ext.stproc.identity.DeviationIdentity,GLOBAL,true,false
+@delete,sequence,name,identity-deviation,0
+sequence,identity-deviation,1,1,1,false
+
+@delete,numberingscheme,name,identity-logevent,0
+numberingscheme,,,,,identity-logevent,identity-logevent,0,1,1,LI-,,0,false,ibanx.ext.stproc.identity.LogEventIdentity,GLOBAL,true,false
+@delete,sequence,name,identity-logevent,0
+sequence,identity-logevent,1,1,1,false
+
+@delete,numberingscheme,name,identity-log,0
+numberingscheme,,,,,identity-log,identity-log,0,1,1,LOG-,,0,false,ibanx.ext.stproc.identity.LogIdentity,GLOBAL,true,false
+@delete,sequence,name,identity-log,0
+sequence,identity-log,1,1,1,false
+
+@delete,numberingscheme,name,identity-shift,0
+numberingscheme,,,,,identity-shift,identity-shift,0,1,1,SH-,,0,false,,GLOBAL,true,false
+@delete,sequence,name,identity-shift,0
+sequence,identity-shift,1,1,1,false
+
+@delete,numberingscheme,name,identity-shiftteam,0
+numberingscheme,,,,,identity-shiftteam,identity-shiftteam,0,1,1,TEAM-,,0,false,,GLOBAL,true,false
+@delete,sequence,name,identity-shiftteam,0
+sequence,identity-shiftteam,1,1,1,false
+
+@delete,numberingscheme,name,identity-rosterschedule,0
+numberingscheme,,,,,identity-rosterschedule,identity-rosterschedule,0,1,1,RS-,,0,false,,GLOBAL,true,false
+@delete,sequence,name,identity-rosterschedule,0
+sequence,identity-rosterschedule,1,1,1,false
+
+@delete,numberingscheme,name,identity-task,0
+numberingscheme,,,,,identity-task,identity-task,0,1,1,T,,0,false,ibanx.ext.stproc.identity.TaskIdentity,GLOBAL,true,false
+@delete,sequence,name,identity-task,0
+sequence,identity-task,1,1,1,false
+
+@delete,numberingscheme,name,identity-taskdefinition,0
+numberingscheme,,,,,identity-taskdefinition,identity-taskdefinition,0,1,1,TD,,0,false,,GLOBAL,true,false
+@delete,sequence,name,identity-taskdefinition,0
+sequence,identity-taskdefinition,1,1,1,false
+
+@delete,numberingscheme,name,identity-instruction,0
+numberingscheme,,,,,identity-instruction,identity-instruction,0,1,1,INS,,0,false,ibanx.ext.stproc.identity.InstructionIdentity,GLOBAL,true,false
+@delete,sequence,name,identity-instruction,0
+sequence,identity-instruction,1,1,1,false
+
+########
+
+@delete,vlist,group,logdefinitions,0
+vlist,logdefinitions,Mogelijke verslag typen,Configuratie settings mogelijke verslag typen
+
+@delete,vlist,group,autocreate-logevents,0
+vlist,autocreate-logevents,Config. auto. meldingen aanmaken,Configuratie settings voor automatisch meldingen aanmaken
+
+@delete,vlist,group,periods,0
+vlist,periods,Periodes,Periodes
+
+@delete,vlist,group,priorities,0
+vlist,priorities,Prioriteiten,Keuzelijst prioriteiten
+
+@delete,queryspec,number,FUNCLEVELTWO,0
+queryspec,FUNCLEVELTWO,,Query sectie's,,,,,Query sectie's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,FUNCLEVELTWO,value
+#@method,addColumn,queryspec,FUNCLEVELTWO,description
+#@method,addColumn,queryspec,FUNCLEVELTWO,ordering
+@method,set,queryspec,FUNCLEVELTWO,orderBy,description
+@method,set,queryspec,FUNCLEVELTWO,key,form
+@method,set,queryspec,FUNCLEVELTWO,form.groupName,funcLevelTwo
+@method,set,queryspec,FUNCLEVELTWO,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,FUNCLEVELTHREE,0
+queryspec,FUNCLEVELTHREE,,Query unit's,,,,,Query unit's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,FUNCLEVELTHREE,value
+#@method,addColumn,queryspec,FUNCLEVELTHREE,description
+#@method,addColumn,queryspec,FUNCLEVELTHREE,ordering
+@method,set,queryspec,FUNCLEVELTHREE,orderBy,description
+@method,set,queryspec,FUNCLEVELTHREE,key,form
+@method,set,queryspec,FUNCLEVELTHREE,form.groupName,funcLevelThree
+@method,set,queryspec,FUNCLEVELTHREE,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,FUNCLEVELFOUR,0
+queryspec,FUNCLEVELFOUR,,Query tag's,,,,,Query tag's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,FUNCLEVELFOUR,value
+#@method,addColumn,queryspec,FUNCLEVELFOUR,description
+#@method,addColumn,queryspec,FUNCLEVELFOUR,ordering
+@method,set,queryspec,FUNCLEVELFOUR,orderBy,description
+@method,set,queryspec,FUNCLEVELFOUR,key,form
+@method,set,queryspec,FUNCLEVELFOUR,form.groupName,funcLevelFour
+@method,set,queryspec,FUNCLEVELFOUR,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,FUNCLEVELFIVE,0
+queryspec,FUNCLEVELFIVE,,Query funcLevelFive's,,,,,Query funcLevelFive's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,FUNCLEVELFIVE,value
+#@method,addColumn,queryspec,FUNCLEVELFIVE,description
+#@method,addColumn,queryspec,FUNCLEVELFIVE,ordering
+@method,set,queryspec,FUNCLEVELFIVE,orderBy,description
+@method,set,queryspec,FUNCLEVELFIVE,key,form
+@method,set,queryspec,FUNCLEVELFIVE,form.groupName,funcLevelFive
+@method,set,queryspec,FUNCLEVELFIVE,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,FUNCLEVELSIX,0
+queryspec,FUNCLEVELSIX,,Query funcLevelSix's,,,,,Query funcLevelSix's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,FUNCLEVELSIX,value
+#@method,addColumn,queryspec,FUNCLEVELSIX,description
+#@method,addColumn,queryspec,FUNCLEVELSIX,ordering
+@method,set,queryspec,FUNCLEVELSIX,orderBy,description
+@method,set,queryspec,FUNCLEVELSIX,key,form
+@method,set,queryspec,FUNCLEVELSIX,form.groupName,funcLevelSix
+@method,set,queryspec,FUNCLEVELSIX,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,FUNCLEVELSEVEN,0
+queryspec,FUNCLEVELSEVEN,,Query funcLevelSeven's,,,,,Query funcLevelSeven's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,FUNCLEVELSEVEN,value
+#@method,addColumn,queryspec,FUNCLEVELSEVEN,description
+#@method,addColumn,queryspec,FUNCLEVELSEVEN,ordering
+@method,set,queryspec,FUNCLEVELSEVEN,orderBy,description
+@method,set,queryspec,FUNCLEVELSEVEN,key,form
+@method,set,queryspec,FUNCLEVELSEVEN,form.groupName,funcLevelSeven
+@method,set,queryspec,FUNCLEVELSEVEN,operator.form.groupName,0
+@endTransaction
+
+
+@delete,queryspec,number,GEOLEVELTWO,0
+queryspec,GEOLEVELTWO,,Query geoLevelTwo's,,,,,Query geoLevelTwo's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,GEOLEVELTWO,value
+#@method,addColumn,queryspec,GEOLEVELTWO,description
+#@method,addColumn,queryspec,GEOLEVELTWO,ordering
+@method,set,queryspec,GEOLEVELTWO,orderBy,description
+@method,set,queryspec,GEOLEVELTWO,key,form
+@method,set,queryspec,GEOLEVELTWO,form.groupName,geoLevelTwo
+@method,set,queryspec,GEOLEVELTWO,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,GEOLEVELTHREE,0
+queryspec,GEOLEVELTHREE,,Query geoLevelThree's,,,,,Query geoLevelThree's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,GEOLEVELTHREE,value
+#@method,addColumn,queryspec,GEOLEVELTHREE,description
+#@method,addColumn,queryspec,GEOLEVELTHREE,ordering
+@method,set,queryspec,GEOLEVELTHREE,orderBy,description
+@method,set,queryspec,GEOLEVELTHREE,key,form
+@method,set,queryspec,GEOLEVELTHREE,form.groupName,geoLevelThree
+@method,set,queryspec,GEOLEVELTHREE,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,GEOLEVELFOUR,0
+queryspec,GEOLEVELFOUR,,Query geoLevelFour's,,,,,Query geoLevelFour's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,GEOLEVELFOUR,value
+#@method,addColumn,queryspec,GEOLEVELFOUR,description
+#@method,addColumn,queryspec,GEOLEVELFOUR,ordering
+@method,set,queryspec,GEOLEVELFOUR,orderBy,description
+@method,set,queryspec,GEOLEVELFOUR,key,form
+@method,set,queryspec,GEOLEVELFOUR,form.groupName,geoLevelFour
+@method,set,queryspec,GEOLEVELFOUR,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,GEOLEVELFIVE,0
+queryspec,GEOLEVELFIVE,,Query geoLevelFive's,,,,,Query geoLevelFive's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,GEOLEVELFIVE,value
+#@method,addColumn,queryspec,GEOLEVELFIVE,description
+#@method,addColumn,queryspec,GEOLEVELFIVE,ordering
+@method,set,queryspec,GEOLEVELFIVE,orderBy,description
+@method,set,queryspec,GEOLEVELFIVE,key,form
+@method,set,queryspec,GEOLEVELFIVE,form.groupName,geoLevelFive
+@method,set,queryspec,GEOLEVELFIVE,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,GEOLEVELSIX,0
+queryspec,GEOLEVELSIX,,Query geoLevellSix's,,,,,Query geoLevelSix's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,GEOLEVELSIX,value
+#@method,addColumn,queryspec,GEOLEVELSIX,description
+#@method,addColumn,queryspec,GEOLEVELSIX,ordering
+@method,set,queryspec,GEOLEVELSIX,orderBy,description
+@method,set,queryspec,GEOLEVELSIX,key,form
+@method,set,queryspec,GEOLEVELSIX,form.groupName,ggeoLevelSix
+@method,set,queryspec,GEOLEVELSIX,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,GEOLEVELSEVEN,0
+queryspec,GEOLEVELSEVEN,,Query geoLevelSeven's,,,,,Query geoLevelSeven's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+#@method,addColumn,queryspec,GEOLEVELSEVEN,value
+#@method,addColumn,queryspec,GEOLEVELSEVEN,description
+#@method,addColumn,queryspec,GEOLEVELSEVEN,ordering
+@method,set,queryspec,GEOLEVELSEVEN,orderBy,description
+@method,set,queryspec,GEOLEVELSEVEN,key,form
+@method,set,queryspec,GEOLEVELSEVEN,form.groupName,geoLevelSeven
+@method,set,queryspec,GEOLEVELSEVEN,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,TAG,0
+queryspec,TAG,,Query tag's,,,,,Query tag's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,TAG,orderBy,description
+@method,set,queryspec,TAG,key,form
+@method,set,queryspec,TAG,form.groupName,tag
+@method,set,queryspec,TAG,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,EQUIPMENT,0
+queryspec,EQUIPMENT,,Query equipment's,,,,,Query equipment's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,EQUIPMENT,orderBy,description
+@method,set,queryspec,EQUIPMENT,key,form
+@method,set,queryspec,EQUIPMENT,form.groupName,equipment
+@method,set,queryspec,EQUIPMENT,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,FLOC,0
+queryspec,FLOC,,Query floc's,,,,,Query floc's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,FLOC,orderBy,description
+@method,set,queryspec,FLOC,key,form
+@method,set,queryspec,FLOC,form.groupName,floc
+@method,set,queryspec,FLOC,operator.form.groupName,0
+@endTransaction
+
+vitem,periods,1d,1 dag
+vitem,periods,2d,2 dagen
+vitem,periods,3d,3 dagen
+vitem,periods,4d,4 dagen
+vitem,periods,5d,5 dagen
+vitem,periods,6d,6 dagen
+vitem,periods,1w,1 week
+vitem,periods,2w,2 weken
+vitem,periods,3w,3 weken
+vitem,periods,4w,4 weken
+vitem,periods,1m,1 maand
+vitem,periods,2m,2 maanden
+vitem,periods,3m,3 maanden
+vitem,periods,4m,4 maanden
+vitem,periods,5m,5 maanden
+vitem,periods,6m,6 maanden
+vitem,periods,7m,7 maanden
+vitem,periods,8m,8 maanden
+vitem,periods,9m,9 maanden
+vitem,periods,10m,10 maanden
+vitem,periods,11m,11 maanden
+vitem,periods,12m,12 maanden
+vitem,periods,1y,1 jaar
+vitem,periods,2y,2 jaar
+vitem,periods,3y,3 jaar
+
+#############################################################
+
+
+businessobjecttype,DEFAULT_SHIFT_TEAM,,Ploeg,,,,,Ploeg,ibanx.org.TeamIF,ORG_STATE,-1,-1,null,GLOBAL,true,null,null,null,null,null,false
+@startTransaction
+@method,set,businessobjecttype,DEFAULT_SHIFT_TEAM,class0,team
+@endTransaction
+
+@delete,queryspec,number,ALL-SHIFT-TEAMS,0
+queryspec,ALL-SHIFT-TEAMS,,All shifts,,,,,All shifts,sysadmin,ibanx.org.Team,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-SHIFT-TEAMS,id
+@method,addColumn,queryspec,ALL-SHIFT-TEAMS,name
+@method,set,queryspec,ALL-SHIFT-TEAMS,key,form
+@method,set,queryspec,ALL-SHIFT-TEAMS,form.system,false
+@method,set,queryspec,ALL-SHIFT-TEAMS,operator.form.system,0
+@method,set,queryspec,ALL-SHIFT-TEAMS,form.entityClass,ibanx.org.Team
+@method,set,queryspec,ALL-SHIFT-TEAMS,operator.form.entityClass,0
+@method,set,queryspec,ALL-SHIFT-TEAMS,form.businessObjectType.number,DEFAULT_SHIFT_TEAM
+@method,set,queryspec,ALL-SHIFT-TEAMS,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-SHIFT-TEAMS,disableAccessControl,true
+@endTransaction
+
+
+@delete,queryspec,number,ALL-SHIFT-TEAMS-IDENTITY,0
+queryspec,ALL-SHIFT-TEAMS-IDENTITY,,All shifts,,,,,All shifts,sysadmin,ibanx.org.Team,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-SHIFT-TEAMS-IDENTITY,number
+@method,addColumn,queryspec,ALL-SHIFT-TEAMS-IDENTITY,name
+@method,set,queryspec,ALL-SHIFT-TEAMS-IDENTITY,key,form
+@method,set,queryspec,ALL-SHIFT-TEAMS-IDENTITY,form.system,false
+@method,set,queryspec,ALL-SHIFT-TEAMS-IDENTITY,operator.form.system,0
+@method,set,queryspec,ALL-SHIFT-TEAMS-IDENTITY,form.entityClass,ibanx.org.Team
+@method,set,queryspec,ALL-SHIFT-TEAMS-IDENTITY,operator.form.entityClass,0
+@method,set,queryspec,ALL-SHIFT-TEAMS-IDENTITY,form.businessObjectType.number,DEFAULT_SHIFT_TEAM
+@method,set,queryspec,ALL-SHIFT-TEAMS-IDENTITY,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-SHIFT-TEAMS-IDENTITY,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,ALL-SHIFT-TEAM-IDS-BY-NAME,0
+queryspec,ALL-SHIFT-TEAM-IDS-BY-NAME,,All shifts,,,,,All shifts,sysadmin,ibanx.org.Team,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-SHIFT-TEAM-IDS-BY-NAME,id
+@method,addColumn,queryspec,ALL-SHIFT-TEAM-IDS-BY-NAME,name
+@method,set,queryspec,ALL-SHIFT-TEAM-IDS-BY-NAME,key,form
+@method,set,queryspec,ALL-SHIFT-TEAM-IDS-BY-NAME,form.system,false
+@method,set,queryspec,ALL-SHIFT-TEAM-IDS-BY-NAME,operator.form.system,0
+@method,set,queryspec,ALL-SHIFT-TEAM-IDS-BY-NAME,form.entityClass,ibanx.org.Team
+@method,set,queryspec,ALL-SHIFT-TEAM-IDS-BY-NAME,operator.form.entityClass,0
+@method,set,queryspec,ALL-SHIFT-TEAM-IDS-BY-NAME,form.businessObjectType.number,DEFAULT_SHIFT_TEAM
+@method,set,queryspec,ALL-SHIFT-TEAM-IDS-BY-NAME,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-SHIFT-TEAM-IDS-BY-NAME,disableAccessControl,true
+@endTransaction
+
+
+@delete,queryspec,number,ALL-SHIFT-TEAM-IDENTITIES-BY-NAME,0
+queryspec,ALL-SHIFT-TEAM-IDENTITIES-BY-NAME,,All shifts,,,,,All shifts,sysadmin,ibanx.org.Team,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-SHIFT-TEAM-IDENTITIES-BY-NAME,number
+@method,addColumn,queryspec,ALL-SHIFT-TEAM-IDENTITIES-BY-NAME,name
+@method,set,queryspec,ALL-SHIFT-TEAM-IDENTITIES-BY-NAME,key,form
+@method,set,queryspec,ALL-SHIFT-TEAM-IDENTITIES-BY-NAME,form.system,false
+@method,set,queryspec,ALL-SHIFT-TEAM-IDENTITIES-BY-NAME,operator.form.system,0
+@method,set,queryspec,ALL-SHIFT-TEAM-IDENTITIES-BY-NAME,form.entityClass,ibanx.org.Team
+@method,set,queryspec,ALL-SHIFT-TEAM-IDENTITIES-BY-NAME,operator.form.entityClass,0
+@method,set,queryspec,ALL-SHIFT-TEAM-IDENTITIES-BY-NAME,form.businessObjectType.number,DEFAULT_SHIFT_TEAM
+@method,set,queryspec,ALL-SHIFT-TEAM-IDENTITIES-BY-NAME,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-SHIFT-TEAM-IDENTITIES-BY-NAME,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,ALL-SHIFT-TEAM-INSTANCES,0
+queryspec,ALL-SHIFT-TEAM-INSTANCES,,All shifts,,,,,All shifts,sysadmin,ibanx.org.TeamPreviewList,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,ALL-SHIFT-TEAM-INSTANCES,key,form
+@method,set,queryspec,ALL-SHIFT-TEAM-INSTANCES,form.system,false
+@method,set,queryspec,ALL-SHIFT-TEAM-INSTANCES,operator.form.system,0
+@method,set,queryspec,ALL-SHIFT-TEAM-INSTANCES,form.entityClass,ibanx.org.Team
+@method,set,queryspec,ALL-SHIFT-TEAM-INSTANCES,operator.form.entityClass,0
+@method,set,queryspec,ALL-SHIFT-TEAM-INSTANCES,form.businessObjectType.number,DEFAULT_SHIFT_TEAM
+@method,set,queryspec,ALL-SHIFT-TEAM-INSTANCES,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-SHIFT-TEAM-INSTANCES,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,ALL-ACTIVE-SHIFT-TEAMS,0
+queryspec,ALL-ACTIVE-SHIFT-TEAMS,,All active shifts,,,,,All active shifts,sysadmin,ibanx.org.Team,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-ACTIVE-SHIFT-TEAMS,id
+@method,addColumn,queryspec,ALL-ACTIVE-SHIFT-TEAMS,name
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,key,form
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,form.system,false
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,operator.form.system,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,form.entityClass,ibanx.org.Team
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,operator.form.entityClass,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,form.businessObjectType.number,DEFAULT_SHIFT_TEAM
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,form.lifecycleState.name,ACTIVE
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,operator.form.lifecycleState.name,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,0
+queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,,All active shifts,,,,,All active shifts,sysadmin,ibanx.org.Team,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,number
+@method,addColumn,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,name
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,key,form
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,form.system,false
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,operator.form.system,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,form.entityClass,ibanx.org.Team
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,operator.form.entityClass,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,form.businessObjectType.number,DEFAULT_SHIFT_TEAM
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,form.lifecycleState.name,ACTIVE
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,operator.form.lifecycleState.name,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAMS-IDENTITY,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,0
+queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,,All active shifts,,,,,All active shifts,sysadmin,ibanx.org.Team,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,id
+@method,addColumn,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,name
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,key,form
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,form.system,false
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,operator.form.system,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,form.entityClass,ibanx.org.Team
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,operator.form.entityClass,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,form.businessObjectType.number,DEFAULT_SHIFT_TEAM
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,form.lifecycleState.name,ACTIVE
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,operator.form.lifecycleState.name,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDS-BY-NAME,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,0
+queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,,All active shifts,,,,,All active shifts,sysadmin,ibanx.org.Team,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,number
+@method,addColumn,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,name
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,key,form
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,form.system,false
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,operator.form.system,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,form.entityClass,ibanx.org.Team
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,operator.form.entityClass,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,form.businessObjectType.number,DEFAULT_SHIFT_TEAM
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,form.lifecycleState.name,ACTIVE
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,operator.form.lifecycleState.name,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-IDENTITIES-BY-NAME,disableAccessControl,true
+@endTransaction
+
+@delete,queryspec,number,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,0
+queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,,All active shifts,,,,,All active shifts,sysadmin,ibanx.org.TeamPreviewList,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,key,form
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,form.system,false
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,operator.form.system,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,form.entityClass,ibanx.org.Team
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,operator.form.entityClass,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,form.businessObjectType.number,DEFAULT_SHIFT_TEAM
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,form.lifecycleState.name,ACTIVE
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,operator.form.lifecycleState.name,0
+@method,set,queryspec,ALL-ACTIVE-SHIFT-TEAM-INSTANCES,disableAccessControl,true
+@endTransaction
+
+
+## use startdate of shift in rosterviews
+@delete,queryspec,number,SHIFT-OVERVIEW,0
+queryspec,SHIFT-OVERVIEW,,Shift overview,,,,,Shift overview,sysadmin,ibanx.logbook.ShiftIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,SHIFT-OVERVIEW,key,form
+@method,set,queryspec,SHIFT-OVERVIEW,form.startDate,
+@method,set,queryspec,SHIFT-OVERVIEW,startDate_interpolationValue,-1d
+@method,set,queryspec,SHIFT-OVERVIEW,between.form.startDate,
+@method,set,queryspec,SHIFT-OVERVIEW,between.startDate_interpolationValue,14d
+@method,set,queryspec,SHIFT-OVERVIEW,operator.form.startDate,16
+@method,set,queryspec,SHIFT-OVERVIEW,objectClassName,ibanx.logbook.ShiftIF
+@method,set,queryspec,SHIFT-OVERVIEW,orderBy,startDate
+@method,set,queryspec,SHIFT-OVERVIEW,ascending,true
+@method,set,queryspec,SHIFT-OVERVIEW,reportSpecId,shift2
+@endTransaction
+
+## use enddate of shifts in rosterviews
+@delete,queryspec,number,SHIFT-OVERVIEW-ALT1,0
+queryspec,SHIFT-OVERVIEW-ALT1,,Shift overview by enddate,,,,,Shift overview by enddate,sysadmin,ibanx.logbook.ShiftIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,key,form
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,form.endDate,
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,form.endDate,0h
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,between.form.endDate,
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,between.endDate_interpolationValue,14d
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,operator.form.endDate,16
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,objectClassName,ibanx.logbook.ShiftIF
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,orderBy,startDate
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,ascending,true
+@method,set,queryspec,SHIFT-OVERVIEW-ALT1,reportSpecId,shift2
+@endTransaction

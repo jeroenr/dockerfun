@@ -1,0 +1,47 @@
+## include this path in local implementation patch or run directly from import console with: @include,pcq_2_5_to_pcq_2_5_1/update.csv
+
+@delete,queryspec,number,PL-LCS-BY-BOT,0
+queryspec-pcq-2.x,,,,,PL-LCS-BY-BOT,Lifecycle States,Picklist all lifecycle states for the default lifecycle of a businessobjecttype,SysAdm,ibanx.object.BusinessObjectTypeIF,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,PL-LCS-BY-BOT,defaultLifecycle.allLifecycleStates.name
+@method,addColumn,queryspec,PL-LCS-BY-BOT,defaultLifecycle.allLifecycleStates.description
+@method,addColumn,queryspec,PL-LCS-BY-BOT,lifecycleId
+@method,set,queryspec,PL-LCS-BY-BOT,authorizationObjectClassName,ibanx.lifecycle.LifecycleStateIF
+@method,set,queryspec,PL-LCS-BY-BOT,authorizationPath,defaultLifecycle.allLifecycleStates
+@method,set,queryspec,PL-LCS-BY-BOT,disableAccessControl,true
+@method,set,queryspec,PL-LCS-BY-BOT,key,bot
+@method,set,queryspec,PL-LCS-BY-BOT,operator.bot.number,0
+@endTransaction
+
+@delete,queryspec,number,PL-LCS-ALL-DISTINCT,0
+queryspec-pcq-2.x,,,,,PL-LCS-ALL-DISTINCT,Lifecycle States,Picklist all lifecycle states for the default lifecycle of a businessobjecttype,SysAdm,ibanx.object.BusinessObjectTypeIF,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,PL-LCS-ALL-DISTINCT,defaultLifecycle.allLifecycleStates.name
+@method,addColumn,queryspec,PL-LCS-ALL-DISTINCT,defaultLifecycle.allLifecycleStates.description
+@method,addColumn,queryspec,PL-LCS-ALL-DISTINCT,lifecycleId
+@method,set,queryspec,PL-LCS-ALL-DISTINCT,authorizationObjectClassName,ibanx.lifecycle.LifecycleStateIF
+@method,set,queryspec,PL-LCS-ALL-DISTINCT,authorizationPath,defaultLifecycle.allLifecycleStates
+@method,set,queryspec,PL-LCS-ALL-DISTINCT,disableAccessControl,true
+@method,set,queryspec,PL-LCS-ALL-DISTINCT,key,bot
+@method,set,queryspec,PL-LCS-ALL-DISTINCT,operator.bot.objectClass,0
+@endTransaction
+
+## PCQ-2451
+@method,set,queryspec,PL-BOT,key,form
+@method,set,businessobjecttype-pcq-2.x,PRESENCE_PERMIT,class0,PERMIT
+
+@method,set,queryspec,ALL-VALID-USERS,key,form
+
+@method,set,queryspec,MEASURE-DEFINITIONS,key,form
+
+
+@delete,queryspec,number,ALL-NONSYSTEM-ORGS,0
+queryspec-pcq-2.x,,,,,ALL-NONSYSTEM-ORGS,Non system organizations,Non system organizations,sysadmin,ibanx.org.Organization,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-NONSYSTEM-ORGS,number
+@method,addColumn,queryspec,ALL-NONSYSTEM-ORGS,name
+@method,set,queryspec,ALL-NONSYSTEM-ORGS,key,form
+@method,set,queryspec,ALL-NONSYSTEM-ORGS,form.system,false
+@method,set,queryspec,ALL-NONSYSTEM-ORGS,operator.form.system,0
+@method,set,queryspec,ALL-NONSYSTEM-ORGS,disableAccessControl,true
+@endTransaction

@@ -1,0 +1,45 @@
+@offsetdate,05-06-2013
+
+@delete,lotolist,number,MULT-02,=
+@delete,lotopoint,number,LP02,=
+@delete,lotoactivity,number,IA-01,=
+@delete,lotoactivity,number,IA-02,=
+@delete,claim,number,LC-01,=
+
+lotolist,MULTI_DISCIPLINE_ISOLATION_LIST,DEFAULT_LOTO_LIST_PROCESS,DEFAULT_LOTO_LIST_PROCESS,PROPOSED,DEFAULT_LOTO_LIST_PROCESS,DRAFT,null,2013-06-05 15:05:19,2013-06-05 15:05:38,ssv1,ssv1,05-06-2013 15:05:38,false,null,Remarks about work order,WO-0987,null,INSPECTION,null,null,null,null,PLANT1,30-100,30-120-0100,null,null,30-100-0100-LH020,null,PLANT1,MULT-02,01,true,false
+@startTransaction
+@method,set,lotolist,MULT-02,documentReference,
+@method,set,lotolist,MULT-02,lockboxNr,
+@method,set,lotolist,MULT-02,lockNrEI,
+@method,set,lotolist,MULT-02,lockNrMechanical,
+@method,set,lotolist,MULT-02,lockNrProduction,
+@method,set,lotolist,MULT-02,tagDescription,Effluent tank T100 high level switch
+@endTransaction
+!ph1,signature_lotolist,null,null,null,null,null,MULT-02,ISOLATE,null,null,null,null,false,Yes
+!ph2,audit,CREATE_EVENT,MULT-02 created,ssv1,2013-06-05,ibanx.loto.IsolationList,MULT-02
+!ph3,audit,SETSTATE_EVENT,Status of MULT-02 changed into For review,ssv1,2013-06-05,ibanx.loto.IsolationList,MULT-02
+!ph4,audit,SAVE_EVENT,Properties of MULT-02 changed,ssv1,2013-06-05,ibanx.loto.IsolationList,MULT-02
+!ph5,attr-change,tagDescription,Effluent tank T100 high level switch,,1,!ph4
+claim,DEFAULT_LOTO_CLAIM_PROCESS,DEFAULT_LOTO_CLAIM_PROCESS,PLANNED,-1,05-06-2013 15:05:29,null,2013-06-05 15:05:29,2013-06-05 15:05:29,ssv1,null,MULT-02,LP02,PLANT1,LC-01,01,true,false
+lotopoint,EI_ISOLATION_POINT,DEFAULT_LOTO_POINT_PROCESS,DEFAULT_LOTO_POINT_PROCESS,ACTIVE,DEFAULT_LOTO_POINT_PROCESS,DRAFT,05-06-2013 15:05:29,false,null,02,2013-06-05 15:05:29,2013-06-05 15:05:29,ssv1,ssv1,null,null,null,false,02,false,null,,PLANT1,30-100,30-120-0100,null,null,30-100-0100-LH020,null,PLANT1,LP02,01,true,false
+@startTransaction
+@method,set,lotopoint,LP02,discipline,PRODUCTION
+@method,set,lotopoint,LP02,energyTypeMagnitude,
+@method,set,lotopoint,LP02,insulationPresent,
+@method,set,lotopoint,LP02,isolatedState,CLOSED
+@method,set,lotopoint,LP02,lotoMethod,LOCK
+@method,set,lotopoint,LP02,scaffoldingReq,
+@method,set,lotopoint,LP02,subType,
+@method,set,lotopoint,LP02,tagDescription,Effluent tank T100 high level switch
+@method,set,lotopoint,LP02,timeNeeded,
+@method,set,lotopoint,LP02,tracingPresent,
+@method,set,lotopoint,LP02,tryOut,
+@method,set,lotopoint,LP02,unLotoMethod,REMOVESPADE
+@endTransaction
+!ph6,audit,CREATE_EVENT,LP02 created,ssv1,2013-06-05,ibanx.loto.IsolationPoint,LP02
+lotoactivity,ISOLATION_ACTIVITY,DEFAULT_LOTO_ACTIVITY_PROCESS,DEFAULT_LOTO_ACTIVITY_PROCESS,PLANNED,-1,05-06-2013 15:05:29,Isolate,2013-06-05 15:05:29,2013-06-05 15:05:29,ssv1,null,1,Isolate,0.0,null,null,MULT-02,PLANT1,IA-01,01,true,false
+!ph7,activity-claim,IA-01,LC-01,activity-claim,2013-06-05 15:05:29,2013-06-05 15:05:29,null,null,activity-claim,is-activity-of,is-claim-of
+!ph8,audit,CREATE_EVENT,IA-01 created,ssv1,2013-06-05,ibanx.loto.IsolationActivity,IA-01
+lotoactivity,DE_ISOLATION_ACTIVITY,DEFAULT_LOTO_ACTIVITY_PROCESS,DEFAULT_LOTO_ACTIVITY_PROCESS,PLANNED,-1,05-06-2013 15:05:29,De-isolate,2013-06-05 15:05:29,2013-06-05 15:05:29,ssv1,null,1,De-isolate,0.0,null,null,MULT-02,PLANT1,IA-02,02,true,false
+!ph9,activity-claim,IA-02,LC-01,activity-claim,2013-06-05 15:05:29,2013-06-05 15:05:29,null,null,activity-claim,is-activity-of,is-claim-of
+!ph10,audit,CREATE_EVENT,IA-02 created,ssv1,2013-06-05,ibanx.loto.IsolationActivity,IA-02

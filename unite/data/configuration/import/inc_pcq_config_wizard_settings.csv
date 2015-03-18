@@ -1,0 +1,14 @@
+configurationSetting,ra.default.type,IBANX_RA_BP1
+
+## defines which roles are denied access to a module
+#configurationSetting,loto.denyAccess,contractor;everyone
+#configurationSetting,ra.denyAccess,contractor;everyone
+#configurationSetting,tra.denyAccess,contractor;everyone
+#configurationSetting,permit.denyAccess,contractor;everyone
+
+## when using risk assessment best practice 2, then below you need to associate
+## each type of work with a permit type; these types need to be configured and need to
+## be registered with the risk assessment type
+#configurationSetting,ra.typeOfWorkPermitMapping.TOF_A,DELTALINQS_PERMIT
+#configurationSetting,ra.typeOfWorkPermitMapping.TOF_B,DELTALINQS_PERMIT
+#configurationSetting,ra.typeOfWorkPermitMapping.TOF_C,DELTALINQS_PERMIT

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+
+    <fieldset name="PRINT:LOGEVENTS">
+        <hidden name="id" restricts="logBook"/>
+        <multiselect name="logBook" label="empty" width="wide">
+            <source class="loglist"/>
+        </multiselect>
+    </fieldset>
+
+    <fieldset name="PRINT:OTHERS">
+        <checkbox name="deviation" label="Deviation"/>
+        <space name="temp"/>
+        <checkbox name="instruction" label="Instruction"/>
+    </fieldset>
+
+    <form name="DASHBOARD:PRINT">
+        <fieldsetref name="PRINT:LOGEVENTS"/>
+        <fieldsetref name="PRINT:OTHERS"/>
+    </form>
+
+</forms>

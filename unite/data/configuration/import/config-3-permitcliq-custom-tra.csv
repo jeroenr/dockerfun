@@ -1,0 +1,204 @@
+############### PERMISSIONS ####################################
+# 1,CREATE,Create,GLOBAL,true,true
+# 2,BROWSE,Browse,GLOBAL,true,true
+# 3,READ,Read,GLOBAL,true,true
+# 4,COPY,Copy,GLOBAL,true,true
+# 5,UPDATE,Update,GLOBAL,true,true
+# 6,DELETE,Delete,GLOBAL,true,true
+# 7,CHANGESTATE,Change state,GLOBAL,true,true
+# 8,VIEWACL,View ACL,GLOBAL,true,true
+# 9,CHANGEACL,Change ACL,GLOBAL,true,true
+# 10,VIEWAUDITTRAIL,View audittrail,GLOBAL,true,true
+
+################################################################
+## TASK RISK ANALYSIS
+################################################################
+
+# add acl for Task Risk Analysis
+!ph0001,acl_v2,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-IN_BEWERKING,State ACL for Task Risk Analysis - IN_BEWERKING,null,2,GLOBAL,true,true,false
+trusteepermission,ibanx.security.RolePermission,!ph0001,anonymous,2,2
+trusteepermission,ibanx.security.RolePermission,!ph0001,anonymous,3,2
+trusteepermission,ibanx.security.RolePermission,!ph0001,everyone,2,2
+trusteepermission,ibanx.security.RolePermission,!ph0001,everyone,3,2
+trusteepermission,ibanx.security.RolePermission,!ph0001,verstrekker,1,2
+trusteepermission,ibanx.security.RolePermission,!ph0001,verstrekker,4,2
+trusteepermission,ibanx.security.RolePermission,!ph0001,verstrekker,5,2
+roleperm,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-IN_BEWERKING,verstrekker,DELETE
+trusteepermission,ibanx.security.RolePermission,!ph0001,verstrekker,7,2
+trusteepermission,ibanx.security.RolePermission,!ph0001,aanvrager,1,2
+trusteepermission,ibanx.security.RolePermission,!ph0001,aanvrager,4,2
+trusteepermission,ibanx.security.RolePermission,!ph0001,aanvrager,5,2
+roleperm,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-IN_BEWERKING,aanvrager,DELETE
+roleperm,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-IN_BEWERKING,permit_administrator,SAVE_AS_TEMPLATE
+trusteepermission,ibanx.security.RolePermission,!ph0001,aanvrager,7,2
+
+!ph0002,acl_v2,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-BEKRACHTIGEN,State ACL for Task Risk Analysis - BEKRACHTIGEN,null,2,GLOBAL,true,true,false
+trusteepermission,ibanx.security.RolePermission,!ph0002,anonymous,2,2
+trusteepermission,ibanx.security.RolePermission,!ph0002,anonymous,3,2
+trusteepermission,ibanx.security.RolePermission,!ph0002,everyone,2,2
+trusteepermission,ibanx.security.RolePermission,!ph0002,everyone,3,2
+trusteepermission,ibanx.security.RolePermission,!ph0002,aanvrager,4,2
+trusteepermission,ibanx.security.RolePermission,!ph0002,verstrekker,4,2
+trusteepermission,ibanx.security.RolePermission,!ph0002,tra_bekrachtiger,5,2
+trusteepermission,ibanx.security.RolePermission,!ph0002,tra_bekrachtiger,7,2
+trusteepermission,ibanx.security.RolePermission,!ph0002,operationeel_beheerder,5,2
+trusteepermission,ibanx.security.RolePermission,!ph0002,operationeel_beheerder,7,2
+roleperm,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-BEKRACHTIGEN,permit_administrator,SAVE_AS_TEMPLATE
+
+!ph0003,acl_v2,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-GOEDGEKEURD,State ACL for Task Risk Analysis - GOEDGEKEURD,null,2,GLOBAL,true,true,false
+trusteepermission,ibanx.security.RolePermission,!ph0003,anonymous,2,2
+trusteepermission,ibanx.security.RolePermission,!ph0003,anonymous,3,2
+trusteepermission,ibanx.security.RolePermission,!ph0003,everyone,2,2
+trusteepermission,ibanx.security.RolePermission,!ph0003,everyone,3,2
+trusteepermission,ibanx.security.RolePermission,!ph0003,aanvrager,4,2
+trusteepermission,ibanx.security.RolePermission,!ph0003,verstrekker,4,2
+roleperm,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-GOEDGEKEURD,operationeel_beheerder,CHANGESTATE
+roleperm,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-GOEDGEKEURD,operationeel_beheerder,UPDATE
+roleperm,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-GOEDGEKEURD,permit_administrator,SAVE_AS_TEMPLATE
+
+!ph0004,acl_v2,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-GEEVALUEERD,State ACL for Task Risk Analysis - GEEVALUEERD,null,2,GLOBAL,true,true,false
+trusteepermission,ibanx.security.RolePermission,!ph0004,anonymous,2,2
+trusteepermission,ibanx.security.RolePermission,!ph0004,anonymous,3,2
+trusteepermission,ibanx.security.RolePermission,!ph0004,everyone,2,2
+trusteepermission,ibanx.security.RolePermission,!ph0004,everyone,3,2
+trusteepermission,ibanx.security.RolePermission,!ph0004,aanvrager,4,2
+trusteepermission,ibanx.security.RolePermission,!ph0004,verstrekker,4,2
+roleperm,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-GEEVALUEERD,operationeel_beheerder,CHANGESTATE
+roleperm,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-GEEVALUEERD,operationeel_beheerder,UPDATE
+roleperm,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-GEEVALUEERD,permit_administrator,SAVE_AS_TEMPLATE
+
+!ph0005,acl_v2,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-AFGEKEURD,State ACL for Task Risk Analysis - AFGEKEURD,null,2,GLOBAL,true,true,false
+trusteepermission,ibanx.security.RolePermission,!ph0005,anonymous,2,2
+trusteepermission,ibanx.security.RolePermission,!ph0005,anonymous,3,2
+trusteepermission,ibanx.security.RolePermission,!ph0005,everyone,2,2
+trusteepermission,ibanx.security.RolePermission,!ph0005,everyone,3,2
+trusteepermission,ibanx.security.RolePermission,!ph0005,verstrekker,4,2
+trusteepermission,ibanx.security.RolePermission,!ph0005,verstrekker,5,2
+trusteepermission,ibanx.security.RolePermission,!ph0005,verstrekker,7,2
+trusteepermission,ibanx.security.RolePermission,!ph0005,aanvrager,4,2
+trusteepermission,ibanx.security.RolePermission,!ph0005,aanvrager,5,2
+trusteepermission,ibanx.security.RolePermission,!ph0005,aanvrager,7,2
+
+!ph0006,acl_v2,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-VERWIJDERD,State ACL for Task Risk Analysis - VERWIJDERD,null,2,GLOBAL,true,true,false
+#remove if everyone may see removed tra's
+trusteepermission,ibanx.security.RolePermission,!ph0006,anonymous,2,2
+trusteepermission,ibanx.security.RolePermission,!ph0006,anonymous,3,2
+trusteepermission,ibanx.security.RolePermission,!ph0006,everyone,2,2
+trusteepermission,ibanx.security.RolePermission,!ph0006,everyone,3,2
+
+!ph0007,acl_v2,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-TEMPLATE,State ACL for Task Risk Analysis - TEMPLATE,null,2,GLOBAL,true,true,false
+trusteepermission,ibanx.security.RolePermission,!ph0007,anonymous,2,2
+trusteepermission,ibanx.security.RolePermission,!ph0007,anonymous,3,2
+trusteepermission,ibanx.security.RolePermission,!ph0007,everyone,2,2
+trusteepermission,ibanx.security.RolePermission,!ph0007,everyone,3,2
+trusteepermission,ibanx.security.RolePermission,!ph0007,aanvrager,4,2
+trusteepermission,ibanx.security.RolePermission,!ph0007,verstrekker,4,2
+roleperm,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-TEMPLATE,operationeel_beheerder,CHANGESTATE
+roleperm,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-TEMPLATE,operationeel_beheerder,UPDATE
+roleperm,StateAcl TASK_RISK_ANALYSIS_LIFECYCLE-TEMPLATE,operationeel_beheerder,DELETE
+
+# delete lifecycle and lifecyclestates for Task Risk Analysis
+@delete,lifecyclestate_v2,name,IN_BEWERKING,0,lifecycle.number,TASK_RISK_ANALYSIS_LIFECYCLE,0
+@delete,lifecyclestate_v2,name,BEKRACHTIGEN,0,lifecycle.number,TASK_RISK_ANALYSIS_LIFECYCLE,0
+@delete,lifecyclestate_v2,name,GOEDGEKEURD,0,lifecycle.number,TASK_RISK_ANALYSIS_LIFECYCLE,0
+@delete,lifecyclestate_v2,name,GEEVALUEERD,0,lifecycle.number,TASK_RISK_ANALYSIS_LIFECYCLE,0
+@delete,lifecyclestate_v2,name,AFGEKEURD,0,lifecycle.number,TASK_RISK_ANALYSIS_LIFECYCLE,0
+@delete,lifecyclestate_v2,name,VERWIJDERD,0,lifecycle.number,TASK_RISK_ANALYSIS_LIFECYCLE,0
+@delete,lifecyclestate_v2,name,TEMPLATE,0,lifecycle.number,TASK_RISK_ANALYSIS_LIFECYCLE,0
+@delete,lifecycle_v2,number,TASK_RISK_ANALYSIS_LIFECYCLE,0
+
+lifecycle_v2,TASK_RISK_ANALYSIS_LIFECYCLE,ibanx.lifecycle.Lifecycle,Task Risk Analysis lifecycle,The lifecycle of a Task Risk Analysis,GLOBAL,true,false
+
+state-pcq-2.5,TASK_RISK_ANALYSIS_LIFECYCLE,IN_BEWERKING,In bewerking,null,false,false,1,!ph0001,preparation
+state-pcq-2.5,TASK_RISK_ANALYSIS_LIFECYCLE,BEKRACHTIGEN,Bekrachtigen,null,false,true,2,!ph0002,preparation
+state-pcq-2.5,TASK_RISK_ANALYSIS_LIFECYCLE,GOEDGEKEURD,Goedgekeurd,null,false,false,3,!ph0003,finalization
+state-pcq-2.5,TASK_RISK_ANALYSIS_LIFECYCLE,GEEVALUEERD,Geevalueerd,null,false,false,4,!ph0004,finalization
+state-pcq-2.5,TASK_RISK_ANALYSIS_LIFECYCLE,AFGEKEURD,Afgekeurd,null,true,false,1,!ph0005,exception
+state-pcq-2.5,TASK_RISK_ANALYSIS_LIFECYCLE,TEMPLATE,Template,null,true,false,2,!ph0007,exception
+state-pcq-2.5,TASK_RISK_ANALYSIS_LIFECYCLE,VERWIJDERD,Verwijderd,null,true,false,3,!ph0006,exception
+
+@delete,businessobjecttype-pcq-2.x,number,TASK_RISK_ANALYSIS,0
+businessobjecttype-pcq-2.x,,,,,TASK_RISK_ANALYSIS,Taak Risico Analyse,Taak Risico Analyse,ibanx.tra.TaskRiskAnalysisIF,TASK_RISK_ANALYSIS_LIFECYCLE,null,-1,null,GLOBAL,true,tra\,create.vm,tra\,copy.vm,tra\,view.vm,tra\,edit.vm,tra\,search.vm,false
+@startTransaction
+@method,set,businessobjecttype-pcq-2.x,TASK_RISK_ANALYSIS,class0,TRA
+@endTransaction
+
+
+# measure definitions voor verstrekkende afdeling
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvFlenzenLabelenRequired,mvFlenzenLabelenRequired,mvFlenzenLabelenRequired,mvFlenzenLabelenRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvSpoelenRequired,mvSpoelenRequired,mvSpoelenRequired,mvSpoelenRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvAftappenRequired,mvAftappenRequired,mvAftappenRequired,mvAftappenRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvStomenRequired,mvStomenRequired,mvStomenRequired,mvStomenRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvInblokkenRequired,mvInblokkenRequired,mvInblokkenRequired,mvInblokkenRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvAfstekenRequired,mvAfstekenRequired,mvAfstekenRequired,mvAfstekenRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvAfkoppelenRequired,mvAfkoppelenRequired,mvAfkoppelenRequired,mvAfkoppelenRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvDrukvrijRequired,mvDrukvrijRequired,mvDrukvrijRequired,mvDrukvrijRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvProduktvrijRequired,mvProduktvrijRequired,mvProduktvrijRequired,mvProduktvrijRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvControlerenOpToxischeStoffenRequired,mvControlerenOpToxischeStoffenRequired,mvControlerenOpToxischeStoffenRequired,mvControlerenOpToxischeStoffenRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvFireDetectionSysteemUitgeschakeldRequired,mvFireDetectionSysteemUitgeschakeldRequired,mvFireDetectionSysteemUitgeschakeldRequired,mvFireDetectionSysteemUitgeschakeldRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,avMechanicalLOTORequired,avMechanicalLOTORequired,avMechanicalLOTORequired,avMechanicalLOTORequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,avEILOTORequired,avEILOTORequired,avEILOTORequired,avEILOTORequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,avSafetiesLOTORequired,avSafetiesLOTORequired,avSafetiesLOTORequired,avSafetiesLOTORequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvControleOmgevingOpBrandbaarMateriaalRequired,mvControleOmgevingOpBrandbaarMateriaalRequired,mvControleOmgevingOpBrandbaarMateriaalRequired,mvControleOmgevingOpBrandbaarMateriaalRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvPanelDCSOverbruggingenRequired,mvPanelDCSOverbruggingenRequired,mvPanelDCSOverbruggingenRequired,mvPanelDCSOverbruggingenRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvAppElectrischBlokkerenRequired,mvAppElectrischBlokkerenRequired,mvAppElectrischBlokkerenRequired,mvAppElectrischBlokkerenRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvAppElectrischVrijschakelenRequired,mvAppElectrischVrijschakelenRequired,mvAppElectrischVrijschakelenRequired,mvAppElectrischVrijschakelenRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvAppMechanischBlokkerenRequired,mvAppMechanischBlokkerenRequired,mvAppMechanischBlokkerenRequired,mvAppMechanischBlokkerenRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvBeslotenRuimteConditieRapportRequired,mvBeslotenRuimteConditieRapportRequired,mvBeslotenRuimteConditieRapportRequired,mvBeslotenRuimteConditieRapportRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvMilieubeschermendeMaatregelenRequired,mvMilieubeschermendeMaatregelenRequired,mvMilieubeschermendeMaatregelenRequired,mvMilieubeschermendeMaatregelenRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,mvVrijeMaatregelRequired,mvVrijeMaatregelRequired,1. mvVrijeMaatregelRequired,mvVrijeMaatregelRequired,mvVrijeMaatregel,true,GLOBAL,true,false
+
+# measure definitions voor houder voorzorgsmaatregelen
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,vzmPuttenGotenRiolenAfdekkenRequired,vzmPuttenGotenRiolenAfdekkenRequired,vzmPuttenGotenRiolenAfdekkenRequired,vzmPuttenGotenRiolenAfdekkenRequired,vzmPuttenGotenRiolenAfdekken,true,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,vzmVonkafschermingGebruikenRequired,vzmVonkafschermingGebruikenRequired,vzmVonkafschermingGebruikenRequired,vzmVonkafschermingGebruikenRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,vzmWerkplekAfzettenRequired,vzmWerkplekAfzettenRequired,vzmWerkplekAfzettenRequired,vzmWerkplekAfzettenRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,vzmBrandwachtInzettenRequired,vzmBrandwachtInzettenRequired,vzmBrandwachtInzettenRequired,vzmBrandwachtInzettenRequired,vzmBrandwachtInzetten,true,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,vzmMangatwachtInzettenRequired,vzmMangatwachtInzettenRequired,vzmMangatwachtInzettenRequired,vzmMangatwachtInzettenRequired,vzmMangatwachtInzetten,true,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,vzmCommunicatiemiddelenRequired,vzmCommunicatiemiddelenRequired,vzmCommunicatiemiddelenRequired,vzmCommunicatiemiddelenRequired,vzmCommunicatiemiddelen,true,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,vzmBrandwaterslangGereedRequired,vzmBrandwaterslangGereedRequired,vzmBrandwaterslangGereedRequired,vzmBrandwaterslangGereedRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,vzmPoederblusserRequired,vzmPoederblusserRequired,vzmPoederblusserRequired,vzmPoederblusserRequired,vzmPoederblusser,true,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,vzmOverigeBlusmiddelenRequired,vzmOverigeBlusmiddelenRequired,vzmOverigeBlusmiddelenRequired,vzmOverigeBlusmiddelenRequired,vzmOverigeBlusmiddelen,true,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,vzmWerkplekEnWerkstukNathoudenRequired,vzmWerkplekEnWerkstukNathoudenRequired,vzmWerkplekEnWerkstukNathoudenRequired,vzmWerkplekEnWerkstukNathoudenRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,vzmWerkplekBeveiligenValgevaarRequired,vzmWerkplekBeveiligenValgevaarRequired,vzmWerkplekBeveiligenValgevaarRequired,vzmWerkplekBeveiligenValgevaarRequired,vzmWerkplekBeveiligenValgevaar,true,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,vzmGeforceerdeVentilatieRequired,vzmGeforceerdeVentilatieRequired,vzmGeforceerdeVentilatieRequired,vzmGeforceerdeVentilatieRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,vzmVrijeTekstRequired,vzmVrijeTekstRequired,1. vzmVrijeTekstRequired,vzmVrijeTekstRequired,vzmVrijeTekst,true,GLOBAL,true,false
+
+#aanvullende persoonlijke beschermingsmiddelen
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,pbmRuimzichtZuurbrilRequired,pbmRuimzichtZuurbrilRequired,pbmRuimzichtZuurbrilRequired,pbmRuimzichtZuurbrilRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,pbmGelaatschermRequired,pbmGelaatschermRequired,pbmGelaatschermRequired,pbmGelaatschermRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,pbmGehoorbeschermingRequired,pbmGehoorbeschermingRequired,pbmGehoorbeschermingRequired,pbmGehoorbeschermingRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,pbmValbeschermingRequired,pbmValbeschermingRequired,pbmValbeschermingRequired,pbmValbeschermingRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,pbmHandArmbeschermingRequired,pbmHandArmbeschermingRequired,pbmHandArmbeschermingRequired,pbmHandArmbeschermingRequired,pbmHandArmbescherming,true,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,pbmBeschermendeKledingRequired,pbmBeschermendeKledingRequired,pbmBeschermendeKledingRequired,pbmBeschermendeKledingRequired,pbmBeschermendeKleding,true,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,pbmVluchtmaskerBinnenHandbereikRequired,pbmVluchtmaskerBinnenHandbereikRequired,pbmVluchtmaskerBinnenHandbereikRequiredk,pbmVluchtmaskerBinnenHandbereikRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,pbmGasalarmeringRequired,pbmGasalarmeringRequired,pbmGasalarmeringRequired,pbmGasalarmeringRequired,pbmGasalarmering,true,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,pbmAdembeschermingRequired,pbmAdembeschermingRequired,pbmAdembeschermingRequired,pbmAdembeschermingRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,pbmVrijeTekstRequired,pbmVrijeTekstRequired,1. pbmVrijeTekstRequired,pbmVrijeTekstRequired,pbmVrijeTekst,true,GLOBAL,true,false
+
+## gas measurements
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,gmZuurstofRequired,gmZuurstofRequired,gmZuurstofRequired,gmZuurstofRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,gmExplosiviteitRequired,gmExplosiviteitRequired,gmExplosiviteitRequired,gmExplosiviteitRequired,,false,GLOBAL,true,false
+measuredefinition,,,,,ibanx.tra.MeasureDefinitionIF,gmToxischRequired,gmToxischRequired,gmToxischRequired,gmToxischRequired,,false,GLOBAL,true,false
+
+#attach specialty picklists to personal protection definitions
+@method,set,measuredefinition,pbmAdembeschermingRequired,picklist,pbmAdembescherming
+@method,set,measuredefinition,gmZuurstofRequired,picklist,frequency
+@method,set,measuredefinition,gmExplosiviteitRequired,picklist,frequency
+@method,set,measuredefinition,gmToxischRequired,picklist,frequency
+
+## define max nr of fields that can be populated on the form
+## each object its own transaction!
+
+@method,set,measuredefinition,vzmVrijeTekstRequired,maxFields,2
+
+@method,set,measuredefinition,pbmVrijeTekstRequired,maxFields,2
+@method,set,measuredefinition,mvVrijeMaatregelRequired,maxFields,2
+
+########### NUMBERING AND SEQUENCES DEFINITIONS #########################
+
+##@delete,numberingscheme,name,identity-taskriskanalysis,0
+numberingscheme,,,,,identity-taskriskanalysis,identity-taskriskanalysis,0,1,1,TRA-,,0,true,,GLOBAL,true,false
+##@delete,sequence,name,identity-taskriskanalysis,0
+sequence,identity-taskriskanalysis,0,1,1,false
+
+

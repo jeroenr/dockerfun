@@ -1,0 +1,18 @@
+
+@delete,queryspec,number,TAG,0
+queryspec,TAG,,Query tag's,,,,,Query tag's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,TAG,orderBy,description
+@method,set,queryspec,TAG,key,form
+@method,set,queryspec,TAG,form.groupName,tag
+@method,set,queryspec,TAG,operator.form.groupName,0
+@endTransaction
+
+@delete,queryspec,number,EQUIPMENT,0
+queryspec,EQUIPMENT,,Query equipment's,,,,,Query equipment's,sysadmin,ibanx.object.ValueItemIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,EQUIPMENT,orderBy,description
+@method,set,queryspec,EQUIPMENT,key,form
+@method,set,queryspec,EQUIPMENT,form.groupName,equipment
+@method,set,queryspec,EQUIPMENT,operator.form.groupName,0
+@endTransaction

@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+    <!-- used -->
+    <form name="incident.RegisterIncidentLong">
+        <fieldsetref name="incidentInitDetails"/>
+        <fieldsetref name="incidentLocation"/>
+        <fieldsetref name="incidentClassification"/>
+        <fieldsetref name="incidentOriginUnwanted"/>
+        <fieldsetref name="incLossTypeUnwanted1"/>
+        <fieldsetref name="incLossTypeNear1"/>
+        <fieldsetref name="incLossTypeLoss1"/>
+
+        <fieldsetref name="incidentDocumentAttachment"/>
+        <fieldsetref name="incidentDetails"/>
+        <fieldsetref name="GENERIC_INCIDENT:WHITELISTING"/>
+
+        <button type="submit" name="eventSubmit_doRegister"/>
+    </form>
+
+    <!-- used -->
+    <form name="incident.RegisterIncidentShort">
+        <fieldsetref name="incidentInitDetailsShort"/>
+        <fieldsetref name="incidentLocation"/>
+        <fieldsetref name="incidentOrganisation"/>
+
+        <fieldsetref name="incidentSupplementClassification"/>
+        <fieldsetref name="incidentOriginUnwanted"/>
+        <fieldsetref name="incLossTypeUnwanted"/>
+        <fieldsetref name="incLossTypeNear"/>
+        <fieldsetref name="incLossTypeLoss"/>
+        <fieldsetref name="incidentSupplementClassification2"/>
+
+        <fieldsetref name="incidentDocumentAttachment"/>
+        <fieldsetref name="incidentDetails"/>
+
+        <fieldsetref name="incidentUnwantedPeople"/>
+        <fieldsetref name="incidentUnwantedEnvironment"/>
+        <fieldsetref name="incidentUnwantedProperty"/>
+        <fieldsetref name="incidentUnwantedOperations"/>
+        <fieldsetref name="incidentUnwantedReputation"/>
+        <fieldsetref name="incidentNearPeople"/>
+        <fieldsetref name="incidentNearEnvironment"/>
+        <fieldsetref name="incidentNearProperty"/>
+        <fieldsetref name="incidentNearOperations"/>
+        <fieldsetref name="incidentNearReputation"/>
+        <fieldsetref name="incidentLossPeople"/>
+        <fieldsetref name="incidentLossEnvironment"/>
+        <fieldsetref name="incidentLossProperty"/>
+        <fieldsetref name="incidentLossOperations"/>
+        <fieldsetref name="incidentLossReputation"/>
+
+        <fieldsetref name="GENERIC_INCIDENT:WHITELISTING"/>
+
+        <button type="submit" name="eventSubmit_doRegister"/>
+    </form>
+
+    <!-- used -->
+    <form name="incident.EditIncident.REGISTERED" >
+        <hidden name="aggregateIdentifier"/>
+        <fieldsetref name="incidentFinalDetails"/>
+        <fieldsetref name="incidentLocation"/>
+        <fieldsetref name="incidentOrganisation"/>
+
+        <fieldsetref name="incidentSupplementClassification"/>
+        <fieldsetref name="incidentOriginUnwanted"/>
+        <fieldsetref name="incLossTypeUnwanted"/>
+        <fieldsetref name="incLossTypeNear"/>
+        <fieldsetref name="incLossTypeLoss"/>
+        <fieldsetref name="incidentSupplementClassification2"/>
+
+        <fieldsetref name="incidentDocumentAttachment"/>
+        <fieldsetref name="incidentDetails"/>
+
+        <fieldsetref name="incidentUnwantedPeople"/>
+        <fieldsetref name="incidentUnwantedEnvironment"/>
+        <fieldsetref name="incidentUnwantedProperty"/>
+        <fieldsetref name="incidentUnwantedOperations"/>
+        <fieldsetref name="incidentUnwantedReputation"/>
+        <fieldsetref name="incidentNearPeople"/>
+        <fieldsetref name="incidentNearEnvironment"/>
+        <fieldsetref name="incidentNearProperty"/>
+        <fieldsetref name="incidentNearOperations"/>
+        <fieldsetref name="incidentNearReputation"/>
+        <fieldsetref name="incidentLossPeople"/>
+        <fieldsetref name="incidentLossEnvironment"/>
+        <fieldsetref name="incidentLossProperty"/>
+        <fieldsetref name="incidentLossOperations"/>
+        <fieldsetref name="incidentLossReputation"/>
+
+        <fieldsetref name="GENERIC_INCIDENT:WHITELISTING"/>
+
+        <button type="submit" name="eventSubmit_doCancel"/>
+        <button type="submit" name="eventSubmit_doModify_incident"/>
+    </form>
+
+    <!-- used -->
+    <form name="incident.EditIncident.SUPPLEMENTED">
+        <hidden name="aggregateIdentifier"/>
+        <fieldsetref name="incidentViewDetails"/>
+
+        <fieldsetref name="incidentLocation"/>
+        <fieldsetref name="incidentOrganisation"/>
+
+        <fieldsetref name="incidentSupplementClassification"/>
+        <fieldsetref name="incidentOriginUnwanted"/>
+        <fieldsetref name="incLossTypeUnwanted"/>
+        <fieldsetref name="incLossTypeNear"/>
+        <fieldsetref name="incLossTypeLoss"/>
+        <fieldsetref name="incidentSupplementClassification2"/>
+
+        <fieldsetref name="incidentDocumentAttachment"/>
+        <fieldsetref name="incidentDetails"/>
+
+        <fieldsetref name="incidentUnwantedPeople"/>
+        <fieldsetref name="incidentUnwantedEnvironment"/>
+        <fieldsetref name="incidentUnwantedProperty"/>
+        <fieldsetref name="incidentUnwantedOperations"/>
+        <fieldsetref name="incidentUnwantedReputation"/>
+        <fieldsetref name="incidentNearPeople"/>
+        <fieldsetref name="incidentNearEnvironment"/>
+        <fieldsetref name="incidentNearProperty"/>
+        <fieldsetref name="incidentNearOperations"/>
+        <fieldsetref name="incidentNearReputation"/>
+        <fieldsetref name="incidentLossPeople"/>
+        <fieldsetref name="incidentLossEnvironment"/>
+        <fieldsetref name="incidentLossProperty"/>
+        <fieldsetref name="incidentLossOperations"/>
+        <fieldsetref name="incidentLossReputation"/>
+
+        <fieldsetref name="incidentOwner" />
+
+        <fieldsetref name="GENERIC_INCIDENT:WHITELISTING"/>
+
+        <button type="submit" name="eventSubmit_doCancel"/>
+        <button type="submit" name="eventSubmit_doModify_incident"/>
+    </form>
+
+    <!-- used -->
+    <form name="incident.EditIncident.VERIFIED">
+        <hidden name="aggregateIdentifier"/>
+        <fieldsetref name="incidentViewDetails"/>
+
+        <fieldsetref name="incidentLocation"/>
+        <fieldsetref name="incidentOrganisation"/>
+
+        <fieldsetref name="incidentResearchClassification"/>
+        <fieldsetref name="incidentOriginUnwanted"/>
+        <fieldsetref name="incResearchLossTypeUnwanted"/>
+        <fieldsetref name="incResearchLossTypeNear"/>
+        <fieldsetref name="incResearchLossTypeLoss"/>
+        <fieldsetref name="incidentSupplementClassification2"/>
+
+        <fieldsetref name="incidentDocumentAttachment"/>
+        <fieldsetref name="incidentDetails"/>
+
+        <fieldsetref name="incidentResearchUnwantedPeople"/>
+        <fieldsetref name="incidentResearchUnwantedEnvironment"/>
+        <fieldsetref name="incidentResearchUnwantedProperty"/>
+        <fieldsetref name="incidentResearchUnwantedOperations"/>
+        <fieldsetref name="incidentResearchUnwantedReputation"/>
+        <fieldsetref name="incidentResearchNearPeople"/>
+        <fieldsetref name="incidentResearchNearEnvironment"/>
+        <fieldsetref name="incidentResearchNearProperty"/>
+        <fieldsetref name="incidentResearchNearOperations"/>
+        <fieldsetref name="incidentResearchNearReputation"/>
+        <fieldsetref name="incidentResearchLossPeople"/>
+        <fieldsetref name="incidentResearchLossEnvironment"/>
+        <fieldsetref name="incidentResearchLossProperty"/>
+        <fieldsetref name="incidentResearchLossOperations"/>
+        <fieldsetref name="incidentResearchLossReputation"/>
+
+        <fieldsetref name="incidentOwner" />
+
+        <fieldsetref name="GENERIC_INCIDENT:WHITELISTING"/>
+
+        <button type="submit" name="eventSubmit_doCancel"/>
+        <button type="submit" name="eventSubmit_doModify_incident"/>
+    </form>
+
+    <!-- used -->
+    <form name="incident.EditIncident.INVESTIGATED">
+        <hidden name="aggregateIdentifier"/>
+        <fieldsetref mode="view" name="incidentViewDetails"/>
+
+        <fieldsetref mode="view" name="incidentLocation"/>
+        <fieldsetref mode="view" name="incidentOrganisation"/>
+
+        <fieldsetref mode="view" name="incidentResearchClassification"/>
+        <fieldsetref mode="view" name="incidentOriginUnwanted"/>
+        <fieldsetref mode="view" name="incResearchLossTypeUnwanted"/>
+        <fieldsetref mode="view" name="incResearchLossTypeNear"/>
+        <fieldsetref mode="view" name="incResearchLossTypeLoss"/>
+        <fieldsetref mode="view" name="incidentAnalysisClassification2"/>
+
+        <fieldsetref name="incidentDocumentAttachment"/>
+        <fieldsetref mode="view" name="incidentDetails"/>
+
+        <fieldsetref mode="view" name="incidentResearchUnwantedPeople"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedEnvironment"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedProperty"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedOperations"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedReputation"/>
+        <fieldsetref mode="view" name="incidentResearchNearPeople"/>
+        <fieldsetref mode="view" name="incidentResearchNearEnvironment"/>
+        <fieldsetref mode="view" name="incidentResearchNearProperty"/>
+        <fieldsetref mode="view" name="incidentResearchNearOperations"/>
+        <fieldsetref mode="view" name="incidentResearchNearReputation"/>
+        <fieldsetref mode="view" name="incidentResearchLossPeople"/>
+        <fieldsetref mode="view" name="incidentResearchLossEnvironment"/>
+        <fieldsetref mode="view" name="incidentResearchLossProperty"/>
+        <fieldsetref mode="view" name="incidentResearchLossOperations"/>
+        <fieldsetref mode="view" name="incidentResearchLossReputation"/>
+
+        <fieldsetref name="incidentOwner" />
+
+        <fieldsetref name="incidentCosts" />
+        <fieldsetref name="incidentMajorCause" />
+        <fieldsetref name="incidentMinorCause" />
+        <fieldsetref name="incidentMethod" />
+        <fieldsetref name="incidentRecommendations" />
+
+        <fieldsetref name="GENERIC_INCIDENT:WHITELISTING"/>
+
+        <button type="submit" name="eventSubmit_doCancel"/>
+        <button type="submit" name="eventSubmit_doModify_incident"/>
+    </form>
+
+    <!-- used -->
+    <form name="incident.EditIncident.ANALYZED_AND_PLANNED">
+        <hidden name="aggregateIdentifier"/>
+        <fieldsetref mode="view" name="incidentViewDetails"/>
+
+        <fieldsetref mode="view" name="incidentLocation"/>
+        <fieldsetref mode="view" name="incidentOrganisation"/>
+
+        <fieldsetref mode="view" name="incidentResearchClassification"/>
+        <fieldsetref mode="view" name="incidentOriginUnwanted"/>
+        <fieldsetref mode="view" name="incResearchLossTypeUnwanted"/>
+        <fieldsetref mode="view" name="incResearchLossTypeNear"/>
+        <fieldsetref mode="view" name="incResearchLossTypeLoss"/>
+        <fieldsetref mode="view" name="incidentAnalysisClassification2"/>
+
+        <fieldsetref name="incidentDocumentAttachment" mode="view"/>
+        <fieldsetref mode="view" name="incidentDetails"/>
+
+        <fieldsetref mode="view" name="incidentResearchUnwantedPeople"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedEnvironment"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedProperty"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedOperations"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedReputation"/>
+        <fieldsetref mode="view" name="incidentResearchNearPeople"/>
+        <fieldsetref mode="view" name="incidentResearchNearEnvironment"/>
+        <fieldsetref mode="view" name="incidentResearchNearProperty"/>
+        <fieldsetref mode="view" name="incidentResearchNearOperations"/>
+        <fieldsetref mode="view" name="incidentResearchNearReputation"/>
+        <fieldsetref mode="view" name="incidentResearchLossPeople"/>
+        <fieldsetref mode="view" name="incidentResearchLossEnvironment"/>
+        <fieldsetref mode="view" name="incidentResearchLossProperty"/>
+        <fieldsetref mode="view" name="incidentResearchLossOperations"/>
+        <fieldsetref mode="view" name="incidentResearchLossReputation"/>
+
+        <fieldsetref name="incidentOwner" />
+
+        <fieldsetref mode="view" name="incidentCosts" />
+        <fieldsetref mode="view" name="incidentMajorCause" />
+        <fieldsetref mode="view" name="incidentMinorCause" />
+        <fieldsetref mode="view" name="incidentMethod" />
+
+        <fieldsetref name="incidentRecommendations" />
+
+        <fieldsetref name="GENERIC_INCIDENT:WHITELISTING"/>
+
+        <button type="submit" name="eventSubmit_doCancel"/>
+        <button type="submit" name="eventSubmit_doModify_incident"/>
+    </form>
+
+    <!-- used -->
+    <form name="incident.EditIncident.ACTIVITIES_EXECUTED">
+        <hidden name="aggregateIdentifier"/>
+        <fieldsetref mode="view" name="incidentViewDetails"/>
+
+        <fieldsetref mode="view" name="incidentLocation"/>
+        <fieldsetref mode="view" name="incidentOrganisation"/>
+
+        <fieldsetref mode="view" name="incidentResearchClassification"/>
+        <fieldsetref mode="view" name="incidentOriginUnwanted"/>
+        <fieldsetref mode="view" name="incResearchLossTypeUnwanted"/>
+        <fieldsetref mode="view" name="incResearchLossTypeNear"/>
+        <fieldsetref mode="view" name="incResearchLossTypeLoss"/>
+        <fieldsetref mode="view" name="incidentAnalysisClassification2"/>
+
+        <fieldsetref name="incidentDocumentAttachment" mode="view"/>
+        <fieldsetref mode="view" name="incidentDetails"/>
+
+        <fieldsetref mode="view" name="incidentResearchUnwantedPeople"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedEnvironment"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedProperty"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedOperations"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedReputation"/>
+        <fieldsetref mode="view" name="incidentResearchNearPeople"/>
+        <fieldsetref mode="view" name="incidentResearchNearEnvironment"/>
+        <fieldsetref mode="view" name="incidentResearchNearProperty"/>
+        <fieldsetref mode="view" name="incidentResearchNearOperations"/>
+        <fieldsetref mode="view" name="incidentResearchNearReputation"/>
+        <fieldsetref mode="view" name="incidentResearchLossPeople"/>
+        <fieldsetref mode="view" name="incidentResearchLossEnvironment"/>
+        <fieldsetref mode="view" name="incidentResearchLossProperty"/>
+        <fieldsetref mode="view" name="incidentResearchLossOperations"/>
+        <fieldsetref mode="view" name="incidentResearchLossReputation"/>
+
+        <fieldsetref mode="view" name="incidentCosts" />
+        <fieldsetref mode="view" name="incidentMajorCause" />
+        <fieldsetref mode="view" name="incidentMinorCause" />
+        <fieldsetref mode="view" name="incidentMethod" />
+
+        <fieldsetref name="incidentRecommendations" />
+        <fieldsetref name="incidentEvaluations" />
+
+        <fieldsetref name="GENERIC_INCIDENT:WHITELISTING"/>
+
+        <button type="submit" name="eventSubmit_doCancel"/>
+        <button type="submit" name="eventSubmit_doModify_incident"/>
+    </form>
+
+
+    <!-- used -->
+    <form name="incident.EditIncident.EVALUATED_AND_CLOSED">
+        <hidden name="aggregateIdentifier"/>
+        <fieldsetref mode="view" name="incidentViewDetails"/>
+
+        <fieldsetref mode="view" name="incidentLocation"/>
+        <fieldsetref mode="view" name="incidentOrganisation"/>
+
+        <fieldsetref mode="view" name="incidentResearchClassification"/>
+        <fieldsetref mode="view" name="incidentOriginUnwanted"/>
+        <fieldsetref mode="view" name="incResearchLossTypeUnwanted"/>
+        <fieldsetref mode="view" name="incResearchLossTypeNear"/>
+        <fieldsetref mode="view" name="incResearchLossTypeLoss"/>
+        <fieldsetref mode="view" name="incidentAnalysisClassification2"/>
+
+        <fieldsetref name="incidentDocumentAttachment" mode="view"/>
+        <fieldsetref mode="view" name="incidentDetails"/>
+
+        <fieldsetref mode="view" name="incidentResearchUnwantedPeople"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedEnvironment"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedProperty"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedOperations"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedReputation"/>
+        <fieldsetref mode="view" name="incidentResearchNearPeople"/>
+        <fieldsetref mode="view" name="incidentResearchNearEnvironment"/>
+        <fieldsetref mode="view" name="incidentResearchNearProperty"/>
+        <fieldsetref mode="view" name="incidentResearchNearOperations"/>
+        <fieldsetref mode="view" name="incidentResearchNearReputation"/>
+        <fieldsetref mode="view" name="incidentResearchLossPeople"/>
+        <fieldsetref mode="view" name="incidentResearchLossEnvironment"/>
+        <fieldsetref mode="view" name="incidentResearchLossProperty"/>
+        <fieldsetref mode="view" name="incidentResearchLossOperations"/>
+        <fieldsetref mode="view" name="incidentResearchLossReputation"/>
+
+        <fieldsetref mode="view" name="incidentCosts" />
+        <fieldsetref mode="view" name="incidentMajorCause" />
+        <fieldsetref mode="view" name="incidentMinorCause" />
+        <fieldsetref mode="view" name="incidentMethod" />
+
+        <fieldsetref mode="view" name="incidentRecommendations" />
+        <fieldsetref mode="view" name="incidentEvaluations" />
+    </form>
+
+    <!-- used -->
+    <form name="incident.RejectIncidentEarly">
+        <hidden name="aggregateIdentifier"/>
+        <hidden name="number"/>
+        <fieldsetref name="view:incident" mode="view" />
+
+        <textarea name="reason" maxLength="1000" width="wide" required="true"/>
+
+        <fieldsetref name="GENERIC_INCIDENT:WHITELISTING"/>
+
+        <button type="submit" name="eventSubmit_doCancel"/>
+        <button type="submit" name="eventSubmit_doReject_incident_early"/>
+    </form>
+
+    <form name="incident.DismissIncident">
+        <hidden name="aggregateIdentifier"/>
+        <fieldsetref name="view:incident" mode="view" />
+
+        <textarea name="reason" maxLength="1000" width="wide" required="true"/>
+
+        <fieldsetref name="GENERIC_INCIDENT:WHITELISTING"/>
+
+        <button type="submit" name="eventSubmit_doCancel"/>
+        <button type="submit" name="eventSubmit_doDismiss_incident"/>
+    </form>
+
+    <!-- used -->
+    <form name="incident.RejectIncidentLate">
+        <hidden name="aggregateIdentifier"/>
+        <hidden name="number"/>
+        <fieldsetref name="view:incident" mode="view" />
+
+        <textarea name="reason" maxLength="1000" width="wide" required="true"/>
+
+        <fieldsetref name="GENERIC_INCIDENT:WHITELISTING"/>
+
+        <button type="submit" name="eventSubmit_doCancel"/>
+        <button type="submit" name="eventSubmit_doReject_incident_late"/>
+    </form>
+
+    <!-- used -->
+    <form name="incident.ViewIncident" mode="view">
+        <fieldsetref name="view:incident" />
+    </form>
+
+    <form name="incident.ViewIncident.REJECTED_EARLY" mode="view">
+        <fieldsetref name="view:incident" />
+        <fieldsetref name="incidentRejected"/>
+    </form>
+    <form name="incident.EditIncident.REJECTED_EARLY">
+        <fieldsetref name="view:incident" />
+        <fieldsetref name="incidentRejected"/>
+    </form>
+
+    <form name="incident.ViewIncident.REJECTED_LATE" mode="view">
+        <fieldsetref name="view:incident" />
+        <fieldsetref name="incidentRejected"/>
+    </form>
+
+    <form name="incident.EditIncident.REJECTED_LATE">
+        <fieldsetref name="view:incident" />
+        <fieldsetref name="incidentRejected"/>
+    </form>
+
+    <form name="incident.ViewIncidentDetails" mode="view">
+        <hidden name="aggregateIdentifier"/>
+        <fieldsetref mode="view" name="incidentViewDetails"/>
+
+        <fieldsetref mode="view" name="incidentLocation"/>
+        <fieldsetref mode="view" name="incidentOrganisation"/>
+
+        <fieldsetref mode="view" name="incidentResearchClassification"/>
+        <fieldsetref mode="view" name="incidentOriginUnwanted"/>
+        <fieldsetref mode="view" name="incResearchLossTypeUnwanted"/>
+        <fieldsetref mode="view" name="incResearchLossTypeNear"/>
+        <fieldsetref mode="view" name="incResearchLossTypeLoss"/>
+        <fieldsetref mode="view" name="incidentAnalysisClassification2"/>
+
+        <fieldsetref mode="view" name="incidentDocumentAttachment"/>
+        <fieldsetref mode="view" name="incidentDetails"/>
+
+        <fieldsetref mode="view" name="incidentResearchUnwantedPeople"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedEnvironment"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedProperty"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedOperations"/>
+        <fieldsetref mode="view" name="incidentResearchUnwantedReputation"/>
+        <fieldsetref mode="view" name="incidentResearchNearPeople"/>
+        <fieldsetref mode="view" name="incidentResearchNearEnvironment"/>
+        <fieldsetref mode="view" name="incidentResearchNearProperty"/>
+        <fieldsetref mode="view" name="incidentResearchNearOperations"/>
+        <fieldsetref mode="view" name="incidentResearchNearReputation"/>
+        <fieldsetref mode="view" name="incidentResearchLossPeople"/>
+        <fieldsetref mode="view" name="incidentResearchLossEnvironment"/>
+        <fieldsetref mode="view" name="incidentResearchLossProperty"/>
+        <fieldsetref mode="view" name="incidentResearchLossOperations"/>
+        <fieldsetref mode="view" name="incidentResearchLossReputation"/>
+
+        <fieldsetref mode="view" name="incidentCosts" />
+        <fieldsetref mode="view" name="incidentMajorCause" />
+        <fieldsetref mode="view" name="incidentMinorCause" />
+        <fieldsetref mode="view" name="incidentMethod" />
+
+        <fieldsetref mode="view" name="incidentRecommendations" />
+        <fieldsetref mode="view" name="incidentEvaluations" />
+    </form>
+
+    <form name="incident.DismissedIncidentOverview" mode="view">
+        <fieldsetref name="view:incident" />
+        <date name="dismissDate" />
+        <textarea name="reason" />
+    </form>
+
+    <!-- shiftcliq link -->
+    <!-- used -->
+    <form name="incident.RegisterIncidentLinkedToLogEvent">
+        <hidden name="linkedLogEventNumber"/>
+        <fieldsetref name="incidentLocation"/>
+        <fieldsetref name="registerLinkedIncidentHiddenPBS"/>
+        <fieldsetref name="incidentClassification"/>
+
+        <fieldsetref name="incidentDocumentAttachment"/>
+        <fieldsetref name="incidentDetails"/>
+        <fieldsetref name="GENERIC_INCIDENT:WHITELISTING"/>
+
+        <button type="submit" name="eventSubmit_doRegister"/>
+    </form>
+
+<!-- FIELDSETS -->
+    <!-- used -->
+    <fieldset name="view:incident" showlegend="false">
+        <textfield name="title" label="incidentTitle2" />
+        <suggest name="funcLevelOne" minLength="0" required="true" restricts="funcLevelTwo,funcLevelThree,tag">
+            <source class="plantlist" display="value,description"/>
+        </suggest>
+
+        <date name="incidentDate" />
+        <suggest name="funcLevelTwo" minLength="0" required="true" restricts="funcLevelThree,tag">
+            <source class="valuelist" valuelistNameRef="funcLevelTwo" display="value,description"/>
+        </suggest>
+
+        <select name="incidentType" type="radio">
+            <source class="inline" order="ordering" translationPattern="incidentType.%s">
+                <option value="UNWANTED_SITUATION"/>
+                <option value="NEAR_MISS"/>
+                <option value="LOSS"/>
+            </source>
+        </select>
+        <suggest name="funcLevelThree" minLength="0" required="true" restricts="tag">
+            <source class="valuelist" valuelistNameRef="funcLevelThree" display="value,description"/>
+        </suggest>
+
+        <multiselect name="incidentAffectedLossType">
+            <source class="inline" order="ordering" translationPattern="incidentAffectedLossType.%s">
+                <option value="PEOPLE"/>
+                <option value="ENVIRONMENT"/>
+                <option value="PROPERTY"/>
+                <option value="OPERATIONS"/>
+                <option value="REPUTATION"/>
+            </source>
+        </multiselect>
+        <suggest name="tag" minLength="0" required="true">
+            <source class="valuelist" valuelistNameRef="tag" display="value,description"/>
+        </suggest>
+
+        <suggest name="owner">
+            <source class="userlist" />
+        </suggest>
+        <select name="incidentConsequenceActual">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+
+        <textarea name="description" />
+        <select name="incidentConsequencePotential">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+
+        <select type="radio" name="confidential" required="true">
+            <source class="valuelist" valuelistNameRef="boolean" display="description"/>
+        </select>
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incidentOwner">
+        <suggest name="owner" required="true">
+            <source class="userlist"/>
+        </suggest>
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incidentCosts">
+        <textfield name="incidentActualCosts" maskref="number" maxLength="250" required="true"  />
+        <textarea name="incidentActualCostsDescription" maxLength="250" width="wide" />
+
+        <textfield name="incidentPotentialCosts" maskref="number" maxLength="250" required="true" />
+        <textarea name="incidentPotentialCostsDescription" maxLength="250" width="wide" />
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incidentInitDetails" showlegend="false">
+        <textfield name="title" required="true" width="wide" label="incidentTitle2"/>
+        <textarea name="incidentPreliminaryDescription" maxLength="250" required="true" width="wide"/>
+        <date name="incidentDate" value="today" required="true"/>
+        <time name="incidentTime" value="now" required="true"/>
+        <suggest name="incidentReporterName" required="false" freeText="true" minLength="0">
+            <source class="userlist"/>
+        </suggest>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentInitDetailsShort" showlegend="false">
+        <textfield name="title" required="true" width="wide" label="incidentTitle2"/>
+        <textarea name="description" label="incidentDescription" maxLength="1000" required="true" width="wide"/>
+        <date name="incidentDate" value="today" required="true"/>
+        <time name="incidentTime" value="now" required="true"/>
+        <suggest name="incidentReporterName" required="false" freeText="true" minLength="0">
+            <source class="userlist"/>
+        </suggest>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentFinalDetails" showlegend="false">
+        <textfield name="title" required="true" width="wide" label="incidentTitle2"/>
+        <textarea name="incidentPreliminaryDescription" maxLength="250" required="true" width="wide" mode="view" />
+        <textarea name="description" label="incidentDescription" maxLength="1000" required="true" width="wide" />
+        <date name="incidentDate" value="today" required="true"/>
+        <time name="incidentTime" value="now" required="true"/>
+        <suggest name="incidentReporterName" required="false" freeText="true" minLength="0">
+            <source class="userlist"/>
+        </suggest>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentViewDetails" showlegend="false">
+        <textfield name="title" required="true" width="wide" label="incidentTitle2"/>
+        <textarea name="incidentPreliminaryDescription" maxLength="250" required="true" width="wide" mode="view" />
+        <textarea name="description" label="incidentDescription" maxLength="1000" required="true" width="wide" />
+        <date name="incidentDate" value="today" required="true" mode="view"/>
+        <time name="incidentTime" value="now" required="true" mode="view"/>
+        <suggest name="incidentReporterName" required="false" freeText="true" minLength="0" mode="view">
+            <source class="userlist"/>
+        </suggest>
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incidentClassification">
+        <select name="incidentType" type="radio" width="wide">
+            <source class="inline" order="ordering" translationPattern="incidentType.%s">
+                <option value="UNWANTED_SITUATION" discloses="incLossTypeUnwanted1,incidentOriginUnwanted"/>
+                <option value="NEAR_MISS" discloses="incLossTypeNear1"/>
+                <option value="LOSS" discloses="incLossTypeLoss1"/>
+            </source>
+        </select>
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incidentOriginUnwanted" showlegend="false">
+        <select name="incidentOrigin" type="radio" width="wide">
+            <source class="valuelist" valuelistNameRef="incident_origin"/>
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentSupplementClassification" label="incidentClassification">
+        <select name="incidentType" type="radio" width="wide" required="true">
+            <source class="inline" order="ordering" translationPattern="incidentType.%s">
+                <option value="UNWANTED_SITUATION" discloses="incLossTypeUnwanted,incidentOriginUnwanted"/>
+                <option value="NEAR_MISS" discloses="incLossTypeNear"/>
+                <option value="LOSS" discloses="incLossTypeLoss"/>
+            </source>
+        </select>
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incidentResearchClassification" label="incidentClassification">
+        <select name="incidentType" type="radio" width="wide" required="true">
+            <source class="inline" order="ordering" translationPattern="incidentType.%s">
+                <option value="UNWANTED_SITUATION" discloses="incResearchLossTypeUnwanted,incidentOriginUnwanted"/>
+                <option value="NEAR_MISS" discloses="incResearchLossTypeNear"/>
+                <option value="LOSS" discloses="incResearchLossTypeLoss"/>
+            </source>
+        </select>
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incLossTypeUnwanted" showlegend="false">
+        <multiselect name="incident1AffectedLossType" required="true" width="wide" label="incidentAffectedLossType">
+            <source class="inline" order="ordering" translationPattern="incidentAffectedLossType.%s">
+                <option value="PEOPLE" discloses="incidentUnwantedPeople" />
+                <option value="ENVIRONMENT" discloses="incidentUnwantedEnvironment" />
+                <option value="PROPERTY" discloses="incidentUnwantedProperty" />
+                <option value="OPERATIONS" discloses="incidentUnwantedOperations" />
+                <option value="REPUTATION" discloses="incidentUnwantedReputation" />
+            </source>
+        </multiselect>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incLossTypeUnwanted1" showlegend="false">
+        <multiselect name="incident1AffectedLossType" width="wide" label="incidentAffectedLossType">
+            <source class="inline" order="ordering" translationPattern="incidentAffectedLossType.%s">
+                <option value="PEOPLE" />
+                <option value="ENVIRONMENT" />
+                <option value="PROPERTY" />
+                <option value="OPERATIONS" />
+                <option value="REPUTATION" />
+            </source>
+        </multiselect>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incResearchLossTypeUnwanted" showlegend="false">
+        <multiselect name="incident1AffectedLossType" required="true" width="wide" label="incidentAffectedLossType">
+            <source class="inline" order="ordering" translationPattern="incidentAffectedLossType.%s">
+                <option value="PEOPLE" discloses="incidentResearchUnwantedPeople" />
+                <option value="ENVIRONMENT" discloses="incidentResearchUnwantedEnvironment" />
+                <option value="PROPERTY" discloses="incidentResearchUnwantedProperty" />
+                <option value="OPERATIONS" discloses="incidentResearchUnwantedOperations" />
+                <option value="REPUTATION" discloses="incidentResearchUnwantedReputation" />
+            </source>
+        </multiselect>
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incResearchLossTypeNear" showlegend="false">
+        <multiselect name="incident2AffectedLossType" required="true" width="wide" label="incidentAffectedLossType">
+            <source class="inline" order="ordering" translationPattern="incidentAffectedLossType.%s">
+                <option value="PEOPLE" discloses="incidentResearchNearPeople" />
+                <option value="ENVIRONMENT" discloses="incidentResearchNearEnvironment" />
+                <option value="PROPERTY" discloses="incidentResearchNearProperty" />
+                <option value="OPERATIONS" discloses="incidentResearchNearOperations" />
+                <option value="REPUTATION" discloses="incidentResearchNearReputation" />
+            </source>
+        </multiselect>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incLossTypeNear" showlegend="false">
+        <multiselect name="incident2AffectedLossType" required="true" width="wide" label="incidentAffectedLossType">
+            <source class="inline" order="ordering" translationPattern="incidentAffectedLossType.%s">
+                <option value="PEOPLE" discloses="incidentNearPeople" />
+                <option value="ENVIRONMENT" discloses="incidentNearEnvironment" />
+                <option value="PROPERTY" discloses="incidentNearProperty" />
+                <option value="OPERATIONS" discloses="incidentNearOperations" />
+                <option value="REPUTATION" discloses="incidentNearReputation" />
+            </source>
+        </multiselect>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incLossTypeNear1" showlegend="false">
+        <multiselect name="incident2AffectedLossType" width="wide" label="incidentAffectedLossType">
+            <source class="inline" order="ordering" translationPattern="incidentAffectedLossType.%s">
+                <option value="PEOPLE" />
+                <option value="ENVIRONMENT" />
+                <option value="PROPERTY" />
+                <option value="OPERATIONS" />
+                <option value="REPUTATION" />
+            </source>
+        </multiselect>
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incLossTypeLoss" showlegend="false">
+        <multiselect name="incident3AffectedLossType" required="true" width="wide" label="incidentAffectedLossType">
+            <source class="inline" order="ordering" translationPattern="incidentAffectedLossType.%s">
+                <option value="PEOPLE" discloses="incidentLossPeople" />
+                <option value="ENVIRONMENT" discloses="incidentLossEnvironment" />
+                <option value="PROPERTY" discloses="incidentLossProperty" />
+                <option value="OPERATIONS" discloses="incidentLossOperations" />
+                <option value="REPUTATION" discloses="incidentLossReputation" />
+            </source>
+        </multiselect>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incLossTypeLoss1" showlegend="false">
+        <multiselect name="incident3AffectedLossType" width="wide" label="incidentAffectedLossType">
+            <source class="inline" order="ordering" translationPattern="incidentAffectedLossType.%s">
+                <option value="PEOPLE" />
+                <option value="ENVIRONMENT" />
+                <option value="PROPERTY" />
+                <option value="OPERATIONS" />
+                <option value="REPUTATION" />
+            </source>
+        </multiselect>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incResearchLossTypeLoss" showlegend="false">
+        <multiselect name="incident3AffectedLossType" required="true" width="wide" label="incidentAffectedLossType">
+            <source class="inline" order="ordering" translationPattern="incidentAffectedLossType.%s">
+                <option value="PEOPLE" discloses="incidentResearchLossPeople" />
+                <option value="ENVIRONMENT" discloses="incidentResearchLossEnvironment" />
+                <option value="PROPERTY" discloses="incidentResearchLossProperty" />
+                <option value="OPERATIONS" discloses="incidentResearchLossOperations" />
+                <option value="REPUTATION" discloses="incidentResearchLossReputation" />
+            </source>
+        </multiselect>
+    </fieldset>
+
+    <!-- 'Unwanted Situation' fieldsets -->
+    <!-- used -->
+    <fieldset name="incidentUnwantedPeople">
+        <select name="incidentUnwantedPeoplePotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentUnwantedEnvironment">
+        <select name="incidentUnwantedEnvironmentPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentUnwantedProperty">
+        <select name="incidentUnwantedPropertyPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentUnwantedOperations">
+        <select name="incidentUnwantedOperationsPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentUnwantedReputation">
+        <select name="incidentUnwantedReputationPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentResearchUnwantedPeople" label="incidentUnwantedPeople">
+        <select name="incidentUnwantedPeoplePotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+
+        <textarea name="incidentUnwantedPeopleDetails" maxLength="250" width="wide" label="incidentDetails2"/>
+        <select name="incidentUnwantedPeopleCause" required="true" label="incidentEffect">
+            <source class="valuelist" valuelistNameRef="incident_people_cause" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentResearchUnwantedEnvironment" label="incidentUnwantedEnvironment">
+        <select name="incidentUnwantedEnvironmentPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+
+        <textarea name="incidentUnwantedEnvironmentDetails" maxLength="250"  width="wide" label="incidentDetails2"/>
+        <select name="incidentUnwantedEnvironmentCause" required="true" label="incidentEffect">
+            <source class="valuelist" valuelistNameRef="incident_environment_cause" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentResearchUnwantedProperty" label="incidentUnwantedProperty">
+        <select name="incidentUnwantedPropertyPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+
+        <textarea name="incidentUnwantedPropertyDetails" maxLength="250" width="wide" label="incidentDetails2"/>
+        <select name="incidentUnwantedPropertyCause" required="true" label="incidentEffect">
+            <source class="valuelist" valuelistNameRef="incident_property_cause" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentResearchUnwantedOperations" label="incidentUnwantedOperations">
+        <select name="incidentUnwantedOperationsPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+
+        <textarea name="incidentUnwantedOperationsDetails" maxLength="250" width="wide" label="incidentDetails2"/>
+        <select name="incidentUnwantedOperationsCause" required="true" label="incidentEffect">
+            <source class="valuelist" valuelistNameRef="incident_operations_cause" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentResearchUnwantedReputation" label="incidentUnwantedReputation">
+        <select name="incidentUnwantedReputationPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+
+        <textarea name="incidentUnwantedReputationDetails" maxLength="250" width="wide" label="incidentDetails2"/>
+        <select name="incidentUnwantedReputationCause" required="true" label="incidentEffect">
+            <source class="valuelist" valuelistNameRef="incident_reputation_cause" order="value" />
+        </select>
+    </fieldset>
+
+
+    <!-- 'Near miss' fieldsets -->
+    <!-- used -->
+    <fieldset name="incidentNearPeople">
+        <select name="incidentNearPeoplePotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentNearEnvironment">
+        <select name="incidentNearEnvironmentPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentNearProperty">
+        <select name="incidentNearPropertyPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentNearOperations">
+        <select name="incidentNearOperationsPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentNearReputation">
+        <select name="incidentNearReputationPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentResearchNearPeople" label="incidentNearPeople">
+        <select name="incidentNearPeoplePotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+
+        <textarea name="incidentNearPeopleDetails" maxLength="250" width="wide" label="incidentDetails2" />
+        <select name="incidentNearPeopleCause" required="true" label="incidentEffect">
+            <source class="valuelist" valuelistNameRef="incident_people_cause" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentResearchNearEnvironment" label="incidentNearEnvironment">
+        <select name="incidentNearEnvironmentPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+
+        <textarea name="incidentNearEnvironmentDetails" maxLength="250" width="wide" label="incidentDetails2"/>
+        <select name="incidentNearEnvironmentCause" required="true" label="incidentEffect">
+            <source class="valuelist" valuelistNameRef="incident_environment_cause" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentResearchNearProperty" label="incidentNearProperty">
+        <select name="incidentNearPropertyPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+
+        <textarea name="incidentNearPropertyDetails" maxLength="250" width="wide" label="incidentDetails2" />
+        <select name="incidentNearPropertyCause" required="true" label="incidentEffect">
+            <source class="valuelist" valuelistNameRef="incident_property_cause" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentResearchNearOperations" label="incidentNearOperations">
+        <select name="incidentNearOperationsPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+
+        <textarea name="incidentNearOperationsDetails" maxLength="250" width="wide" label="incidentDetails2" />
+        <select name="incidentNearOperationsCause" required="true" label="incidentEffect">
+            <source class="valuelist" valuelistNameRef="incident_operations_cause" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentResearchNearReputation" label="incidentNearReputation">
+        <select name="incidentNearReputationPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+
+        <textarea name="incidentNearReputationDetails" maxLength="250" width="wide" label="incidentDetails2" />
+        <select name="incidentNearReputationCause" required="true" label="incidentEffect">
+            <source class="valuelist" valuelistNameRef="incident_reputation_cause" order="value" />
+        </select>
+    </fieldset>
+
+    <!-- 'Loss' fieldsets -->
+    <!-- used -->
+    <fieldset name="incidentLossPeople">
+        <select name="incidentLossPeopleActual" type="radio" width="wide" required="true" label="actualConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+        <select name="incidentLossPeoplePotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+        <multiple name="incidentLossVictims" form="victim:supplement" display="victimName"/>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentResearchLossPeople" label="incidentLossPeople">
+        <select name="incidentLossPeopleActual" type="radio" width="wide" required="true" label="actualConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+        <select name="incidentLossPeoplePotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+        <multiple name="incidentLossVictims" form="victim:research" display="victimName"/>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentLossEnvironment">
+        <select name="incidentLossEnvironmentActual" type="radio" width="wide" required="true" label="actualConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+        <select name="incidentLossEnvironmentPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentLossProperty">
+        <select name="incidentLossPropertyActual" type="radio" width="wide" required="true" label="actualConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+        <select name="incidentLossPropertyPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentLossOperations">
+        <select name="incidentLossOperationsActual" type="radio" width="wide" required="true" label="actualConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+        <select name="incidentLossOperationsPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentLossReputation">
+        <select name="incidentLossReputationActual" type="radio" width="wide" required="true" label="actualConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+        <select name="incidentLossReputationPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentResearchLossEnvironment" label="incidentLossEnvironment">
+        <select name="incidentLossEnvironmentActual" type="radio" width="wide" required="true" label="actualConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+        <select name="incidentLossEnvironmentPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+
+        <select name="incidentLossEnvironmentType" type="radio" width="wide" required="true">
+            <source class="valuelist" valuelistNameRef="incident_loss_environment_type" order="value" />
+        </select>
+        <textfield name="incidentLossEnvironmentTypeOther" maxLength="250" width="wide"  />
+        <textfield name="incidentLossEnvironmentSource" maxLength="250" width="wide"  />
+        <textarea name="incidentLossEnvironmentInvolvedProducts" maxLength="250" width="wide"  />
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentResearchLossProperty" label="incidentLossProperty">
+        <select name="incidentLossPropertyActual" type="radio" width="wide" required="true" label="actualConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+        <select name="incidentLossPropertyPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+
+
+        <select name="incidentLossPropertyDamageTo" type="radio" width="wide" required="true">
+            <source class="valuelist" valuelistNameRef="incident_loss_property_damage_to" order="value" />
+        </select>
+        <textfield name="incidentLossPropertyDamageToOther" maxLength="250" width="wide"  />
+        <select name="incidentLossPropertyDamageKind" type="radio" width="wide" required="true">
+            <source class="valuelist" valuelistNameRef="incident_loss_property_damage_kind" order="value" />
+        </select>
+        <textfield name="incidentLossPropertyDamageKindOther" maxLength="250" width="wide"  />
+        <select name="incidentLossPropertyStricken" type="radio" width="wide" required="true">
+            <source class="valuelist" valuelistNameRef="incident_loss_property_stricken" order="value" />
+        </select>
+        <textfield name="incidentLossPropertyStrickenOther" maxLength="250" width="wide"  />
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentResearchLossOperations" label="incidentLossOperations">
+        <select name="incidentLossOperationsActual" type="radio" width="wide" required="true" label="actualConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+        <select name="incidentLossOperationsPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+
+        <select name="incidentLossOperationsDeviatingProcessConditions" type="radio" width="wide" required="true">
+            <source class="valuelist" valuelistNameRef="incident_loss_operations_deviating_conditions" order="value" />
+        </select>
+        <textfield name="incidentLossOperationsDeviatingProcessConditionsOther" maxLength="250" width="wide"  />
+        <select name="incidentLossOperationsDeviationInQuality" type="radio" width="wide" required="true">
+            <source class="valuelist" valuelistNameRef="incident_loss_operations_deviations" order="value" />
+        </select>
+        <textfield name="incidentLossOperationsDeviationInQualityOther" maxLength="250" width="wide"  />
+    </fieldset>
+    <!-- used -->
+    <fieldset name="incidentResearchLossReputation" label="incidentLossReputation">
+        <select name="incidentLossReputationActual" type="radio" width="wide" required="true" label="actualConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+        <select name="incidentLossReputationPotential" type="radio" width="wide" required="true" label="potentialConsequence">
+            <source class="valuelist" valuelistNameRef="consequence" order="value" />
+        </select>
+
+        <textarea name="incidentLossReputationDescription" maxLength="250" width="wide" />
+
+        <select name="incidentLossReputationKindOfDamage" type="radio" width="wide" required="true">
+            <source class="valuelist" valuelistNameRef="incident_loss_reputation_damage_kind" order="value" />
+        </select>
+        <textfield name="incidentLossReputationKindOfDamageOther" maxLength="250" width="wide"  />
+    </fieldset>
+
+    <!-- used -->
+    <form name="victim:supplement">
+        <fieldsetref name="fs:victim:supplement" />
+    </form>
+
+    <fieldset name="fs:victim:supplement" showlegend="false">
+        <textfield name="victimName" width="wide" required="true" />
+        <select name="affectedParty" width="wide" required="true">
+            <source class="valuelist" valuelistNameRef="incident_affected_party" display="description" />
+        </select>
+    </fieldset>
+
+    <form name="victim:research" >
+        <fieldsetref name="fs:victim:research" />
+    </form>
+
+    <fieldset name="fs:victim:research" showlegend="false">
+        <textfield name="victimName" width="wide" required="true" />
+        <select name="affectedParty" width="wide" required="true">
+            <source class="valuelist" valuelistNameRef="incident_affected_party" display="description" order="description" />
+        </select>
+        <textfield name="age" width="wide" maskref="number" />
+        <select name="typeOfInjury" width="wide" required="true">
+            <source class="valuelist" valuelistNameRef="incident_injury_type" order="description"/>
+        </select>
+        <multiselect name="kindOfInjury" width="wide" required="true" type="list">
+            <source class="valuelist" valuelistNameRef="incident_injuries" order="description"/>
+        </multiselect>
+        <textfield name="otherInjuryKind" width="wide" />
+        <multiselect name="locationOfInjury" width="wide" required="true" type="list">
+            <source class="valuelist" valuelistNameRef="locationOfInjuries" order="description" />
+        </multiselect>
+        <textfield name="otherInjuryLocation" width="wide" />
+        <textfield name="employmentCurrentPosition" width="wide" />
+        <textfield name="employment" width="wide" />
+        <textfield name="lostWorkDays" required="true" maskref="number" width="wide" />
+        <textfield name="restrictedWorkDays" required="true" maskref="number" width="wide" />
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incidentSupplementClassification2" showlegend="false">
+        <select name="incidentImmediateCause" type="radio" width="wide">
+            <source class="valuelist" valuelistNameRef="incident_immediate_cause" translationPattern="incidentImmediateCause.%s" />
+        </select>
+        <select type="radio" name="confidential" required="true">
+            <source class="valuelist" valuelistNameRef="boolean" display="description"/>
+        </select>
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incidentAnalysisClassification2" showlegend="false">
+        <select name="incidentImmediateCause" type="radio">
+            <source class="valuelist" valuelistNameRef="incident_immediate_cause" translationPattern="incidentImmediateCause.%s" />
+        </select>
+        <!-- needed for formflapping -->
+        <select name="incidentConsequencePotential" mode="view">
+            <source class="inline" order="value" translationPattern="consequence.%s">
+                <option value="0INSIGNIFICANT" />
+                <option value="1MINOR" discloses="incidentMinorCause" />
+                <option value="2MEDIUM" discloses="incidentMinorCause" />
+                <option value="3MAJOR" discloses="incidentMajorCause" />
+                <option value="4CATASTROPHIC" discloses="incidentMajorCause" />
+            </source>
+        </select>
+
+        <select type="radio" name="confidential" required="true">
+            <source class="valuelist" valuelistNameRef="boolean" display="description"/>
+        </select>
+
+        <!-- for completeness since potential is here too -->
+        <select name="incidentConsequenceActual" mode="view">
+            <source class="inline" order="value" translationPattern="consequence.%s">
+                <option value="0INSIGNIFICANT" />
+                <option value="1MINOR" />
+                <option value="2MEDIUM" />
+                <option value="3MAJOR" />
+                <option value="4CATASTROPHIC" />
+            </source>
+        </select>
+
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incidentMinorCause">
+        <textarea name="incidentMinorCause1" maxLength="250" width="wide" />
+        <textarea name="incidentMinorCause2" maxLength="250" width="wide" />
+        <textarea name="incidentMinorCause3" maxLength="250" label="incidentMinorCause2" width="wide" />
+        <textarea name="incidentMinorCause4" maxLength="250" label="incidentMinorCause2" width="wide" />
+        <textarea name="incidentMinorCause5" maxLength="250" label="incidentMinorCause2" width="wide" />
+        <select name="incidentMinorCauseBasicCause">
+            <source class="valuelist" valuelistNameRef="incident_minor_basic_cause" />
+        </select>
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incidentMethod">
+        <select name="incidentMethod" label="incidentMethod2" type="radio" required="true">
+            <source class="valuelist" valuelistNameRef="incident_analysis_method" order="value" />
+        </select>
+        <textfield name="incidentMethodOther" maxLength="250" width="wide" />
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incidentRecommendations">
+        <textarea name="incidentRecommendations" maxLength="250" />
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incidentEvaluations">
+        <textarea name="incidentEvaluations" maxLength="250" label="incidentEvaluations2" />
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incidentMajorCause">
+        <multiple name="incidentMajorCauseAnalysis" form="multiple:majorCause" display="basicCause:suggest,directCause:suggest" />
+    </fieldset>
+
+    <!-- used -->
+    <form name="multiple:majorCause" >
+        <suggest name="directCause" required="true">        <!-- could be free text -->
+            <source class="valuelist" valuelistNameRef="incident_major_direct_cause" display="description" />
+        </suggest>
+        <suggest name="basicCause" required="true">
+            <source class="valuelist" valuelistNameRef="incident_major_basic_cause" display="description" />
+        </suggest>
+        <textarea name="explanation" required="true" />
+    </form>
+
+    <!-- used -->
+    <fieldset name="incidentDetails">
+        <textarea name="incidentAffected" maxLength="250" width="wide"/>
+        <textarea name="incidentWitnesses" maxLength="250" width="wide"/>
+
+        <select name="incidentActivitiyList" width="wide">
+            <source class="valuelist" valuelistNameRef="incident_activity"/>
+        </select>
+
+        <multiselect name="incidentConditions" width="wide">
+            <source class="valuelist" valuelistNameRef="incident_conditions" order="value"/>
+        </multiselect>
+
+        <multiselect name="incidentLSR" width="wide">
+            <source class="valuelist" valuelistNameRef="incident_life_saving_rules" order="description"/>
+        </multiselect>
+
+        <textarea name="incidentActions" maxLength="250" width="wide"/>
+        <!-- we allow one free extra field -->
+        <!--<textarea name="incidentExtra" maxLength="250" width="wide"/>-->
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incidentRejected" showlegend="false">
+        <textarea name="reason" maxLength="1000" width="wide" label="reasonOfRejection"/>
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="incidentLocation">
+        <!-- when you do not want to enable incident creation without selecting a plant configure the hidden field
+             and in the incidentContext.xml for menuCreateIncident set orgcontextrequired = true
+        -->
+        <!--
+        <hidden name="funcLevelTwo"/>
+        -->
+
+        <!-- when you the user to be able to create an incident without having selected a context first configure the
+             suggest field with the plantlist
+             and in the incidentContext.xml for menuCreateIncident set orgcontextrequired = false
+        -->
+        <suggest name="funcLevelOne" minLength="0" required="true" restricts="funcLevelTwo,funcLevelThree,tag">
+            <source class="plantlist" display="value,description"/>
+        </suggest>
+        <suggest name="funcLevelTwo" minLength="0" required="true" restricts="funcLevelThree,tag">
+            <source class="valuelist" valuelistNameRef="funcLevelTwo" display="value,description"/>
+        </suggest>
+        <suggest name="funcLevelThree" minLength="0" required="true" restricts="tag">
+            <source class="valuelist" valuelistNameRef="funcLevelThree" display="value,description"/>
+        </suggest>
+        <suggest name="tag" minLength="0" required="true">
+            <source class="valuelist" valuelistNameRef="tag" display="value,description"/>
+        </suggest>
+    </fieldset>
+    
+    <!-- used -->
+    <fieldset name="incidentOrganisation">
+        <suggest name="orgLevelOne" minLength="0" required="true" restricts="orgLevelTwo,orgLevelThree,orgLevelFour">
+            <source class="plantlist" display="description"/>
+        </suggest>
+        <suggest name="orgLevelTwo" minLength="0" required="true" restricts="orgLevelThree,orgLevelFour">
+            <source class="valuelist" valuelistNameRef="icqOrgLevelTwo" display="description"/>
+        </suggest>
+        <suggest name="orgLevelThree" minLength="0" required="true" restricts="orgLevelFour">
+            <source class="valuelist" valuelistNameRef="icqOrgLevelThree" display="description"/>
+        </suggest>
+        <suggest name="orgLevelFour" minLength="0" required="true">
+            <source class="valuelist" valuelistNameRef="icqOrgLevelFour" display="description"/>
+        </suggest>
+    </fieldset>
+
+    <!-- used -->
+    <fieldset name="registerLinkedIncidentHiddenPBS" showlegend="false">
+        <hidden name="funcLevelTwo"/>
+        <hidden name="funcLevelThree"/>
+        <hidden name="funcLevelFour"/>
+        <hidden name="funcLevelFive"/>
+        <hidden name="funcLevelSix"/>
+        <hidden name="geoLevelThree"/>
+        <hidden name="orgLevelThree"/>
+        <hidden name="floc"/>
+        <hidden name="tag"/>
+        <hidden name="equipment"/>
+    </fieldset>
+
+    <fieldset name="incidentDocumentAttachment">
+        <document qualifier="incident"/>
+        <url name="incidentDocumentLink" protocol="file" />
+    </fieldset>
+
+</forms>

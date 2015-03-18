@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+    <!-- LOTOLIST -->
+    <form style="search" name="EDIT_STORED_QUERY:LOTOLIST" generatetag="false">
+        <fieldsetref name="GENERIC_SEARCH_SECTION_PBS"/>
+        <fieldsetref name="ADVANCED_LOTOLIST_SEARCH:PROPERTIES"/>
+        <fieldsetref name="ADVANCED_LOTOLIST_SEARCH:SIGN"/>
+
+        <fieldsetref name="ADVANCED_LOTOLIST_SEARCH:RESULT_PROPERTIES"/>
+
+        <hidden name="objectClassName" value="ibanx.loto.IsolationListIF"/>
+        <hidden name="key" value="form"/>
+
+        <button name="eventSubmit_doView" label="BUTTON_SEARCH_PREVIEW"/>
+        <button name="eventSubmit_doDelete" label="actionButtonDelete"/>
+        <button name="eventSubmit_doCopycreate"/>
+        <button name="eventSubmit_doSave" label="BUTTON_SEARCH_SAVE"/>
+        <button name="eventSubmit_doCancel" label="actionButtonCancel"/>
+
+        <whitelist names="searchResultList name description objectKey privateSpec queryspec"/>
+    </form>
+
+    <form style="search" name="SEARCH:SIMPLE:LOTOLIST" generatetag="false">
+        <hidden name="tab" value="1"/>
+
+        <fieldsetref name="HIDDEN:AND:WHITELISTING:PROPERTIES"/>
+        <hidden name="objectClassName" value="ibanx.loto.IsolationListIF"/>
+
+        <fieldsetref name="GENERIC_SEARCH_SECTION_PBS"/>
+        <fieldsetref name="ADVANCED_LOTOLIST_SEARCH:PROPERTIES"/>
+        <fieldsetref name="ADVANCED_LOTOLIST_SEARCH:RESULT_PROPERTIES"/>
+
+        <button type="submit" name="eventSubmit_doSearch" label="BUTTON_SEARCH"/>
+        <button type="reset" name="BUTTON_RESET"/>
+    </form>
+
+    <form style="search" name="SEARCH:SIMPLE:LOTOLIST:LINKING" generatetag="false">
+        <hidden name="tab" value="1"/>
+
+        <fieldsetref name="HIDDEN:AND:WHITELISTING:PROPERTIES"/>
+        <hidden name="objectClassName" value="ibanx.loto.IsolationListIF"/>
+
+        <fieldsetref name="GENERIC_SEARCH_SECTION_PBS"/>
+        <fieldsetref name="ADVANCED_LOTOLIST_SEARCH:PROPERTIES:LINKING"/>
+        <fieldsetref name="ADVANCED_LOTOLIST_SEARCH:RESULT_PROPERTIES"/>
+
+        <button type="submit" name="eventSubmit_doSearch" label="BUTTON_SEARCH"/>
+        <button type="reset" name="BUTTON_RESET"/>
+    </form>
+
+    <form style="search" name="SEARCH:LOTOLIST" generatetag="false">
+        <hidden name="tab" value="2"/>
+
+        <fieldsetref name="HIDDEN:AND:WHITELISTING:PROPERTIES"/>
+        <hidden name="objectClassName" value="ibanx.loto.IsolationListIF"/>
+
+        <fieldsetref name="GENERIC_SEARCH_SECTION_PBS"/>
+        <fieldsetref name="ADVANCED_LOTOLIST_SEARCH:PROPERTIES"/>
+        <fieldsetref name="ADVANCED_LOTOLIST_SEARCH:SIGN"/>
+
+        <fieldsetref name="ADVANCED_LOTOLIST_SEARCH:RESULT_PROPERTIES"/>
+
+        <button type="submit" name="eventSubmit_doSearch" label="BUTTON_SEARCH"/>
+        <button type="reset" name="BUTTON_RESET"/>
+    </form>
+    <form style="search" name="SEARCH:LOTOLIST:LINKING" generatetag="false">
+        <hidden name="tab" value="2"/>
+
+        <fieldsetref name="HIDDEN:AND:WHITELISTING:PROPERTIES"/>
+        <hidden name="objectClassName" value="ibanx.loto.IsolationListIF"/>
+
+        <fieldsetref name="GENERIC_SEARCH_SECTION_PBS"/>
+        <fieldsetref name="ADVANCED_LOTOLIST_SEARCH:PROPERTIES:LINKING"/>
+        <fieldsetref name="ADVANCED_LOTOLIST_SEARCH:SIGN"/>
+
+        <fieldsetref name="ADVANCED_LOTOLIST_SEARCH:RESULT_PROPERTIES"/>
+
+        <button type="submit" name="eventSubmit_doSearch" label="BUTTON_SEARCH"/>
+        <button type="reset" name="BUTTON_RESET"/>
+    </form>
+
+    <fieldset name="ADVANCED_LOTOLIST_SEARCH:PROPERTIES" label="searchCriteria">
+        <multiselect name="businessObjectType.number" operator="equals" label="businessObjectType.number">
+            <source class="businessobjecttypelist" valuelistNameRef="ibanx.loto.IsolationListIF"/>
+        </multiselect>
+        <select type="radio" name="isTemplate" operator="equals" label="isTemplate">
+            <source class="valuelist" valuelistNameRef="boolean"/>
+        </select>
+        <textfield name="number" operator="freetext" label="number"/>
+
+        <daterange name="plannedIsolationDate"/>
+        <daterange name="plannedDeisolationDate"/>
+
+        <multiselect name="lifecycleState.name" operator="match" type="list">
+            <source class="lifecyclestatelist" valuelistNameRef="DEFAULT_LOTO_LIST_PROCESS,TEMPLATE_LOTO_LIST_PROCESS" display="showprocessname"/>
+        </multiselect>
+
+    </fieldset>
+
+    <fieldset name="ADVANCED_LOTOLIST_SEARCH:PROPERTIES:LINKING" label="searchCriteria">
+        <hidden name="businessObjectType.number"/>
+        <hidden name="isTemplate"/>
+
+        <textfield name="number" operator="freetext" label="number"/>
+
+        <daterange name="plannedIsolationDate"/>
+        <daterange name="plannedDeisolationDate"/>
+
+        <multiselect name="lifecycleState.name" operator="match" type="list">
+            <source class="lifecyclestatelist" valuelistNameRef="DEFAULT_LOTO_LIST_PROCESS,TEMPLATE_LOTO_LIST_PROCESS" display="showprocessname"/>
+        </multiselect>
+
+    </fieldset>
+
+    <fieldset name="ADVANCED_LOTOLIST_SEARCH:SIGN" label="searchSign">
+        <textfield name="signature.name" label="name"/>
+        <!-- between.signature.signdate  -->
+        <daterange name="signature.signDate" label="signDate"/>
+    </fieldset>
+
+    <fieldset name="ADVANCED_LOTOLIST_SEARCH:RESULT_PROPERTIES" label="searchCriteriaOther">
+        <orderby values="number,funcLevelTwo,funcLevelThree,tag" label="searchOrderBy"/>
+        <layout values="isolationLists,isolationListsActive" label="searchLayout"/>
+    </fieldset>
+
+
+    <!-- LOTOPOINT -->
+    <form style="search" name="EDIT_STORED_QUERY:LOTOPOINT" generatetag="false">
+        <fieldsetref name="GENERIC_SEARCH_SECTION_PBS"/>
+        <fieldsetref name="SIMPLE_LOTOPOINT_SEARCH:PROPERTIES"/>
+        <fieldsetref name="LOTOPOINT_SEARCH:RESULT_PROPERTIES"/>
+
+        <hidden name="objectClassName" value="ibanx.loto.IsolationPointIF"/>
+        <hidden name="key" value="form"/>
+
+        <button name="eventSubmit_doView" label="BUTTON_SEARCH_PREVIEW"/>
+        <button name="eventSubmit_doDelete" label="actionButtonDelete"/>
+        <button name="eventSubmit_doCopycreate"/>
+        <button name="eventSubmit_doSave" label="BUTTON_SEARCH_SAVE"/>
+        <button name="eventSubmit_doCancel" label="actionButtonCancel"/>
+
+        <whitelist names="searchResultList name description objectKey privateSpec queryspec"/>
+    </form>
+
+    <form style="search" name="SEARCH:SIMPLE:LOTOPOINT" generatetag="false">
+        <hidden name="tab" value="1"/>
+
+        <fieldsetref name="HIDDEN:AND:WHITELISTING:PROPERTIES"/>
+        <hidden name="objectClassName" value="ibanx.loto.IsolationPointIF"/>
+
+        <fieldsetref name="GENERIC_SEARCH_SECTION_PBS"/>
+        <fieldsetref name="SIMPLE_LOTOPOINT_SEARCH:PROPERTIES"/>
+        <fieldsetref name="LOTOPOINT_SEARCH:RESULT_PROPERTIES"/>
+
+        <button type="submit" name="eventSubmit_doSearch" label="BUTTON_SEARCH"/>
+        <button type="reset" name="BUTTON_RESET"/>
+    </form>
+
+    <form style="search" name="SEARCH:LOTOPOINT" generatetag="false">
+        <hidden name="tab" value="2"/>
+
+        <fieldsetref name="HIDDEN:AND:WHITELISTING:PROPERTIES"/>
+        <hidden name="objectClassName" value="ibanx.loto.IsolationPointIF"/>
+
+        <fieldsetref name="GENERIC_SEARCH_SECTION_PBS"/>
+        <fieldsetref name="ADVANCED_LOTOPOINT_SEARCH:PROPERTIES"/>
+        <fieldsetref name="LOTOPOINT_SEARCH:RESULT_PROPERTIES"/>
+
+        <button type="submit" name="eventSubmit_doSearch" label="BUTTON_SEARCH"/>
+        <button type="reset" name="BUTTON_RESET"/>
+    </form>
+
+    <fieldset name="SIMPLE_LOTOPOINT_SEARCH:PROPERTIES" label="searchCriteria">
+        <multiselect name="businessObjectType.number" operator="equals" label="businessObjectType.number">
+            <source class="businessobjecttypelist" valuelistNameRef="ibanx.loto.IsolationPointIF"/>
+        </multiselect>
+        <select type="radio" name="standard" operator="equals">
+            <source class="valuelist" valuelistNameRef="boolean"/>
+        </select>
+        <select name="category" operator="equals">
+            <source class="valuelist" valuelistNameRef="category" filter="all"/>
+        </select>
+        <textfield name="pointNumber" operator="freetext"/>
+
+        <multiselect name="lifecycleState.name" operator="match" type="list">
+            <source class="lifecyclestatelist" valuelistNameRef="DEFAULT_LOTO_POINT_PROCESS" display="showprocessname"/>
+        </multiselect>
+
+    </fieldset>
+    <fieldset name="ADVANCED_LOTOPOINT_SEARCH:PROPERTIES" label="searchCriteria">
+        <multiselect name="businessObjectType.number" operator="equals" label="businessObjectType.number">
+            <source class="businessobjecttypelist" valuelistNameRef="ibanx.loto.IsolationPointIF"/>
+        </multiselect>
+        <select type="radio" name="standard" operator="equals">
+            <source class="valuelist" valuelistNameRef="boolean"/>
+        </select>
+        <select name="category" operator="equals">
+            <source class="valuelist" valuelistNameRef="category" filter="all"/>
+        </select>
+        <textfield name="number" operator="freetext"/>
+        <textfield name="pointNumber" operator="freetext"/>
+        <select name="medium" operator="equals">
+            <source class="valuelist" valuelistNameRef="medium" filter="all"/>
+        </select>
+        <select name="diameter" operator="equals">
+            <source class="valuelist" valuelistNameRef="lotoDiameter" filter="all"/>
+        </select>
+        <select name="pipingStandard" operator="equals">
+            <source class="valuelist" valuelistNameRef="pipingStandard" filter="all"/>
+        </select>
+        <select name="pressureClass" operator="equals">
+            <source class="valuelist" valuelistNameRef="lotoPressureClass" filter="all"/>
+        </select>
+        <select name="gasketType" operator="equals">
+            <source class="valuelist" valuelistNameRef="lotoGasketType" filter="all"/>
+        </select>
+
+        <multiselect name="lifecycleState.name" operator="match" type="list">
+            <source class="lifecyclestatelist" valuelistNameRef="DEFAULT_LOTO_POINT_PROCESS" display="showprocessname"/>
+        </multiselect>
+
+    </fieldset>
+
+    <fieldset name="LOTOPOINT_SEARCH:RESULT_PROPERTIES" label="searchCriteriaOther">
+        <orderby values="pointNumber,funcLevelTwo,funcLevelThree,tag" label="searchOrderBy"/>
+        <layout values="isolationPoints,isolatedPoints" label="searchLayout"/>
+    </fieldset>
+
+
+   <!-- form name used hardcoded in java code -->
+   <form style="search" name="FILTER:ISOLATIONLIST">
+       <fieldsetref name="FILTER:ISOLATIONLIST:TYPE"/>
+       <fieldsetref name="FILTER:ISOLATIONLIST:PBS"/>
+       <fieldsetref name="GENERIC_LOTO_LIST:WHITELISTING"/>
+       <fieldsetref name="GENERIC_LOTO_LIST:FILTER:WHITELISTING"/>
+   </form>
+   <form style="search" name="FILTER:ISOLATIONLIST:NOTYPE">
+       <fieldsetref name="FILTER:ISOLATIONLIST:PBS"/>
+       <fieldsetref name="GENERIC_LOTO_LIST:WHITELISTING"/>
+       <fieldsetref name="GENERIC_LOTO_LIST:FILTER:WHITELISTING"/>
+   </form>
+   <fieldset name="FILTER:ISOLATIONLIST:TYPE" label="searchCriteria" showlegend="false">
+       <multiselect type="checkbox" name="businessObjectType.number" operator="equals" label="businessObjectType.number" width="wide">
+           <source class="businessobjecttypelist" valuelistNameRef="ibanx.loto.IsolationListIF"/>
+       </multiselect>
+   </fieldset>
+   <fieldset name="FILTER:ISOLATIONLIST:PBS" label="searchCriteria" showlegend="false">
+       <hidden name="funcLevelOne" restricts="funcLevelTwo,funcLevelThree,tag"/>
+       <suggest name="funcLevelTwo" minLength="0" maxLength="50" cssClass="uppercase" restricts="funcLevelThree,tag">
+           <source class="valuelist" valuelistNameRef="funcLevelTwo" display="value,description" filter="all"/>
+       </suggest>
+       <suggest name="funcLevelThree" minLength="0" maxLength="50"
+                cssClass="uppercase" restricts="tag">
+           <source class="valuelist" valuelistNameRef="funcLevelThree" display="value,description" filter="all"/>
+       </suggest>
+       <suggest name="tag" minLength="0" freeText="true" cssClass="uppercase" maxLength="50">
+           <source class="valuelist" valuelistNameRef="tag" display="value,description" filter="all"/>
+       </suggest>
+   </fieldset>
+</forms>
+	

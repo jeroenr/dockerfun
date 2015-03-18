@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+    <form name="DELTALINQS_PERMIT:CREATE" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PROPERTIES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DOCUMENT"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:COPY" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PROPERTIES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DOCUMENT"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PLANNING"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:COPY_TEMPLATE" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC"/>
+        <fieldsetref name="GENERIC_PERMIT_TEMPLATE:SECTION:PROPERTIES"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+
+    <form name="DELTALINQS_PERMIT:CONFIRM" mode="view">
+        <fieldsetref name="GENERIC:SECTION:FLOC"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW"/>
+    </form>
+
+    <form name="DELTALINQS_PERMIT:CONFIRM:O_AC" mode="view">
+        <fieldsetref name="GENERIC:SECTION:FLOC"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+
+    <!-- 1 -->
+    <form name="DELTALINQS_PERMIT:VIEW:1" mode="view">
+        <fieldsetref name="GENERIC:SECTION:FLOC"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:1" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:1:I_BR" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:EDIT:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURES"/>
+
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A1" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A2" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A3" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT_AND_RBH:SECTION:TOOLS" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT_AND_RBH:SECTION:VEHICLES" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DOCS" mode="view"/>
+
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:1:B_AV" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_USER"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_SIGN"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:1:B_OB" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_USER"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_SIGN"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:1:B_MO1" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_USER"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_SIGN"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:1:B_MO2" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_USER"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_SIGN"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:1:B_MO3" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_USER"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_SIGN"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:1:B_VV" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_USER"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_SIGN"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:1:B_VS" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_USER"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_SIGN"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:1:B_VA" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_USER"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_SIGN"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:1:B_VL" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_USER"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURE_SIGN"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+        <whitelist names="nextStateIdentity"/>
+    </form>
+
+    <!-- 2 -->
+    <form name="DELTALINQS_PERMIT:VIEW:2" mode="view">
+        <fieldsetref name="GENERIC:SECTION:FLOC"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PROPERTIES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DOCUMENT"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A1"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A2"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A3"/>
+        <fieldsetref name="GENERIC_PERMIT_AND_RBH:SECTION:TOOLS"/>
+        <fieldsetref name="GENERIC_PERMIT_AND_RBH:SECTION:VEHICLES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DOCS"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:VIEW:PLANNING" mode="view">
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PLANNING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:2" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PROPERTIES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DOCUMENT"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A1"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A2"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A3"/>
+        <fieldsetref name="GENERIC_PERMIT_AND_RBH:SECTION:TOOLS"/>
+        <fieldsetref name="GENERIC_PERMIT_AND_RBH:SECTION:VEHICLES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DOCS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PLANNING"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DIRECT_PRINTING"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:1:WITH_RBH" mode="edit">
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:1:WITH_RBH:I_BR" mode="edit">
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DOCUMENT"/>
+        <hidden name="riskValue"/>
+        <hidden name="avTraRequired"/>
+        <hidden name="riscCategory"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:2:WITH_RBH" mode="edit">
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DOCUMENT"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PLANNING"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DIRECT_PRINTING"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:2:B_VV" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:EDIT:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PLANNING"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DIRECT_PRINTING"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:2:I_VV" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:EDIT:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PLANNING"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DIRECT_PRINTING"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:2:I_MV" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:EDIT:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PLANNING"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DIRECT_PRINTING"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:2:I_AMH" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:EDIT:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PLANNING"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DIRECT_PRINTING"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:2:B_VS" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:EDIT:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PLANNING"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DIRECT_PRINTING"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+
+    <!-- 3 -->
+    <form name="DELTALINQS_PERMIT:VIEW:3" mode="view">
+        <fieldsetref name="GENERIC:SECTION:FLOC"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:RISK_ASPECTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OPERATIONAL_ATTENTION"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:GAS_MEASURES"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:3:I_AMH" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:RISK_ASPECTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OPERATIONAL_ATTENTION"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:GAS_MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:3:I_MV" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:RISK_ASPECTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OPERATIONAL_ATTENTION"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:GAS_MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:3:I_VV" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:RISK_ASPECTS" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OPERATIONAL_ATTENTION"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:GAS_MEASURES" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+
+    <!-- 4 -->
+    <form name="DELTALINQS_PERMIT:VIEW:4" mode="view">
+        <fieldsetref name="GENERIC_PERMIT:SECTION:ADDITIONAL_REQUIREMENTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PRECAUTION_MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PERSONAL_PROTECTIVE_EQUIPMENT"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:4" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PRECAUTION_MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PERSONAL_PROTECTIVE_EQUIPMENT"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+
+    <form name="DELTALINQS_PERMIT:EDIT:4:I_MV" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:ADDITIONAL_REQUIREMENTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PRECAUTION_MEASURES" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PERSONAL_PROTECTIVE_EQUIPMENT" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:4:I_AMH" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:ADDITIONAL_REQUIREMENTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PRECAUTION_MEASURES" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PERSONAL_PROTECTIVE_EQUIPMENT" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:4:B_VS" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:ADDITIONAL_REQUIREMENTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PRECAUTION_MEASURES" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PERSONAL_PROTECTIVE_EQUIPMENT" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:4:B_OB" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:ADDITIONAL_REQUIREMENTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PRECAUTION_MEASURES" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PERSONAL_PROTECTIVE_EQUIPMENT" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:4:B_MO1" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:ADDITIONAL_REQUIREMENTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PRECAUTION_MEASURES" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PERSONAL_PROTECTIVE_EQUIPMENT" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:4:B_MO2" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:ADDITIONAL_REQUIREMENTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PRECAUTION_MEASURES" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PERSONAL_PROTECTIVE_EQUIPMENT" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+    <form name="DELTALINQS_PERMIT:EDIT:4:B_MO3" mode="edit">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:ADDITIONAL_REQUIREMENTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PRECAUTION_MEASURES" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PERSONAL_PROTECTIVE_EQUIPMENT" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+
+    <!-- 7 -->
+    <form name="DELTALINQS_PERMIT:VIEW:7" mode="view">
+        <fieldsetref name="GENERIC:SECTION:FLOC" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OVERVIEW" mode="view"/>
+    </form>
+
+    <!-- handout -->
+    <form name="DELTALINQS_PERMIT:HANDOUT" mode="edit">
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PLANNING:HANDOUT"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:ADDITIONAL_REQUIREMENTS" mode="view"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PRECAUTION_MEASURES:HANDOUT"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:GAS_MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:CLOSE_TOGETHER"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:WORKFLOWCOMMENT"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DIRECT_PRINTING"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+
+    <!-- edit template -->
+    <form name="DELTALINQS_PERMIT:EDIT:E_T" mode="edit">
+        <hidden name="riscCategory"/>
+        <fieldsetref name="GENERIC:SECTION:FLOC"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PROPERTIES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DOCUMENT"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A1"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A2"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A3"/>
+        <fieldsetref name="GENERIC_PERMIT_AND_RBH:SECTION:TOOLS"/>
+        <fieldsetref name="GENERIC_PERMIT_AND_RBH:SECTION:VEHICLES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DOCS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PLANNING"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:ADDITIONAL_REQUIREMENTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PRECAUTION_MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:GAS_MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PERSONAL_PROTECTIVE_EQUIPMENT"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:RISK_ASPECTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OPERATIONAL_ATTENTION"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DIRECT_PRINTING"/>
+        <fieldsetref name="GENERIC_PERMIT:WHITELISTING"/>
+    </form>
+
+    <!-- print -->
+    <form name="DELTALINQS_PERMIT:PRINT" mode="view">
+        <fieldsetref name="GENERIC:SECTION:FLOC"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PROPERTIES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DOCUMENT"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A1"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A2"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A3"/>
+        <fieldsetref name="GENERIC_PERMIT_AND_RBH:SECTION:TOOLS"/>
+        <fieldsetref name="GENERIC_PERMIT_AND_RBH:SECTION:VEHICLES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DOCS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PLANNING"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:ADDITIONAL_REQUIREMENTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PRECAUTION_MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:GAS_MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PERSONAL_PROTECTIVE_EQUIPMENT"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:RISK_ASPECTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OPERATIONAL_ATTENTION"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DIRECT_PRINTING"/>
+    </form>
+
+    <form name="DELTALINQS_PERMIT:AUDIT">
+        <checkbox name="avTraOptional"/>
+        <textfield name="riscCategory" translate="true" label="risk"/>
+        <fieldsetref name="GENERIC:SECTION:FLOC"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PROPERTIES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DOCUMENT"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:SIGNATURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A1"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A2"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:A3"/>
+        <fieldsetref name="GENERIC_PERMIT_AND_RBH:SECTION:TOOLS"/>
+        <fieldsetref name="GENERIC_PERMIT_AND_RBH:SECTION:VEHICLES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DOCS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PLANNING"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:ADDITIONAL_REQUIREMENTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PRECAUTION_MEASURES"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:GAS_MEASURES:AUDIT"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:PERSONAL_PROTECTIVE_EQUIPMENT"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:RISK_ASPECTS"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:OPERATIONAL_ATTENTION"/>
+        <fieldsetref name="GENERIC_PERMIT:SECTION:DIRECT_PRINTING"/>
+    </form>
+
+</forms>

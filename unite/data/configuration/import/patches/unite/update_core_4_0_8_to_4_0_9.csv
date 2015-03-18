@@ -1,0 +1,5 @@
+role,application_configurator,,nl::applicatie configurator;en::application configurator
+simplegroup,global_application_configurators
+@allocateRoleToGroup,GLOBAL,application_configurator,global_application_configurators
+
+

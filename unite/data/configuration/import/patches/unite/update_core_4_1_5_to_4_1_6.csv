@@ -1,0 +1,5 @@
+
+## HIM-743 : remove compare screen
+@delete,appsetting,key,*.comparable.attributes.*,LIKE
+@delete,appsetting,key,*.compare.sections.*,LIKE
+

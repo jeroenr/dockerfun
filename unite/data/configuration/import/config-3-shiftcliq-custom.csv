@@ -1,0 +1,103 @@
+######################       BUSINESSOBJECTTYPES       ##################################################
+#                                                                                                       #
+#      BELOW IS ONLY VALID IF WE USE OLD SKOOL GUI RENDERING USING THE TEMPLATE DRILLDOWN               #
+#      APPROACH... NEW SKOOL DOES NOT USE TYPED TEMPLATES ANYMORE!!!!                                   #
+#      ==================================================================================               #
+#                                                                                                       #
+# Below we configure the following directory structure for template placement:                          #
+#     log templates in screens\logbook\log\...   [ templates in here are controller templates           #
+#                                                  using config settings (f.i. businessobjecttype)      #
+#                                                  to determine which templates to process next ]       #
+#                                                                                                       #
+#     logitem templates in screens\logbook\logitem\...                                                  #
+#                                                [ templates in here are controller templates           #
+#                                                  using config settings (f.i. businessobjecttype)      #
+#                                                  to determine which templates to process next ]       #
+#                                                                                                       #
+#     Deviation templates in screens\logbook\deviation\...                                              #
+#                                                    [ templates in here are controller templates       #
+#                                                      using config settings (f.i. businessobjecttype)  #
+#                                                      to determine which templates to process next ]   #
+#                                                                                                       #
+#########################################################################################################
+
+######## SHIFTS
+
+businessobjecttype,CONTINUE_DIENST,,Dienst,,,,,Dienst,ibanx.logbook.ShiftIF,DEFAULT_SHIFT_PROC,-1,,,GLOBAL,true,,,,,,false
+
+######## LOGS
+
+businessobjecttype,WACHTVERSLAG,,Wachtverslag,,,,,Wachtverslag,ibanx.logbook.LogIF,WACHTVERSLAG_PROC,-1,,,GLOBAL,true,,,,,,false
+@startTransaction
+@method,setRepeating,businessobjecttype,WACHTVERSLAG,reportTemplate,logbook\,report\,logreport.vm
+@method,setRepeating,businessobjecttype,WACHTVERSLAG,availableLogitem,SIMPLE_LOGEVENT
+@method,setRepeating,businessobjecttype,WACHTVERSLAG,availableLogitem,DETAIL_LOGEVENT
+@endTransaction
+
+businessobjecttype,OPERATORVERSLAG,,Operatorverslag,,,,,Operatorverslag,ibanx.logbook.LogIF,OPERATORVERSLAG_PROC,-1,,,GLOBAL,true,,,,,,false
+@startTransaction
+@method,setRepeating,businessobjecttype,OPERATORVERSLAG,reportTemplate,logbook\,report\,operator_logreport.vm
+@method,setRepeating,businessobjecttype,OPERATORVERSLAG,availableLogitem,SIMPLE_LOGEVENT
+@endTransaction
+
+businessobjecttype,MORNINGREPORT,,Ochtendrapportage,,,,,Ochtendrapportage,ibanx.logbook.LogIF,WACHTVERSLAG_PROC,-1,,,GLOBAL,true,,,,,,false
+@startTransaction
+@method,setRepeating,businessobjecttype,MORNINGREPORT,reportTemplate,logbook\,report\,logreport.vm
+@method,setRepeating,businessobjecttype,MORNINGREPORT,availableLogitem,SIMPLE_LOGEVENT
+@endTransaction
+
+######## LOGEVENTS
+
+businessobjecttype,SIMPLE_LOGEVENT,,Productiemelding,,,,,Productiemelding,ibanx.logbook.LogEventIF,DEFAULT_LOGEVENT_PROC,-1,,,GLOBAL,true,logbook\,logevent\,create.vm,logbook\,logevent\,copy.vm,logbook\,logevent\,view.vm,logbook\,logevent\,edit.vm,logbook\,logevent\,search.vm,false
+businessobjecttype,DETAIL_LOGEVENT,,Bijzonderheid,,,,,Bijzonderheid,ibanx.logbook.LogEventIF,DEFAULT_LOGEVENT_PROC,-1,,,GLOBAL,true,logbook\,logevent\,create.vm,logbook\,logevent\,copy.vm,logbook\,logevent\,view.vm,logbook\,logevent\,edit.vm,logbook\,logevent\,search.vm,false
+
+######## DEVIATIONS
+
+businessobjecttype,DEFAULT_DEVIATION,,Beschikbaarheid,,,,,Beschikbaarheid,ibanx.logbook.DeviationIF,DEFAULT_DEVIATION_PROC,-1,,,GLOBAL,true,logbook\,deviation\,create.vm,logbook\,deviation\,copy.vm,logbook\,deviation\,view.vm,logbook\,deviation\,edit.vm,logbook\,deviation\,search.vm,false
+businessobjecttype,DEFAULT_OPERATIONAL_BYPASS_DEVIATION,,Overbrugging,,,,,Overbrugging,ibanx.logbook.DeviationIF,DEFAULT_DEVIATION_PROC,-1,,,GLOBAL,true,logbook\,deviation\,create.vm,logbook\,deviation\,copy.vm,logbook\,deviation\,view.vm,logbook\,deviation\,edit.vm,logbook\,deviation\,search.vm,false
+businessobjecttype,DEFAULT_DCS_SUPPRESS_DEVIATION,,DCS-suppress,,,,,DCS-suppress,ibanx.logbook.DeviationIF,DEFAULT_DEVIATION_PROC,-1,,,GLOBAL,true,logbook\,deviation\,create.vm,logbook\,deviation\,copy.vm,logbook\,deviation\,view.vm,logbook\,deviation\,edit.vm,logbook\,deviation\,search.vm,false
+businessobjecttype,DEFAULT_SETTING_DEVIATION,,Tijdelijke setting,,,,,Tijdelijke setting,ibanx.logbook.DeviationIF,DEFAULT_DEVIATION_PROC,-1,,,GLOBAL,true,logbook\,deviation\,create.vm,logbook\,deviation\,copy.vm,logbook\,deviation\,view.vm,logbook\,deviation\,edit.vm,logbook\,deviation\,search.vm,false
+businessobjecttype,DEFAULT_TEST_DEVIATION,,Proef,,,,,Proef,ibanx.logbook.DeviationIF,DEFAULT_DEVIATION_PROC,-1,,,GLOBAL,true,logbook\,deviation\,create.vm,logbook\,deviation\,copy.vm,logbook\,deviation\,view.vm,logbook\,deviation\,edit.vm,logbook\,deviation\,search.vm,false
+businessobjecttype,DEFAULT_HASIT_DEVIATION,,Ongewenste situatie,,,,,Ongewenste situatie,ibanx.logbook.DeviationIF,DEFAULT_DEVIATION_PROC,-1,,,GLOBAL,true,logbook\,deviation\,create.vm,logbook\,deviation\,copy.vm,logbook\,deviation\,view.vm,logbook\,deviation\,edit.vm,logbook\,deviation\,search.vm,false
+######## TASKS
+
+businessobjecttype,DEFAULT_TASK,,Taak,,,,,Taak,ibanx.task.TaskIF,DEFAULT_TASK_PROC,-1,,,GLOBAL,true,logbook\,task\,create.vm,logbook\,task\,copy.vm,logbook\,task\,view.vm,logbook\,task\,edit.vm,logbook\,task\,search.vm,false
+businessobjecttype,EVALUATE_PERMIT_TASK,,Evalueer ingenomen vergunning,,,,,Evalueer ingenomen vergunning,ibanx.task.TaskIF,EVALUATE_PERMIT_TASK_PROC,-1,,,GLOBAL,true,logbook\,task\,create.vm,logbook\,task\,copy.vm,logbook\,task\,view.vm,logbook\,task\,edit.vm,logbook\,task\,search.vm,false
+
+######## INSTRUCTIONS
+
+@include,inc_def_instruction.csv
+
+#############################################################
+
+logdefinitions_v1_3,logdefinitions,KEY1,Wachtverslag,PLANT1,CONTINUE_DIENST,,,WACHTVERSLAG,true
+logdefinitions_v1_3,logdefinitions,KEY2,Operator verslag 30-100,PLANT1,CONTINUE_DIENST,,30-100,OPERATORVERSLAG,true
+logdefinitions_v1_3,logdefinitions,KEY3,Operator verslag 30-200,PLANT1,CONTINUE_DIENST,,30-200,OPERATORVERSLAG,true
+logdefinitions_v1_3,logdefinitions,KEY4,Operator verslag 30-300,PLANT1,CONTINUE_DIENST,,30-300,OPERATORVERSLAG,true
+logdefinitions_v1_3,logdefinitions,KEY5,Operator verslag 30-400,PLANT1,CONTINUE_DIENST,,30-400,OPERATORVERSLAG,true
+logdefinitions_v1_3,logdefinitions,KEY7,Dagverslag,PLANT1,CONTINUE_DIENST,ochtend,,MORNINGREPORT,true
+
+logdefinitions_v1_3,logdefinitions,KEY10,Wachtverslag,PLANT2,CONTINUE_DIENST,,,WACHTVERSLAG,true
+logdefinitions_v1_3,logdefinitions,KEY11,Operator verslag 30-500,PLANT2,CONTINUE_DIENST,,30-500,OPERATORVERSLAG,true
+logdefinitions_v1_3,logdefinitions,KEY12,Operator verslag 30-600,PLANT2,CONTINUE_DIENST,,30-600,OPERATORVERSLAG,true
+logdefinitions_v1_3,logdefinitions,KEY13,Operator verslag Onsites,PLANT2,CONTINUE_DIENST,,,OPERATORVERSLAG,true
+
+#############################################################
+
+autocreate_logevents,Plant 1 : Auto. bijz. melding wvs.,Automatische bijzonderheden melding wachtverslag,PLANT1,,KEY1,DETAIL_LOGEVENT,PERSONNEL,[nog in te vullen],,,,
+autocreate_logevents,Plant 1 (30-100): Auto. prod. melding wvs.,Automatische productie melding wachtverslag,PLANT1,,KEY1,SIMPLE_LOGEVENT,GENERAL,[nog in te vullen],[nog in te vullen],30-100,,
+autocreate_logevents,Plant 1 (30-200): Auto. prod. melding wvs.,Automatische productie melding wachtverslag,PLANT1,,KEY1,SIMPLE_LOGEVENT,GENERAL,[nog in te vullen],[nog in te vullen],30-200,,
+autocreate_logevents,Plant 1 (30-300): Auto. prod. melding wvs.,Automatische productie melding wachtverslag,PLANT1,,KEY1,SIMPLE_LOGEVENT,GENERAL,[nog in te vullen],[nog in te vullen],30-300,,
+autocreate_logevents,Plant 1 (30-400): Auto. prod. melding wvs.,Automatische productie melding wachtverslag,PLANT1,,KEY1,SIMPLE_LOGEVENT,GENERAL,[nog in te vullen],[nog in te vullen],30-400,,
+
+autocreate_logevents,Plant 1 (30-100): Auto. prod. melding ovs.,Automatische productie melding operator verslag,PLANT1,,KEY2,SIMPLE_LOGEVENT,GENERAL,[nog in te vullen],[nog in te vullen],30-100,,
+
+autocreate_logevents,Plant 2 : Auto. bijz. melding wvs.,Automatische bijzonderheden melding wachtverslag,PLANT2,,KEY10,DETAIL_LOGEVENT,PERSONNEL,[nog in te vullen],,,,
+autocreate_logevents,Plant 2 (30-500): Auto. prod. melding wvs.,Automatische productie melding wachtverslag,PLANT2,,KEY10,SIMPLE_LOGEVENT,GENERAL,[nog in te vullen],[nog in te vullen],30-500,,
+autocreate_logevents,Plant 2 (30-600): Auto. prod. melding wvs.,Automatische productie melding wachtverslag,PLANT2,,KEY10,SIMPLE_LOGEVENT,GENERAL,[nog in te vullen],[nog in te vullen],30-600,,
+autocreate_logevents,Plant 2 : Auto. prod. melding wvs.,Automatische productie melding wachtverslag,PLANT2,,KEY10,SIMPLE_LOGEVENT,GENERAL,[nog in te vullen],[nog in te vullen],,,
+
+
+#############################################################
+
+

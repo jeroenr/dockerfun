@@ -1,0 +1,12 @@
+## include this in local patch or un directly from import console with: @include,patches/patches_1_2_to_1_3.csv
+## remember to include the custom update patch in your local patch as well: @include,patches/scq_1_2_x_to_1_3/update_custom.csv
+
+
+@include,patches/pergo/update_core_1_2_to_1_3.csv
+
+@include,patches/pergo/update_appsettings_1_2_to_1_3.csv
+
+@include,patches/pergo/update_screendefs_1_2_to_1_3.csv
+@include,patches/pergo/update_attrdefs_1_2_to_1_3.csv
+
+

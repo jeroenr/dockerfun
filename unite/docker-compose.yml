@@ -1,13 +1,15 @@
 data:
   build: data
   volumes:
-   - "/tomcat:rw"
+   - "/tomcat"
 tomcat7:
   image: codenvy/jdk7_tomcat7
+  user: root
   volumes_from:
-   - "data"
+   - data
   environment:
    - CATALINA_BASE=/tomcat
+   - JAVA_OPTS=-Dunite.environment=acceptance
   links:
    - data
    - mysql
@@ -20,5 +22,5 @@ mysql:
   links:
     - data
   environment:
-    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_ROOT_PASSWORD=password
 

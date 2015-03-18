@@ -1,0 +1,27 @@
+## when you incomment the date offset below then on import all dates will be time-shifted
+## to a date relative to the offset date and the import date
+@offsetdate,26-06-2013 10:27:44
+
+@delete,lotopoint,number,LP2023,=
+
+lotopoint,MECHANICAL_ISOLATION_POINT,DEFAULT_LOTO_POINT_PROCESS,DEFAULT_LOTO_POINT_PROCESS,ACTIVE,DEFAULT_LOTO_POINT_PROCESS,DRAFT,26-06-2013 10:16:40,false,null,6264,2013-06-26 10:16:33,2013-06-26 10:16:40,ibanxadmin,ibanxadmin,null,null,null,true,6264,false,null,,PLANT1,30-100,30-120-0100,null,null,30-100-0100-LH10020,null,PLANT1,LP2023,2023,true,false
+@startTransaction
+@method,set,lotopoint,LP2023,diameter,
+@method,set,lotopoint,LP2023,discipline,PRODUCTION
+@method,set,lotopoint,LP2023,energyTypeMagnitude,
+@method,set,lotopoint,LP2023,gasketType,
+@method,set,lotopoint,LP2023,insulationPresent,
+@method,set,lotopoint,LP2023,isolatedState,CLOSED
+@method,set,lotopoint,LP2023,lotoMethod,LOCK
+@method,set,lotopoint,LP2023,pressureClass,
+@method,set,lotopoint,LP2023,scaffoldingReq,
+@method,set,lotopoint,LP2023,subType,
+@method,set,lotopoint,LP2023,tagDescription,Effluent tank T100 high level switch
+@method,set,lotopoint,LP2023,timeNeeded,
+@method,set,lotopoint,LP2023,tracingPresent,
+@method,set,lotopoint,LP2023,tryOut,
+@method,set,lotopoint,LP2023,unLotoMethod,REMOVESPADE
+@endTransaction
+!ph1,audit,CREATE_EVENT,LP2023 created,ibanxadmin,2013-06-26,ibanx.loto.IsolationPoint,LP2023
+!ph2,audit,SETSTATE_EVENT,Status of LP2023 changed into Active,ibanxadmin,2013-06-26,ibanx.loto.IsolationPoint,LP2023
+!ph3,audit,SAVE_EVENT,Properties of LP2023 changed,ibanxadmin,2013-06-26,ibanx.loto.IsolationPoint,LP2023

@@ -1,0 +1,23 @@
+@offsetdate,04-06-2013
+
+@delete,permit,number,WVG-T9,=
+
+permit,WVG-T9,null,null,2013-06-04 18:12:11,2013-06-04 18:12:11,ssv1,ssv1,DELTALINQS_PERMIT_TRANS,DELTALINQS_PERMIT_TRANS_PROCESS,DELTALINQS_PERMIT_TRANS_PROCESS,I_AW,-1,04-06-2013 18:12:11,PLANT1,10100-0200,Civiel,30-140-0140-F14080,null,WO-0987,null,null,null,null,null,null,null,null,0,null,null,null,0,2013-06-04,null,null,false,null,PLANT1,true,false
+@startTransaction
+@method,set,permit,WVG-T9,avTraOptional,false
+@method,set,permit,WVG-T9,avTraRequired,No
+@method,set,permit,WVG-T9,flagSignaturesInitialized,true
+@method,set,permit,WVG-T9,geoLevelThreeDescription,Gasoil STORAGE
+@method,set,permit,WVG-T9,tagDescription,Basket Filter 4
+@method,set,permit,WVG-T9,workDescription,Any work description
+@method,set,permit,WVG-T9,zone,1
+@endTransaction
+!ph1,signature,null,null,null,null,null,WVG-T9,B_VL,null,null,null,null,false,Yes
+!ph2,signature,null,null,null,null,null,WVG-T9,B_AV,null,null,null,null,false,Yes
+!ph3,signature,null,null,null,null,null,WVG-T9,B_OB,null,null,null,null,false,Yes
+!ph4,signature,null,null,null,null,null,WVG-T9,B_MO1,null,null,null,null,false,No
+!ph5,signature,null,null,null,null,null,WVG-T9,B_MO2,null,null,null,null,false,No
+!ph6,signature,null,null,null,null,null,WVG-T9,B_VV,null,null,null,null,false,Yes
+!ph7,signature,null,null,null,null,null,WVG-T9,B_VS,null,null,null,null,false,Yes
+!ph8,signature,null,null,null,null,null,WVG-T9,B_VA,null,null,null,null,false,Yes
+!ph9,audit,CREATE_EVENT,WVG-T9 created,ssv1,2013-06-04,ibanx.permit.Permit,WVG-T9

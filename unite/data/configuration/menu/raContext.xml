@@ -1,0 +1,75 @@
+<?xml version="1.0" standalone="yes" ?>
+<definition>
+    <portal>
+        <context id="default" title="Algemeen" uri="/module/ra/action/SetMenuAction/menuId/380" collapsed="false">
+            <i18n>menuGeneral</i18n>
+            <role name="anonymous"/>
+        </context>
+        <context id="loggedin" title="Algemeen" uri="/module/ra/action/SetMenuAction/menuId/380" collapsed="false">
+            <i18n>menuGeneral</i18n>
+            <role name="everyone"/>
+        </context>
+        <context id="ra" title="Risico bepaling" uri="/module/ra/action/SetMenuAction/menuId/380" collapsed="false">
+            <i18n>menuRA</i18n>
+            <role name="aanvrager"/>
+            <role name="voorbereider"/>
+            <role name="verstrekker"/>
+        </context>
+    </portal>
+
+    <menu>
+        <item id="377">
+            <i18n>query</i18n>
+            <action name="SearchObject">
+                <objectClassName>ibanx.tra.RiskAssessmentIF</objectClassName>
+                <key>form</key>
+                <form.businessObjectType.aaV1>RA</form.businessObjectType.aaV1>
+            </action>
+            <context>default</context>
+            <context>loggedin</context>
+        </item>
+        <item id="376" orgcontextrequired="true" advanced="true">
+            <i18n>menuNewRA</i18n>
+            <action name="ra.RAAction">
+            	<eventSubmit_doNew>x</eventSubmit_doNew>
+            </action>
+            <context>ra</context>
+        </item>
+        <item id="378">
+            <i18n>menuRAInBewerking</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.tra.RiskAssessmentIF</objectClassName>
+                <key>form</key>
+                <module>ra</module>
+                <form.lifecycleState.name>IN_BEWERKING</form.lifecycleState.name>
+            </action>
+            <context>default</context>
+            <context>ra</context>
+        </item>
+        <item id="379" title="RBH afgerond">
+            <i18n>menuRAFinished</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.tra.RiskAssessmentIF</objectClassName>
+                <key>form</key>
+                <form.lifecycleState.name>AFGEROND</form.lifecycleState.name>
+                <orderBy>dateModified</orderBy>
+                <ascending>false</ascending>
+            </action>
+            <context>default</context>
+            <context>ra</context>
+        </item>
+        <item id="380">
+            <i18n>menuRAAll</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.tra.RiskAssessmentIF</objectClassName>
+                <key>form</key>
+                <module>ra</module>
+                <orderBy>dateModified</orderBy>
+                <ascending>false</ascending>
+            </action>
+            <context>default</context>
+            <context>ra</context>
+        </item>
+
+    </menu>
+</definition>

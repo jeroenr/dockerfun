@@ -1,0 +1,14 @@
+################################################################
+################# LOTO SPECIFIC ########################
+################################################################
+
+########### ROLES DEFINITIONS #########################
+
+## outcomment if allready exists
+
+role,loto_list_template_creator,loto,nl::lototo template beheerder;en::lototo template administrator
+role,loto_point_template_creator,loto,nl::lototo punt template beheerder;en::lotot point template administrator
+role,loto_creator,loto,nl::lototo creator;en::lototo creator
+role,loto_approver,loto,nl::lototo fiatteur;en::lototo_approver
+role,loto_issuer,loto,nl::lototo verstrekker;en::lototo issuer
+role,loto_splitter,loto,nl::lototo splitter;en::lototo splitter

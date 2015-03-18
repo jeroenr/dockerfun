@@ -1,0 +1,55 @@
+
+
+@include,patches/concedo/update_kernel_2_7_to_2_8.csv
+
+
+## factored out StaticIF so we now need to explicitly configure these previous static link/linktypes
+
+!phpra,roleinfo,refs,references,ibanx.permit.PermitIF
+!phprb,roleinfo,irefb,is referenced by,ibanx.form.FormIF
+linktype_v2,permitReference,ibanx.permit.link.ReferenceLinkPermitToForm,!phpra,!phprb
+
+!phula,roleinfo,uses,uses,ibanx.permit.PermitIF
+!phulb,roleinfo,iub,is used by,ibanx.permit.PermitIF
+linktype_v2,permitUsage,ibanx.permit.link.UsageLinkPermitToPermit,!phula,!phulb
+
+
+## todo : the ALL-PLANTS queryspec do NOT use the DEFAULT_PLANT type yet, when permitcliq upgrades to a config
+##        where different organization types are supported, these queryspecs need to be updated
+##        an should use a different type (like DEFAULT_PLANT)
+
+@delete,queryspec,number,ALL-PLANTS,0
+queryspec,ALL-PLANTS,,All plants,,,,,All plants,sysadmin,ibanx.org.Organization,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-PLANTS,id
+@method,addColumn,queryspec,ALL-PLANTS,number
+@method,addColumn,queryspec,ALL-PLANTS,name
+@method,addColumn,queryspec,ALL-PLANTS,description
+@method,set,queryspec,ALL-PLANTS,key,form
+@method,set,queryspec,ALL-PLANTS,form.system,false
+@method,set,queryspec,ALL-PLANTS,form.entityClass,ibanx.org.Organization
+@method,set,queryspec,ALL-PLANTS,operator.form.entityClass,0
+@method,set,queryspec,ALL-PLANTS,operator.form.system,0
+@method,set,queryspec,ALL-PLANTS,form.businessObjectType.number,ORG
+@method,set,queryspec,ALL-PLANTS,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-PLANTS,disableAccessControl,false
+@endTransaction
+
+@delete,queryspec,number,ALL-PLANTS-IDENTITY,0
+queryspec,ALL-PLANTS-IDENTITY,,All plants,,,,,All plants,sysadmin,ibanx.org.Organization,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-PLANTS-IDENTITY,number
+@method,addColumn,queryspec,ALL-PLANTS-IDENTITY,name
+@method,set,queryspec,ALL-PLANTS-IDENTITY,key,form
+@method,set,queryspec,ALL-PLANTS-IDENTITY,form.system,false
+@method,set,queryspec,ALL-PLANTS-IDENTITY,operator.form.system,0
+@method,set,queryspec,ALL-PLANTS-IDENTITY,form.entityClass,ibanx.org.Organization
+@method,set,queryspec,ALL-PLANTS-IDENTITY,operator.form.entityClass,0
+@method,set,queryspec,ALL-PLANTS-IDENTITY,form.businessObjectType.number,ORG
+@method,set,queryspec,ALL-PLANTS-IDENTITY,operator.form.businessObjectType.number,0
+@method,set,queryspec,ALL-PLANTS-IDENTITY,disableAccessControl,true
+@endTransaction
+
+
+
+appsetting,5,configurationVersion,200

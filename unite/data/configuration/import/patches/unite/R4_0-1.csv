@@ -1,0 +1,14 @@
+## CAN BE RUN FROM IMPORT CONSOLE BY : @include,patches/unite/R4_0-1.csv
+
+when migrating from non-unite concedo/pergo/peta, comment out this line and comment in the required register command and the applicable patches below
+
+##@register,R4.0-1
+
+##@include,patches/concedo/patches_3_1_to_4_0.csv
+
+##@include,patches/pergo/patches_1_3_x_to_1_6.csv
+##@include,patches/pergo/patches_1_6_x_to_1_7.csv
+##@include,patches/pergo/patches_1_7_to_4_0.csv
+
+##@include,patches/peta/patches_1_2_to_4_0.csv
+

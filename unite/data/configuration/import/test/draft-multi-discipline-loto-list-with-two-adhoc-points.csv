@@ -1,0 +1,75 @@
+## when you incomment the date offset below then on import all dates will be time-shifted
+## to a date relative to the offset date and the import date
+@offsetdate,25-06-2013 10:26:40
+
+@delete,lotolist,number,MULT-11006,=
+@delete,lotopoint,number,LP2017,=
+@delete,lotopoint,number,LP2018,=
+@delete,lotoactivity,number,IA-2025,=
+@delete,lotoactivity,number,IA-2026,=
+@delete,lotoactivity,number,IA-2027,=
+@delete,lotoactivity,number,IA-2028,=
+
+
+lotolist,MULTI_DISCIPLINE_ISOLATION_LIST,DEFAULT_LOTO_LIST_PROCESS,DEFAULT_LOTO_LIST_PROCESS,DRAFT,-1,null,2013-06-25 10:24:20,2013-06-25 10:24:20,ibanxadmin,ibanxadmin,25-06-2013 10:24:20,false,null,myRemarks 4567,WO23,null,MAINTENANCE,2013-06-25,2013-06-25,null,null,PLANT1,30-100,30-100-0100,null,null,30-100-0100-LH10030,null,PLANT1,MULT-11006,11006,true,false
+@startTransaction
+@method,set,lotolist,MULT-11006,documentReference,
+@method,set,lotolist,MULT-11006,lockboxNr,
+@method,set,lotolist,MULT-11006,lockNrEI,
+@method,set,lotolist,MULT-11006,lockNrMechanical,
+@method,set,lotolist,MULT-11006,lockNrProduction,
+@endTransaction
+!ph1,signature_lotolist,null,null,null,null,null,MULT-11006,ISOLATE,null,null,null,null,false,Yes
+!ph2,audit,CREATE_EVENT,MULT-11006 created,ibanxadmin,2013-06-25,ibanx.loto.IsolationList,MULT-11006
+claim,DEFAULT_LOTO_CLAIM_PROCESS,DEFAULT_LOTO_CLAIM_PROCESS,PLANNED,-1,25-06-2013 10:25:38,null,2013-06-25 10:25:38,2013-06-25 10:25:38,ibanxadmin,null,MULT-11006,LP2017,PLANT1,LC-2011,1011,true,false
+lotopoint,MECHANICAL_ISOLATION_POINT,DEFAULT_LOTO_POINT_PROCESS,DEFAULT_LOTO_POINT_PROCESS,ACTIVE,DEFAULT_LOTO_POINT_PROCESS,DRAFT,25-06-2013 10:25:38,false,null,myName,2013-06-25 10:25:37,2013-06-25 10:25:38,ibanxadmin,ibanxadmin,null,null,null,false,P10001,false,null,CLOSED,PLANT1,30-100,30-100-0100,null,null,30-100-0100-LH10030,null,PLANT1,LP2017,2017,true,false
+@startTransaction
+@method,set,lotopoint,LP2017,diameter,
+@method,set,lotopoint,LP2017,discipline,PRODUCTION
+@method,set,lotopoint,LP2017,energyTypeMagnitude,
+@method,set,lotopoint,LP2017,gasketType,
+@method,set,lotopoint,LP2017,insulationPresent,
+@method,set,lotopoint,LP2017,isolatedState,OPEN
+@method,set,lotopoint,LP2017,lotoMethod,LABEL
+@method,set,lotopoint,LP2017,pressureClass,
+@method,set,lotopoint,LP2017,scaffoldingReq,
+@method,set,lotopoint,LP2017,subType,
+@method,set,lotopoint,LP2017,tagDescription,Effluent tank T100 high level switch
+@method,set,lotopoint,LP2017,timeNeeded,
+@method,set,lotopoint,LP2017,tracingPresent,
+@method,set,lotopoint,LP2017,tryOut,
+@method,set,lotopoint,LP2017,unLotoMethod,LABEL
+@endTransaction
+!ph3,audit,CREATE_EVENT,LP2017 created,ibanxadmin,2013-06-25,ibanx.loto.IsolationPoint,LP2017
+claim,DEFAULT_LOTO_CLAIM_PROCESS,DEFAULT_LOTO_CLAIM_PROCESS,PLANNED,-1,25-06-2013 10:26:16,null,2013-06-25 10:26:16,2013-06-25 10:26:16,ibanxadmin,null,MULT-11006,LP2018,PLANT1,LC-2012,1012,true,false
+lotopoint,MECHANICAL_ISOLATION_POINT,DEFAULT_LOTO_POINT_PROCESS,DEFAULT_LOTO_POINT_PROCESS,ACTIVE,DEFAULT_LOTO_POINT_PROCESS,DRAFT,25-06-2013 10:26:16,false,null,mypoint2,2013-06-25 10:26:16,2013-06-25 10:26:16,ibanxadmin,ibanxadmin,null,null,null,false,P10002,false,null,CLOSED,PLANT1,30-100,30-100-0100,null,null,30-100-0100-LH10030,null,PLANT1,LP2018,2018,true,false
+@startTransaction
+@method,set,lotopoint,LP2018,diameter,
+@method,set,lotopoint,LP2018,discipline,PRODUCTION
+@method,set,lotopoint,LP2018,energyTypeMagnitude,
+@method,set,lotopoint,LP2018,gasketType,
+@method,set,lotopoint,LP2018,insulationPresent,
+@method,set,lotopoint,LP2018,isolatedState,OPEN
+@method,set,lotopoint,LP2018,lotoMethod,LABEL
+@method,set,lotopoint,LP2018,pressureClass,
+@method,set,lotopoint,LP2018,scaffoldingReq,
+@method,set,lotopoint,LP2018,subType,
+@method,set,lotopoint,LP2018,tagDescription,Effluent tank T100 high level switch
+@method,set,lotopoint,LP2018,timeNeeded,
+@method,set,lotopoint,LP2018,tracingPresent,
+@method,set,lotopoint,LP2018,tryOut,
+@method,set,lotopoint,LP2018,unLotoMethod,LABEL
+@endTransaction
+!ph4,audit,CREATE_EVENT,LP2018 created,ibanxadmin,2013-06-25,ibanx.loto.IsolationPoint,LP2018
+lotoactivity,ISOLATION_ACTIVITY,DEFAULT_LOTO_ACTIVITY_PROCESS,DEFAULT_LOTO_ACTIVITY_PROCESS,PLANNED,-1,25-06-2013 10:25:38,Isolate,2013-06-25 10:25:38,2013-06-25 10:25:38,ibanxadmin,null,1,Isolate,0.0,null,null,MULT-11006,PLANT1,IA-2025,2025,true,false
+!ph5,activity-claim,IA-2025,LC-2011,activity-claim,2013-06-25 10:25:38,2013-06-25 10:25:38,null,null,activity-claim,is-activity-of,is-claim-of
+!ph6,audit,CREATE_EVENT,IA-2025 created,ibanxadmin,2013-06-25,ibanx.loto.IsolationActivity,IA-2025
+lotoactivity,DE_ISOLATION_ACTIVITY,DEFAULT_LOTO_ACTIVITY_PROCESS,DEFAULT_LOTO_ACTIVITY_PROCESS,PLANNED,-1,25-06-2013 10:25:38,De-isolate,2013-06-25 10:25:38,2013-06-25 10:25:38,ibanxadmin,null,1,De-isolate,0.0,null,null,MULT-11006,PLANT1,IA-2026,2026,true,false
+!ph7,activity-claim,IA-2026,LC-2011,activity-claim,2013-06-25 10:25:38,2013-06-25 10:25:38,null,null,activity-claim,is-activity-of,is-claim-of
+!ph8,audit,CREATE_EVENT,IA-2026 created,ibanxadmin,2013-06-25,ibanx.loto.IsolationActivity,IA-2026
+lotoactivity,ISOLATION_ACTIVITY,DEFAULT_LOTO_ACTIVITY_PROCESS,DEFAULT_LOTO_ACTIVITY_PROCESS,PLANNED,-1,25-06-2013 10:26:16,Isolate,2013-06-25 10:26:16,2013-06-25 10:26:16,ibanxadmin,null,2,Isolate,0.0,null,null,MULT-11006,PLANT1,IA-2027,2027,true,false
+!ph9,activity-claim,IA-2027,LC-2012,activity-claim,2013-06-25 10:26:16,2013-06-25 10:26:16,null,null,activity-claim,is-activity-of,is-claim-of
+!ph10,audit,CREATE_EVENT,IA-2027 created,ibanxadmin,2013-06-25,ibanx.loto.IsolationActivity,IA-2027
+lotoactivity,DE_ISOLATION_ACTIVITY,DEFAULT_LOTO_ACTIVITY_PROCESS,DEFAULT_LOTO_ACTIVITY_PROCESS,PLANNED,-1,25-06-2013 10:26:16,De-isolate,2013-06-25 10:26:16,2013-06-25 10:26:16,ibanxadmin,null,2,De-isolate,0.0,null,null,MULT-11006,PLANT1,IA-2028,2028,true,false
+!ph11,activity-claim,IA-2028,LC-2012,activity-claim,2013-06-25 10:26:16,2013-06-25 10:26:16,null,null,activity-claim,is-activity-of,is-claim-of
+!ph12,audit,CREATE_EVENT,IA-2028 created,ibanxadmin,2013-06-25,ibanx.loto.IsolationActivity,IA-2028

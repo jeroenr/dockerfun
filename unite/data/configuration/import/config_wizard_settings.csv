@@ -1,0 +1,21 @@
+@include,inc_modules.csv
+
+@include,inc_scq_config_wizard_settings.csv
+@include,inc_moc_config_wizard_settings.csv
+@include,inc_icq_config_wizard_settings.csv
+@include,inc_pcq_config_wizard_settings.csv
+
+
+## IE Document compatibility mode
+## If customers use IE and force IE to run in a document mode that we do not support then you need to configure this
+## setting so unite can force IE to run a mode that Unite supports.
+
+## Edge for latest IE
+##configurationSetting,X-UA-Compatible,Edge
+
+## If a value of 9,10 is needed:
+## configurationSetting,X-UA-Compatible,9\,10
+
+## if set to true, the browser printdialog will be triggered automatically saving
+## the user two click in the browsermenu (FILE->PRINT)
+configurationSetting,all.autoprint.enabled,false

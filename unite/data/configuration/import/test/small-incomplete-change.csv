@@ -1,0 +1,111 @@
+## when you incomment the date offset below then on import all dates will be time-shifted
+## to a date relative to the offset date and the import date
+@offsetdate,27-06-2013
+
+@SQL,DELETE FROM IBANX_CHANGE_ACTIVITY WHERE ID IN (SELECT RB_OBJECT_ID FROM IBANX_CHANGE_REQUEST CR INNER JOIN IBANX_CHANGEREQUEST_LINK CL ON CR.ID = CL.RA_OBJECT_ID WHERE CR.NR = 'MOC-T0001010' AND CL.LINKTYPE_NAME = 'request-activity')
+@SQL,DELETE FROM IBANX_CHANGE_ANALYSIS WHERE ID IN (SELECT RB_OBJECT_ID FROM IBANX_CHANGE_REQUEST CR INNER JOIN IBANX_CHANGEREQUEST_LINK CL ON CR.ID = CL.RA_OBJECT_ID WHERE CR.NR = 'MOC-T0001010' AND CL.LINKTYPE_NAME = 'request-analysis')
+@SQL,DELETE FROM IBANX_CHANGEREQUEST_LINK WHERE RA_OBJECT_ID IN (SELECT ID FROM IBANX_CHANGE_REQUEST WHERE NR = 'MOC-T0001010')
+@delete,change,number,MOC-T0001010,=
+@delete,change-analysis,number,CAN-T1012,=
+@delete,change-activity,number,AC-T1049,=
+@delete,change-activity,number,AC-T1050,=
+@delete,change-activity,number,AC-T1051,=
+
+change,MOC-T0001010,1010,null,2013-06-27 09:19:17,2013-06-27 09:20:52,sitere1,coordinator1,CHANGE,CHANGE_PROCESS,CHANGE_PROCESS,CHANGE_PREPARATIONINCOMPLETE,CHANGE_PROCESS,CHANGE_FORAPPROVAL_FED_PRE_3,27-06-2013 09:20:52,myTitle,myProblem,mySolution,myAlternative,myDescription,null,null,null,null,null,null,1,0,null,coordinator1,null,null,null,null,null,0,0,0,0,0,PLANT1,30-100,30-100-0100,null,null,null,30-100-0100-LH10020,,false,null,PLANT1,true,false
+@startTransaction
+@method,set,change,MOC-T0001010,duration,TEMPORARY
+@method,set,change,MOC-T0001010,emergencyByPass,
+@method,set,change,MOC-T0001010,flowId,small
+@method,set,change,MOC-T0001010,gatekeeper,
+@method,set,change,MOC-T0001010,initialrisk,8
+@method,set,change,MOC-T0001010,initialrisk_risk_frequency,4
+@method,set,change,MOC-T0001010,initialrisk_risk_metadata,changePeopleSafety=0\,changeHealth=4\,changeEnvironment=0\,changeAssets=0\,changeReputation=0\,changeSecurity=0\,
+@method,set,change,MOC-T0001010,inTurnAround,
+@method,set,change,MOC-T0001010,largeCategory,
+@method,set,change,MOC-T0001010,mediumCategory,
+@method,set,change,MOC-T0001010,riskafterchange,5
+@method,set,change,MOC-T0001010,riskafterchange_risk_frequency,1
+@method,set,change,MOC-T0001010,riskafterchange_risk_metadata,changePeopleSafety=0\,changeHealth=2\,changeEnvironment=0\,changeAssets=0\,changeReputation=0\,changeSecurity=0\,
+@method,set,change,MOC-T0001010,roi,0
+@method,set,change,MOC-T0001010,roiTimespan,
+@method,set,change,MOC-T0001010,sapArId,
+@method,set,change,MOC-T0001010,sapId,0
+@method,set,change,MOC-T0001010,tagDescription,Effluent tank T100 high level switch
+@endTransaction
+!ph1,request-analysis,2013-06-27 09:19:18,2013-06-27 09:19:18,null,null,request-analysis,request-analysis,MOC-T0001010,has-analysis,CAN-T1012,is-analysis-of
+change-analysis,CAN-T1012,null,null,2013-06-27 09:19:18,2013-06-27 09:19:43,sitere1,sitere1,APPROVAL_CHECKLIST_SMALL,DEFAULT_CL_PROCESS,DEFAULT_CL_PROCESS,CL_FINISHED,DEFAULT_CL_PROCESS,CL_OPEN,27-06-2013 09:19:31,null,null,null,coordinator1,PLANT1,true,false
+@startTransaction
+@method,set,change-analysis,CAN-T1012,checklistVersion,1
+@method,setRepeating,change-analysis,CAN-T1012,item_action,SUPERVISOR-SMALL
+@method,setRepeating,change-analysis,CAN-T1012,item_action,SRE1-FED
+@method,setRepeating,change-analysis,CAN-T1012,item_action,SRE2-FED
+@method,set,change-analysis,CAN-T1012,item_categorySRE1,true
+@method,set,change-analysis,CAN-T1012,item_categorySRE2,true
+@method,set,change-analysis,CAN-T1012,item_categorySupervisor,true
+@method,set,change-analysis,CAN-T1012,processOrder,
+@endTransaction
+!ph2,audit,SETSTATE_EVENT,Status of CAN-T1012 changed into Finished,sitere1,2013-06-27,ibanx.moc.ChangeAnalysis,CAN-T1012
+!ph3,audit,SAVE_EVENT,Properties of CAN-T1012 changed,sitere1,2013-06-27,ibanx.moc.ChangeAnalysis,CAN-T1012
+
+change-activity,AC-T1049,1049,Supervisor,2013-06-27 09:19:29,2013-06-27 09:20:52,sitere1,coordinator1,APPROVAL_CA,DEFAULT_CA_PROCESS,DEFAULT_CA_PROCESS,CA_FINISHED,DEFAULT_CA_PROCESS,CA_OPEN,27-06-2013 09:20:52,Supervisor,null,Supervisor (small change) Template.,FRONTENDDESIGN,null,myReason,supciv1,sysadmin,null,null,27-06-2013 09:20:52,coordinator1,true,0,0,0,0,0,PLANT1,null,null,null,null,,null,null,false,SUPERVISOR-SMALL,PLANT1,true,false
+@startTransaction
+@method,set,change-activity,AC-T1049,checklistName,approval_checklist_small
+@method,set,change-activity,AC-T1049,checklistVersion,1
+@method,set,change-activity,AC-T1049,crId,67377
+@method,set,change-activity,AC-T1049,disapproved,true
+@method,set,change-activity,AC-T1049,executedByRole,supervisor
+@method,set,change-activity,AC-T1049,finishInStep,CHANGE_FORAPPROVAL_FED_PRE_3
+@method,set,change-activity,AC-T1049,generated,true
+@method,set,change-activity,AC-T1049,releaseInStep,CHANGE_FORAPPROVAL_FED_PRE_3
+@method,set,change-activity,AC-T1049,skill,
+@method,set,change-activity,AC-T1049,skillRequired,true
+@endTransaction
+!ph5,signature,null,null,null,null,null,AC-T1049,CA_FINISHED,null,null,null,null,false,Yes
+!ph6,audit,CREATE_EVENT,AC-T1049 created,sitere1,2013-06-27,ibanx.moc.ChangeActivity,AC-T1049
+!ph7,audit,SETSTATE_EVENT,Status of AC-T1049 changed into Open,coordinator1,2013-06-27,ibanx.moc.ChangeActivity,AC-T1049
+!ph8,audit,SAVE_EVENT,Properties of AC-T1049 changed,coordinator1,2013-06-27,ibanx.moc.ChangeActivity,AC-T1049
+!ph9,audit,SETSTATE_EVENT,Status of AC-T1049 changed into Finished,coordinator1,2013-06-27,ibanx.moc.ChangeActivity,AC-T1049
+!ph10,audit,SAVE_EVENT,Properties of AC-T1049 changed,coordinator1,2013-06-27,ibanx.moc.ChangeActivity,AC-T1049
+!ph11,attr-change,reason,,myReason,1,!ph10
+!ph12,attr-change,finishedDate,,27-06-2013 09:20:52,2,!ph10
+!ph13,attr-change,finishedBy,,coordinator1,3,!ph10
+!ph14,attr-change,crId,,67377,4,!ph10
+!ph15,attr-change,disapproved,,true,5,!ph10
+
+change-activity,AC-T1050,1050,Site Responsible Engineer - Process FED,2013-06-27 09:19:30,2013-06-27 09:19:30,sitere1,null,APPROVAL_CA,DEFAULT_CA_PROCESS,DEFAULT_CA_PROCESS,CA_DRAFT,DEFAULT_CA_PROCESS,CA_DRAFT,27-06-2013 09:19:30,Site Responsible Engineer - Process,null,Site Responsible Engineer - Process Template.,FRONTENDDESIGN,null,null,sitere1,sysadmin,null,null,null,null,true,0,0,0,0,0,PLANT1,null,null,null,null,,null,null,false,SRE1-FED,PLANT1,true,false
+@startTransaction
+@method,set,change-activity,AC-T1050,checklistName,approval_checklist_small
+@method,set,change-activity,AC-T1050,checklistVersion,1
+@method,set,change-activity,AC-T1050,executedByRole,site_responsible_engineer
+@method,set,change-activity,AC-T1050,finishInStep,CHANGE_FORAPPROVAL_FED_PRE_2
+@method,set,change-activity,AC-T1050,generated,true
+@method,set,change-activity,AC-T1050,releaseInStep,CHANGE_FORAPPROVAL_FED_PRE_2
+@method,set,change-activity,AC-T1050,skill,
+@method,set,change-activity,AC-T1050,skillRequired,false
+@endTransaction
+!ph17,signature,null,null,null,null,null,AC-T1050,CA_FINISHED,null,null,null,null,false,Yes
+!ph18,audit,CREATE_EVENT,AC-T1050 created,sitere1,2013-06-27,ibanx.moc.ChangeActivity,AC-T1050
+
+change-activity,AC-T1051,1051,Site Responsible Engineer - Maintenance FED,2013-06-27 09:19:30,2013-06-27 09:19:30,sitere1,null,APPROVAL_CA,DEFAULT_CA_PROCESS,DEFAULT_CA_PROCESS,CA_DRAFT,DEFAULT_CA_PROCESS,CA_DRAFT,27-06-2013 09:19:30,Site Responsible Engineer - Maintenance,null,Site Responsible Engineer - Maintenance Template.,FRONTENDDESIGN,null,null,sitemtall,sysadmin,null,null,null,null,true,0,0,0,0,0,PLANT1,null,null,null,null,,null,null,false,SRE2-FED,PLANT1,true,false
+@startTransaction
+@method,set,change-activity,AC-T1051,checklistName,approval_checklist_small
+@method,set,change-activity,AC-T1051,checklistVersion,1
+@method,set,change-activity,AC-T1051,executedByRole,site_responsible_engineer
+@method,set,change-activity,AC-T1051,finishInStep,CHANGE_FORAPPROVAL_FED_PRE_2
+@method,set,change-activity,AC-T1051,generated,true
+@method,set,change-activity,AC-T1051,releaseInStep,CHANGE_FORAPPROVAL_FED_PRE_2
+@method,set,change-activity,AC-T1051,skill,
+@method,set,change-activity,AC-T1051,skillRequired,false
+@endTransaction
+!ph20,signature,null,null,null,null,null,AC-T1051,CA_FINISHED,null,null,null,null,false,Yes
+!ph21,audit,CREATE_EVENT,AC-T1051 created,sitere1,2013-06-27,ibanx.moc.ChangeActivity,AC-T1051
+!ph22,signature,null,null,null,null,null,MOC-T0001010,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph23,audit,CREATE_EVENT,MOC-T0001010 created,sitere1,2013-06-27,ibanx.moc.ChangeRequest,MOC-T0001010
+!ph24,audit,SETSTATE_EVENT,Status of MOC-T0001010 changed into Submitted,sitere1,2013-06-27,ibanx.moc.ChangeRequest,MOC-T0001010
+!ph25,attr-change,owner,coordinator1,sitere1,1,!ph24
+!ph26,audit,SETSTATE_EVENT,Status of MOC-T0001010 changed into Appr. Supervisors,coordinator1,2013-06-27,ibanx.moc.ChangeRequest,MOC-T0001010
+!ph27,audit,REJECT_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T0001010 changed into Preparation Incomplete because activity has been disapproved with reason : myReason,coordinator1,2013-06-27,ibanx.moc.ChangeRequest,MOC-T0001010
+
+!ph4,request-activity,2013-06-27 09:19:30,2013-06-27 09:19:30,null,null,request-activity,request-activity,MOC-T0001010,has-activity,AC-T1049,is-activity-of
+!ph16,request-activity,2013-06-27 09:19:30,2013-06-27 09:19:30,null,null,request-activity,request-activity,MOC-T0001010,has-activity,AC-T1050,is-activity-of
+!ph19,request-activity,2013-06-27 09:19:31,2013-06-27 09:19:31,null,null,request-activity,request-activity,MOC-T0001010,has-activity,AC-T1051,is-activity-of
