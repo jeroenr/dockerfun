@@ -1,7 +1,5 @@
 data:
   build: data
-  volumes:
-   - /tomcat
 tomcat7:
   image: codenvy/jdk7_tomcat7
   volumes_from:
