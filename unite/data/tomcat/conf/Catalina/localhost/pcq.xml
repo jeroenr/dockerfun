@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>                                  
+	<Context privileged="true"
+        useHttpOnly="false">
+	<Logger suffix=".txt" prefix="logs/webapp_concedo_permit" className="org.apache.catalina.logger.FileLogger" timestamp="true" />
+	
+	<!-- Default set of monitored resources -->
+ 	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+	
+	<ResourceLink global="jdbc/unite" name="jdbc/unite" type="javax.sql.DataSource"/>
+	<Environment name="documentAttachmentUri" value="http://localhost:8080/jackrabbit-webapp-2.2.1/rmi" type="java.lang.String" override="false"/>	
+	
+	<Environment name="uniteConfigurationDirectory" value="/configuration" type="java.lang.String" override="false"/>
+	<Environment name="uniteApplicationDataDirectory" value="/application-data" type="java.lang.String" override="false"/>	
+	<Environment name="solrDataDirectory" value="/application-data/solr/data" type="java.lang.String" override="false" />
+	
+    <!-- <Resource name="mail/uniteSession" auth="Container" type="javax.mail.Session" mail.smtp.host="localhost" mail.smtp.port="3025"	/> -->
+
+    <Environment name="pergoIntegrationUrl" value="http://localhost:8080/scq" type="java.lang.String" override="false" />
+    <Environment name="petaIntegrationUrl" value="http://localhost:8080/chq" type="java.lang.String" override="false" />
+    <Environment name="changeCliqUrl" value="http://localhost:8080/chq" type="java.lang.String" override="false" />
+    <Environment name="noreplyAddress" value="noreply@ibanx-hse.com" type="java.lang.String" override="false" />
+    <Environment name="operatePlantContext" value="/scq" type="java.lang.String" override="false" />
+    <Environment name="workClearanceContext" value="/pcq" type="java.lang.String" override="false" />
+    <Environment name="improvePlantContext" value="/chq" type="java.lang.String" override="false" />
+    
+    <Environment name="reportingIntegrationUrl" value="" type="java.lang.String" override="false" />
+    <Environment name="casLogoutUrl" value="http://localhost:8080/cas/logout" type="java.lang.String" override="false" />
+    <Environment name="casLoginUrl" value="http://localhost:8080/cas/login" type="java.lang.String" override="false" />
+    <Environment name="callbackPoint" value="http://localhost:8080/scq/sc/callback" type="java.lang.String" override="false" />
+    
+    
+</Context>
