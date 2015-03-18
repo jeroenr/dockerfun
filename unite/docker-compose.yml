@@ -9,18 +9,22 @@ tomcat7:
    - JAVA_OPTS=-Dunite.environment=acceptance
   links:
    - data
-   - mysql
+   - mysql_unite
+   - mysql_jack
   ports:
    - "8888:8080"
-mysql:
+mysql_unite:
   image: mysql:5.6
-  volumes_from:
-    - data
   expose:
     - "3306"
-  links:
-    - data
   environment:
     - MYSQL_ROOT_PASSWORD=password
-    - MYSQL_HOME=/mysql
+    - MYSQL_DATABASE=unite
+mysql_jack:
+  image: mysql:5.6
+  expose:
+    - "3306"
+  environment:
+    - MYSQL_ROOT_PASSWORD=password
+    - MYSQL_DATABASE=unite_repository
 

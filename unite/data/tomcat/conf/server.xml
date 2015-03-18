@@ -96,7 +96,7 @@
 
         username="root" driverClassName="com.mysql.jdbc.Driver" password="password"
 
-    	url="jdbc:mysql://mysql:3306/unite?autoReconnect=true&amp;characterEncoding=utf8" /> 
+    	url="jdbc:mysql://mysql_unite:3306/unite?autoReconnect=true&amp;characterEncoding=utf8" /> 
 
               
 
