@@ -6,7 +6,8 @@ tomcat7:
    - data
   environment:
    - CATALINA_BASE=/tomcat
-   - JAVA_OPTS="-Dunite.environment=acceptance -Xmx512m -XX:MaxPermSize=512m -XX:+UseConcMarkSweepGC"
+   - CATALINA_OPTS=-Dunite.environment=acceptance
+   - JAVA_OPTS=-Xmx512m -XX:MaxPermSize=512m -XX:+UseConcMarkSweepGC
   links:
    - data
    - unitedb
@@ -25,6 +26,6 @@ jackrabbitdb:
   expose:
     - "3306"
   environment:
-    - MYSQL_ROOT_PASSWORD=password
+    - MYSQL_ROOT_PASSWORD=root
     - MYSQL_DATABASE=unite_repository
 
