@@ -12,6 +12,6 @@ RUN mkdir -p /tomcat && chmod -R 777 /tomcat && chown -R 1000:1000 /tomcat
 RUN mkdir -p /home/user/tomcat7/bin/jackrabbit && chmod -R 777 /home/user/tomcat7/bin/jackrabbit && chown -R 1000:1000 /home/user/tomcat7/bin/jackrabbit
 RUN mkdir -p /etc/mysql/conf.d && chmod -R 700 /etc/mysql/conf.d && chown -R 1000:1000 /etc/mysql/conf.d
 
-VOLUME ["/tomcat","/configuration","/mysql","/application-data","/home/user/tomcat7/bin/jackrabbit"]
+VOLUME ["/tomcat","/configuration","/etc/mysql/conf.d","/application-data","/home/user/tomcat7/bin/jackrabbit"]
 
 CMD /bin/sh

@@ -1,5 +1,6 @@
 data:
   build: data
+  restart: always
 tomcat7:
   image: codenvy/jdk7_tomcat7
   volumes_from:
@@ -16,6 +17,8 @@ tomcat7:
    - "8888:8080"
 unitedb:
   image: mysql:5.6
+  volumes_from:
+    - data
   expose:
     - "3306"
   ports:
@@ -25,6 +28,8 @@ unitedb:
     - MYSQL_DATABASE=unite
 jackrabbitdb:
   image: mysql:5.6
+  volumes_from:
+    - data
   expose:
     - "3306"
   environment:
