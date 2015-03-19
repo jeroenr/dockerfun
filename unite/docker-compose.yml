@@ -6,7 +6,7 @@ tomcat7:
    - data
   environment:
    - CATALINA_BASE=/tomcat
-   - JAVA_OPTS=-Dunite.environment=acceptance
+   - JAVA_OPTS="-Dunite.environment=acceptance -Xmx512m -XX:MaxPermSize=512m -XX:+UseConcMarkSweepGC"
   links:
    - data
    - unitedb
