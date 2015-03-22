@@ -1,0 +1,24 @@
+## which pcq modules are enabled
+configurationSetting,permit.enabled,true
+configurationSetting,ra.enabled,true
+configurationSetting,tra.enabled,true
+configurationSetting,loto.enabled,true
+
+## which scq modules are enabled
+configurationSetting,daydashboard.enabled,true
+configurationSetting,shift.enabled,true
+configurationSetting,portal.enabled,true
+configurationSetting,search.enabled,true
+configurationSetting,logevent.enabled,true
+configurationSetting,deviation.enabled,true
+configurationSetting,task.enabled,true
+configurationSetting,instruction.enabled,true
+configurationSetting,whiteboard.enabled,true
+
+## which chq modules are enabled
+configurationSetting,moc.enabled,true
+configurationSetting,incident.enabled,true
+
+## which generic modules are enabled
+configurationSetting,admin.enabled,true
+configurationSetting,support.enabled,true

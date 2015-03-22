@@ -1,0 +1,1 @@
+webapps\Jackrabbit\WEB-INF\web.xml is modified to point to /bootstrap.properties

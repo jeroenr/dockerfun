@@ -1,0 +1,30 @@
+
+<?xml version="1.0" encoding="UTF-8"?>                                  
+	<Context privileged="true" useHttpOnly="false">
+	<Logger suffix=".txt" prefix="logs/webapp_chq" className="org.apache.catalina.logger.FileLogger" timestamp="true" />
+	
+	<!-- Default set of monitored resources -->
+ 	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+	
+	<ResourceLink global="jdbc/unite" name="jdbc/unite" type="javax.sql.DataSource"/>
+	<Environment name="documentAttachmentUri" value="http://172.17.0.27:49174/jackrabbit-webapp-2.2.13/rmi" type="java.lang.String" override="false"/>	
+	
+	<Environment name="uniteConfigurationDirectory" value="/home/user/configuration" type="java.lang.String" override="false"/>
+	<Environment name="uniteApplicationDataDirectory" value="/home/user/application-data" type="java.lang.String" override="false"/>
+	
+    <!-- <Resource name="mail/uniteSession" auth="Container" type="javax.mail.Session" mail.smtp.host="localhost" mail.smtp.port="3025"	/> -->
+
+    <Environment name="pergoIntegrationUrl" value="http://172.17.0.27:49174/scq" type="java.lang.String" override="false" />
+    <Environment name="petaIntegrationUrl" value="http://172.17.0.27:49174/chq" type="java.lang.String" override="false" />
+    <Environment name="changeCliqUrl" value="http://172.17.0.27:49174/chq" type="java.lang.String" override="false" />
+    <Environment name="noreplyAddress" value="noreply@ibanx.nl" type="java.lang.String" override="false" />
+    <Environment name="operatePlantContext" value="/scq" type="java.lang.String" override="false" />
+    <Environment name="workClearanceContext" value="/pcq" type="java.lang.String" override="false" />
+    <Environment name="improvePlantContext" value="/chq" type="java.lang.String" override="false" />
+    
+    <Environment name="reportingIntegrationUrl" value="" type="java.lang.String" override="false" />
+    <Environment name="casLogoutUrl" value="http://172.17.0.27:49174/cas/logout" type="java.lang.String" override="false" />
+    <Environment name="casLoginUrl" value="http://172.17.0.27:49174/login" type="java.lang.String" override="false" />
+    <Environment name="callbackPoint" value="http://172.17.0.27:49174/chq/sc/callback" type="java.lang.String" override="false" />
+
+</Context>
