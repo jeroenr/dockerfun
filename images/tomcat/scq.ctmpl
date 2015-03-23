@@ -1,5 +1,4 @@
-{{range service "tomcat-8080"}}
-<?xml version="1.0" encoding="UTF-8"?>                                  
+{{with $tag := env "TAG"}}{{range service (print $tag ".tomcat-8080")}}<?xml version="1.0" encoding="UTF-8"?>                                  
 	<Context privileged="true" useHttpOnly="false">
 	<Logger suffix=".txt" prefix="logs/webapp_scq" className="org.apache.catalina.logger.FileLogger" timestamp="true" />
 	
@@ -7,25 +6,26 @@
  	<WatchedResource>WEB-INF/web.xml</WatchedResource>
 	
 	<ResourceLink global="jdbc/unite" name="jdbc/unite" type="javax.sql.DataSource"/>
-	<Environment name="documentAttachmentUri" value="http://{{.Address}}:{{.Port}}/jackrabbit-webapp-2.2.13/rmi" type="java.lang.String" override="false"/>	
+	<Environment name="documentAttachmentUri" value="http://{{key "host/ip"}}:{{.Port}}/jackrabbit-webapp-2.2.13/rmi" type="java.lang.String" override="false"/>	
 	
 	<Environment name="uniteConfigurationDirectory" value="/home/user/configuration" type="java.lang.String" override="false"/>
 	<Environment name="uniteApplicationDataDirectory" value="/home/user/application-data" type="java.lang.String" override="false"/>
 	
     <!-- <Resource name="mail/uniteSession" auth="Container" type="javax.mail.Session" mail.smtp.host="localhost" mail.smtp.port="3025"	/> -->
 
-    <Environment name="pergoIntegrationUrl" value="http://{{.Address}}:{{.Port}}/scq" type="java.lang.String" override="false" />
-    <Environment name="petaIntegrationUrl" value="http://{{.Address}}:{{.Port}}/chq" type="java.lang.String" override="false" />
-    <Environment name="changeCliqUrl" value="http://{{.Address}}:{{.Port}}/chq" type="java.lang.String" override="false" />
+    <Environment name="pergoIntegrationUrl" value="http://{{key "host/ip"}}:{{.Port}}/scq" type="java.lang.String" override="false" />
+    <Environment name="petaIntegrationUrl" value="http://{{key "host/ip"}}:{{.Port}}/chq" type="java.lang.String" override="false" />
+    <Environment name="changeCliqUrl" value="http://{{key "host/ip"}}:{{.Port}}/chq" type="java.lang.String" override="false" />
     <Environment name="noreplyAddress" value="noreply@ibanx.nl" type="java.lang.String" override="false" />
     <Environment name="operatePlantContext" value="/scq" type="java.lang.String" override="false" />
     <Environment name="workClearanceContext" value="/pcq" type="java.lang.String" override="false" />
     <Environment name="improvePlantContext" value="/chq" type="java.lang.String" override="false" />
     
     <Environment name="reportingIntegrationUrl" value="" type="java.lang.String" override="false" />
-    <Environment name="casLogoutUrl" value="http://{{.Address}}:{{.Port}}/cas/logout" type="java.lang.String" override="false" />
-    <Environment name="casLoginUrl" value="http://{{.Address}}:{{.Port}}/login" type="java.lang.String" override="false" />
-    <Environment name="callbackPoint" value="http://{{.Address}}:{{.Port}}/scq/sc/callback" type="java.lang.String" override="false" />
+    <Environment name="casLogoutUrl" value="http://{{key "host/ip"}}:{{.Port}}/cas/logout" type="java.lang.String" override="false" />
+    <Environment name="casLoginUrl" value="http://{{key "host/ip"}}:{{.Port}}/cas/login" type="java.lang.String" override="false" />
+    <Environment name="callbackPoint" value="http://{{key "host/ip"}}:{{.Port}}/scq/sc/callback" type="java.lang.String" override="false" />
     
 </Context>
+{{end}}
 {{end}}
