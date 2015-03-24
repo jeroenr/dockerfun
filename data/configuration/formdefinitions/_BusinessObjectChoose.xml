@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+    <form name="CHOOSE_BO_TYPE">
+        <hidden name="funcLevelOne"/>
+        <hidden name="funcLevelTwo"/>
+        <hidden name="funcLevelThree"/>
+        <hidden name="funcLevelFour"/>
+        <hidden name="orgContext"/>
+        <hidden name="tag"/>
+        <hidden name="equipment"/>
+        <hidden name="standard"/>
+        <hidden name="isTemplate"/>
+        <hidden name="businessObjectType"/>
+        <hidden name="objectKey"/>
+        <hidden name="shiftObjectKey"/>
+        <hidden name="boType"/>
+        <hidden name="title"/>
+        <hidden name="affectsFuncLevelOne"/>
+        <whitelist names="eventSubmit_do.* form.* key objectClassName page_validator.* dummyshiftObjectKey logObjectKey cb.form.enabled"/>
+    </form>
+    <form name="CHOOSE_BO_TYPE:EDIT">
+        <hidden name="funcLevelOne"/>
+        <hidden name="funcLevelTwo"/>
+        <hidden name="funcLevelThree"/>
+        <hidden name="funcLevelFour"/>
+        <hidden name="orgContext"/>
+        <hidden name="tag"/>
+        <hidden name="equipment"/>
+        <hidden name="standard"/>
+        <hidden name="isTemplate"/>
+        <hidden name="businessObjectType"/>
+        <hidden name="objectKey"/>
+        <hidden name="shiftObjectKey"/>
+        <hidden name="title"/>
+        <hidden name="affectsFuncLevelOne"/>
+        <whitelist names="eventSubmit_do.* form.* key objectClassName page_validator.* dummyshiftObjectKey logObjectKey"/>
+    </form>
+</forms>

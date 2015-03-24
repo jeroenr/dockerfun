@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+    <form name="ROLE:VIEW" mode="view" >
+        <localizedtextfield name="name" required="true" minLength="5" maxLength="50"/>
+        <space name="space"/>
+        <select type="radio" name="enabled">
+            <source class="valuelist" valuelistNameRef="boolean" display="description"/>
+        </select>
+        <space name="space"/>
+        <select type="radio" name="system">
+            <source class="valuelist" valuelistNameRef="boolean" display="description"/>
+        </select>
+    </form>
+
+    <form name="ROLE:CREATE" generatetag="false">
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+        <fieldsetref name="ROLE:PROPERTIES:CREATE"/>
+    </form>
+
+    <form name="ROLE:EDIT" generatetag="false">
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+        <fieldsetref name="ROLE:PROPERTIES"/>
+    </form>
+
+    <fieldset name="ROLE:PROPERTIES:CREATE" label="LABEL_SECTION_PROPERTIES">
+        <hidden name="key" value="form" persist="false"/>
+        <localizedtextfield name="name" required="true" minLength="5" maxLength="50"/>
+        <space name="space"/>
+        <select type="radio" name="enabled">
+            <source class="valuelist" valuelistNameRef="boolean" display="description"/>
+        </select>
+    </fieldset>
+    <fieldset name="ROLE:PROPERTIES" label="LABEL_SECTION_PROPERTIES">
+        <hidden name="key" value="form" persist="false"/>
+        <localizedtextfield name="name" translationsOnly="true" minLength="5" maxLength="50"/>
+        <space name="space"/>
+        <select type="radio" name="enabled">
+            <source class="valuelist" valuelistNameRef="boolean" display="description"/>
+        </select>
+    </fieldset>
+</forms>

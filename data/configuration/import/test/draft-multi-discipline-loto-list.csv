@@ -1,0 +1,16 @@
+## when you incomment the date offset below then on import all dates will be time-shifted
+## to a date relative to the offset date and the import date
+@offsetdate,25-06-2013 09:46:39
+
+@delete,lotolist,number,MULT-11011,=
+
+lotolist,MULTI_DISCIPLINE_ISOLATION_LIST,DEFAULT_LOTO_LIST_PROCESS,DEFAULT_LOTO_LIST_PROCESS,DRAFT,-1,null,2013-06-25 09:46:18,2013-06-25 09:46:18,ibanxadmin,ibanxadmin,25-06-2013 09:46:18,false,null,Remarks about work order,WO-0987,null,INSPECTION,null,null,null,null,PLANT1,30-100,30-100-0100,null,null,30-100-0100-LH10030,null,PLANT1,MULT-11011,10011,true,false
+@startTransaction
+@method,set,lotolist,MULT-11011,documentReference,
+@method,set,lotolist,MULT-11011,lockboxNr,
+@method,set,lotolist,MULT-11011,lockNrEI,
+@method,set,lotolist,MULT-11011,lockNrMechanical,
+@method,set,lotolist,MULT-11011,lockNrProduction,
+@endTransaction
+!ph1,signature_lotolist,null,null,null,null,null,MULT-11011,ISOLATE,null,null,null,null,false,Yes
+!ph2,audit,CREATE_EVENT,MULT-11011 created,ibanxadmin,2013-06-25,ibanx.loto.IsolationList,MULT-11011

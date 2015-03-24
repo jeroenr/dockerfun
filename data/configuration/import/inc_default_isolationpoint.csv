@@ -1,0 +1,135 @@
+############### PERMISSIONS ####################################
+# 1,CREATE,Create,GLOBAL,true,true
+# 2,BROWSE,Browse,GLOBAL,true,true
+# 3,READ,Read,GLOBAL,true,true
+# 4,COPY,Copy,GLOBAL,true,true
+# 5,UPDATE,Update,GLOBAL,true,true
+# 6,DELETE,Delete,GLOBAL,true,true
+# 7,CHANGESTATE,Change state,GLOBAL,true,true
+# 8,VIEWACL,View ACL,GLOBAL,true,true
+# 9,CHANGEACL,Change ACL,GLOBAL,true,true
+# 10,VIEWAUDITTRAIL,View audittrail,GLOBAL,true,true
+
+################################################################
+## ISOLATION POINTS
+################################################################
+
+@delete,acl_v2,name,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,0
+acl_v2,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,State ACL for an isolationpoint - Draft,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,anonymous,READ
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,everyone,READ
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,everyone,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,application_administrator,CREATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,application_administrator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,application_administrator,COPY
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,application_administrator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,application_administrator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,loto_point_template_creator,CREATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,loto_point_template_creator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,loto_point_template_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,loto_point_template_creator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,loto_point_template_creator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,loto_creator,CREATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,loto_creator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,loto_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,loto_creator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,loto_creator,DELETE
+
+@delete,acl_v2,name,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,0
+acl_v2,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,State ACL for an isolationpoint - Active,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,anonymous,READ
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,everyone,READ
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,everyone,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,application_administrator,CREATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,application_administrator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,application_administrator,COPY
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,application_administrator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,application_administrator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_point_template_creator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_point_template_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_point_template_creator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_point_template_creator,DELETE
+## to create adhoc points and to make sure the list of type is displayed on the
+## create screen
+## todo : maybe we need a new permission for this (create_adhoc ???)
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_list_template_creator,CREATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_list_template_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_list_template_creator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_list_template_creator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_list_template_creator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_creator,CREATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_creator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_creator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_creator,DELETE
+
+@delete,acl_v2,name,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,0
+acl_v2,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,State ACL for an isolationpoint - Obsolete,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,anonymous,READ
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,everyone,READ
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,everyone,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,application_administrator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,application_administrator,COPY
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,application_administrator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,application_administrator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,loto_point_template_creator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,loto_point_template_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,loto_point_template_creator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,loto_point_template_creator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,loto_creator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,loto_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,loto_creator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,loto_creator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,loto_list_template_creator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,loto_list_template_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,loto_list_template_creator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,loto_list_template_creator,DELETE
+
+@delete,acl_v2,name,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,0
+acl_v2,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,State ACL for an isolationpoint - Deleted,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,anonymous,READ
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,everyone,READ
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,everyone,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,application_administrator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,application_administrator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,loto_point_template_creator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,loto_point_template_creator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,loto_creator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,loto_creator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,loto_list_template_creator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,loto_list_template_creator,CHANGESTATE
+
+lifecycle_v2,DEFAULT_LOTO_POINT_PROCESS,ibanx.lifecycle.Lifecycle,Process Isolationpoints,Process Isolationpoints,GLOBAL,true,false
+lifecyclestate_v4,DEFAULT_LOTO_POINT_PROCESS,DRAFT,Draft,null,false,false,1,StateAcl DEFAULT_LOTO_POINT_PROCESS-DRAFT,yellow
+lifecyclestate_v4,DEFAULT_LOTO_POINT_PROCESS,ACTIVE,Active,null,false,false,2,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,green
+lifecyclestate_v4,DEFAULT_LOTO_POINT_PROCESS,OBSOLETE,Obsolete,null,false,false,3,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,red
+lifecyclestate_v4,DEFAULT_LOTO_POINT_PROCESS,DELETED,Deleted,null,false,false,4,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,red
+
+
+@delete,businessobjecttype-pcq-2.x,number,MECHANICAL_ISOLATION_POINT,0
+businessobjecttype-pcq-2.x,,,,,MECHANICAL_ISOLATION_POINT,Standard mechanical isolation point,Standard mechanical isolation point,ibanx.loto.IsolationPointIF,DEFAULT_LOTO_POINT_PROCESS,null,-1,null,GLOBAL,true,null,null,null,null,null,false
+@startTransaction
+@method,set,businessobjecttype-pcq-2.x,MECHANICAL_ISOLATION_POINT,class0,ISOLATIONPOINT
+@method,setRepeating,businessobjecttype-pcq-2.x,MECHANICAL_ISOLATION_POINT,validListType,DEFAULT_ISOLATION_LIST
+@method,setRepeating,businessobjecttype-pcq-2.x,MECHANICAL_ISOLATION_POINT,validListType,MULTI_DISCIPLINE_ISOLATION_LIST
+@endTransaction
+
+@delete,businessobjecttype-pcq-2.x,number,EI_ISOLATION_POINT,0
+businessobjecttype-pcq-2.x,,,,,EI_ISOLATION_POINT,Standard EI isolation point,Standard EI isolation point,ibanx.loto.IsolationPointIF,DEFAULT_LOTO_POINT_PROCESS,null,-1,null,GLOBAL,true,null,null,null,null,null,false
+@startTransaction
+@method,set,businessobjecttype-pcq-2.x,EI_ISOLATION_POINT,class0,ISOLATIONPOINT
+@method,setRepeating,businessobjecttype-pcq-2.x,EI_ISOLATION_POINT,validListType,EI_ISOLATION_LIST
+@method,setRepeating,businessobjecttype-pcq-2.x,EI_ISOLATION_POINT,validListType,MULTI_DISCIPLINE_ISOLATION_LIST
+@endTransaction
+
+@delete,businessobjecttype-pcq-2.x,number,SAFETY_ISOLATION_POINT,0
+businessobjecttype-pcq-2.x,,,,,SAFETY_ISOLATION_POINT,Standard safety isolation point,Standard safety isolation point,ibanx.loto.IsolationPointIF,DEFAULT_LOTO_POINT_PROCESS,null,-1,null,GLOBAL,true,null,null,null,null,null,false
+@startTransaction
+@method,set,businessobjecttype-pcq-2.x,SAFETY_ISOLATION_POINT,class0,ISOLATIONPOINT
+@method,setRepeating,businessobjecttype-pcq-2.x,SAFETY_ISOLATION_POINT,validListType,SAFETY_ISOLATION_LIST
+@method,setRepeating,businessobjecttype-pcq-2.x,SAFETY_ISOLATION_POINT,validListType,MULTI_DISCIPLINE_ISOLATION_LIST
+@endTransaction

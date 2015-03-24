@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+
+    <form style="search" name="SEARCH:INSTRUCTION" generatetag="false">
+        <fieldsetref name="HIDDEN:AND:WHITELISTING:PROPERTIES"/>
+        <fieldsetref name="SEARCH_INSTRUCTION_PROPERTIES"/>
+        <fieldsetref name="SEARCH_INSTRUCTION_LAYOUT"/>
+        <fieldsetref name="GENERIC_SEARCH_SECTION_PBS_NO_FUNCLEVEL_ONE"/>
+        <fieldsetref name="ADVANCED_INSTRUCTION_SEARCH"/>
+
+        <button type="submit" name="eventSubmit_doSearch" label="BUTTON_SEARCH"/>
+    </form>
+
+    <form style="search" name="EDIT_STORED_QUERY:INSTRUCTION" generatetag="false">
+        <fieldsetref name="HIDDEN:AND:WHITELISTING:PROPERTIES"/>
+        <fieldsetref name="SEARCH_INSTRUCTION_PROPERTIES"/>
+        <fieldsetref name="SEARCH_INSTRUCTION_LAYOUT"/>
+        <fieldsetref name="GENERIC_SEARCH_SECTION_PBS_NO_FUNCLEVEL_ONE"/>
+        <fieldsetref name="ADVANCED_INSTRUCTION_SEARCH"/>
+        <hidden name="key" value="form"/>
+
+        <button name="eventSubmit_doView" label="BUTTON_SEARCH_PREVIEW"/>
+        <button name="eventSubmit_doDelete" label="actionButtonDelete"/>
+        <button name="eventSubmit_doCopycreate"/>
+        <button name="eventSubmit_doSave" label="BUTTON_SEARCH_SAVE"/>
+        <button name="eventSubmit_doCancel" label="actionButtonCancel"/>
+    </form>
+
+    <fieldset name="SEARCH_INSTRUCTION_PROPERTIES" showlegend="false">
+        <hidden name="funcLevelOne" restricts="funcLevelTwo,funcLevelThree,tag"/>
+        <hidden name="objectClassName" value="ibanx.logbook.InstructionIF"/>
+
+        <select name="lifecycleState.name" operator="equals">
+            <source class="lifecyclestatelist" valuelistNameRef="DEFAULT_INSTRUCTION_PROC" display="showprocessname"/>
+        </select>
+
+        <multiselect name="affectsFuncLevelOne">
+            <source class="plantlist"/>
+        </multiselect>
+
+        <checkbox name="flag_highlite"/>
+    </fieldset>
+
+    <fieldset name="SEARCH_INSTRUCTION_LAYOUT" showlegend="false">
+        <layout values="stdinstr" label="searchLayout"/>
+        <pagesize/>
+        <checkbox name="searchAdvancedSwitch" discloses="GENERIC_SEARCH_SECTION_PBS_NO_FUNCLEVEL_ONE,ADVANCED_INSTRUCTION_SEARCH"/>
+    </fieldset>
+
+    <fieldset name="ADVANCED_INSTRUCTION_SEARCH" label="searchCriteria">
+        <textfield name="number" cssClass="uppercase"/>
+
+        <textfield name="title" label="instructionTitle"/>
+
+        <daterange name="effectiveFromDate" label="effectiveFromDate"/>
+        <daterange name="effectiveTillDate" label="effectiveTillDate"/>
+
+    </fieldset>
+
+</forms>

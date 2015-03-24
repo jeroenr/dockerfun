@@ -1,0 +1,215 @@
+@page {/* for printing */
+    size: A4;
+    margin: 0.3in; /* smallest for IE */
+}
+
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    /* For Chinese / Japanse / Korean */
+    /*font-family: "Noto Sans CJK SC Light", Verdana, Arial, Helvetica, sans-serif;*/
+}
+
+.headerTable { /* shift info */
+    vertical-align: top;
+    font-size: 0.9em !important;
+}
+
+#hitlist {
+    width: 100%;
+    display: table;
+    -fs-table-paginate: paginate;
+}
+
+#hitlist-headers {
+    float: left;
+    display: table-header-group;  /* repeated on every page */
+}
+
+.hitlist-col-header, .hitlist-row-cell {
+    width: 35mm;
+    overflow: hidden;
+}
+
+.hitlist-col-header {
+    float: left;
+    display: table-cell;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.hitlist-body {
+    display: table-row-group;
+}
+
+.hitlist-row {
+    clear:both;
+    float: left;
+    display: table-row;
+    width: 100%;
+}
+
+.hitlist-attributegroup-headers {
+    float: left;
+    display: table-header-group;
+    margin-top: 15px;
+}
+
+.hitlist-attributegroup-header {
+    float: left;
+    display: table-cell;
+    font-weight: bold;
+    padding-top: 1em;
+}
+
+.hitlist-row-header {
+    display: table-header-group;
+    width: 100%;
+}
+
+.hitlist-row-header div div {
+    padding-top: 20px;
+}
+
+.hitlist-row-header-cell {
+    float: left;
+    display: table-cell;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.hitlist-row-cell {
+    float: left;
+    display: table-cell;
+    font-size: 0.8em;
+}
+
+.hitlist-section-itemcount {
+    width: 1%;
+}
+
+.header-level-0, .header-level-1, .header-level-2, .header-level-3, .header-level-4, .header-level-5 {
+    clear: both;
+    page-break-after: avoid;
+}
+
+div.hitlist-row.header-level-1 > div {
+    padding-top: 20px !important;
+}
+
+.cumulative-downtime-row {
+    float: left;
+    width: 100%;
+}
+.cumulative-downtime-cell {
+    float: right;
+    width: 100%;
+    text-align: right;
+}
+
+.cumulative-downtime {
+    text-align: right;
+    overflow: visible;
+    display: inline;
+    font-weight: bold;
+}
+
+.list-title {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.group-title, .group-value {
+    display: inline;
+}
+
+.group-value {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.group-title {
+    display: none;
+}
+
+.printable-footer {
+    float: left;
+    width: 100%;
+    clear: both;
+    font-size: 80%;
+    border-top: 2px solid black;
+    margin-top: 20px;
+}
+
+.eventtitleSmall {
+    border-bottom: 1px solid gray;
+    width: 95%;
+    overflow: visible;
+}
+
+.followUpExt {
+    width: 65mm !important;
+}
+
+.tagDescAndCode {
+    overflow: visible;
+    width: 75mm;
+}
+
+.eventTime {
+    width: 15mm;
+}
+
+/* enable this to remove shift info
+#reportHeaderContainer {
+    display: none;
+}
+*/
+
+#reportHeaderContainer * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-spacing: 0;
+}
+
+.headerReport * {
+    font-weight: bold;
+}
+
+.headerInfo td {
+    padding-bottom: 10px !important;
+}
+
+.shift-members {
+    vertical-align: top;
+}
+
+.indent-0, .indent-1, .indent-2, .indent-3, .indent-4, .indent-5 {
+    display: table-cell;
+    float: left;
+}
+
+.indent-0 {
+    width: 0;
+}
+
+.indent-1 {
+    width: 1em;
+}
+
+.indent-2 {
+    width: 2em;
+}
+
+.indent-3 {
+    width: 3em;
+}
+
+.indent-4 {
+    width: 4em;
+}
+
+.indent-5 {
+    width: 5em;
+}

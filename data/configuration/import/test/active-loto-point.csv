@@ -1,0 +1,27 @@
+## when you incomment the date offset below then on import all dates will be time-shifted
+## to a date relative to the offset date and the import date
+@offsetdate,26-06-2013 10:27:44
+
+@delete,lotopoint,number,LP2024,=
+
+lotopoint,MECHANICAL_ISOLATION_POINT,DEFAULT_LOTO_POINT_PROCESS,DEFAULT_LOTO_POINT_PROCESS,ACTIVE,DEFAULT_LOTO_POINT_PROCESS,DRAFT,26-06-2013 10:17:04,false,null,6263,2013-06-26 10:16:58,2013-06-26 10:17:04,ibanxadmin,ibanxadmin,null,null,null,true,6263,false,null,,PLANT2,30-500,,null,null,,null,PLANT2,LP2024,2024,true,false
+@startTransaction
+@method,set,lotopoint,LP2024,diameter,
+@method,set,lotopoint,LP2024,discipline,PRODUCTION
+@method,set,lotopoint,LP2024,energyTypeMagnitude,
+@method,set,lotopoint,LP2024,gasketType,
+@method,set,lotopoint,LP2024,insulationPresent,
+@method,set,lotopoint,LP2024,isolatedState,CLOSED
+@method,set,lotopoint,LP2024,lotoMethod,LOCK
+@method,set,lotopoint,LP2024,pressureClass,
+@method,set,lotopoint,LP2024,scaffoldingReq,
+@method,set,lotopoint,LP2024,subType,
+@method,set,lotopoint,LP2024,timeNeeded,
+@method,set,lotopoint,LP2024,tracingPresent,
+@method,set,lotopoint,LP2024,tryOut,
+@method,set,lotopoint,LP2024,unLotoMethod,REMOVESPADE
+@endTransaction
+!ph1,audit,CREATE_EVENT,LP2024 created,ibanxadmin,2013-06-26,ibanx.loto.IsolationPoint,LP2024
+!ph2,audit,SETSTATE_EVENT,Status of LP2024 changed into Active,ibanxadmin,2013-06-26,ibanx.loto.IsolationPoint,LP2024
+!ph3,audit,SAVE_EVENT,Properties of LP2024 changed,ibanxadmin,2013-06-26,ibanx.loto.IsolationPoint,LP2024
+

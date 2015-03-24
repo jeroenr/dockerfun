@@ -1,0 +1,116 @@
+{
+    "bapiSequence": [
+        {
+            "function":"Z_BAPI_NOTIF_CREATE",
+            "convert": true
+        },
+        {
+            "function":"BAPI_ALM_NOTIF_CREATE"
+        },
+        {
+            "function":"Z_BAPI_NOTIF_CREATE",
+            "table":"NOTIFHEADER",
+            "source":"NOTIF_NO"
+        },
+        {
+            "function":"BAPI_ALM_NOTIF_SAVE"
+        },
+        {
+            "function":"BAPI_TRANSACTION_COMMIT"
+        },
+        {
+            "function":"BAPI_ALM_NOTIF_PUTINPROGRESS"
+        },
+        {
+            "function": "BAPI_ALM_NOTIF_GET_DETAIL",
+            "target":"NUMBER",
+            "table":"NOTITEM"
+        },
+        {
+            "function": "BAPI_ALM_NOTIF_GET_DETAIL",
+            "target":"NUMBER",
+            "table":"NOTLONGTXT"
+        }
+    ],
+    "mapping": {
+        "NOTIF_TYPE": {
+            "values": ["6N"]
+        },
+        "SHORT_TEXT": {
+            "values": ["shortText"],
+            "transformers": ["akzoStripTokens"]
+        },
+        "EQUIPMENT": {
+            "values": ["equipment"]
+        },
+        "PRIORITY": {
+            "values": ["sapPriority"]
+        },
+        "PLANGROUP": {
+            "values": ["sapPlannerGroup"]
+        },
+        "PM_WKCTR": {
+            "values": ["sapMainWorkCenter"]
+        },
+        "PLANPLANT": {
+            "values": ["plant"]
+        },
+        "FUNCT_LOC":{
+            "values": ["floc"]
+        },
+        "DESSTDATE": {
+            "values": ["sapPlannedStartDate"],
+            "transformers": ["stringToDate"]
+        },
+        "DESENDDATE": {
+            "values": ["sapPlannedStartDate"],
+            "transformers": ["stringToDate"]
+        },
+        "DESSTTIME": {
+            "values": ["sapPlannedStartDate"],
+            "transformers": ["stringToDate"]
+        },
+        "DESENDTM": {
+            "values": ["sapPlannedStartDate"],
+            "transformers": ["stringToDate"]
+        },
+        "ITEM_KEY": {
+            "values": ["0010"]
+        },
+        "ITEM_SORT_NO": {
+            "values": ["0010"]
+        },
+        "D_CODEGRP": {
+            "values": ["6ALG"]
+        },
+        "D_CODE": {
+            "values": ["sapDefectType"]
+        },
+        "DESCRIPT": {
+            "values": [""]
+        },
+        "PARTN_ROLE": {
+            "values": ["ML"]
+        },
+        "PARTNER": {
+            "values": ["sapNotifier"]
+        },
+        "BREAKDOWN": {
+            "values": ["downtime"],
+            "transformers": ["akzoTickIfNotEmpty"]
+        },
+        "STRMLFNDATE": {
+            "values": ["eventDate"]
+        },
+        "LONGTEXT_EXIST": {
+            "values": ["description"],
+            "transformers": ["akzoTickIfNotEmpty"]
+        },
+        "TEXT_LINE":{
+            "values":["number","title"],
+            "transformers":["concat","akzoStripTokens"],
+            "tables":["NOTIF_LONGTEXT"]
+        }
+    }
+}
+

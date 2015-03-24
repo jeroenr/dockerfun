@@ -1,0 +1,51 @@
+## when you incomment the date offset below then on import all dates will be time-shifted
+## to a date relative to the offset date and the import date
+@offsetdate,10-06-2013 15:50:05
+
+@SQL,DELETE FROM IBANX_SIGNATURE WHERE OBJECT_ID IN (SELECT ID FROM IBANX_CHANGE_REQUEST WHERE NR = 'MOC-T00000002')
+@delete,change,number,MOC-T00000002,=
+@SQL,DELETE FROM IBANX_CHANGEREQUEST_LINK WHERE RA_OBJECT_ID NOT IN (SELECT ID FROM IBANX_CHANGE_REQUEST)
+@SQL,DELETE FROM IBANX_AUDIT_EVENT WHERE OBJECT_CLASS = 'ibanx.moc.ChangeRequest' AND OBJECT_ID NOT IN (SELECT ID FROM IBANX_CHANGE_REQUEST)
+@SQL,DELETE FROM IBANX_AUDIT_EVENT WHERE OBJECT_CLASS = 'ibanx.moc.ChangeAnalysis' AND OBJECT_ID NOT IN (SELECT ID FROM IBANX_CHANGEREQUEST_LINK WHERE LINKTYPE_NAME = 'request-analysis')
+@SQL,DELETE FROM IBANX_AUDIT_EVENT WHERE OBJECT_CLASS = 'ibanx.moc.ChangeActivity' AND OBJECT_ID NOT IN (SELECT ID FROM IBANX_CHANGEREQUEST_LINK WHERE LINKTYPE_NAME = 'request-activity')
+@SQL,DELETE FROM IBANX_CHANGE_ACTIVITY WHERE IS_TEMPLATE = 0 AND ID NOT IN (SELECT RB_OBJECT_ID FROM IBANX_CHANGEREQUEST_LINK WHERE LINKTYPE_NAME = 'request-activity')
+@SQL,DELETE FROM IBANX_CHANGE_ANALYSIS WHERE IS_TEMPLATE = 0 AND ID NOT IN (SELECT RB_OBJECT_ID FROM IBANX_CHANGEREQUEST_LINK WHERE LINKTYPE_NAME = 'request-analysis')
+
+
+change,MOC-T00000002,2,null,2013-06-10 15:50:05,2013-06-10 15:50:06,init,init,CHANGE,CHANGE_PROCESS,CHANGE_PROCESS,CHANGE_NEW,-1,10-06-2013 15:50:05,title2,Problem,solution,None,Minimal Risk,null,null,null,null,null,null,1,0,null,init,null,null,null,null,null,0,0,0,0,0,PLANT1,30-100,30-100-0100,null,null,null,30-100-0100-LH10020,,false,null,PLANT1,true,false
+@startTransaction
+@method,set,change,MOC-T00000002,duration,TEMPORARY
+@method,set,change,MOC-T00000002,emergencyByPass,
+@method,set,change,MOC-T00000002,flowId,small
+@method,set,change,MOC-T00000002,gatekeeper,
+@method,set,change,MOC-T00000002,initialrisk,6
+@method,set,change,MOC-T00000002,initialrisk_risk_frequency,1
+@method,set,change,MOC-T00000002,initialrisk_risk_metadata,changePeopleSafety=5\,changeHealth=0\,changeEnvironment=0\,changeAssets=0\,changeReputation=0\,changeSecurity=0\,
+@method,set,change,MOC-T00000002,inTurnAround,
+@method,set,change,MOC-T00000002,largeCategory,
+@method,set,change,MOC-T00000002,mediumCategory,
+@method,set,change,MOC-T00000002,riskafterchange,7
+@method,set,change,MOC-T00000002,riskafterchange_risk_frequency,1
+@method,set,change,MOC-T00000002,riskafterchange_risk_metadata,changePeopleSafety=4\,changeHealth=0\,changeEnvironment=0\,changeAssets=0\,changeReputation=0\,changeSecurity=0\,
+@method,set,change,MOC-T00000002,roi,0
+@method,set,change,MOC-T00000002,roiTimespan,
+@method,set,change,MOC-T00000002,sapArId,
+@method,set,change,MOC-T00000002,sapId,0
+@method,set,change,MOC-T00000002,tagDescription,Effluent tank T100 high level switch
+@endTransaction
+
+change-analysis,CAN-T2,null,null,2013-06-10 15:50:06,2013-06-10 15:50:06,init,null,APPROVAL_CHECKLIST_SMALL,DEFAULT_CL_PROCESS,DEFAULT_CL_PROCESS,CL_OPEN,-1,10-06-2013 15:50:06,null,null,null,init,PLANT1,true,false
+@startTransaction
+@method,set,change-analysis,CAN-T2,checklistVersion,1
+@method,setRepeating,change-analysis,CAN-T2,item_action,SUPERVISOR-SMALL
+@method,setRepeating,change-analysis,CAN-T2,item_action,SRE1-FED
+@method,setRepeating,change-analysis,CAN-T2,item_action,SRE2-FED
+@method,set,change-analysis,CAN-T2,item_categorySRE1,true
+@method,set,change-analysis,CAN-T2,item_categorySRE2,true
+@method,set,change-analysis,CAN-T2,item_categorySupervisor,true
+@method,set,change-analysis,CAN-T2,processOrder,
+@endTransaction
+!ph2,signature,null,null,null,null,null,MOC-T00000002,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph3,audit,CREATE_EVENT,MOC-T00000002 created,init,2013-06-10,ibanx.moc.ChangeRequest,MOC-T00000002
+
+!ph1,request-analysis,2013-06-10 15:50:06,2013-06-10 15:50:06,null,null,request-analysis,request-analysis,MOC-T00000002,has-analysis,CAN-T2,is-analysis-of

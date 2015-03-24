@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="yes" ?>
+<definition>
+    <portal>
+        <context id="default" title="Whiteboard" uri="/action/SetMenuAction/menuId/300" collapsed="false">
+            <i18n>menuWhiteboard</i18n>
+            <role name="everyone"/>
+            <role name="anonymous"/>
+        </context>
+    </portal>
+    <menu>
+        <item id="300">
+            <i18n>menuWhiteboard</i18n>
+            <action name="logbook.WhiteboardAction">
+                <module>whiteboard</module>
+                <eventSubmit_doView>view</eventSubmit_doView>  
+            </action>
+            <context>default</context>            
+        </item>
+    </menu>
+</definition>

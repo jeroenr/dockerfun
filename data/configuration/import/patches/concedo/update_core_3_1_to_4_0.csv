@@ -1,0 +1,93 @@
+
+########### CONDITIONS TYPE DEFINITIONS ##############
+
+## afhankelijkheids conditietype
+## rollen van de twee permits in de conditie
+!ph3911,roleinfo,needs-resigned,Moet afgesloten zijn voordat betreffende vergunning actief wordt,ibanx.permit.PermitIF,true
+!ph3912,roleinfo,should-be-resigned,Mag niet worden uitgegeven voordat beperkende vergunning is afgesloten,ibanx.permit.PermitIF,true
+conditiontype,afhankelijkheids-conditie,ibanx.condition.Condition,!ph3911,!ph3912,false,,Gekoppelde vergunning moet afgesloten zijn voordat de betreffende vergunning actief kan worden,,,true
+
+## A-B (ABC) conditietype
+## rollen van de twee permits in de conditie
+!ph3921,roleinfo,needs-resigned,A-vergunning moet afgesloten zijn voordat B-vergunning actief wordt,ibanx.permit.PermitIF,true
+!ph3922,roleinfo,should-be-resigned,A-vergunning moet afgesloten zijn voordat huidige B-vergunning actief wordt,ibanx.permit.PermitIF,true
+conditiontype,AB-conditie,ibanx.condition.Condition,!ph3921,!ph3922,false,,ABC methodiek : Gekoppelde A-vergunning moet afgesloten zijn voordat de betreffende B-vergunning actief kan worden,,,false
+
+## B-C (ABC) conditietype
+## rollen van de twee permits in de conditie
+!ph3931,roleinfo,needs-resigned,B-vergunning moet afgesloten zijn voordat andere C-vergunning actief wordt,ibanx.permit.PermitIF,true
+!ph3932,roleinfo,should-be-resigned,B vergunning moet afgesloten zijn voordat huidige C-vergunning actief wordt,ibanx.permit.PermitIF,true
+conditiontype,BC-conditie,ibanx.condition.Condition,!ph3931,!ph3932,false,,ABC methodiek : B-vergunning moet afgesloten zijn voordat de betreffende C-vergunning actief kan worden,,,false
+
+## gelijktijdigheids conditietype (bi-directioneel)
+##!ph4000,roleinfo,requires-active-isolation,Moet tegelijk actief zijn,ibanx.permit.PermitIF,true
+##!ph4001,roleinfo,active-as-long-as,Moet actief zijn voor,ibanx.permit.PermitIF,true
+##conditiontype,gelijktijdigheids-conditie,ibanx.condition.Condition,!ph4000,!ph4001,true
+
+## niet-gelijktijdigheids conditietype (bi-directioneel)
+!ph4010,roleinfo,no-active-at-same-time,Mag niet gelijktijdig met betreffende vergunning actief zijn,ibanx.permit.PermitIF,true
+!ph4011,roleinfo,no-active-at-same-time1,Mag niet gelijktijdig met beperkende vergunning actief zijn,ibanx.permit.PermitIF,true
+conditiontype,niet-gelijktijdigheids-conditie,ibanx.condition.Condition,!ph4010,!ph4011,true,,Gekoppelde vergunningen mogen niet tegelijkertijd actief zijn,,,true
+
+## vereist tra conditietype
+## - conditie van dit type moet automatisch aangemaakt worden als de vergunning
+##   hoog risico is
+#!ph4020,roleinfo,requires-tra,vereist tra,ibanx.permit.PermitIF,true
+#!ph4021,roleinfo,none,-,ibanx.permit.PermitIF,true
+#conditiontype,tra-required-conditie,ibanx.condition.Condition,!ph4020,!ph4021,false,false,Bij een hoogrisico vergunning is een TRA verplicht.
+
+################################################################
+################# LOTO SPECIFIC ########################
+################################################################
+
+!phacra,roleinfo,is-activity-of,is activity of,ibanx.loto.IsolationActivityIF
+!phacrb,roleinfo,is-claim-of,is-claim-of,ibanx.loto.IsolationClaimIF
+linktype_v2,activity-claim,ibanx.loto.ActivityClaimLink,!phacra,!phacrb
+
+
+@delete,queryspec,number,ALL-LOTOLIST-BOT,0
+queryspec,ALL-LOTOLIST-BOT,,LoToList Business object types,,,,,LoToList Business object types,sysadmin,ibanx.object.BusinessObjectTypeIF,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-LOTOLIST-BOT,number
+@method,addColumn,queryspec,ALL-LOTOLIST-BOT,description
+@method,set,queryspec,ALL-LOTOLIST-BOT,key,form
+@method,set,queryspec,ALL-LOTOLIST-BOT,form.objectClass,ibanx.loto.IsolationListIF
+@endTransaction
+
+@delete,queryspec,number,ALL-LOTOPOINT-BOT,0
+queryspec,ALL-LOTOPOINT-BOT,,LoToPoint Business object types,,,,,LoToPoint Business object types,sysadmin,ibanx.object.BusinessObjectTypeIF,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-LOTOPOINT-BOT,number
+@method,addColumn,queryspec,ALL-LOTOPOINT-BOT,description
+@method,set,queryspec,ALL-LOTOPOINT-BOT,key,form
+@method,set,queryspec,ALL-LOTOPOINT-BOT,form.objectClass,ibanx.loto.IsolationPointIF
+@endTransaction
+
+@delete,queryspec,number,ISOLATIONCLAIMS,0
+queryspec,ISOLATIONCLAIMS,,Isolationclaims,,,,,Isolationclaims,sysadmin,ibanx.loto.IsolationClaimIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,ISOLATIONCLAIMS,key,form
+@endTransaction
+
+@delete,queryspec,number,ISOLATIONACTIVITIES,0
+queryspec,ISOLATIONACTIVITIES,,Isolationactivities,,,,,Isolationactivities,sysadmin,ibanx.loto.IsolationActivityIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,ISOLATIONACTIVITIES,key,form
+@endTransaction
+
+@delete,queryspec,number,ACTIVE-TEMPLATE-ISOLATIONPOINTS,0
+queryspec,ACTIVE-TEMPLATE-ISOLATIONPOINTS,,Template Isolationpoints,,,,,Template Isolationpoints,sysadmin,ibanx.loto.IsolationPointIF,true,1,GLOBAL,true
+@startTransaction
+@method,set,queryspec,ACTIVE-TEMPLATE-ISOLATIONPOINTS,key,form
+## todo : figure out if we are going to use isTemplate and/or standard
+##@method,set,queryspec,ACTIVE-TEMPLATE-ISOLATIONPOINTS,form.isTemplate,true
+@method,set,queryspec,ACTIVE-TEMPLATE-ISOLATIONPOINTS,form.standard,true
+@method,set,queryspec,ACTIVE-TEMPLATE-ISOLATIONPOINTS,form.lifecycleState.name,ACTIVE
+##@method,set,queryspec,ACTIVE-TEMPLATE-ISOLATIONPOINTS,form.orgContext,GLOBAL
+@endTransaction
+
+## start adding from concedo 3.0.1
+configurationSetting,all.discr.ibanx.permit.PermitIF.setting.template.state,E_T
+configurationSetting,all.discr.ibanx.tra.TaskRiskAnalysisIF.setting.template.state,TEMPLATE
+## stop adding from concedo 3.0.1
+

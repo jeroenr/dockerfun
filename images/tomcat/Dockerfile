@@ -29,8 +29,8 @@ ADD chq.ctmpl /home/user/consul/chq.ctmpl
 ADD bootstrap.properties /bootstrap.properties
 
 # for Unite
-ENV CATALINA_BASE /home/user/unite
-VOLUME ["/home/user/unite", "/home/user/configuration", "/home/user/application-data"]
+ENV CATALINA_BASE /tomcat
+#VOLUME ["/home/user/unite", "/home/user/configuration", "/home/user/application-data"]
 
 # Setup tomcat
 ENV JAVA_OPTS -XX:MaxPermSize=1G -XX:+CMSClassUnloadingEnabled -XX:+CMSPermGenSweepingEnabled -Dfile.encoding=UTF-8

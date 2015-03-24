@@ -1,0 +1,14 @@
+
+## defines permission on isolation lists
+permission,,,,,ibanx.security.Permission,300,CREATE_ISOLATION_ACTIVITIES,Create isolatie activities on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,305,CREATE_DE_ISOLATION_ACTIVITIES,Create de-isolatie activities on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,310,UPDATE_ISOLATION_ACTIVITIES,Update isolatie activities on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,315,UPDATE_DE_ISOLATION_ACTIVITIES,Update de-isolatie activities on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,320,EXECUTE_ISOLATION_ACTIVITIES,Execute isolatie activities on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,325,EXECUTE_DE_ISOLATION_ACTIVITIES,Execute de-isolatie activities on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,330,REMOVE_ISOLATION_ACTIVITIES,Remove isolatie activities on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,335,REMOVE_DE_ISOLATION_ACTIVITIES,Remove de-isolatie activities on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,340,CREATE_CLAIMS,Create claims on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,345,UPDATE_CLAIMS,Update claims on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,350,REMOVE_CLAIMS,Remove claims on an isolationlist,GLOBAL,true,true
+permission,,,,,ibanx.security.Permission,355,MOVE_CLAIMS,Move claims on an isolationlist,GLOBAL,true,true

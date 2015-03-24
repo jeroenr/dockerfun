@@ -1,0 +1,479 @@
+## when you incomment the date offset below then on import all dates will be time-shifted
+## to a date relative to the offset date and the import date
+@offsetdate,02-07-2013 13:53:37
+
+@SQL,DELETE FROM IBANX_SIGNATURE WHERE OBJECT_ID IN (SELECT ID FROM IBANX_CHANGE_REQUEST WHERE NR = 'MOC-T00000009')
+@delete,change,number,MOC-T00000009,=
+@SQL,DELETE FROM IBANX_CHANGEREQUEST_LINK WHERE RA_OBJECT_ID NOT IN (SELECT ID FROM IBANX_CHANGE_REQUEST)
+@SQL,DELETE FROM IBANX_AUDIT_EVENT WHERE OBJECT_CLASS = 'ibanx.moc.ChangeRequest' AND OBJECT_ID NOT IN (SELECT ID FROM IBANX_CHANGE_REQUEST)
+@SQL,DELETE FROM IBANX_AUDIT_EVENT WHERE OBJECT_CLASS = 'ibanx.moc.ChangeAnalysis' AND OBJECT_ID NOT IN (SELECT ID FROM IBANX_CHANGEREQUEST_LINK WHERE LINKTYPE_NAME = 'request-analysis')
+@SQL,DELETE FROM IBANX_AUDIT_EVENT WHERE OBJECT_CLASS = 'ibanx.moc.ChangeActivity' AND OBJECT_ID NOT IN (SELECT ID FROM IBANX_CHANGEREQUEST_LINK WHERE LINKTYPE_NAME = 'request-activity')
+@SQL,DELETE FROM IBANX_CHANGE_ACTIVITY WHERE IS_TEMPLATE = 0 AND ID NOT IN (SELECT RB_OBJECT_ID FROM IBANX_CHANGEREQUEST_LINK WHERE LINKTYPE_NAME = 'request-activity')
+@SQL,DELETE FROM IBANX_CHANGE_ANALYSIS WHERE IS_TEMPLATE = 0 AND ID NOT IN (SELECT RB_OBJECT_ID FROM IBANX_CHANGEREQUEST_LINK WHERE LINKTYPE_NAME = 'request-analysis')
+
+
+change,MOC-T00000009,9,null,2013-07-02 08:58:08,2013-07-02 13:53:22,init,coordinator1,CHANGE,CHANGE_PROCESS,CHANGE_PROCESS,CHANGE_PREPAREEXECUTION,CHANGE_PROCESS,CHANGE_PREPAREEXECUTION,02-07-2013 13:44:55,title9,Problem,solution,None,Minimal Risk,null,null,null,null,null,null,1,0,projman1,coordinator1,null,null,null,null,null,0,0,0,0,0,PLANT1,30-100,30-100-0100,null,null,null,30-100-0100-LH10020,null,false,null,PLANT1,true,false
+@startTransaction
+@method,set,change,MOC-T00000009,duration,TEMPORARY
+@method,set,change,MOC-T00000009,emergencyByPass,
+@method,set,change,MOC-T00000009,flowId,small
+@method,set,change,MOC-T00000009,gatekeeper,
+@method,set,change,MOC-T00000009,initialrisk,6
+@method,set,change,MOC-T00000009,initialrisk_risk_frequency,1
+@method,set,change,MOC-T00000009,initialrisk_risk_metadata,changePeopleSafety=5\,changeHealth=0\,changeEnvironment=0\,changeAssets=0\,changeReputation=0\,changeSecurity=0\,
+@method,set,change,MOC-T00000009,inTurnAround,
+@method,set,change,MOC-T00000009,largeCategory,
+@method,set,change,MOC-T00000009,mediumCategory,
+@method,set,change,MOC-T00000009,riskafterchange,7
+@method,set,change,MOC-T00000009,riskafterchange_risk_frequency,1
+@method,set,change,MOC-T00000009,riskafterchange_risk_metadata,changePeopleSafety=4\,changeHealth=0\,changeEnvironment=0\,changeAssets=0\,changeReputation=0\,changeSecurity=0\,
+@method,set,change,MOC-T00000009,roi,0
+@method,set,change,MOC-T00000009,roiTimespan,
+@method,set,change,MOC-T00000009,sapArId,
+@method,set,change,MOC-T00000009,sapId,0
+@method,set,change,MOC-T00000009,tagDescription,Effluent tank T100 high level switch
+@endTransaction
+!ph1,request-analysis,2013-07-02 08:58:09,2013-07-02 08:58:09,null,null,request-analysis,request-analysis,MOC-T00000009,has-analysis,CAN-T13,is-analysis-of
+change-analysis,CAN-T13,null,null,2013-07-02 08:58:09,2013-07-02 08:58:27,init,init,APPROVAL_CHECKLIST_SMALL,DEFAULT_CL_PROCESS,DEFAULT_CL_PROCESS,CL_FINISHED,DEFAULT_CL_PROCESS,CL_OPEN,02-07-2013 08:58:21,null,null,null,coordinator1,PLANT1,true,false
+@startTransaction
+@method,set,change-analysis,CAN-T13,checklistVersion,1
+@method,setRepeating,change-analysis,CAN-T13,item_action,SUPERVISOR-SMALL
+@method,setRepeating,change-analysis,CAN-T13,item_action,SRE1-FED
+@method,setRepeating,change-analysis,CAN-T13,item_action,SRE2-FED
+@method,set,change-analysis,CAN-T13,item_categorySRE1,true
+@method,set,change-analysis,CAN-T13,item_categorySRE2,true
+@method,set,change-analysis,CAN-T13,item_categorySupervisor,true
+@method,set,change-analysis,CAN-T13,processOrder,
+@endTransaction
+!ph2,audit,SETSTATE_EVENT,Status of CAN-T13 changed into Finished,init,2013-07-02,ibanx.moc.ChangeAnalysis,CAN-T13
+!ph3,audit,SAVE_EVENT,Properties of CAN-T13 changed,init,2013-07-02,ibanx.moc.ChangeAnalysis,CAN-T13
+!ph4,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph5,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph6,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph7,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph8,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph9,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph10,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph11,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph12,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph13,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph14,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph15,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph16,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph17,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph18,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph19,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph20,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph21,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph22,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph23,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph24,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph25,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph26,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph27,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph28,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph29,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph30,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph31,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph32,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph33,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph34,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph35,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph36,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph37,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph38,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph39,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph40,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph41,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph42,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph43,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph44,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph45,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph46,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph47,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph48,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph49,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph50,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph51,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph52,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph53,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph54,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph55,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph56,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph57,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph58,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph59,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph60,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph61,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph62,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph63,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph64,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph65,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph66,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph67,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph68,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph69,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph70,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph71,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph72,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph73,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph74,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph75,signature,null,null,null,null,null,MOC-T00000009,CHANGE_FORAPPROVAL,null,null,null,null,false,No
+!ph76,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph77,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph78,attr-change,owner,coordinator1,init,1,!ph77
+!ph79,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph80,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph81,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph82,attr-change,owner,coordinator1,init,1,!ph81
+!ph83,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph84,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph85,audit,SAVE_EVENT,Properties of MOC-T00000009 changed,ibanxadmin,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph86,attr-change,owner,ibanxadmin,coordinator1,1,!ph85
+!ph87,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Prepare Execution because all activities have been finished.,ibanxadmin,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph88,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into In Execution,ibanxadmin,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph89,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Start up,ibanxadmin,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph90,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph91,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph92,attr-change,owner,coordinator1,init,1,!ph91
+!ph93,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph94,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph95,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph96,attr-change,owner,coordinator1,init,1,!ph95
+!ph97,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph98,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph99,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph100,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph101,attr-change,owner,coordinator1,init,1,!ph100
+!ph102,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph103,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph104,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph105,attr-change,owner,coordinator1,init,1,!ph104
+!ph106,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph107,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph108,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph109,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph110,attr-change,owner,coordinator1,init,1,!ph109
+!ph111,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph112,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph113,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph114,attr-change,owner,coordinator1,init,1,!ph113
+!ph115,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph116,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph117,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph118,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph119,attr-change,owner,coordinator1,init,1,!ph118
+!ph120,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph121,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph122,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph123,attr-change,owner,coordinator1,init,1,!ph122
+!ph124,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph125,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph126,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph127,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph128,attr-change,owner,coordinator1,init,1,!ph127
+!ph129,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph130,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph131,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph132,attr-change,owner,coordinator1,init,1,!ph131
+!ph133,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph134,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph135,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph136,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph137,attr-change,owner,coordinator1,init,1,!ph136
+!ph138,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph139,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph140,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph141,attr-change,owner,coordinator1,init,1,!ph140
+!ph142,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph143,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph144,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Prepare Execution because all activities have been finished.,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph145,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph146,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph147,attr-change,owner,coordinator1,init,1,!ph146
+!ph148,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph149,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph150,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph151,attr-change,owner,coordinator1,init,1,!ph150
+!ph152,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph153,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph154,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Prepare Execution because all activities have been finished.,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph155,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph156,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph157,attr-change,owner,coordinator1,init,1,!ph156
+!ph158,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph159,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph160,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph161,attr-change,owner,coordinator1,init,1,!ph160
+!ph162,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph163,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph164,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Prepare Execution because all activities have been finished.,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph165,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph166,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph167,attr-change,owner,coordinator1,init,1,!ph166
+!ph168,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph169,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph170,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph171,attr-change,owner,coordinator1,init,1,!ph170
+!ph172,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph173,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph174,audit,SAVE_EVENT,Properties of MOC-T00000009 changed,ibanxadmin,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph175,attr-change,owner,ibanxadmin,coordinator1,1,!ph174
+!ph176,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Prepare Execution because all activities have been finished.,ibanxadmin,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph177,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into In Execution,ibanxadmin,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph178,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Start up,ibanxadmin,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph179,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph180,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph181,attr-change,owner,coordinator1,init,1,!ph180
+!ph182,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph183,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph184,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph185,attr-change,owner,coordinator1,init,1,!ph184
+!ph186,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph187,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph188,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph189,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph190,attr-change,owner,coordinator1,init,1,!ph189
+!ph191,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph192,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph193,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph194,attr-change,owner,coordinator1,init,1,!ph193
+!ph195,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph196,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph197,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph198,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph199,attr-change,owner,coordinator1,init,1,!ph198
+!ph200,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph201,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph202,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph203,attr-change,owner,coordinator1,init,1,!ph202
+!ph204,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph205,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph206,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph207,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph208,attr-change,owner,coordinator1,init,1,!ph207
+!ph209,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph210,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph211,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph212,attr-change,owner,coordinator1,init,1,!ph211
+!ph213,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph214,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph215,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph216,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph217,attr-change,owner,coordinator1,init,1,!ph216
+!ph218,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph219,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph220,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph221,attr-change,owner,coordinator1,init,1,!ph220
+!ph222,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph223,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph224,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph225,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph226,attr-change,owner,coordinator1,init,1,!ph225
+!ph227,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph228,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph229,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph230,attr-change,owner,coordinator1,init,1,!ph229
+!ph231,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph232,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph233,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Prepare Execution because all activities have been finished.,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph234,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph235,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph236,attr-change,owner,coordinator1,init,1,!ph235
+!ph237,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph238,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph239,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph240,attr-change,owner,coordinator1,init,1,!ph239
+!ph241,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph242,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph243,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Prepare Execution because all activities have been finished.,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph244,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph245,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph246,attr-change,owner,coordinator1,init,1,!ph245
+!ph247,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph248,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph249,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph250,attr-change,owner,coordinator1,init,1,!ph249
+!ph251,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph252,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph253,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Prepare Execution because all activities have been finished.,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph254,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph255,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph256,attr-change,owner,coordinator1,init,1,!ph255
+!ph257,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph258,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph259,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph260,attr-change,owner,coordinator1,init,1,!ph259
+!ph261,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph262,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph263,audit,SAVE_EVENT,Properties of MOC-T00000009 changed,ibanxadmin,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph264,attr-change,owner,ibanxadmin,coordinator1,1,!ph263
+!ph265,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Prepare Execution because all activities have been finished.,ibanxadmin,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph266,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into In Execution,ibanxadmin,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph267,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Start up,ibanxadmin,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph268,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph269,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph270,attr-change,owner,coordinator1,init,1,!ph269
+!ph271,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph272,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph273,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph274,attr-change,owner,coordinator1,init,1,!ph273
+!ph275,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph276,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph277,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph278,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph279,attr-change,owner,coordinator1,init,1,!ph278
+!ph280,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph281,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph282,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph283,attr-change,owner,coordinator1,init,1,!ph282
+!ph284,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph285,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph286,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph287,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph288,attr-change,owner,coordinator1,init,1,!ph287
+!ph289,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph290,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph291,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph292,attr-change,owner,coordinator1,init,1,!ph291
+!ph293,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph294,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph295,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph296,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph297,attr-change,owner,coordinator1,init,1,!ph296
+!ph298,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph299,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph300,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph301,attr-change,owner,coordinator1,init,1,!ph300
+!ph302,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph303,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph304,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph305,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph306,attr-change,owner,coordinator1,init,1,!ph305
+!ph307,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph308,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph309,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph310,attr-change,owner,coordinator1,init,1,!ph309
+!ph311,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph312,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph313,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph314,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph315,attr-change,owner,coordinator1,init,1,!ph314
+!ph316,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph317,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph318,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph319,attr-change,owner,coordinator1,init,1,!ph318
+!ph320,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph321,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph322,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Prepare Execution because all activities have been finished.,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph323,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph324,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph325,attr-change,owner,coordinator1,init,1,!ph324
+!ph326,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph327,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph328,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph329,attr-change,owner,coordinator1,init,1,!ph328
+!ph330,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph331,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph332,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Prepare Execution because all activities have been finished.,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph333,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph334,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph335,attr-change,owner,coordinator1,init,1,!ph334
+!ph336,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph337,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph338,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph339,attr-change,owner,coordinator1,init,1,!ph338
+!ph340,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph341,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph342,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Prepare Execution because all activities have been finished.,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph343,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph344,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph345,attr-change,owner,coordinator1,init,1,!ph344
+!ph346,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph347,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph348,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph349,attr-change,owner,coordinator1,init,1,!ph348
+!ph350,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph351,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph352,audit,SAVE_EVENT,Properties of MOC-T00000009 changed,ibanxadmin,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph353,attr-change,owner,ibanxadmin,coordinator1,1,!ph352
+!ph354,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Prepare Execution because all activities have been finished.,ibanxadmin,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph355,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into In Execution,ibanxadmin,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph356,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Start up,ibanxadmin,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph357,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph358,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph359,attr-change,owner,coordinator1,init,1,!ph358
+!ph360,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph361,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph362,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph363,attr-change,owner,coordinator1,init,1,!ph362
+!ph364,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph365,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph366,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph367,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph368,attr-change,owner,coordinator1,init,1,!ph367
+!ph369,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph370,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph371,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph372,attr-change,owner,coordinator1,init,1,!ph371
+!ph373,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph374,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph375,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph376,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph377,attr-change,owner,coordinator1,init,1,!ph376
+!ph378,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph379,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph380,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph381,attr-change,owner,coordinator1,init,1,!ph380
+!ph382,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph383,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph384,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph385,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph386,attr-change,owner,coordinator1,init,1,!ph385
+!ph387,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph388,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph389,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph390,attr-change,owner,coordinator1,init,1,!ph389
+!ph391,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph392,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph393,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph394,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph395,attr-change,owner,coordinator1,init,1,!ph394
+!ph396,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph397,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph398,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph399,attr-change,owner,coordinator1,init,1,!ph398
+!ph400,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph401,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph402,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph403,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph404,attr-change,owner,coordinator1,init,1,!ph403
+!ph405,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph406,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph407,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph408,attr-change,owner,coordinator1,init,1,!ph407
+!ph409,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph410,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph411,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Prepare Execution because all activities have been finished.,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph412,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph413,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph414,attr-change,owner,coordinator1,init,1,!ph413
+!ph415,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph416,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph417,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph418,attr-change,owner,coordinator1,init,1,!ph417
+!ph419,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph420,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph421,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Prepare Execution because all activities have been finished.,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph422,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph423,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph424,attr-change,owner,coordinator1,init,1,!ph423
+!ph425,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph426,audit,CREATE_EVENT,MOC-T00000009 created,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph427,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Submitted,init,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph428,attr-change,owner,coordinator1,init,1,!ph427
+!ph429,audit,SETSTATE_EVENT,Status of MOC-T00000009 changed into Appr. Supervisors,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph430,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Appr. Site Resp. Eng. because all activities have been finished.,supciv1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph431,audit,AUTO_PROMOTE_CHANGE_BY_DISAPPROVING_ACTIVITY,Status of MOC-T00000009 changed into Prepare Execution because all activities have been finished.,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph432,audit,SAVE_EVENT,Properties of MOC-T00000009 changed,coordinator1,2013-07-02,ibanx.moc.ChangeRequest,MOC-T00000009
+!ph433,attr-change,assignee,projman1,,1,!ph432

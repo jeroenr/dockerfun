@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="yes" ?>
+<definition>
+    <portal>
+        <context id="default" title="Algemeen" uri="/action/SetMenuAction/menuId/200" collapsed="false">
+            <i18n>menuGeneral</i18n>
+            <role name="anonymous"/>
+            <role name="everyone"/>
+        </context>
+    </portal>
+    <menu>
+        <item id="200">
+            <i18n>menuPortal</i18n>
+            <action name="NullAction">
+                <template>portal,Portal.vm</template>
+                <module>portal</module>
+            </action>
+            <context>default</context>
+        </item>
+    </menu>
+</definition>

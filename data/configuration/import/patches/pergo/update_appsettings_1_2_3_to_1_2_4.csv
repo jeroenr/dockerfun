@@ -1,0 +1,3 @@
+## if set to true, the browser printdialog will be triggered automatically saving
+## the user two click in the browsermenu (FILE->PRINT)
+configurationSetting,all.autoprint.enabled,false

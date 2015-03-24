@@ -1,0 +1,55 @@
+## delete legacy file attachment permissions
+@delete,roleperm,permission,25,=
+@delete,roleperm,permission,26,=
+@delete,roleperm,permission,27,=
+
+@delete,permission,code,25,=
+@delete,permission,code,26,=
+@delete,permission,code,27,=
+
+## factor out baseline
+@delete,roleperm,acl.name,DefaultBaseline,=
+@delete,acl,name,DefaultBaseline,=
+
+@delete,roleperm,acl.name,StateAcl BASELINE_LIFECYCLE-DYNAMIC,=
+@delete,acl,name,StateAcl BASELINE_LIFECYCLE-DYNAMIC,=
+@delete,lifecyclestate_v2,name,DYNAMIC,=,lifecycle.number,BASELINE_LIFECYCLE,=
+
+@delete,roleperm,acl.name,StateAcl BASELINE_LIFECYCLE-FROZEN,=
+@delete,acl,name,StateAcl BASELINE_LIFECYCLE-FROZEN,=
+@delete,lifecyclestate_v2,name,FROZEN,=,lifecycle.number,BASELINE_LIFECYCLE,=
+
+@delete,lifecycle,number,BASELINE_LIFECYCLE,=
+
+@delete,configurationSetting,key,shift.dashboard.portlet.logitems_in_shift_for_org_level_four.fullquery,=
+@delete,configurationSetting,key,shift.dashboard.portlet.logitems_in_shift_for_org_level_four.subsetquery,=
+
+configurationSetting,shift.dashboard.portlet.tasks_in_shift_for_func_level_three.template,portlets/tasks_in_shift_for_xxx.vm
+configurationSetting,shift.dashboard.portlet.tasks_in_shift_for_func_level_three.discrAttribute,funcLevelThree
+configurationSetting,shift.dashboard.portlet.tasks_in_shift_for_func_level_three.picklistName,funcLevelThree
+configurationSetting,shift.dashboard.portlet.tasks_in_shift_for_func_level_three.orderBy,
+
+configurationSetting,shift.dashboard.portlet.tasks_in_previous_shift_for_func_level_three.template,portlets/tasks_in_previous_shift_for_xxx.vm
+configurationSetting,shift.dashboard.portlet.tasks_in_previous_shift_for_func_level_three.discrAttribute,funcLevelThree
+configurationSetting,shift.dashboard.portlet.tasks_in_previous_shift_for_func_level_three.picklistName,funcLevelThree
+configurationSetting,shift.dashboard.portlet.tasks_in_previous_shift_for_func_level_three.picklist.orderBy,
+
+configurationSetting,shift.dashboard.portlet.deviations_in_shift_for_func_level_two.template,portlets/deviations_in_shift_for_xxx.vm
+configurationSetting,shift.dashboard.portlet.deviations_in_shift_for_func_level_two.discrAttribute,funcLevelTwo
+configurationSetting,shift.dashboard.portlet.deviations_in_shift_for_func_level_two.picklistName,funcLevelTwo
+configurationSetting,shift.dashboard.portlet.deviations_in_shift_for_func_level_two.orderBy,
+
+configurationSetting,shift.dashboard.portlet.deviations_in_shift_for_func_level_three.template,portlets/deviations_in_shift_for_xxx.vm
+configurationSetting,shift.dashboard.portlet.deviations_in_shift_for_func_level_three.discrAttribute,funcLevelThree
+configurationSetting,shift.dashboard.portlet.deviations_in_shift_for_func_level_three.picklistName,funcLevelThree
+configurationSetting,shift.dashboard.portlet.deviations_in_shift_for_func_level_three.orderBy,
+
+configurationSetting,shift.dashboard.portlet.instructions_in_shift_for_func_level_two.template,portlets/instructions_in_shift_for_xxx.vm
+configurationSetting,shift.dashboard.portlet.instructions_in_shift_for_func_level_two.discrAttribute,funcLevelTwo
+configurationSetting,shift.dashboard.portlet.instructions_in_shift_for_func_level_two.picklistName,funcLevelTwo
+configurationSetting,shift.dashboard.portlet.instructions_in_shift_for_func_level_two.orderBy,
+
+configurationSetting,shift.dashboard.portlet.instructions_in_shift_for_func_level_three.template,portlets/instructions_in_shift_for_xxx.vm
+configurationSetting,shift.dashboard.portlet.instructions_in_shift_for_func_level_three.discrAttribute,funcLevelThree
+configurationSetting,shift.dashboard.portlet.instructions_in_shift_for_func_level_three.picklistName,funcLevelThree
+configurationSetting,shift.dashboard.portlet.instructions_in_shift_for_func_level_three.orderBy,

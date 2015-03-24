@@ -1,0 +1,4 @@
+@delete,vlist,group,issuePoint,0
+vlist,issuePoint,Uitgiftepunten,Keuzelijst uitgiftepunten
+
+valueitem_printTargets,issuePoint,Uitgiftepunt 1,Uitgiftepunt 1,Printer location 1

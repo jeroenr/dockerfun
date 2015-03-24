@@ -1,0 +1,4 @@
+#### DELETE FILE ATTACHMENTS PERMISSIONS
+@delete,roleperm,permission,25,=
+@delete,roleperm,permission,26,=
+@delete,roleperm,permission,27,=

@@ -1,0 +1,5 @@
+
+@register,R4.0-2
+
+## Following patch encrypts password in database table IBANX_USER->PASSWORD_VALUE 
+@patch,general,EncryptPasswordPatch

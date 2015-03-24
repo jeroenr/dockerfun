@@ -1,0 +1,95 @@
+@offsetdate,05-06-2013
+
+@delete,lotolist,number,MULT-03,=
+@delete,lotopoint,number,LP03,=
+@delete,lotopoint,number,LP04,=
+@delete,lotopoint,number,LP05,=
+@delete,lotoactivity,number,IA-03,=
+@delete,lotoactivity,number,IA-04,=
+@delete,lotoactivity,number,IA-05,=
+@delete,lotoactivity,number,IA-06,=
+@delete,lotoactivity,number,IA-07,=
+@delete,lotoactivity,number,IA-08,=
+@delete,claim,number,LC-03,=
+@delete,claim,number,LC-04,=
+@delete,claim,number,LC-05,=
+
+lotolist,MULTI_DISCIPLINE_ISOLATION_LIST,DEFAULT_LOTO_LIST_PROCESS,DEFAULT_LOTO_LIST_PROCESS,DRAFT,-1,null,2013-06-05 16:12:09,2013-06-05 16:12:09,ibanxadmin,ibanxadmin,05-06-2013 16:12:09,false,null,Remarks about work order,WO-0987,null,INSPECTION,null,null,null,null,PLANT1,30-100,30-120-0100,null,null,30-100-0100-LH10020,null,PLANT1,MULT-03,03,true,false
+@startTransaction
+@method,set,lotolist,MULT-03,documentReference,
+@method,set,lotolist,MULT-03,lockboxNr,
+@method,set,lotolist,MULT-03,lockNrEI,
+@method,set,lotolist,MULT-03,lockNrMechanical,
+@method,set,lotolist,MULT-03,lockNrProduction,
+@endTransaction
+!ph1,signature_lotolist,null,null,null,null,null,MULT-03,ISOLATE,null,null,null,null,false,Yes
+!ph2,audit,CREATE_EVENT,MULT-03 created,ibanxadmin,2013-06-05,ibanx.loto.IsolationList,MULT-03
+claim,DEFAULT_LOTO_CLAIM_PROCESS,DEFAULT_LOTO_CLAIM_PROCESS,PLANNED,-1,05-06-2013 16:12:18,null,2013-06-05 16:12:18,2013-06-05 16:12:18,ibanxadmin,null,MULT-03,LP03,PLANT1,LC-03,03,true,false
+lotopoint,EI_ISOLATION_POINT,DEFAULT_LOTO_POINT_PROCESS,DEFAULT_LOTO_POINT_PROCESS,ACTIVE,DEFAULT_LOTO_POINT_PROCESS,DRAFT,05-06-2013 16:12:18,false,null,03,2013-06-05 16:12:18,2013-06-05 16:12:18,ibanxadmin,ibanxadmin,null,null,null,false,03,false,null,,PLANT1,30-100,30-120-0100,null,null,30-100-0100-LH10020,null,PLANT1,LP03,03,true,false
+@startTransaction
+@method,set,lotopoint,LP03,discipline,PRODUCTION
+@method,set,lotopoint,LP03,energyTypeMagnitude,
+@method,set,lotopoint,LP03,insulationPresent,
+@method,set,lotopoint,LP03,isolatedState,CLOSED
+@method,set,lotopoint,LP03,lotoMethod,LOCK
+@method,set,lotopoint,LP03,scaffoldingReq,
+@method,set,lotopoint,LP03,subType,
+@method,set,lotopoint,LP03,tagDescription,Effluent tank T100 high level switch
+@method,set,lotopoint,LP03,timeNeeded,
+@method,set,lotopoint,LP03,tracingPresent,
+@method,set,lotopoint,LP03,tryOut,
+@method,set,lotopoint,LP03,unLotoMethod,REMOVESPADE
+@endTransaction
+!ph3,audit,CREATE_EVENT,LP03 created,ibanxadmin,2013-06-05,ibanx.loto.IsolationPoint,LP03
+claim,DEFAULT_LOTO_CLAIM_PROCESS,DEFAULT_LOTO_CLAIM_PROCESS,PLANNED,-1,05-06-2013 16:12:27,null,2013-06-05 16:12:27,2013-06-05 16:12:27,ibanxadmin,null,MULT-03,LP04,PLANT1,LC-04,04,true,false
+lotopoint,EI_ISOLATION_POINT,DEFAULT_LOTO_POINT_PROCESS,DEFAULT_LOTO_POINT_PROCESS,ACTIVE,DEFAULT_LOTO_POINT_PROCESS,DRAFT,05-06-2013 16:12:27,false,null,04,2013-06-05 16:12:27,2013-06-05 16:12:27,ibanxadmin,ibanxadmin,null,null,null,false,04,false,null,,PLANT1,30-100,30-120-0100,null,null,30-100-0100-LH10020,null,PLANT1,LP04,04,true,false
+@startTransaction
+@method,set,lotopoint,LP04,discipline,PRODUCTION
+@method,set,lotopoint,LP04,energyTypeMagnitude,
+@method,set,lotopoint,LP04,insulationPresent,
+@method,set,lotopoint,LP04,isolatedState,CLOSED
+@method,set,lotopoint,LP04,lotoMethod,LOCK
+@method,set,lotopoint,LP04,scaffoldingReq,
+@method,set,lotopoint,LP04,subType,
+@method,set,lotopoint,LP04,tagDescription,Effluent tank T100 high level switch
+@method,set,lotopoint,LP04,timeNeeded,
+@method,set,lotopoint,LP04,tracingPresent,
+@method,set,lotopoint,LP04,tryOut,
+@method,set,lotopoint,LP04,unLotoMethod,REMOVESPADE
+@endTransaction
+!ph4,audit,CREATE_EVENT,LP04 created,ibanxadmin,2013-06-05,ibanx.loto.IsolationPoint,LP04
+claim,DEFAULT_LOTO_CLAIM_PROCESS,DEFAULT_LOTO_CLAIM_PROCESS,PLANNED,-1,05-06-2013 16:12:35,null,2013-06-05 16:12:35,2013-06-05 16:12:35,ibanxadmin,null,MULT-03,LP05,PLANT1,LC-05,05,true,false
+lotopoint,EI_ISOLATION_POINT,DEFAULT_LOTO_POINT_PROCESS,DEFAULT_LOTO_POINT_PROCESS,ACTIVE,DEFAULT_LOTO_POINT_PROCESS,DRAFT,05-06-2013 16:12:35,false,null,05,2013-06-05 16:12:35,2013-06-05 16:12:35,ibanxadmin,ibanxadmin,null,null,null,false,05,false,null,,PLANT1,30-100,30-120-0100,null,null,30-100-0100-LH10020,null,PLANT1,LP05,05,true,false
+@startTransaction
+@method,set,lotopoint,LP05,discipline,PRODUCTION
+@method,set,lotopoint,LP05,energyTypeMagnitude,
+@method,set,lotopoint,LP05,insulationPresent,
+@method,set,lotopoint,LP05,isolatedState,CLOSED
+@method,set,lotopoint,LP05,lotoMethod,LOCK
+@method,set,lotopoint,LP05,scaffoldingReq,
+@method,set,lotopoint,LP05,subType,
+@method,set,lotopoint,LP05,tagDescription,Effluent tank T100 high level switch
+@method,set,lotopoint,LP05,timeNeeded,
+@method,set,lotopoint,LP05,tracingPresent,
+@method,set,lotopoint,LP05,tryOut,
+@method,set,lotopoint,LP05,unLotoMethod,REMOVESPADE
+@endTransaction
+!ph5,audit,CREATE_EVENT,LP05 created,ibanxadmin,2013-06-05,ibanx.loto.IsolationPoint,LP05
+lotoactivity,ISOLATION_ACTIVITY,DEFAULT_LOTO_ACTIVITY_PROCESS,DEFAULT_LOTO_ACTIVITY_PROCESS,PLANNED,-1,05-06-2013 16:12:18,Isolate,2013-06-05 16:12:18,2013-06-05 16:12:18,ibanxadmin,null,1,Isolate,0.0,null,null,MULT-03,PLANT1,IA-03,03,true,false
+!ph6,activity-claim,IA-03,LC-03,activity-claim,2013-06-05 16:12:18,2013-06-05 16:12:18,null,null,activity-claim,is-activity-of,is-claim-of
+!ph7,audit,CREATE_EVENT,IA-03 created,ibanxadmin,2013-06-05,ibanx.loto.IsolationActivity,IA-03
+lotoactivity,DE_ISOLATION_ACTIVITY,DEFAULT_LOTO_ACTIVITY_PROCESS,DEFAULT_LOTO_ACTIVITY_PROCESS,PLANNED,-1,05-06-2013 16:12:18,De-isolate,2013-06-05 16:12:18,2013-06-05 16:12:18,ibanxadmin,null,1,De-isolate,0.0,null,null,MULT-03,PLANT1,IA-04,04,true,false
+!ph8,activity-claim,IA-04,LC-03,activity-claim,2013-06-05 16:12:18,2013-06-05 16:12:18,null,null,activity-claim,is-activity-of,is-claim-of
+!ph9,audit,CREATE_EVENT,IA-04 created,ibanxadmin,2013-06-05,ibanx.loto.IsolationActivity,IA-04
+lotoactivity,ISOLATION_ACTIVITY,DEFAULT_LOTO_ACTIVITY_PROCESS,DEFAULT_LOTO_ACTIVITY_PROCESS,PLANNED,-1,05-06-2013 16:12:27,Isolate,2013-06-05 16:12:27,2013-06-05 16:12:27,ibanxadmin,null,2,Isolate,0.0,null,null,MULT-03,PLANT1,IA-05,05,true,false
+!ph10,activity-claim,IA-05,LC-04,activity-claim,2013-06-05 16:12:27,2013-06-05 16:12:27,null,null,activity-claim,is-activity-of,is-claim-of
+!ph11,audit,CREATE_EVENT,IA-05 created,ibanxadmin,2013-06-05,ibanx.loto.IsolationActivity,IA-05
+lotoactivity,DE_ISOLATION_ACTIVITY,DEFAULT_LOTO_ACTIVITY_PROCESS,DEFAULT_LOTO_ACTIVITY_PROCESS,PLANNED,-1,05-06-2013 16:12:27,De-isolate,2013-06-05 16:12:27,2013-06-05 16:12:27,ibanxadmin,null,2,De-isolate,0.0,null,null,MULT-03,PLANT1,IA-06,06,true,false
+!ph12,activity-claim,IA-06,LC-04,activity-claim,2013-06-05 16:12:27,2013-06-05 16:12:27,null,null,activity-claim,is-activity-of,is-claim-of
+!ph13,audit,CREATE_EVENT,IA-06 created,ibanxadmin,2013-06-05,ibanx.loto.IsolationActivity,IA-06
+lotoactivity,ISOLATION_ACTIVITY,DEFAULT_LOTO_ACTIVITY_PROCESS,DEFAULT_LOTO_ACTIVITY_PROCESS,PLANNED,-1,05-06-2013 16:12:35,Isolate,2013-06-05 16:12:35,2013-06-05 16:12:35,ibanxadmin,null,3,Isolate,0.0,null,null,MULT-03,PLANT1,IA-07,07,true,false
+!ph14,activity-claim,IA-07,LC-05,activity-claim,2013-06-05 16:12:35,2013-06-05 16:12:35,null,null,activity-claim,is-activity-of,is-claim-of
+!ph15,audit,CREATE_EVENT,IA-07 created,ibanxadmin,2013-06-05,ibanx.loto.IsolationActivity,IA-07
+lotoactivity,DE_ISOLATION_ACTIVITY,DEFAULT_LOTO_ACTIVITY_PROCESS,DEFAULT_LOTO_ACTIVITY_PROCESS,PLANNED,-1,05-06-2013 16:12:35,De-isolate,2013-06-05 16:12:35,2013-06-05 16:12:35,ibanxadmin,null,3,De-isolate,0.0,null,null,MULT-03,PLANT1,IA-08,08,true,false
+!ph16,activity-claim,IA-08,LC-05,activity-claim,2013-06-05 16:12:35,2013-06-05 16:12:35,null,null,activity-claim,is-activity-of,is-claim-of
+!ph17,audit,CREATE_EVENT,IA-08 created,ibanxadmin,2013-06-05,ibanx.loto.IsolationActivity,IA-08

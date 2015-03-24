@@ -1,0 +1,545 @@
+<?xml version="1.0" standalone="yes" ?>
+<definition>
+    <portal>
+        <context id="default" uri="/action/SetMenuAction/menuId/100">
+            <i18n>menuGeneral</i18n>
+            <role name="system_administrator"/>
+            <role name="application_administrator"/>
+            <role name="application_configurator"/>
+        </context>
+        <context id="configuration" uri="/action/SetMenuAction/menuId/100">
+            <i18n>menuApplicationAdministration</i18n>
+            <role name="system_administrator"/>
+            <role name="application_administrator"/>
+            <role name="application_configurator"/>
+        </context>
+        <context id="system" uri="/action/SetMenuAction/menuId/100">
+            <i18n>menuSystemAdministration</i18n>
+            <role name="system_administrator"/>
+            <role name="application_configurator"/>
+        </context>
+        <!--
+        <context id="system_integration" uri="/action/SetMenuAction/menuId/100">
+            <i18n>menuIntegrationAdministration</i18n>
+            <role name="system_administrator"/>
+            <role name="application_configurator"/>
+        </context>
+        -->
+        <context id="technical_configuration" uri="/action/SetMenuAction/menuId/100">
+            <i18n>menuApplicationAdmin</i18n>
+            <role name="application_configurator"/>
+        </context>
+        <context id="logevent" uri="/action/SetMenuAction/menuId/100">
+            <i18n>uniteOperatePlantLink</i18n>
+            <role name="system_administrator"/>
+            <role name="application_administrator"/>
+            <role name="application_configurator"/>
+        </context>
+        <context id="permit" uri="/action/SetMenuAction/menuId/100">
+            <i18n>permit.moduleName</i18n>
+            <role name="system_administrator"/>
+            <role name="application_administrator"/>
+            <role name="application_configurator"/>
+        </context>
+        <context id="ra" uri="/action/SetMenuAction/menuId/100">
+            <i18n>ra.moduleName</i18n>
+            <role name="system_administrator"/>
+            <role name="application_administrator"/>
+            <role name="application_configurator"/>
+        </context>
+        <context id="tra" uri="/action/SetMenuAction/menuId/100">
+            <i18n>tra.moduleName</i18n>
+            <role name="system_administrator"/>
+            <role name="application_administrator"/>
+            <role name="application_configurator"/>
+        </context>
+        <context id="moc" uri="/action/SetMenuAction/menuId/100">
+            <i18n>moc.moduleName</i18n>
+            <role name="system_administrator"/>
+            <role name="application_administrator"/>
+            <role name="application_configurator"/>
+        </context>
+        <context id="incident" uri="/action/SetMenuAction/menuId/100">
+            <i18n>incident.moduleName</i18n>
+            <role name="system_administrator"/>
+            <role name="application_administrator"/>
+            <role name="application_configurator"/>
+        </context>
+    </portal>
+
+    <menu>
+        <item id="100" >
+            <context>default</context>
+            <i18n>menuIntroduction</i18n>
+            <action name="NullAction">
+                <module>admin</module>
+                <template>admin,index.vm</template>
+            </action>
+        </item>
+
+        <item id="250" >
+            <context>configuration</context>
+            <i18n>menuOrganizationsAdmin</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.org.OrganizationIF</objectClassName>
+                <key>form</key>
+                <form.businessObjectType.number>ORG</form.businessObjectType.number>
+                <form.businessObjectType.number>DEFAULT_SITE</form.businessObjectType.number>
+                <form.businessObjectType.number>DEFAULT_PLANT</form.businessObjectType.number>
+            </action>
+        </item>
+        <item id="251" >
+            <i18n>menuSitesAdmin</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.org.Organization</objectClassName>
+                <key>form</key>
+                <form.businessObjectType.number>DEFAULT_SITE</form.businessObjectType.number>
+                <operator.form.businessObjectType.number>0</operator.form.businessObjectType.number>
+                <rsfilter>form.businessObjectType.number</rsfilter>
+            </action>
+            <context>configuration</context>
+        </item>
+        <item id="252" >
+            <i18n>menuFuncLevelOnesAdmin</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.org.Organization</objectClassName>
+                <key>form</key>
+                <form.businessObjectType.number>DEFAULT_PLANT</form.businessObjectType.number>
+                <operator.form.businessObjectType.number>0</operator.form.businessObjectType.number>
+                <rsfilter>form.businessObjectType.number</rsfilter>
+            </action>
+            <context>configuration</context>
+        </item>
+        <item id="253" >
+            <i18n>menuTeamsAdmin</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.org.TeamIF</objectClassName>
+                <key>form</key>
+                <form.businessObjectType.number>DEFAULT_SHIFT_TEAM</form.businessObjectType.number>
+                <operator.form.businessObjectType.number>0</operator.form.businessObjectType.number>
+                <rsfilter>form.businessObjectType.number</rsfilter>
+            </action>
+            <context>logevent</context>
+        </item>
+        <item id="255" >
+            <context>configuration</context>
+            <i18n>menuUsers</i18n>
+            <action name="SetMenuAction">
+                <menuId>257</menuId>
+            </action>
+            <submenu>
+                <item id="257" >
+                    <i18n>menuActiveUsers</i18n>
+                    <action name="Query">
+                        <objectClassName>ibanx.org.UserIF</objectClassName>
+                        <key>form</key>
+                        <form.lifecycleState.name>VALID</form.lifecycleState.name>
+                    </action>
+                </item>
+                <item id="258" >
+                    <i18n>menuInactiveUsers</i18n>
+                    <action name="Query">
+                        <objectClassName>ibanx.org.UserIF</objectClassName>
+                        <key>form</key>
+                        <form.lifecycleState.name>INVALID</form.lifecycleState.name>
+                    </action>
+                </item>
+                <item id="256" >
+                    <i18n>menuNonValidatedUsers</i18n>
+                    <action name="Query">
+                        <objectClassName>ibanx.org.UserIF</objectClassName>
+                        <key>form</key>
+                        <form.lifecycleState.name>UNCONFIRMED</form.lifecycleState.name>
+                    </action>
+                </item>
+            </submenu>
+        </item>
+        <item id="260" >
+            <context>configuration</context>
+            <i18n>menuGroupsAdmin</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.org.GroupIF</objectClassName>
+            </action>
+        </item>
+        <item id="270" >
+            <context>configuration</context>
+            <i18n>menuRolesAdmin</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.org.RoleIF</objectClassName>
+            </action>
+        </item>
+        <item id="650" >
+            <context>configuration</context>
+            <i18n>menuValueListsAdmin</i18n>
+            <action name="ValueListAction">
+                <objectClassName>ibanx.object.ValueListIF</objectClassName>
+            </action>
+        </item>
+        <item id="651" >
+            <context>configuration</context>
+            <i18n>menuRewirePBSAdmin</i18n>
+            <action name="ValueItemRewireAction"/>
+        </item>
+        <item id="655" >
+            <context>configuration</context>
+            <i18n>menuAuditTrail</i18n>
+            <action name="NullAction">
+                <template>admin,audit,AuditTrail.vm</template>
+            </action>
+        </item>
+
+        <!-- SYSTEM ADMIN INTEGRATION -->
+        <!--
+        <item id="401" >
+            <context>system_integration</context>
+            <i18n>menuImportPbs</i18n>
+            <action name="NullAction">
+                <template>admin,pbs,UploadCsvPbs.vm</template>
+            </action>
+        </item>
+        <item id="402" >
+            <context>system_integration</context>
+            <i18n>menuImportEquipment</i18n>
+            <action name="NullAction">
+                <template>admin,pbs,UploadCsvEquipment.vm</template>
+            </action>
+        </item>
+        -->
+        <!--
+        <item id="405" >
+            <context>system_integration</context>
+            <i18n>menuImportPrimavera</i18n>
+            <action name="NullAction">
+                <template>admin,import,ImportPrimavera.vm</template>
+            </action>
+        </item>
+         -->
+        <!-- PCQ SPECIFIC -->
+        <item id="600" >
+            <context>tra</context>
+            <i18n>menuTRAMeasures</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.tra.MeasureDefinitionIF</objectClassName>
+            </action>
+        </item>
+        <item id="601" >
+            <context>ra</context>
+            <i18n>menuRARiskCalculationConfiguration</i18n>
+            <action name="RiskCalculationConfigurationAction"/>
+        </item>
+        <item id="605" >
+            <context>permit</context>
+            <i18n>menuCleanup</i18n>
+            <action name="PrepareCleanupAction"/>
+        </item>
+        <item id="610" >
+            <context>permit</context>
+            <i18n>menuMaps</i18n>
+            <action name="NullAction">
+                <template>admin,map,map.vm</template>
+            </action>
+        </item>
+        <item id="615" >
+            <context>permit</context>
+            <i18n>menuConditionTypesAdmin</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.condition.ConditionTypeIF</objectClassName>
+                <key>form</key>
+                <reportSpecId>PADMINCONDTYPES</reportSpecId>
+                urce
+            </action>
+        </item>
+
+        <!-- CHQ SPECIFIC -->
+        <item id="1622">
+            <context>moc</context>
+            <i18n>menuChecklistAdministration</i18n>
+            <action name="ChecklistAdministrationAction">
+                <eventSubmit_doViewChecklists>true</eventSubmit_doViewChecklists>
+                <module>admin</module>
+            </action>
+        </item>
+        <item id="1625">
+            <context>moc</context>
+            <i18n>menuActivityTemplatesActive</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.moc.ChangeActivityIF</objectClassName>
+                <module>admin</module>
+                <reportSpecId>templateactivities</reportSpecId>
+                <key>form</key>
+                <form.isTemplate>true</form.isTemplate>
+                <form.lifecycleState.name>CA_TEMPLATE_ACTIVE
+                </form.lifecycleState.name>
+            </action>
+        </item>
+        <item id="1626">
+            <context>moc</context>
+            <i18n>actionTitleCreateTemplateChangeActivity</i18n>
+            <action name="ChangeActivityAction">
+                <module>admin</module>
+                <objectClassName>ibanx.moc.ChangeActivityIF</objectClassName>
+                <eventSubmit_doNew>true</eventSubmit_doNew>
+                <isTemplate>true</isTemplate>
+            </action>
+        </item>
+        <!--
+        <item id="1627">
+            <context>moc</context>
+            <i18n>menuSearchTemplateChangeActivity</i18n>
+            <action name="SearchObject">
+                <objectClassName>ibanx.moc.ChangeActivityIF</objectClassName>
+                <module>admin</module>
+                <reportSpecId>templateactivities</reportSpecId>
+                <key>form</key>
+                <form.isTemplate>true</form.isTemplate>
+            </action>
+        </item>
+        -->
+        <!-- NOTIFICATION -->
+        <item id="630" >
+            <context>moc</context>
+            <i18n>menuNotificationRuleAdmin</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.rules.NotificationRuleIF</objectClassName>
+            </action>
+        </item>
+
+        <!-- ICQ -->
+        <item id="635" >
+           <context>incident</context>
+           <i18n>menuConfigureIncidentRegistration</i18n>
+           <action name="ConfigureIncidentFlowAction"/>
+        </item>
+
+        <item id="636" >
+            <context>incident</context>
+            <i18n>menuRebuildSolrIndex</i18n>
+            <action name="SolrReIndex"/>
+        </item>
+        <item id="637">
+            <context>incident</context>
+            <i18n>menuRebuildReportingIndex</i18n>
+            <action name="ReportingDBReIndex"/>
+        </item>
+        <!--
+        <item id="638" >
+            <context>incident</context>
+            <i18n>menuRebuildDBIndex</i18n>
+            <action name="DBReIndex"/>
+        </item>
+        <item id="639">
+            <context>incident</context>
+            <i18n>menuRebuildEventStore</i18n>
+            <action name="ReBuildEventStore"/>
+        </item>
+        -->
+        <!-- SCQ SPECIFIC -->
+        <item id="620">
+            <context>logevent</context>
+            <i18n>menuConfigurationWizard</i18n>
+            <action name="ConfigurationWizardAction"/>
+        </item>
+        <item id="621" >
+            <context>logevent</context>
+            <i18n>menuConfigurationImportWizard</i18n>
+            <action name="ImportConfigurationAction"/>
+        </item>
+        <item id="622" >
+            <context>logevent</context>
+            <i18n>menuConfigurationExportWizard</i18n>
+            <action name="ExportConfigurationAction"/>
+        </item>
+
+        <item id="625">
+            <context>logevent</context>
+            <i18n>menuPortalConfiguration</i18n>
+            <action name="NullAction">
+                <template>admin,portal,Upload.vm</template>
+            </action>
+        </item>
+        <item id="626" >
+            <context>logevent</context>
+            <i18n>menuRosterFromExcel</i18n>
+            <action name="RosterFromXlsAction"/>
+        </item>
+        <item id="627" >
+            <context>logevent</context>
+            <i18n>menuRoster</i18n>
+            <action name="logbook.RosterAction">
+                <eventSubmit_doNew>true</eventSubmit_doNew>
+                <objectClassName>ibanx.logbook.RosterScheduleIF</objectClassName>
+            </action>
+        </item>
+        <item id="628">
+            <context>logevent</context>
+            <i18n>menuRollbackRoster</i18n>
+            <action name="logbook.RosterAction">
+                <eventSubmit_doPrepare_rollback>true
+                </eventSubmit_doPrepare_rollback>
+                <objectClassName>ibanx.logbook.RosterScheduleIF</objectClassName>
+            </action>
+        </item>
+        <item id="629" >
+            <context>logevent</context>
+            <i18n>menuRosterSchedules</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.logbook.RosterScheduleIF</objectClassName>
+            </action>
+        </item>
+
+        <!-- SYSTEM ADMIN -->
+        <item id="501" >
+            <context>system</context>
+            <i18n>menuImportData</i18n>
+            <action name="admin.ImportBatchAction">
+                <template>admin,system,Import.vm</template>
+            </action>
+        </item>
+        <item id="502" >
+            <context>system</context>
+            <i18n>menuExportData</i18n>
+            <action name="NullAction">
+                <template>admin,system,Export.vm</template>
+            </action>
+        </item>
+        <item id="503" >
+            <context>system</context>
+            <i18n>menuExportCustomerData</i18n>
+            <action name="NullAction">
+                <template>admin,migrate,ExportData.vm</template>
+            </action>
+        </item>
+        <item id="504" >
+            <context>system</context>
+            <i18n>menuImportCustomerData</i18n>
+            <action name="NullAction">
+                <template>admin,migrate,ImportData.vm</template>
+            </action>
+        </item>
+
+        <item id="505" >
+            <context>system</context>
+            <i18n>menuImportConsole</i18n>
+            <action name="Import">
+            </action>
+        </item>
+        <item id="506" >
+            <context>system</context>
+            <i18n>menuSystemStatus</i18n>
+            <action name="admin.SystemStatus"/>
+        </item>
+        <item id="507" >
+            <context>default</context>
+            <i18n>menuLicenseOverview</i18n>
+            <action name="LicenseOverviewAction">
+            </action>
+        </item>
+        <item id="508" >
+            <context>default</context>
+            <i18n>menuLicenseAdmin</i18n>
+            <action name="LicenseAction">
+            </action>
+        </item>
+
+        <!-- TECHNICAL CONFIG ADMIN -->
+        <item id="750" >
+            <context>technical_configuration</context>
+            <i18n>menuSystemApplicationDebugSettings</i18n>
+            <action name="admin.ApplicationSettingsAction">
+                <template>admin,debugsettings,appdebugsettings.vm</template>
+            </action>
+        </item>
+
+        <item id="751">
+            <context>technical_configuration</context>
+            <i18n>menuSystemUserDebugSettings</i18n>
+            <action name="admin.DebugSettingsAction">
+                <template>admin,debugsettings,debugsettings.vm</template>
+            </action>
+        </item>
+
+
+        <item id="755" >
+            <context>technical_configuration</context>
+            <i18n>menuGeneralSettings</i18n>
+            <action name="admin.ApplicationSettingsAction">
+                <template>admin,appsettings,general_settings.vm</template>
+            </action>
+        </item>
+
+        <!-- TECHNICAL CONFIG ADMIN -->
+        <item id="800">
+            <context>technical_configuration</context>
+            <i18n>menuUniteConfiguration</i18n>
+            <action name="UniteConfigurationAction"/>
+        </item>
+        <item id="830" >
+            <context>technical_configuration</context>
+            <i18n>menuAclsAdmin</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.security.AclIF</objectClassName>
+            </action>
+        </item>
+        <item id="840" >
+            <context>technical_configuration</context>
+            <i18n>menuLifecyclesAdmin</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.lifecycle.LifecycleIF</objectClassName>
+            </action>
+        </item>
+        <item id="850" >
+            <context>technical_configuration</context>
+            <i18n>menuBusinessObjectTypesAdmin</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.object.BusinessObjectTypeIF</objectClassName>
+            </action>
+        </item>
+        <item id="860" >
+            <context>technical_configuration</context>
+            <i18n>menuSystemOrganizationsAdmin</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.org.OrganizationIF</objectClassName>
+                <key>form</key>
+                <form.businessObjectType.number>GLOBAL_ORG
+                </form.businessObjectType.number>
+                <operator.form.businessObjectType.number>0
+                </operator.form.businessObjectType.number>
+            </action>
+        </item>
+        <item id="870">
+            <context>technical_configuration</context>
+            <i18n>menuLinkTypesAdmin</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.link.LinkTypeIF</objectClassName>
+            </action>
+        </item>
+        <item id="880">
+            <context>technical_configuration</context>
+            <i18n>savedQueries</i18n>
+            <action name="Query">
+                <objectClassName>ibanx.report.QuerySpecIF</objectClassName>
+                <module>admin</module>
+            </action>
+        </item>
+
+        <item id="900">
+            <context>technical_configuration</context>
+            <i18n>menuPluginManager</i18n>
+            <action name="admin.PluginAdminAction"/>
+        </item>
+        <item id="905">
+            <context>technical_configuration</context>
+            <i18n>menuJobConsole</i18n>
+            <action name="NullAction">
+                <template>admin,job,jobnames.vm</template>
+            </action>
+        </item>
+        <item id="915">
+            <context>technical_configuration</context>
+            <i18n>menuCacheConsole</i18n>
+            <action name="NullAction">
+                <template>admin,cache,cache.vm</template>
+            </action>
+        </item>
+    </menu>
+</definition>

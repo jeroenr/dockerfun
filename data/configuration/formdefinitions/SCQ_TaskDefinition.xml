@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+
+    <form name="TD:DEFAULT_TASK:CREATE" >
+        <fieldsetref name="GENERIC:SECTION:PBS" />
+        <fieldsetref name="TD:TASK" />
+        <fieldsetref name="TD:TASK:MISCELLANEOUS" />
+        <fieldsetref name="GENERIC:SCQ:WHITELISTING" />
+    </form>
+
+    <form name="TD:DEFAULT_TASK:EDIT" >
+        <fieldsetref name="GENERIC:SECTION:PBS" />
+        <fieldsetref name="TD:TASK" />
+        <fieldsetref name="TD:TASK:MISCELLANEOUS" />
+        <fieldsetref name="GENERIC:SCQ:WHITELISTING" />
+    </form>
+
+	<form name="TD:DEFAULT_TASK:VIEW:1" mode="view">
+		<fieldsetref name="GENERIC:SECTION:PBS" />
+		<fieldsetref name="TD:TASK" />
+		<fieldsetref name="TD:TASK:MISCELLANEOUS" />
+		<fieldsetref name="TD:DETAILS" />
+	</form>
+
+    <fieldset name="TD:TASK" label="TASK:SECTION:TASK">
+        <textarea name="title" maxLength="1000" required="true" width="wide" label="taskTitle"/>
+        <select name="priority">
+            <source class="valuelist" valuelistNameRef="priorities" display="description"/>
+        </select>
+        <suggest name="assignee">
+            <source class="userlist"/>
+        </suggest>
+    </fieldset>
+
+    <fieldset name="TD:TASK:MISCELLANEOUS" label="TASK:SECTION:MISCELLANEOUS">
+        <textarea name="description" maxLength="1000" width="wide"/>
+    </fieldset>
+
+	<fieldset name="TD:DETAILS" label="taskDefinitionFields">
+		<checkbox name="enabled" />
+		<textfield name="condition4_value" label="orgContext"/>
+		<multiselect name="condition6_value" label="shiftType">
+			<source class="valuelist" valuelistNameRef="shiftType" />
+		</multiselect>
+		<textfield name="condition5_value" label="team"/>
+		<textfield name="condition8_startDate"/>
+		<textfield name="condition8_endDate"/>
+	</fieldset>
+</forms>

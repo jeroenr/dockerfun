@@ -1,0 +1,16 @@
+## rename all ACL's using the SQL script from SCQ 1.3->1.6 update (from update_core_1_3_x_to_1_6.csv)
+## change acl names to strict use of naming regime
+## mysql
+@SQL,UPDATE IBANX_ACL AS ACL\, IBANX_LIFECYCLE_STATE AS STATE\, IBANX_LIFECYCLE AS LC SET ACL.NAME = CONCAT('StateAcl '\, LC.NR\,'-'\,STATE.NAME) WHERE ACL.ID = STATE.STATE_ACL_ID AND STATE.LIFECYCLE_ID = LC.ID,mysql
+## oracle
+@SQL,MERGE INTO IBANX_ACL N_ACL USING (SELECT ACL.ID ID\,  CONCAT('StateAcl '\, CONCAT(LC.NR\, CONCAT('-'\,STATE.NAME))) NEW_NAME FROM IBANX_ACL ACL\, IBANX_LIFECYCLE_STATE STATE\, IBANX_LIFECYCLE LC WHERE ACL.ID = STATE.STATE_ACL_ID AND STATE.LIFECYCLE_ID = LC.ID) T_ACL ON (N_ACL.ID = T_ACL.ID) WHEN MATCHED THEN UPDATE SET N_ACL.NAME = T_ACL.NEW_NAME,oracle
+## mssql
+@SQL,UPDATE IBANX_ACL SET NAME = 'StateAcl ' + LC.NR + '-' + STATE.NAME FROM IBANX_ACL ACL\, IBANX_LIFECYCLE_STATE STATE\, IBANX_LIFECYCLE LC WHERE ACL.ID = STATE.STATE_ACL_ID AND STATE.LIFECYCLE_ID = LC.ID,mssql
+
+## delete legacy references to ibanx.picklist.ItemIF queryspecs
+## @delete,acl,name,Master ACL for picklist item=
+## @delete,queryspec,number,lookup,=
+
+
+role,permit_administrator,permit,nl::vergunning beheerder;en::permit administrator
+

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+    <fieldset name="ADHOC:ISOLATION_ACTIVITY:DETAILS" label="LABEL_SECTION_PROPERTIES">
+        <select name="discipline" required="true">
+            <source class="valuelist" valuelistNameRef="lotoDiscipline" display="description"/>
+        </select>
+        <textarea name="description" maxLength="250" required="true" width="wide" label="titleActivity"/>
+        <textfield name="executionDetails" maxLength="80" width="wide"/>
+        <hidden name="duration" value="0"/>
+    </fieldset>
+    <fieldset name="ISOLATION_ACTIVITY:DETAILS" label="LABEL_SECTION_PROPERTIES">
+        <select name="discipline" required="true">
+            <source class="valuelist" valuelistNameRef="lotoDiscipline" display="description"/>
+        </select>
+        <textarea name="description" maxLength="250" required="true" width="wide" label="titleActivity"/>
+        <textfield name="executionDetails" maxLength="80" width="wide"/>
+        <hidden name="duration" value="0"/>
+    </fieldset>
+
+    <fieldset name="ISOLATION_ACTIVITY:CONFIRM:FINISH" label="LABEL_SECTION_PROPERTIES">
+        <textfield name="name" label="title"/>
+        <textfield name="orgContext"/>
+        <textarea name="dateFinished"/>
+        <textfield name="finishedBy"/>
+        <textfield name="description"/>
+        <textfield name="remarks"/>
+    </fieldset>
+    <fieldset name="ISOLATION_ACTIVITY:ACTIVITYINFO:CONFIRM" label="additionalActivityInfo">
+        <textfield name="executionDetails" maxLength="80" width="wide"/>
+    </fieldset>
+
+    <form name="ISOLATION_ACTIVITY:CONFIRM" mode="view">
+        <fieldsetref name="ISOLATION_ACTIVITY:DETAILS"/>
+    </form>
+    <form name="DE_ISOLATION_ACTIVITY:CONFIRM" mode="view">
+        <fieldsetref name="ISOLATION_ACTIVITY:DETAILS"/>
+    </form>
+
+    <form name="ISOLATION_ACTIVITY:VIEW:1" mode="view">
+        <fieldsetref name="ISOLATION_ACTIVITY:DETAILS"/>
+    </form>
+    <form name="DE_ISOLATION_ACTIVITY:VIEW:1" mode="view">
+        <fieldsetref name="ISOLATION_ACTIVITY:DETAILS"/>
+    </form>
+
+    <form name="ISOLATION_ACTIVITY:EDIT:ADHOC">
+        <fieldsetref name="ADHOC:ISOLATION_ACTIVITY:DETAILS"/>
+        <fieldsetref name="GENERIC_LOTO_ACTIVITY:WHITELISTING"/>
+    </form>
+    <form name="ISOLATION_ACTIVITY:EDIT">
+        <fieldsetref name="ISOLATION_ACTIVITY:DETAILS"/>
+        <fieldsetref name="GENERIC_LOTO_ACTIVITY:WHITELISTING"/>
+    </form>
+    <form name="DE_ISOLATION_ACTIVITY:EDIT">
+        <fieldsetref name="ISOLATION_ACTIVITY:DETAILS"/>
+        <fieldsetref name="GENERIC_LOTO_ACTIVITY:WHITELISTING"/>
+    </form>
+    <form name="DE_ISOLATION_ACTIVITY:EDIT:ADHOC">
+        <fieldsetref name="ADHOC:ISOLATION_ACTIVITY:DETAILS"/>
+        <fieldsetref name="GENERIC_LOTO_ACTIVITY:WHITELISTING"/>
+    </form>
+
+    <form name="ISOLATION_ACTIVITY:VIEW:2" mode="view">
+        <fieldsetref name="ISOLATION_ACTIVITY:DETAILS"/>
+    </form>
+    <form name="ISOLATION_ACTIVITY:VIEW:2:ADHOC" mode="view">
+        <fieldsetref name="ADHOC:ISOLATION_ACTIVITY:DETAILS"/>
+    </form>
+    <form name="DE_ISOLATION_ACTIVITY:VIEW:2" mode="view">
+        <fieldsetref name="ISOLATION_ACTIVITY:DETAILS"/>
+    </form>
+    <form name="DE_ISOLATION_ACTIVITY:VIEW:2:ADHOC" mode="view">
+        <fieldsetref name="ADHOC:ISOLATION_ACTIVITY:DETAILS"/>
+    </form>
+
+    <form name="ISOLATION_ACTIVITY:CREATE">
+        <fieldsetref name="ADHOC:ISOLATION_ACTIVITY:DETAILS"/>
+        <fieldsetref name="GENERIC_LOTO_ACTIVITY:WHITELISTING"/>
+    </form>
+    <form name="DE_ISOLATION_ACTIVITY:CREATE">
+        <fieldsetref name="ADHOC:ISOLATION_ACTIVITY:DETAILS"/>
+        <fieldsetref name="GENERIC_LOTO_ACTIVITY:WHITELISTING"/>
+    </form>
+
+    <form name="ISOLATION_ACTIVITY:FINISH" mode="edit">
+        <fieldsetref name="ISOLATION_ACTIVITY:CONFIRM:FINISH" mode="view"/>
+        <fieldsetref name="ISOLATION_ACTIVITY:ACTIVITYINFO:CONFIRM"/>
+        <fieldsetref name="GENERIC_LOTO_ACTIVITY:WHITELISTING"/>
+        <fieldsetref name="GENERIC:CONFIRM:WHITELISTING"/>
+    </form>
+
+    <form name="ISOLATION_ACTIVITY:PRINT" mode="view">
+        <fieldsetref name="ISOLATION_ACTIVITY:DETAILS"/>
+    </form>
+    <form name="DE_ISOLATION_ACTIVITY:PRINT" mode="view">
+        <fieldsetref name="ISOLATION_ACTIVITY:DETAILS"/>
+    </form>
+
+</forms>

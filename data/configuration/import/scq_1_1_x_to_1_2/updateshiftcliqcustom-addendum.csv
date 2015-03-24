@@ -1,0 +1,3 @@
+## only put stuff in here that can be imported parallel with other
+## processing -  aka is NOT used during migration transformation
+## ... like an extensive equipment picklist

@@ -1,0 +1,8 @@
+## include this in local patch or un directly from import console with: @include,patches/patches_1_3_1_to_1_3_2.csv
+## remember to include the custom update patch in your local patch as well: @include,patches/pergo/update_custom_1_3_1_to_1_3_2.csv
+
+@include,patches/pergo/update_core_1_3_1_to_1_3_2.csv
+
+
+
+

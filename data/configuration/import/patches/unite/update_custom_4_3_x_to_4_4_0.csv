@@ -1,0 +1,215 @@
+## start -  move permission registration from botype to lifecycle
+##    ADD CUSTOM LIFECYCLES!!!!
+##    OUTCOMMENT UNUSED LIFECYCLES
+
+@startTransaction
+@method,setRepeating,lifecycle,GLOBAL_ORG_STATE,permission,MODIFY_TEAM
+@endTransaction
+
+@startTransaction
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,CREATE_DEVIATION
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,MODIFY_DEVIATION
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,DELETE_DEVIATION
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,CREATE_TASK
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,MODIFY_TASK
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,DELETE_TASK
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,CREATE_TASK_DEFINITION
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,MODIFY_TASK_DEFINITION
+@method,setRepeating,lifecycle,DEFAULT_SHIFT_PROC,permission,DELETE_TASK_DEFINITION
+@endTransaction
+
+@startTransaction
+@method,setRepeating,lifecycle,WACHTVERSLAG_PROC,permission,CLEAR_LOG
+@method,setRepeating,lifecycle,WACHTVERSLAG_PROC,permission,RESTORE_LOG
+@method,setRepeating,lifecycle,WACHTVERSLAG_PROC,permission,CREATE_LOGITEM
+@method,setRepeating,lifecycle,WACHTVERSLAG_PROC,permission,MODIFY_LOGITEM
+@method,setRepeating,lifecycle,WACHTVERSLAG_PROC,permission,DELETE_LOGITEM
+@endTransaction
+
+@startTransaction
+@method,setRepeating,lifecycle,OPERATORVERSLAG_PROC,permission,CLEAR_LOG
+@method,setRepeating,lifecycle,OPERATORVERSLAG_PROC,permission,RESTORE_LOG
+@method,setRepeating,lifecycle,OPERATORVERSLAG_PROC,permission,CREATE_LOGITEM
+@method,setRepeating,lifecycle,OPERATORVERSLAG_PROC,permission,MODIFY_LOGITEM
+@method,setRepeating,lifecycle,OPERATORVERSLAG_PROC,permission,DELETE_LOGITEM
+@endTransaction
+
+@startTransaction
+@method,setRepeating,lifecycle,DEFAULT_LOGEVENT_PROC,permission,MODIFY_FOLLOWUP
+@method,setRepeating,lifecycle,DEFAULT_LOGEVENT_PROC,permission,FLAG_HIGHLITE
+@endTransaction
+
+@startTransaction
+@method,setRepeating,lifecycle,DEFAULT_DEVIATION_PROC,permission,FLAG_HIGHLITE
+@method,setRepeating,lifecycle,DEFAULT_DEVIATION_PROC,permission,MODIFY_FOLLOWUP
+@endTransaction
+
+@startTransaction
+@method,setRepeating,lifecycle,DEFAULT_TASK_PROC,permission,PROPAGATE
+@method,setRepeating,lifecycle,DEFAULT_TASK_PROC,permission,MODIFY_FOLLOWUP
+@method,setRepeating,lifecycle,DEFAULT_TASK_PROC,permission,FLAG_HIGHLITE
+@endTransaction
+
+@startTransaction
+@method,setRepeating,lifecycle,DEFAULT_INSTRUCTION_PROC,permission,FLAG_HIGHLITE
+@endTransaction
+
+@method,setRepeating,lifecycle_v2,DELTALINQS_STOP_PERMIT_PROCESS,permission,SAVE_AS_TEMPLATE
+
+@startTransaction
+@method,setRepeating,lifecycle_v2,DELTALINQS_PERMIT_TRANS_PROCESS,permission,CREATE_CONDITION
+@method,setRepeating,lifecycle_v2,DELTALINQS_PERMIT_TRANS_PROCESS,permission,EDIT_CONDITION
+@method,setRepeating,lifecycle_v2,DELTALINQS_PERMIT_TRANS_PROCESS,permission,DELETE_CONDITION
+@method,setRepeating,lifecycle_v2,DELTALINQS_PERMIT_TRANS_PROCESS,permission,OVERRIDE_CONDITION
+@method,setRepeating,lifecycle_v2,DELTALINQS_PERMIT_TRANS_PROCESS,permission,SAVE_AS_TEMPLATE
+@method,setRepeating,lifecycle_v2,DELTALINQS_PERMIT_TRANS_PROCESS,permission,PROPAGATE_MEASURES
+@endTransaction
+
+@method,setRepeating,lifecycle_v2,DELTALINQS_PERMIT_PROCESS,permission,SAVE_AS_TEMPLATE
+
+@startTransaction
+@method,setRepeating,lifecycle,CHANGE_PROCESS,permission,CREATE_CONDITION
+@method,setRepeating,lifecycle,CHANGE_PROCESS,permission,DELETE_CONDITION
+@method,setRepeating,lifecycle,CHANGE_PROCESS,permission,OVERRIDE_CONDITION
+@method,setRepeating,lifecycle,CHANGE_PROCESS,permission,SAVE_AS_TEMPLATE
+@method,setRepeating,lifecycle,CHANGE_PROCESS,permission,CREATE_ACTIVITY
+@method,setRepeating,lifecycle,CHANGE_PROCESS,permission,CREATE_ANALYSIS
+@endTransaction
+
+@startTransaction
+@method,setRepeating,lifecycle,DEFAULT_CA_PROCESS,permission,CREATE_CONDITION
+@method,setRepeating,lifecycle,DEFAULT_CA_PROCESS,permission,DELETE_CONDITION
+@method,setRepeating,lifecycle,DEFAULT_CA_PROCESS,permission,OVERRIDE_CONDITION
+@method,setRepeating,lifecycle,DEFAULT_CA_PROCESS,permission,SAVE_AS_TEMPLATE
+@endTransaction
+
+@startTransaction
+@method,setRepeating,lifecycle,DEFAULT_CL_PROCESS,permission,CREATE_CONDITION
+@method,setRepeating,lifecycle,DEFAULT_CL_PROCESS,permission,DELETE_CONDITION
+@method,setRepeating,lifecycle,DEFAULT_CL_PROCESS,permission,OVERRIDE_CONDITION
+@endTransaction
+
+## incomment when required
+#@startTransaction
+#@method,setRepeating,lifecycle,DEFAULT_CR_PROCESS,permission,CREATE_CONDITION
+#@method,setRepeating,lifecycle,DEFAULT_CR_PROCESS,permission,DELETE_CONDITION
+#@method,setRepeating,lifecycle,DEFAULT_CR_PROCESS,permission,OVERRIDE_CONDITION
+#@method,setRepeating,lifecycle,DEFAULT_CR_PROCESS,permission,SAVE_AS_TEMPLATE
+#@method,setRepeating,lifecycle,DEFAULT_CR_PROCESS,permission,CREATE_ACTIVITY
+#@method,setRepeating,lifecycle,DEFAULT_CR_PROCESS,permission,CREATE_ANALYSIS
+#@endTransaction
+
+@startTransaction
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,CREATE_ISOLATION_ACTIVITIES
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,CREATE_DE_ISOLATION_ACTIVITIES
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,UPDATE_ISOLATION_ACTIVITIES
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,UPDATE_DE_ISOLATION_ACTIVITIES
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,EXECUTE_ISOLATION_ACTIVITIES
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,EXECUTE_DE_ISOLATION_ACTIVITIES
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,REMOVE_ISOLATION_ACTIVITIES
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,REMOVE_DE_ISOLATION_ACTIVITIES
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,CREATE_CLAIMS
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,UPDATE_CLAIMS
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,REMOVE_CLAIMS
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,MOVE_CLAIMS
+@endTransaction
+
+## end -  move permission registration from botype to lifecycle
+
+## When creating loto list template, the template creator should have possibility to create adhoc points for loto list templates.
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_list_template_creator,CREATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_list_template_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_list_template_creator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_list_template_creator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-ACTIVE,loto_list_template_creator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,loto_list_template_creator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,loto_list_template_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,loto_list_template_creator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-OBSOLETE,loto_list_template_creator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,loto_list_template_creator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_POINT_PROCESS-DELETED,loto_list_template_creator,CHANGESTATE
+
+## RENAME CHANGE STATE GROUPS
+## incomment when required
+#update_state_group,DEFAULT_CR_PROCESS,CR_NEW,NEW
+#update_state_group,DEFAULT_CR_PROCESS,CR_INCOMPLETE,NEW
+#update_state_group,DEFAULT_CR_PROCESS,CR_PROPOSED,NEW
+#update_state_group,DEFAULT_CR_PROCESS,CR_PROPOSEDINCOMPLETE,NEW
+
+#update_state_group,DEFAULT_CR_PROCESS,CR_SUBMITTED,PREPARATION
+#update_state_group,DEFAULT_CR_PROCESS,CR_INPREPARATION,PREPARATION
+#update_state_group,DEFAULT_CR_PROCESS,CR_PREPARATIONINCOMPLETE,PREPARATION
+
+#update_state_group,DEFAULT_CR_PROCESS,CR_FORAPPROVAL,APPROVAL
+
+#update_state_group,DEFAULT_CR_PROCESS,CR_PREPAREEXECUTION,EXECUTION
+
+#update_state_group,DEFAULT_CR_PROCESS,CR_IMPLEMENTATION,EXECUTION
+#update_state_group,DEFAULT_CR_PROCESS,CR_IMPLEMENTATIONINCOMPLETE,EXECUTION
+
+#update_state_group,DEFAULT_CR_PROCESS,CR_STARTUP,STARTUP
+#update_state_group,DEFAULT_CR_PROCESS,CR_CLOSED,CLOSURE
+
+#update_state_group,DEFAULT_CR_PROCESS,CR_DELETED,EXCEPTION
+#update_state_group,DEFAULT_CR_PROCESS,CR_REJECTED,EXCEPTION
+#update_state_group,DEFAULT_CR_PROCESS,CR_ONHOLD,EXCEPTION
+
+## FOLD CHANGE ACTIVITY STATES AND DELETE TRANSITIONS
+
+@SQL,UPDATE IBANX_LIFECYCLE_STATE SET SEQ_ORDER = 3 WHERE NAME = 'CA_FINISHED'
+
+@delete,acl,name,StateAcl DEFAULT_CA_PROCESS-CA_INPROGRESS,=
+@delete,acl,name,StateAcl DEFAULT_CA_PROCESS-CA_CLOSED,=
+@delete,state,name,CA_INPROGRESS,=
+@delete,state,name,CA_CLOSED,=
+
+## delete regular transitions
+
+@delete,acl,name,TransitionACL CA_DRAFT - CA_OPEN,=
+@delete,transition,name,CA_DRAFT - CA_OPEN,=
+
+@delete,acl,name,TransitionACL CA_DRAFT - CA_DELETED,=
+@delete,transition,name,CA_DRAFT - CA_DELETED,=
+
+@delete,acl,name,TransitionACL CA_OPEN - CA_INPROGRESS,=
+@delete,transition,name,CA_OPEN - CA_INPROGRESS,=
+
+@delete,acl,name,TransitionACL CA_OPEN - CA_FINISHED,=
+@delete,transition,name,CA_OPEN - CA_FINISHED,=
+
+@delete,acl,name,TransitionACL CA_INPROGRESS - CA_FINISHED,=
+@delete,transition,name,CA_INPROGRESS - CA_FINISHED,=
+
+@delete,acl,name,TransitionACL CA_INPROGRESS - CA_OPEN,=
+@delete,transition,name,CA_INPROGRESS - CA_OPEN,=
+
+@delete,acl,name,TransitionACL CA_FINISHED - CA_OPEN,=
+@delete,transition,name,CA_FINISHED - CA_OPEN,=
+
+@delete,acl,name,TransitionACL CA_FINISHED - CA_CLOSED,=
+@delete,transition,name,CA_FINISHED - CA_CLOSED,=
+
+
+## delete template transitions
+
+@delete,acl,name,TransitionACL CA_TEMPLATE_DRAFT - CA_TEMPLATE_ACTIVE,=
+@delete,transition,name,CA_TEMPLATE_DRAFT - CA_TEMPLATE_ACTIVE,=
+
+@delete,acl,name,TransitionACL CA_TEMPLATE_DRAFT - CA_TEMPLATE_INACTIVE,=
+@delete,transition,name,CA_TEMPLATE_DRAFT - CA_TEMPLATE_INACTIVE,=
+
+@delete,acl,name,TransitionACL CA_TEMPLATE_ACTIVE - CA_TEMPLATE_INACTIVE,=
+@delete,transition,name,CA_TEMPLATE_ACTIVE - CA_TEMPLATE_INACTIVE,=
+
+@delete,acl,name,TransitionACL CA_TEMPLATE_INACTIVE - CA_TEMPLATE_DRAFT,=
+@delete,transition,name,CA_TEMPLATE_INACTIVE - CA_TEMPLATE_DRAFT,=
+
+## update configuration settings
+
+configurationSetting,shift.dashboard.breakout.changerequests_for_implementation_and_startup.template,screens/logbook/common/INC_VIEW_dashboard_boq_changerequests_for_implementation_and_startup.vm
+
+## which dashboard breakouts are out of the box configured : put yours here, the names have changed!
+configurationSetting,shift.dashboard.breakouts,meldingen_in_dienst_zonder_opvolging;meldingen_in_plant_zonder_opvolging;deviations_in_shift;actieve_afwijkingen_per_affected_plant;highlited_afwijkingen_in_dienst;open_taken_in_dienst;open_taken_in_vorige_dienst;onderhande_taken_in_vorige_dienst;actieve_instructies_per_affected_plant;permittowork_to_prepare_today_and_tomorrow;changerequests_for_implementation_and_startup
+
+@include,inc_chq_config_wizard_settings.csv
+

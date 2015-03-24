@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+    <form name="NOTIFICATION_RULE:CREATE">
+        <fieldsetref name="NOTIFICATION:RULE:BASE:PROPERTIES"/>
+        <fieldsetref name="NOTIFICATION:RULE:CONDITIONS:ENTITYCLASS"/>
+        <fieldsetref name="CONDITIONS-BOT-ACTIVITY"/>
+        <fieldsetref name="CONDITIONS-BOT-REQUEST"/>
+        <fieldsetref name="CONDITIONS-BOT-CHECKLIST"/>
+        <fieldsetref name="NOTIFICATION:RULE:MESSAGE:PROPERTIES"/>
+        <fieldsetref name="NOTIFICATION:RULE:MESSAGE:HELP"/>
+
+        <whitelist
+                names="attributeName.* attributeValue.* recipient.* recipientCounter recipientType.* conditionCounter eventSubmit_doCreate form.system key objectClassName"/>
+    </form>
+    <form name="NOTIFICATION_RULE:EDIT">
+        <fieldsetref name="NOTIFICATION:RULE:BASE:PROPERTIES"/>
+        <fieldsetref name="NOTIFICATION:RULE:CONDITIONS:ENTITYCLASS"/>
+        <fieldsetref name="CONDITIONS-BOT-ACTIVITY"/>
+        <fieldsetref name="CONDITIONS-BOT-REQUEST"/>
+        <fieldsetref name="CONDITIONS-BOT-CHECKLIST"/>
+        <fieldsetref name="NOTIFICATION:RULE:MESSAGE:PROPERTIES"/>
+        <fieldsetref name="NOTIFICATION:RULE:MESSAGE:HELP"/>
+
+        <whitelist
+                names="attributeName.* attributeValue.* recipient.* recipientCounter recipientType.* tab conditionCounter eventSubmit_doSave form.system key objectClassName objectKey"/>
+    </form>
+
+    <form name="NOTIFICATION_RULE:VIEW" mode="view">
+        <fieldsetref name="NOTIFICATION:RULE:BASE:PROPERTIES"/>
+        <fieldsetref name="NOTIFICATION:RULE:CONDITIONS:ENTITYCLASS"/>
+        <fieldsetref name="CONDITIONS-BOT-ACTIVITY"/>
+        <fieldsetref name="CONDITIONS-BOT-REQUEST"/>
+        <fieldsetref name="CONDITIONS-BOT-CHECKLIST"/>
+        <fieldsetref name="NOTIFICATION:RULE:MESSAGE:PROPERTIES"/>
+    </form>
+
+    <fieldset name="NOTIFICATION:RULE:BASE:PROPERTIES" label="notificationRule_properties">
+        <textfield name="name" maxLength="50" required="true"/>
+        <space name="spacer"/>
+        <select name="eventType" required="true">
+            <source class="valuelist" valuelistNameRef="eventType" display="description"/>
+        </select>
+        <space name="spacer"/>
+        <select type="radio" name="enabled">
+            <source class="valuelist" valuelistNameRef="boolean" display="description"/>
+        </select>
+    </fieldset>
+
+    <fieldset name="NOTIFICATION:RULE:CONDITIONS:ENTITYCLASS"
+              label="condition_properties">
+        <!-- start do not remove -->
+        <select type="radio" name="Condition.entityClass" label="entityClass">
+            <source class="inline">
+                <option value="ibanx.moc.ChangeRequest" discloses="CONDITIONS-BOT-REQUEST"/>
+                <option value="ibanx.moc.ChangeActivity" discloses="CONDITIONS-BOT-ACTIVITY"/>
+                <option value="ibanx.moc.ChangeAnalysis" discloses="CONDITIONS-BOT-CHECKLIST"/>
+            </source>
+        </select>
+        <!-- end do not remove -->
+    </fieldset>
+
+    <fieldset name="CONDITIONS-BOT-ACTIVITY" showlegend="false">
+        <!-- start do not remove -->
+        <select name="Condition.businessObjectType.number" label="businessObjectType.number">
+            <source class="businessobjecttypelist" valuelistNameRef="ibanx.moc.ChangeActivityIF"/>
+        </select>
+        <space name="spacer"/>
+        <select name="Condition.lifecycleState.name" label="lifecycleState.name">
+            <source class="lifecyclestatelist" valuelistNameRef="DEFAULT_CA_PROCESS" display="showprocessname"/>
+        </select>
+        <!-- end do not remove -->
+    </fieldset>
+
+    <fieldset name="CONDITIONS-BOT-REQUEST" showlegend="false">
+        <!-- start do not remove -->
+        <select name="Condition.businessObjectType.number" label="businessObjectType.number">
+            <source class="businessobjecttypelist" valuelistNameRef="ibanx.moc.ChangeRequestIF"/>
+        </select>
+        <space name="spacer"/>
+        <select name="Condition.lifecycleState.name" label="lifecycleState.name">
+            <source class="lifecyclestatelist" valuelistNameRef="CHANGE_PROCESS" display="showphase"/>
+        </select>
+        <!-- end do not remove -->
+        <space name="spacer"/>
+        <suggest name="Condition.orgContext" label="orgContext" minLength="0" maxLength="50" cssClass="uppercase"
+                 mappedFieldName="funcLevelOne" restricts="Condition.funcLevelTwo,Condition.funcLevelThree">
+            <source class="plantlist" display="description"/>
+        </suggest>
+        <space name="spacer"/>
+        <suggest name="Condition.funcLevelTwo" label="funcLevelTwo" minLength="0" maxLength="50" cssClass="uppercase"
+                 mappedFieldName="funcLevelTwo" restricts="Condition.funcLevelThree"   >
+            <source class="valuelist" valuelistNameRef="funcLevelTwo" display="description"/>
+        </suggest>
+        <space name="spacer"/>
+        <suggest name="Condition.funcLevelThree" label="funcLevelThree" minLength="0" maxLength="50" cssClass="uppercase">
+            <source class="valuelist" valuelistNameRef="funcLevelThree" display="description"/>
+        </suggest>
+        <space name="spacer"/>
+        <select name="Condition.flowId" label="flowId">
+            <source class="inline" translationPattern="moctype.%s">
+                <option value="small"/>
+                <option value="small-with-gatekeeping"/>
+                <option value="medium"/>
+                <option value="medium-with-gatekeeping"/>
+                <option value="medium-with-studies"/>
+                <option value="large"/>
+            </source>
+        </select>
+    </fieldset>
+
+    <fieldset name="CONDITIONS-BOT-CHECKLIST" showlegend="false">
+        <!-- start do not remove -->
+        <select name="Condition.businessObjectType.number" label="businessObjectType.number">
+            <source class="businessobjecttypelist" valuelistNameRef="ibanx.moc.ChangeAnalysisIF"/>
+        </select>
+        <space name="spacer"/>
+        <select name="Condition.lifecycleState.name" label="lifecycleState.name">
+            <source class="lifecyclestatelist" valuelistNameRef="DEFAULT_CL_PROCESS" display="showprocessname"/>
+        </select>
+        <!-- end do not remove -->
+    </fieldset>
+
+    <fieldset name="NOTIFICATION:RULE:MESSAGE:HELP" showlegend="false">
+        <staticlabel name="messageHelp" width="wide"/>
+        <staticlabel name="mailRefNr" width="wide"/>
+        <staticlabel name="mailLink" width="wide"/>
+    </fieldset>
+    <fieldset name="NOTIFICATION:RULE:MESSAGE:PROPERTIES" label="message_properties">
+        <textfield name="from" maxLength="100" width="wide" required="true"/>
+        <textfield name="messageTitle" width="wide" maxLength="100"/>
+        <textarea name="messageBody" width="wide" maxLength="1000"/>
+    </fieldset>
+</forms>

@@ -1,0 +1,226 @@
+@offsetdate,10-06-2013
+
+@delete,permit,number,WVG-ACTV2,=
+
+permit,WVG-ACTV2,null,null,2013-06-10 17:57:08,2013-06-10 17:57:42,ssv1,ssv1,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,DELTALINQS_PERMIT_PROCESS,O_AC,DELTALINQS_PERMIT_PROCESS,O_KVU,10-06-2013 17:57:42,PLANT1,10100-0200,Civiel,30-140-0140-F14080,null,WO-0987,2013-06-10,null,2013-06-10,null,07:00,17:00,,null,3,null,null,,1,2013-06-10,null,null,false,null,PLANT1,true,false
+@startTransaction
+@method,set,permit,WVG-ACTV2,aantalUitvoerenden,1
+@method,set,permit,WVG-ACTV2,avBeslotenRuimteRequired,
+@method,set,permit,WVG-ACTV2,avElektrischWerkenRequired,
+@method,set,permit,WVG-ACTV2,avGraafVergunningRequired,
+@method,set,permit,WVG-ACTV2,avHijsVergunningRequired,
+@method,set,permit,WVG-ACTV2,avMultiDisciplineLOTO,
+@method,set,permit,WVG-ACTV2,avMultiDisciplineLOTOReady,
+@method,set,permit,WVG-ACTV2,avMultiDisciplineLOTORequired,
+@method,set,permit,WVG-ACTV2,avSteigerVergunningRequired,
+@method,set,permit,WVG-ACTV2,avTraOptional,true
+@method,set,permit,WVG-ACTV2,avTraRequired,No
+@method,set,permit,WVG-ACTV2,avVrijeTekst1,
+@method,set,permit,WVG-ACTV2,avVrijeTekst1Required,
+@method,set,permit,WVG-ACTV2,extraEisen,
+@method,set,permit,WVG-ACTV2,flagSignaturesInitialized,true
+@method,set,permit,WVG-ACTV2,geoLevelThreeDescription,Gasoil STORAGE
+@method,set,permit,WVG-ACTV2,gezamenlijkAfsluiten,
+@method,set,permit,WVG-ACTV2,gmExplosiviteitContinueMeting,
+@method,set,permit,WVG-ACTV2,gmExplosiviteitRequired,
+@method,set,permit,WVG-ACTV2,gmToxischContinueMeting,
+@method,set,permit,WVG-ACTV2,gmToxischMAC,
+@method,set,permit,WVG-ACTV2,gmToxischRequired,
+@method,set,permit,WVG-ACTV2,gmToxischStof,
+@method,set,permit,WVG-ACTV2,gmZuurstofContinueMeting,
+@method,set,permit,WVG-ACTV2,gmZuurstofRequired,
+@method,set,permit,WVG-ACTV2,houderName,Chuck Norris
+@method,set,permit,WVG-ACTV2,invloedNaburigeWerkzaamheden,
+@method,set,permit,WVG-ACTV2,issuePoint,
+@method,set,permit,WVG-ACTV2,markup.body,
+@method,set,permit,WVG-ACTV2,mogelijkeRisicos,
+@method,set,permit,WVG-ACTV2,mvAfkoppelen,
+@method,set,permit,WVG-ACTV2,mvAfkoppelenReady,
+@method,set,permit,WVG-ACTV2,mvAfkoppelenRequired,
+@method,set,permit,WVG-ACTV2,mvAfsteken,
+@method,set,permit,WVG-ACTV2,mvAfstekenReady,
+@method,set,permit,WVG-ACTV2,mvAfstekenRequired,
+@method,set,permit,WVG-ACTV2,mvAftappen,
+@method,set,permit,WVG-ACTV2,mvAftappenReady,
+@method,set,permit,WVG-ACTV2,mvAftappenRequired,
+@method,set,permit,WVG-ACTV2,mvAppElectrischBlokkeren,
+@method,set,permit,WVG-ACTV2,mvAppElectrischBlokkerenReady,
+@method,set,permit,WVG-ACTV2,mvAppElectrischBlokkerenRequired,
+@method,set,permit,WVG-ACTV2,mvAppElectrischVrijschakelen,
+@method,set,permit,WVG-ACTV2,mvAppElectrischVrijschakelenReady,
+@method,set,permit,WVG-ACTV2,mvAppElectrischVrijschakelenRequired,
+@method,set,permit,WVG-ACTV2,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-ACTV2,mvAppMechanischBlokkerenReady,
+@method,set,permit,WVG-ACTV2,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-ACTV2,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-ACTV2,mvBeslotenRuimteConditieRapportReady,
+@method,set,permit,WVG-ACTV2,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-ACTV2,mvControleOmgevingOpBrandbaarMateriaal,
+@method,set,permit,WVG-ACTV2,mvControleOmgevingOpBrandbaarMateriaalReady,
+@method,set,permit,WVG-ACTV2,mvControleOmgevingOpBrandbaarMateriaalRequired,
+@method,set,permit,WVG-ACTV2,mvControlerenOpToxischeStoffen,
+@method,set,permit,WVG-ACTV2,mvControlerenOpToxischeStoffenReady,
+@method,set,permit,WVG-ACTV2,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-ACTV2,mvDrukvrij,
+@method,set,permit,WVG-ACTV2,mvDrukvrijReady,
+@method,set,permit,WVG-ACTV2,mvDrukvrijRequired,
+@method,set,permit,WVG-ACTV2,mvFireDetectionSysteemUitgeschakeld,
+@method,set,permit,WVG-ACTV2,mvFireDetectionSysteemUitgeschakeldReady,
+@method,set,permit,WVG-ACTV2,mvFireDetectionSysteemUitgeschakeldRequired,
+@method,set,permit,WVG-ACTV2,mvFlenzenLabelen,
+@method,set,permit,WVG-ACTV2,mvFlenzenLabelenReady,
+@method,set,permit,WVG-ACTV2,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-ACTV2,mvInblokken,
+@method,set,permit,WVG-ACTV2,mvInblokkenReady,
+@method,set,permit,WVG-ACTV2,mvInblokkenRequired,
+@method,set,permit,WVG-ACTV2,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-ACTV2,mvMilieubeschermendeMaatregelenReady,
+@method,set,permit,WVG-ACTV2,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-ACTV2,mvPanelDCSOverbruggingen,
+@method,set,permit,WVG-ACTV2,mvPanelDCSOverbruggingenReady,
+@method,set,permit,WVG-ACTV2,mvPanelDCSOverbruggingenRequired,
+@method,set,permit,WVG-ACTV2,mvProduktvrij,
+@method,set,permit,WVG-ACTV2,mvProduktvrijReady,
+@method,set,permit,WVG-ACTV2,mvProduktvrijRequired,
+@method,set,permit,WVG-ACTV2,mvSpoelen,
+@method,set,permit,WVG-ACTV2,mvSpoelenReady,
+@method,set,permit,WVG-ACTV2,mvSpoelenRequired,
+@method,set,permit,WVG-ACTV2,mvStomen,
+@method,set,permit,WVG-ACTV2,mvStomenReady,
+@method,set,permit,WVG-ACTV2,mvStomenRequired,
+@method,set,permit,WVG-ACTV2,mvVrijeMaatregel1,
+@method,set,permit,WVG-ACTV2,mvVrijeMaatregel1Ready,
+@method,set,permit,WVG-ACTV2,mvVrijeMaatregel1Required,
+@method,set,permit,WVG-ACTV2,mvVrijeMaatregel2,
+@method,set,permit,WVG-ACTV2,mvVrijeMaatregel2Ready,
+@method,set,permit,WVG-ACTV2,mvVrijeMaatregel2Required,
+@method,set,permit,WVG-ACTV2,pbmAdembescherming,
+@method,set,permit,WVG-ACTV2,pbmAdembeschermingRequired,
+@method,set,permit,WVG-ACTV2,pbmBeschermendeKleding,
+@method,set,permit,WVG-ACTV2,pbmBeschermendeKledingRequired,
+@method,set,permit,WVG-ACTV2,pbmGasalarmering,
+@method,set,permit,WVG-ACTV2,pbmGasalarmeringRequired,
+@method,set,permit,WVG-ACTV2,pbmGehoorbeschermingRequired,
+@method,set,permit,WVG-ACTV2,pbmGelaatschermRequired,
+@method,set,permit,WVG-ACTV2,pbmHandArmbescherming,
+@method,set,permit,WVG-ACTV2,pbmHandArmbeschermingRequired,
+@method,set,permit,WVG-ACTV2,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-ACTV2,pbmValbeschermingRequired,
+@method,set,permit,WVG-ACTV2,pbmVluchtmaskerBinnenHandbereikRequired,
+@method,set,permit,WVG-ACTV2,pbmVrijeTekst1,
+@method,set,permit,WVG-ACTV2,pbmVrijeTekst1Required,
+@method,set,permit,WVG-ACTV2,pbmVrijeTekst2,
+@method,set,permit,WVG-ACTV2,pbmVrijeTekst2Required,
+@method,set,permit,WVG-ACTV2,productinformatiekaart,
+@method,set,permit,WVG-ACTV2,specialeOperationeleAandachtspuntenVrijeTekst1,
+@method,set,permit,WVG-ACTV2,tagDescription,Basket Filter 4
+@method,set,permit,WVG-ACTV2,tvChemicalienGas,
+@method,set,permit,WVG-ACTV2,tvChemicalienGasRequired,
+@method,set,permit,WVG-ACTV2,tvElektrischHandgereedschap,
+@method,set,permit,WVG-ACTV2,tvEx-proof,
+@method,set,permit,WVG-ACTV2,tvGereedschapVerbrandingsmotor,
+@method,set,permit,WVG-ACTV2,tvGraafmachine,
+@method,set,permit,WVG-ACTV2,tvHandgereedschap,
+@method,set,permit,WVG-ACTV2,tvHeftruck,
+@method,set,permit,WVG-ACTV2,tvHijsgereedschap,
+@method,set,permit,WVG-ACTV2,tvHijskraan,
+@method,set,permit,WVG-ACTV2,tvHogedrukReiniger,
+@method,set,permit,WVG-ACTV2,tvHoogwerker,
+@method,set,permit,WVG-ACTV2,tvHydraulischHandgereedschap,
+@method,set,permit,WVG-ACTV2,tvLasapparatuur,
+@method,set,permit,WVG-ACTV2,tvMax110V50V,
+@method,set,permit,WVG-ACTV2,tvPneumatischHandgereedschap,
+@method,set,permit,WVG-ACTV2,tvSteiger,
+@method,set,permit,WVG-ACTV2,tvStroomgenerator,
+@method,set,permit,WVG-ACTV2,tvTankwagen,
+@method,set,permit,WVG-ACTV2,tvVacuumwagen,
+@method,set,permit,WVG-ACTV2,tvVerreiker,
+@method,set,permit,WVG-ACTV2,tvVoertuigVerbrandingsmotor,
+@method,set,permit,WVG-ACTV2,tvVrijeTekst1,
+@method,set,permit,WVG-ACTV2,tvVrijeTekst1Required,
+@method,set,permit,WVG-ACTV2,tvVrijeTekst2,
+@method,set,permit,WVG-ACTV2,tvVrijeTekst2Required,
+@method,set,permit,WVG-ACTV2,vzmBrandwachtInzetten,
+@method,set,permit,WVG-ACTV2,vzmBrandwachtInzettenRequired,
+@method,set,permit,WVG-ACTV2,vzmBrandwaterslangGereedRequired,
+@method,set,permit,WVG-ACTV2,vzmCommunicatiemiddelen,
+@method,set,permit,WVG-ACTV2,vzmCommunicatiemiddelenRequired,
+@method,set,permit,WVG-ACTV2,vzmGeforceerdeVentilatieRequired,
+@method,set,permit,WVG-ACTV2,vzmMangatwachtInzetten,
+@method,set,permit,WVG-ACTV2,vzmMangatwachtInzettenRequired,
+@method,set,permit,WVG-ACTV2,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-ACTV2,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-ACTV2,vzmPoederblusser,
+@method,set,permit,WVG-ACTV2,vzmPoederblusserRequired,
+@method,set,permit,WVG-ACTV2,vzmPuttenGotenRiolenAfdekken,
+@method,set,permit,WVG-ACTV2,vzmPuttenGotenRiolenAfdekkenRequired,
+@method,set,permit,WVG-ACTV2,vzmVonkafschermingGebruikenRequired,
+@method,set,permit,WVG-ACTV2,vzmVrijeTekst1,
+@method,set,permit,WVG-ACTV2,vzmVrijeTekst1Required,
+@method,set,permit,WVG-ACTV2,vzmVrijeTekst2,
+@method,set,permit,WVG-ACTV2,vzmVrijeTekst2Required,
+@method,set,permit,WVG-ACTV2,vzmWerkplekAfzettenRequired,
+@method,set,permit,WVG-ACTV2,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-ACTV2,vzmWerkplekBeveiligenValgevaarRequired,
+@method,set,permit,WVG-ACTV2,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-ACTV2,workDescription,Any work description
+@method,set,permit,WVG-ACTV2,wwAsbestsloopRequired,
+@method,set,permit,WVG-ACTV2,wwBetredenBeslotenRuimteRequired,
+@method,set,permit,WVG-ACTV2,wwBrandenGutsenLassenRequired,Yes
+@method,set,permit,WVG-ACTV2,wwElectrotechnischRequired,
+@method,set,permit,WVG-ACTV2,wwGravenRequired,
+@method,set,permit,WVG-ACTV2,wwGritstralenRequired,
+@method,set,permit,WVG-ACTV2,wwHakkenBorenRequired,
+@method,set,permit,WVG-ACTV2,wwHijsenRequired,
+@method,set,permit,WVG-ACTV2,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-ACTV2,wwInstrumentatieElectricalRequired,
+@method,set,permit,WVG-ACTV2,wwIsolerenRequired,
+@method,set,permit,WVG-ACTV2,wwMonterenDemonterenRequired,
+@method,set,permit,WVG-ACTV2,wwOpenenInstallatieRequired,
+@method,set,permit,WVG-ACTV2,wwRontgenStralingRequired,
+@method,set,permit,WVG-ACTV2,wwSchilderenRequired,
+@method,set,permit,WVG-ACTV2,wwSlopenRequired,
+@method,set,permit,WVG-ACTV2,wwSpecialeTechniekenA3Required,
+@method,set,permit,WVG-ACTV2,wwSpecialeTechniekenA3RequiredRequired,
+@method,set,permit,WVG-ACTV2,wwSpecialeTechniekenRequired,
+@method,set,permit,WVG-ACTV2,wwSpecialeTechniekenRequiredRequired,
+@method,set,permit,WVG-ACTV2,wwSteigerbouwRequired,
+@method,set,permit,WVG-ACTV2,wwTrekkenDuwenRequired,
+@method,set,permit,WVG-ACTV2,wwVacuumCleaningRequired,
+@method,set,permit,WVG-ACTV2,wwVonkvormingRequired,
+@method,set,permit,WVG-ACTV2,wwWerkenOpHoogteRequired,
+@method,set,permit,WVG-ACTV2,zone,1
+@endTransaction
+!ph1,signature,null,null,null,null,null,WVG-ACTV2,B_VL,null,null,null,null,false,Yes
+!ph2,signature,null,null,null,null,null,WVG-ACTV2,B_AV,Stephanie ShiftSV,,,2013-06-10,true,Yes
+!ph3,signature,null,null,null,null,null,WVG-ACTV2,B_OB,null,null,null,null,false,No
+!ph4,signature,null,null,null,null,null,WVG-ACTV2,B_MO1,null,null,null,null,false,No
+!ph5,signature,null,null,null,null,null,WVG-ACTV2,B_MO2,null,null,null,null,false,No
+!ph6,signature,null,null,null,null,null,WVG-ACTV2,B_VV,null,null,null,null,false,No
+!ph7,signature,null,null,null,null,null,WVG-ACTV2,B_VS,Stephanie ShiftSV,,,2013-06-10,true,Yes
+!ph8,signature,null,null,null,null,null,WVG-ACTV2,B_VA,null,null,null,null,false,Yes
+!ph9,audit,CREATE_EVENT,WVG-ACTV2 created,ssv1,2013-06-10,ibanx.permit.Permit,WVG-ACTV2
+!ph10,audit,PROMOTE_EVENT,Status of WVG-ACTV2 changed into Measures Holder,ssv1,2013-06-10,ibanx.permit.Permit,WVG-ACTV2
+!ph11,attr-change,plannedStartDate,2013-06-10,,1,!ph10
+!ph12,attr-change,plannedEndDate,2013-06-10,,2,!ph10
+!ph13,attr-change,workHoursFrom,07:00,,3,!ph10
+!ph14,attr-change,workHoursTo,17:00,,4,!ph10
+!ph15,attr-change,riscCategory,3,0,5,!ph10
+!ph16,attr-change,avTraOptional,true,false,6,!ph10
+!ph17,attr-change,wwBrandenGutsenLassenRequired,Yes,,7,!ph10
+!ph18,audit,PROMOTE_EVENT,Status of WVG-ACTV2 changed into Signature Applicant,ssv1,2013-06-10,ibanx.permit.Permit,WVG-ACTV2
+!ph19,audit,SAVE_EVENT,Properties of WVG-ACTV2 changed,ssv1,2013-06-10,ibanx.permit.Permit,WVG-ACTV2
+!ph20,audit,SETSTATE_EVENT,Status of WVG-ACTV2 changed into Determine Risk,ssv1,2013-06-10,ibanx.permit.Permit,WVG-ACTV2
+!ph21,audit,SIGNEDPROMOTE_EVENT,Electronic signature placed for promotion of WVG-ACTV2,ssv1,2013-06-10,ibanx.permit.Permit,WVG-ACTV2
+!ph22,audit,PROMOTE_EVENT,Status of WVG-ACTV2 changed into Measures Issuing Department,ssv1,2013-06-10,ibanx.permit.Permit,WVG-ACTV2
+!ph23,audit,PROMOTE_EVENT,Status of WVG-ACTV2 changed into Approval Measures Holder,ssv1,2013-06-10,ibanx.permit.Permit,WVG-ACTV2
+!ph24,audit,PROMOTE_EVENT,Status of WVG-ACTV2 changed into Execute Measures to be taken,ssv1,2013-06-10,ibanx.permit.Permit,WVG-ACTV2
+!ph25,audit,PROMOTE_EVENT,Status of WVG-ACTV2 changed into Signature Issuer,ssv1,2013-06-10,ibanx.permit.Permit,WVG-ACTV2
+!ph26,audit,SAVE_EVENT,Properties of WVG-ACTV2 changed,ssv1,2013-06-10,ibanx.permit.Permit,WVG-ACTV2
+!ph27,audit,SETSTATE_EVENT,Status of WVG-ACTV2 changed into Ready for Issuing,ssv1,2013-06-10,ibanx.permit.Permit,WVG-ACTV2
+!ph28,audit,SIGNEDPROMOTE_EVENT,Electronic signature placed for promotion of WVG-ACTV2,ssv1,2013-06-10,ibanx.permit.Permit,WVG-ACTV2
+!ph29,audit,SETSTATE_EVENT,Status of WVG-ACTV2 changed into Active,ssv1,2013-06-10,ibanx.permit.Permit,WVG-ACTV2
+!ph30,audit,SAVE_EVENT,Properties of WVG-ACTV2 changed,ssv1,2013-06-10,ibanx.permit.Permit,WVG-ACTV2
+!ph31,attr-change,timesIssued,1,0,1,!ph30
+!ph32,attr-change,aantalUitvoerenden,1,,2,!ph30
+!ph33,attr-change,houderName,Chuck Norris,,3,!ph30

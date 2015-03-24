@@ -1,0 +1,98 @@
+## Risk Calculation
+@include,inc_default_riskcalculation.csv
+
+############### PERMISSIONS ####################################
+# 1,CREATE,Create,GLOBAL,true,true
+# 2,BROWSE,Browse,GLOBAL,true,true
+# 3,READ,Read,GLOBAL,true,true
+# 4,COPY,Copy,GLOBAL,true,true
+# 5,UPDATE,Update,GLOBAL,true,true
+# 6,DELETE,Delete,GLOBAL,true,true
+# 7,CHANGESTATE,Change state,GLOBAL,true,true
+# 8,VIEWACL,View ACL,GLOBAL,true,true
+# 9,CHANGEACL,Change ACL,GLOBAL,true,true
+# 10,VIEWAUDITTRAIL,View audittrail,GLOBAL,true,true
+
+################################################################
+## IBX BP1 RISK ASSESSMENT / RISICO BEPALING HULPLIJST
+################################################################
+
+@delete,acl_v2,name,StateAcl IBANX_RA_BP1_PROCESS-IN_BEWERKING,0
+!phIBANX_RA_BP1_PROCESS717,acl_v2,StateAcl IBANX_RA_BP1_PROCESS-IN_BEWERKING,State ACL for RiskAssessment - In bewerking,null,2,GLOBAL,true,true,false
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-IN_BEWERKING,everyone,BROWSE
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-IN_BEWERKING,everyone,READ
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-IN_BEWERKING,anonymous,BROWSE
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-IN_BEWERKING,anonymous,READ
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-IN_BEWERKING,aanvrager,CREATE
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-IN_BEWERKING,aanvrager,COPY
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-IN_BEWERKING,aanvrager,UPDATE
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-IN_BEWERKING,aanvrager,CHANGESTATE
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-IN_BEWERKING,verstrekker,CREATE
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-IN_BEWERKING,verstrekker,COPY
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-IN_BEWERKING,verstrekker,UPDATE
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-IN_BEWERKING,verstrekker,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl IBANX_RA_BP1_PROCESS-REVIEW,0
+!phIBANX_RA_BP1_PROCESS720,acl_v2,StateAcl IBANX_RA_BP1_PROCESS-REVIEW,State ACL for RiskAssessment - Review,null,2,GLOBAL,true,true,false
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-REVIEW,everyone,BROWSE
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-REVIEW,everyone,READ
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-REVIEW,anonymous,BROWSE
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-REVIEW,anonymous,READ
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-REVIEW,verstrekker,COPY
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-REVIEW,verstrekker,UPDATE
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-REVIEW,verstrekker,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl IBANX_RA_BP1_PROCESS-AFGEROND,0
+!phIBANX_RA_BP1_PROCESS718,acl_v2,StateAcl IBANX_RA_BP1_PROCESS-AFGEROND,State ACL for RiskAssessment - Afgerond,null,2,GLOBAL,true,true,false
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-AFGEROND,everyone,BROWSE
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-AFGEROND,everyone,READ
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-AFGEROND,anonymous,BROWSE
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-AFGEROND,anonymous,READ
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-AFGEROND,verstrekker,COPY
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-AFGEROND,verstrekker,UPDATE
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-AFGEROND,verstrekker,CHANGESTATE
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-AFGEROND,aanvrager,COPY
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-AFGEROND,aanvrager,UPDATE
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-AFGEROND,aanvrager,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl IBANX_RA_BP1_PROCESS-VERWIJDERD,0
+!phIBANX_RA_BP1_PROCESS719,acl_v2,StateAcl IBANX_RA_BP1_PROCESS-VERWIJDERD,State ACL for RiskAssessment - Verwijderd,null,2,GLOBAL,true,true,false
+#remove if anyone may see removed rbh's
+#roleperm,StateAcl IBANX_RA_BP1_PROCESS-VERWIJDERD,anonymous,BROWSE
+#roleperm,StateAcl IBANX_RA_BP1_PROCESS-VERWIJDERD,anonymous,READ
+#roleperm,StateAcl IBANX_RA_BP1_PROCESS-VERWIJDERD,everyone,BROWSE
+#roleperm,StateAcl IBANX_RA_BP1_PROCESS-VERWIJDERD,everyone,READ
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-VERWIJDERD,application_administrator,BROWSE
+roleperm,StateAcl IBANX_RA_BP1_PROCESS-VERWIJDERD,application_administrator,READ
+#remove update permissions for administrator
+#roleperm,StateAcl IBANX_RA_BP1_PROCESS-VERWIJDERD,application_administrator,COPY
+#roleperm,StateAcl IBANX_RA_BP1_PROCESS-VERWIJDERD,application_administrator,UPDATE
+#roleperm,StateAcl IBANX_RA_BP1_PROCESS-VERWIJDERD,application_administrator,DELETE
+#roleperm,StateAcl IBANX_RA_BP1_PROCESS-VERWIJDERD,application_administrator,CHANGESTATE
+
+
+@delete,lifecycle_v2,number,IBANX_RA_BP1_PROCESS,0
+@delete,lifecyclestate_v2,name,IN_BEWERKING,0,lifecycle.number,IBANX_RA_BP1_PROCESS,0
+@delete,lifecyclestate_v2,name,REVIEW,0,lifecycle.number,IBANX_RA_BP1_PROCESS,0
+@delete,lifecyclestate_v2,name,AFGEROND,0,lifecycle.number,IBANX_RA_BP1_PROCESS,0
+@delete,lifecyclestate_v2,name,VERWIJDERD,0,lifecycle.number,IBANX_RA_BP1_PROCESS,0
+lifecycle_v2,IBANX_RA_BP1_PROCESS,ibanx.lifecycle.Lifecycle,Process IBX BP1 Risk Assessment,Process IBX BP1 Risk Assessment,GLOBAL,true,false
+# No colors on RBH
+lifecyclestate_v3,IBANX_RA_BP1_PROCESS,IN_BEWERKING,In bewerking,null,false,false,1,!phIBANX_RA_BP1_PROCESS717,
+lifecyclestate_v3,IBANX_RA_BP1_PROCESS,REVIEW,Review,null,false,false,2,!phIBANX_RA_BP1_PROCESS720,
+lifecyclestate_v3,IBANX_RA_BP1_PROCESS,AFGEROND,Afgerond,null,false,false,3,!phIBANX_RA_BP1_PROCESS718,
+lifecyclestate_v3,IBANX_RA_BP1_PROCESS,VERWIJDERD,Verwijderd,null,true,false,1,!phIBANX_RA_BP1_PROCESS719,
+
+
+@delete,businessobjecttype-pcq-2.x,number,IBANX_RA_BP1,0
+businessobjecttype-pcq-2.x,,,,,IBANX_RA_BP1,Risico Bepaling Hulplijst,Risico Bepaling Hulplijst,ibanx.tra.RiskAssessmentIF,IBANX_RA_BP1_PROCESS,null,-1,null,GLOBAL,true,null,null,null,null,null,false
+@startTransaction
+@method,set,businessobjecttype-pcq-2.x,IBANX_RA_BP1,class0,RA
+@method,set,businessobjecttype-pcq-2.x,IBANX_RA_BP1,defaultPermitType,DELTALINQS_PERMIT
+@method,set,businessobjecttype-pcq-2.x,IBANX_RA_BP1,isRiskDeterminationEditableOnPermit,false
+## configure all supported permit types that can be included in the risk advice determined by the type-of-work
+## on the risk assessment; for that you need to configure the type of work on the risk assessment; configure
+## the type-of-work picklist and associate the type-of-work options with one of the permit types below (configuration settings)
+@method,setRepeating,businessobjecttype-pcq-2.x,IBANX_RA_BP1,supportedMainPermit,DELTALINQS_PERMIT
+@method,setRepeating,businessobjecttype-pcq-2.x,IBANX_RA_BP1,supportedMainPermit,PRESENCE_PERMIT
+@endTransaction

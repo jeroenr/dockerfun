@@ -1,0 +1,52 @@
+
+############ EVALUATE_PERMIT_TASK LIFECYCLE ###################
+
+!phevptaskopen,acl,,,,,ibanx.security.Acl,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,State ACL describing permissions for roles/users on permit evaluation task's,,2,GLOBAL,true,true,false
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,shiftemployee,COPY
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,shiftemployee,UPDATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,shiftemployee,CHANGESTATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,shiftemployee,PROPAGATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,productionassistant,COPY
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,productionassistant,UPDATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,productionassistant,FLAG_HIGHLITE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,everyone,BROWSE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-OPEN,everyone,READ
+
+!phevptaskinprogress,acl,,,,,ibanx.security.Acl,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,State ACL describing permissions for roles/users on permit evaluation task's,,2,GLOBAL,true,true,false
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,shiftemployee,COPY
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,shiftemployee,UPDATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,shiftemployee,CHANGESTATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,shiftemployee,PROPAGATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,productionassistant,COPY
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,productionassistant,UPDATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,productionassistant,FLAG_HIGHLITE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,everyone,BROWSE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-INUITVOERING,everyone,READ
+
+
+!phevptaskclosed,acl,,,,,ibanx.security.Acl,StateAcl EVALUATE_PERMIT_TASK_PROC-AFGEROND,State ACL describing permissions for roles/users on permit evaluation task's,,2,GLOBAL,true,true,false
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-AFGEROND,everyone,BROWSE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-AFGEROND,everyone,READ
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-AFGEROND,shiftemployee,CHANGESTATE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-AFGEROND,shiftemployee,MODIFY_FOLLOWUP
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-AFGEROND,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-AFGEROND,productionassistant,FLAG_HIGHLITE
+
+!phevptaskcanceled,acl,,,,,ibanx.security.Acl,StateAcl EVALUATE_PERMIT_TASK_PROC-CANCELED,State ACL describing permissions for roles/users on permit evaluation task's,,2,GLOBAL,true,true,false
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-CANCELED,shiftemployee,FLAG_HIGHLITE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-CANCELED,productionassistant,FLAG_HIGHLITE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-CANCELED,everyone,BROWSE
+roleperm,StateAcl EVALUATE_PERMIT_TASK_PROC-CANCELED,everyone,READ
+
+lifecycle,EVALUATE_PERMIT_TASK_PROC,,Taak levenscyclus,,,,,ibanx.lifecycle.Lifecycle,De levenscyclus van een vergunning evaluatie taak.,GLOBAL,true,false
+
+lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,EVALUATE_PERMIT_TASK_PROC,OPEN,Open,-1,false,false,1,!phevptaskopen,true,GLOBAL,false
+lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,EVALUATE_PERMIT_TASK_PROC,INUITVOERING,In uitvoering,-1,false,false,2,!phevptaskinprogress,true,GLOBAL,false
+lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,EVALUATE_PERMIT_TASK_PROC,AFGEROND,Afgerond,-1,false,false,3,!phevptaskclosed,true,GLOBAL,false
+# exception states
+lifecyclestate,,,,,ibanx.lifecycle.LifecycleState,EVALUATE_PERMIT_TASK_PROC,CANCELED,Geannuleerd,-1,true,false,1,!phevptaskcanceled,true,GLOBAL,false
+
+businessobjecttype,EVALUATE_PERMIT_TASK,,Evalueer ingenomen vergunning,,,,,Evalueer ingenomen vergunning,ibanx.task.TaskIF,EVALUATE_PERMIT_TASK_PROC,-1,,,GLOBAL,true,logbook\,task\,create.vm,logbook\,task\,copy.vm,logbook\,task\,view.vm,logbook\,task\,edit.vm,logbook\,task\,search.vm,false
+

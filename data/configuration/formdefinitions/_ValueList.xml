@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+    <!-- shared PBS picklists -->
+    <form name="LISTITEM:CREATE:DEPARTMENTICQ">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:DEPARTMENTICQ"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:DEPARTMENTICQ">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:DEPARTMENTICQ"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:DEPARTMENTICQ">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:DEPARTMENTICQ" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:DEPARTMENTICQ" showlegend="false">
+        <suggest name="funcLevelOne" label="orgContext" minLength="0" operator="equals" maxLength="50" required="true">
+            <source class="plantlist" display="description"/>
+        </suggest>
+    </fieldset>
+
+    <form name="LISTITEM:CREATE:GEOLEVELTHREE">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:GEOLEVELTHREE"/>
+        <fieldsetref name="LISTITEM:MAP"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:GEOLEVELTHREE">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:GEOLEVELTHREE"/>
+        <fieldsetref name="LISTITEM:MAP"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:GEOLEVELTHREE">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:GEOLEVELTHREE" mode="view"/>
+        <fieldsetref name="LISTITEM:MAP" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:GEOLEVELTHREE" showlegend="false">
+        <suggest name="funcLevelOne" label="orgContext" minLength="0" operator="equals" maxLength="50" required="true">
+            <source class="plantlist" display="description"/>
+        </suggest>
+    </fieldset>
+
+    <form name="LISTITEM:CREATE:ORGLEVELTHREE">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:ORGLEVELTHREE"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:ORGLEVELTHREE">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:ORGLEVELTHREE"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:ORGLEVELTHREE">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:ORGLEVELTHREE" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:ORGLEVELTHREE" showlegend="false">
+        <suggest name="funcLevelOne" label="orgContext" minLength="0" operator="equals" maxLength="50" required="true">
+            <source class="plantlist" display="description"/>
+        </suggest>
+    </fieldset>
+
+    <form name="LISTITEM:CREATE:ORGLEVELFOUR">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:ORGLEVELFOUR"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:ORGLEVELFOUR">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:ORGLEVELFOUR"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:ORGLEVELFOUR">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:ORGLEVELFOUR" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:ORGLEVELFOUR" showlegend="false">
+        <suggest name="funcLevelOne" label="orgContext" minLength="0" operator="equals" maxLength="50" required="true" restricts="orgLevelThree">
+            <source class="plantlist" display="description"/>
+        </suggest>
+        <space name="space"/>
+        <suggest name="orgLevelThree" label="orgLevelThree" minLength="0" operator="equals" maxLength="50" required="true">
+            <source class="valuelist" valuelistNameRef="orgLevelThree" display="description"/>
+        </suggest>
+    </fieldset>
+
+    <form name="LISTITEM:CREATE:FUNCLEVELTWO">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:FUNCLEVELTWO"/>
+        <fieldsetref name="LISTITEM:MAP"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:FUNCLEVELTWO">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:FUNCLEVELTWO"/>
+        <fieldsetref name="LISTITEM:MAP"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:FUNCLEVELTWO">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:FUNCLEVELTWO" mode="view"/>
+        <fieldsetref name="LISTITEM:MAP" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:FUNCLEVELTWO" showlegend="false">
+        <suggest name="funcLevelOne" label="orgContext" minLength="0" operator="equals" maxLength="50" required="true">
+            <source class="plantlist" display="description"/>
+        </suggest>
+    </fieldset>
+
+    <form name="LISTITEM:CREATE:FUNCLEVELTHREE">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:FUNCLEVELTHREE"/>
+        <fieldsetref name="LISTITEM:MAP"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:FUNCLEVELTHREE">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:FUNCLEVELTHREE"/>
+        <fieldsetref name="LISTITEM:MAP"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:FUNCLEVELTHREE">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:FUNCLEVELTHREE" mode="view"/>
+        <fieldsetref name="LISTITEM:MAP" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:FUNCLEVELTHREE" showlegend="false">
+        <suggest name="funcLevelOne" label="orgContext" minLength="0" operator="equals" maxLength="50" required="true" restricts="funcLevelTwo">
+            <source class="plantlist" display="description"/>
+        </suggest>
+        <space name="name"/>
+        <suggest name="funcLevelTwo" minLength="0" required="true" maxLength="50" cssClass="uppercase">
+            <source class="valuelist" valuelistNameRef="funcLevelTwo" display="value,description"/>
+        </suggest>
+    </fieldset>
+
+    <form name="LISTITEM:CREATE:TAG">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:TAG"/>
+        <fieldsetref name="LISTITEM:MAP"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:TAG">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:TAG"/>
+        <fieldsetref name="LISTITEM:MAP"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:TAG">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:TAG" mode="view"/>
+        <fieldsetref name="LISTITEM:MAP" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:TAG" showlegend="false">
+        <suggest name="funcLevelOne" label="orgContext" minLength="0" operator="equals" maxLength="50" required="true" restricts="funcLevelTwo,funcLevelThree">
+            <source class="plantlist" display="description"/>
+        </suggest>
+        <space name="name"/>
+        <suggest name="funcLevelTwo" minLength="0" required="true" maxLength="50" cssClass="uppercase" restricts="funcLevelThree">
+            <source class="valuelist" valuelistNameRef="funcLevelTwo" display="value,description"/>
+        </suggest>
+        <space name="name"/>
+        <suggest name="funcLevelThree" minLength="0" maxLength="50" cssClass="uppercase">
+            <source class="valuelist" valuelistNameRef="funcLevelThree" display="value,description"/>
+        </suggest>
+        <space name="name"/>
+        <suggest name="geoLevelThree" minLength="0" maxLength="50" cssClass="uppercase">
+            <source class="valuelist" valuelistNameRef="geoLevelThree" display="value"/>
+        </suggest>
+    </fieldset>
+
+    <form name="LISTITEM:CREATE:EQUIPMENT">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:EQUIPMENT"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:EQUIPMENT">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:EQUIPMENT"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:EQUIPMENT">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:EQUIPMENT" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:EQUIPMENT" showlegend="false">
+        <suggest name="funcLevelOne" label="orgContext" restricts="geoLevelThree" minLength="0" operator="equals" maxLength="50" required="true">
+            <source class="plantlist" display="description"/>
+        </suggest>
+        <space name="name"/>
+        <suggest name="geoLevelThree" minLength="0" cssClass="uppercase" operator="equals" maxLength="50" required="true">
+            <source class="valuelist" valuelistNameRef="geoLevelThree" display="description"/>
+        </suggest>
+    </fieldset>
+
+
+    <!-- concedo-permit picklists -->
+
+    <form name="LISTITEM:CREATE:ISSUEPOINT">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:ISSUEPOINT"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:ISSUEPOINT">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:ISSUEPOINT"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:ISSUEPOINT">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"  mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:ISSUEPOINT"  mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:ISSUEPOINT" showlegend="false">
+        <textfield name="printTarget"/>
+    </fieldset>
+
+    <form name="LISTITEM:CREATE:CATEGORY">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:CATEGORY"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:CATEGORY">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:CATEGORY"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:CATEGORY">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:CATEGORY" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:CATEGORY" showlegend="false">
+        <suggest name="funcLevelOne" label="orgContext" minLength="0" operator="equals" maxLength="50" required="true">
+            <source class="plantlist" display="description"/>
+        </suggest>
+        <space name="name"/>
+        <select name="type" operator="equals" label="businessObjectType">
+            <source class="businessobjecttypelist" valuelistNameRef="ibanx.loto.IsolationPointIF"/>
+        </select>
+    </fieldset>
+
+    <!-- pergo-scriptor picklists-->
+
+    <form name="LISTITEM:CREATE:EVENTCATEGORY">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:EVENTCATEGORY"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:EVENTCATEGORY">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:EVENTCATEGORY"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:EVENTCATEGORY">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:EVENTCATEGORY" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:EVENTCATEGORY" showlegend="false">
+        <textfield name="abbreviation"/>
+        <space name="name"/>
+        <select name="businessObjectType" operator="equals" label="businessObjectType">
+            <source class="businessobjecttypelist" valuelistNameRef="ibanx.logbook.LogEventIF"/>
+        </select>
+    </fieldset>
+
+    <form name="LISTITEM:CREATE:INSTRCATEGORY">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:INSTRCATEGORY"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:INSTRCATEGORY">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:INSTRCATEGORY"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:INSTRCATEGORY">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:INSTRCATEGORY" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:INSTRCATEGORY" showlegend="false">
+        <textfield name="abbreviation"/>
+    </fieldset>
+
+    <form name="LISTITEM:CREATE:FOLLOWUP">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:FOLLOWUP"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:FOLLOWUP">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:FOLLOWUP"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:FOLLOWUP">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:FOLLOWUP" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:FOLLOWUP" showlegend="false">
+        <textfield name="abbreviation"/>
+    </fieldset>
+
+    <form name="LISTITEM:CREATE:SUBTYPE">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:SUBTYPE"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:SUBTYPE">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:SUBTYPE"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:SUBTYPE">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:SUBTYPE" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:SUBTYPE" showlegend="false">
+        <select name="businessObjectType" operator="equals" label="businessObjectType">
+            <source class="businessobjecttypelist" valuelistNameRef="ibanx.logbook.DeviationIF"/>
+        </select>
+    </fieldset>
+
+
+    <form name="LISTITEM:CREATE:LOGDEFINITIONS">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:LOGDEFINITIONS"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:LOGDEFINITIONS">
+        <fieldsetref name="LISTITEM:EDIT:FIXEDVALUE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:LOGDEFINITIONS"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:LOGDEFINITIONS">
+        <fieldsetref name="LISTITEM:EDIT:FIXEDVALUE:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:LOGDEFINITIONS" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:LOGDEFINITIONS" showlegend="false">
+        <suggest name="funcLevelOne" label="orgContext" minLength="0" operator="equals" maxLength="50" required="true" restricts="shiftDefinition,funcLevelTwo">
+            <source class="plantlist" display="description"/>
+        </suggest>
+        <space name="name"/>
+        <suggest name="shiftType" minLength="0" required="true" maxLength="50" cssClass="uppercase">
+            <source class="businessobjecttypelist" valuelistNameRef="ibanx.logbook.ShiftIF"/>
+        </suggest>
+        <space name="name"/>
+        <suggest name="shiftDefinition" minLength="0" maxLength="25" cssClass="uppercase">
+            <source class="shiftdefinitions" display="value,description"/>
+        </suggest>
+        <space name="name"/>
+        <suggest name="funcLevelTwo" minLength="0" maxLength="50" cssClass="uppercase">
+            <source class="valuelist" valuelistNameRef="funcLevelTwo" display="value,description"/>
+        </suggest>
+        <space name="name"/>
+        <select name="logBusinessObjectType" operator="equals">
+            <source class="businessobjecttypelist" valuelistNameRef="ibanx.logbook.LogIF"/>
+        </select>
+        <space name="name"/>
+        <select type="radio" name="autoGenerateLog">
+            <source class="valuelist" valuelistNameRef="boolean" display="description"/>
+        </select>
+    </fieldset>
+
+    <form name="LISTITEM:CREATE:AUTOCREATE-LOGEVENTS">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:AUTOCREATE-LOGEVENTS"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:AUTOCREATE-LOGEVENTS">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:AUTOCREATE-LOGEVENTS"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:AUTOCREATE-LOGEVENTS">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:AUTOCREATE-LOGEVENTS" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:AUTOCREATE-LOGEVENTS" showlegend="false">
+        <!-- cannot restrict logPBSAttributeLevelTwo because form generation logic expects the name on the
+             restricted picklist to be logPBSAttributeLevelOne, but that is of course funcLevelOne
+        -->
+        <suggest name="logPBSAttributeLevelOne" minLength="0" operator="equals" maxLength="50" required="true">
+            <source class="plantlist" display="description"/>
+        </suggest>
+        <space name="name"/>
+        <suggest name="logPBSAttributeLevelTwo" minLength="0" required="true" maxLength="50" cssClass="uppercase">
+            <source class="valuelist" valuelistNameRef="funcLevelTwo" display="value,description"/>
+        </suggest>
+        <space name="name"/>
+        <select name="logBusinessObjectType" operator="equals">
+            <source class="businessobjecttypelist" valuelistNameRef="ibanx.logbook.LogIF"/>
+        </select>
+        <space name="name"/>
+        <select name="logDefinitionKey" operator="equals">
+            <source class="valuelist" valuelistNameRef="logdefinitions"/>
+        </select>
+        <space name="name"/>
+        <select name="logEventBusinessObjectType" operator="equals">
+            <source class="businessobjecttypelist" valuelistNameRef="ibanx.logbook.LogEventIF"/>
+        </select>
+        <space name="name"/>
+        <!-- cannot restrict logEventPBSAttributeLevelThree because form generation logic expects the name on the
+             restricted picklist to be logEventPBSAttributeLevelTwo, but that is of course funcLevelTwo
+        -->
+        <suggest name="logEventPBSAttributeLevelTwo" minLength="0" required="true" maxLength="50" cssClass="uppercase">
+            <source class="valuelist" valuelistNameRef="funcLevelTwo" display="value,description"/>
+        </suggest>
+        <space name="name"/>
+        <suggest name="logEventPBSAttributeLevelThree" minLength="0" maxLength="50" cssClass="uppercase">
+            <source class="valuelist" valuelistNameRef="funcLevelThree" display="value,description"/>
+        </suggest>
+        <space name="name"/>
+        <multiselect name="logEventCategories" operator="equals">
+            <source class="valuelist" valuelistNameRef="eventCategory" display="description"/>
+        </multiselect>
+        <space name="name"/>
+        <textarea name="logEventTitle" maxLength="250" width="wide"/>
+        <textarea name="logEventDescription" maxLength="250" width="wide"/>
+        <space name="name"/>
+        <followupheader name="followupheader"/>
+        <followup name="MISC" width="wide"/>
+        <followup name="IMPROVEMENT" width="wide"/>
+        <followup name="WA" width="wide"/>
+    </fieldset>
+
+    <!-- peta-mutatio picklists-->
+
+    <form name="LISTITEM:CREATE:MOCTYPE">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:MOCTYPE"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:MOCTYPE">
+        <fieldsetref name="LISTITEM:SYSTEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:MOCTYPE"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:MOCTYPE">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:MOCTYPE" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:MOCTYPE" showlegend="false">
+        <textfield name="abbreviation"/>
+        <space name="name"/>
+        <select name="businessObjectType" operator="equals" label="businessObjectType" required="true">
+            <source class="businessobjecttypelist" valuelistNameRef="ibanx.moc.ChangeRequestIF"/>
+        </select>
+    </fieldset>
+
+    <form name="LISTITEM:CREATE:RESOLUTION">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:RESOLUTION"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:RESOLUTION">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:RESOLUTION"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:RESOLUTION">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:RESOLUTION" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:RESOLUTION" showlegend="false">
+        <textfield name="abbreviation"/>
+        <space name="name"/>
+        <select name="type" operator="equals" label="type" required="true">
+            <source class="businessobjecttypelist" valuelistNameRef="ibanx.moc.ChangeActivityIF"/>
+        </select>
+    </fieldset>
+
+    <form name="LISTITEM:CREATE:EVENTTYPE">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:EVENTTYPE"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:EVENTTYPE">
+        <fieldsetref name="LISTITEM:SYSTEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:EVENTTYPE"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:EVENTTYPE">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:EVENTTYPE" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:EVENTTYPE" showlegend="false">
+        <textfield name="abbreviation"/>
+        <space name="name"/>
+        <textfield name="ordering"/>
+    </fieldset>
+
+    <form name="LISTITEM:CREATE:NOTIFICATIONRULEENTITYCLASS">
+        <fieldsetref name="LISTITEM:CREATE:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:NOTIFICATIONRULEENTITYCLASS"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:EDIT:NOTIFICATIONRULEENTITYCLASS">
+        <fieldsetref name="LISTITEM:SYSTEM:EDIT:DETAILS"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:NOTIFICATIONRULEENTITYCLASS"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <form name="LISTITEM:VIEW:NOTIFICATIONRULEENTITYCLASS">
+        <fieldsetref name="LISTITEM:EDIT:DETAILS" mode="view"/>
+        <fieldsetref name="LISTITEM:SPECIFIC:NOTIFICATIONRULEENTITYCLASS" mode="view"/>
+        <fieldsetref name="GENERIC:WHITELISTING"/>
+    </form>
+    <fieldset name="LISTITEM:SPECIFIC:NOTIFICATIONRULEENTITYCLASS" showlegend="false">
+        <textfield name="abbreviation"/>
+        <space name="name"/>
+        <textfield name="ordering"/>
+    </fieldset>
+
+</forms>

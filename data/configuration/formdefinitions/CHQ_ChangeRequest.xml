@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+    <form name="CHANGEREQUESTIF:ASSIGN">
+        <hidden name="key" value="form" persist="false"/>
+        <fieldsetref name="CHANGE_REQUEST:DESCRIPTION" mode="view"/>
+        <hidden name="orgContext" restricts="assignee" persist="false"/>
+        <hidden name="role" value="project_manager" restricts="assignee" persist="false"/>
+        <suggest name="assignee" required="true" label="project_managerUserId" minLength="0">
+            <source class="userlist"/>
+        </suggest>
+        <fieldsetref name="GENERIC_CHANGEREQUEST:WHITELISTING"/>
+    </form>
+
+    <form name="CHANGEREQUESTIF:CHANGE_OWNER">
+        <fieldsetref name="CHANGE_REQUEST:DESCRIPTION" mode="view"/>
+        <hidden name="orgContext" restricts="owner" persist="false"/>
+        <hidden name="role" value="moc_coordinator" restricts="owner" persist="false"/>
+        <suggest name="owner" required="true" label="coordinatorUserId" minLength="0">
+            <source class="userlist"/>
+        </suggest>
+        <fieldsetref name="GENERIC_CHANGEREQUEST:WHITELISTING"/>
+    </form>
+
+    <form name="CHANGE:CREATE">
+        <fieldsetref name="TYPE:CHANGE:HIDDENFIELDS"/>
+        <fieldsetref name="TYPE:CHANGE:TITLE"/>
+        <hidden name="funcLevelOne" restricts="funcLevelTwo,funcLevelThree,tag"/>
+        <fieldsetref name="GENERIC:SECTION:PBS:CHANGEREQUEST"/>
+        <fieldsetref name="TYPE:CHANGE:DESCRIPTION:NEW"/>
+        <fieldsetref name="TYPE:CHANGE:DOCUMENT:REMOVABLE"/>
+        <fieldsetref name="TYPE:CHANGE:SOLUTION:DESCRIPTION"/>
+        <fieldsetref name="TYPE:CHANGE:CLASSIFICATION"/>
+        <fieldsetref name="TYPE:CHANGE:FINANCES:CREATE"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:ONE"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:TWO:CREATE"/>
+        <fieldsetref name="TYPE_CHANGE_GATEKEEPERONCALL"/>
+        <fieldsetref name="GENERIC_CHANGEREQUEST:WHITELISTING"/>
+    </form>
+    <form name="CHANGE:COPY">
+        <fieldsetref name="TYPE:CHANGE:HIDDENFIELDS"/>
+        <fieldsetref name="TYPE:CHANGE:TITLE"/>
+        <hidden name="funcLevelOne" restricts="funcLevelTwo,funcLevelThree,tag"/>
+        <fieldsetref name="GENERIC:SECTION:PBS:CHANGEREQUEST"/>
+        <fieldsetref name="TYPE:CHANGE:DESCRIPTION:NEW"/>
+        <fieldsetref name="TYPE:CHANGE:DOCUMENT:REMOVABLE"/>
+        <fieldsetref name="TYPE:CHANGE:SOLUTION:DESCRIPTION"/>
+        <fieldsetref name="TYPE:CHANGE:CLASSIFICATION"/>
+        <fieldsetref name="TYPE:CHANGE:FINANCES:CREATE"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:ONE"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:TWO:CREATE"/>
+        <fieldsetref name="TYPE_CHANGE_GATEKEEPERONCALL"/>
+        <fieldsetref name="GENERIC_CHANGEREQUEST:WHITELISTING"/>
+    </form>
+    <form name="CHANGE:EDIT:2:NEW">
+        <fieldsetref name="TYPE:CHANGE:HIDDENFIELDS"/>
+        <fieldsetref name="TYPE:CHANGE:TITLE"/>
+        <hidden name="funcLevelOne" restricts="funcLevelTwo,funcLevelThree,tag"/>
+        <fieldsetref name="GENERIC:SECTION:PBS:CHANGEREQUEST"/>
+        <fieldsetref name="TYPE:CHANGE:DESCRIPTION:NEW"/>
+        <fieldsetref name="TYPE:CHANGE:DOCUMENT:REMOVABLE"/>
+        <fieldsetref name="TYPE:CHANGE:SOLUTION:DESCRIPTION"/>
+        <fieldsetref name="TYPE:CHANGE:CLASSIFICATION"/>
+        <fieldsetref name="TYPE:CHANGE:FINANCES:CREATE"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:ONE"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:TWO:CREATE"/>
+        <fieldsetref name="TYPE_CHANGE_GATEKEEPERONCALL"/>
+        <fieldsetref name="GENERIC_CHANGEREQUEST:WHITELISTING"/>
+    </form>
+    <form name="CHANGE:EDIT:2:CHANGE_INCOMPLETE">
+        <fieldsetref name="TYPE:CHANGE:HIDDENFIELDS"/>
+        <fieldsetref name="TYPE:CHANGE:TITLE"/>
+        <hidden name="funcLevelOne" restricts="funcLevelTwo,funcLevelThree,tag"/>
+        <fieldsetref name="GENERIC:SECTION:PBS:CHANGEREQUEST"/>
+        <fieldsetref name="TYPE:CHANGE:DESCRIPTION:NEW"/>
+        <fieldsetref name="TYPE:CHANGE:DOCUMENT:REMOVABLE"/>
+        <fieldsetref name="TYPE:CHANGE:SOLUTION:DESCRIPTION"/>
+        <fieldsetref name="TYPE:CHANGE:CLASSIFICATION"/>
+        <fieldsetref name="TYPE:CHANGE:FINANCES:CREATE"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:ONE"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:TWO:CREATE"/>
+        <fieldsetref name="TYPE_CHANGE_GATEKEEPERONCALL"/>
+        <fieldsetref name="GENERIC_CHANGEREQUEST:WHITELISTING"/>
+    </form>
+
+    <!--FRONTENDDESIGN,BASICDESIGN,DETAILDESIGN,APPROVAL -->
+    <form name="CHANGE:EDIT">
+        <fieldsetref name="TYPE:CHANGE:HIDDENFIELDS"/>
+        <fieldsetref name="TYPE:CHANGE:TITLE"/>
+        <hidden name="funcLevelOne" restricts="funcLevelTwo,funcLevelThree,tag"/>
+        <fieldsetref name="GENERIC:SECTION:PBS:CHANGEREQUEST"/>
+        <fieldsetref name="TYPE:CHANGE:DESCRIPTION"/>
+        <fieldsetref name="TYPE:CHANGE:OTHER_USERS"/>
+        <fieldsetref name="TYPE:CHANGE:DOCUMENT"/>
+        <fieldsetref name="TYPE:CHANGE:SOLUTION:DESCRIPTION"/>
+        <fieldsetref name="TYPE:CHANGE:CLASSIFICATION" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:FINANCES:BEFORE_APPROVAL"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:ONE"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:TWO:BEFORE_APPROVAL"/>
+        <fieldsetref name="TYPE_CHANGE_GATEKEEPERONCALL"/>
+        <fieldsetref name="GENERIC_CHANGEREQUEST:WHITELISTING"/>
+    </form>
+
+    <form name="CHANGE:EDIT:2:EXECUTION">
+        <fieldsetref name="TYPE:CHANGE:HIDDENFIELDS"/>
+        <fieldsetref name="TYPE:CHANGE:TITLE" mode="view"/>
+        <hidden name="funcLevelOne" restricts="funcLevelTwo,funcLevelThree,tag"/>
+        <fieldsetref name="GENERIC:SECTION:PBS:CHANGEREQUEST" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:DESCRIPTION:EXECUTION" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:OTHER_USERS" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:DOCUMENT"/>
+        <fieldsetref name="TYPE:CHANGE:SOLUTION:DESCRIPTION" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:CLASSIFICATION" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:FINANCES:IMPLEMENTATION"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:ONE" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:TWO:IMPLEMENTATION"/>
+        <fieldsetref name="TYPE_CHANGE_GATEKEEPERONCALL" mode="view"/>
+        <fieldsetref name="GENERIC_CHANGEREQUEST:WHITELISTING"/>
+    </form>
+    <form name="CHANGE:EDIT:2:STARTUP">
+        <fieldsetref name="TYPE:CHANGE:HIDDENFIELDS"/>
+        <fieldsetref name="TYPE:CHANGE:TITLE" mode="view"/>
+        <hidden name="funcLevelOne" restricts="funcLevelTwo,funcLevelThree,tag"/>
+        <fieldsetref name="GENERIC:SECTION:PBS:CHANGEREQUEST" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:DESCRIPTION:EXECUTION" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:OTHER_USERS" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:DOCUMENT"/>
+        <fieldsetref name="TYPE:CHANGE:SOLUTION:DESCRIPTION" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:CLASSIFICATION" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:FINANCES:IMPLEMENTATION"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:ONE" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:TWO:IMPLEMENTATION"/>
+        <fieldsetref name="TYPE_CHANGE_GATEKEEPERONCALL" mode="view"/>
+        <fieldsetref name="GENERIC_CHANGEREQUEST:WHITELISTING"/>
+    </form>
+    <form name="CHANGE:EDIT:2:CLOSURE">
+        <fieldsetref name="TYPE:CHANGE:HIDDENFIELDS"/>
+        <fieldsetref name="TYPE:CHANGE:TITLE" mode="view"/>
+        <hidden name="funcLevelOne" restricts="funcLevelTwo,funcLevelThree,tag"/>
+        <fieldsetref name="GENERIC:SECTION:PBS:CHANGEREQUEST" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:DESCRIPTION:EXECUTION" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:OTHER_USERS" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:DOCUMENT"/>
+        <fieldsetref name="TYPE:CHANGE:SOLUTION:DESCRIPTION" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:CLASSIFICATION" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:FINANCES:IMPLEMENTATION"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:ONE" mode="view"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:TWO:IMPLEMENTATION"/>
+        <fieldsetref name="TYPE_CHANGE_GATEKEEPERONCALL" mode="view"/>
+        <fieldsetref name="GENERIC_CHANGEREQUEST:WHITELISTING"/>
+    </form>
+
+    <form name="CHANGE:VIEW:2" mode="view">
+        <fieldsetref name="TYPE:CHANGE:TITLE"/>
+        <fieldsetref name="GENERIC:SECTION:PBS:CHANGEREQUEST"/>
+        <fieldsetref name="TYPE:CHANGE:DESCRIPTION:EXECUTION"/>
+        <fieldsetref name="TYPE:CHANGE:OTHER_USERS"/>
+        <fieldsetref name="TYPE:CHANGE:DOCUMENT"/>
+        <fieldsetref name="TYPE:CHANGE:SOLUTION:DESCRIPTION"/>
+        <fieldsetref name="TYPE:CHANGE:CLASSIFICATION"/>
+        <fieldsetref name="TYPE:CHANGE:FINANCES:IMPLEMENTATION"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:ONE"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:TWO:IMPLEMENTATION"/>
+        <fieldsetref name="TYPE_CHANGE_GATEKEEPERONCALL"/>
+    </form>
+    <form name="CHANGE:PRINT" mode="view">
+        <fieldsetref name="TYPE:CHANGE:TITLE"/>
+        <select name="lifecycleStateId">
+            <source class="lifecyclestatelist" valuelistNameRef="DEFAULT_CA_PROCESS"/>
+        </select>
+        <fieldsetref name="GENERIC:SECTION:PBS:CHANGEREQUEST"/>
+        <fieldsetref name="TYPE:CHANGE:DESCRIPTION:EXECUTION"/>
+        <fieldsetref name="TYPE:CHANGE:OTHER_USERS"/>
+        <fieldsetref name="TYPE:CHANGE:DOCUMENT"/>
+        <fieldsetref name="TYPE:CHANGE:SOLUTION:DESCRIPTION"/>
+        <fieldsetref name="TYPE:CHANGE:CLASSIFICATION"/>
+        <fieldsetref name="TYPE:CHANGE:FINANCES:IMPLEMENTATION"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:ONE"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:TWO:IMPLEMENTATION"/>
+        <fieldsetref name="TYPE_CHANGE_GATEKEEPERONCALL"/>
+    </form>
+    <form name="CHANGE:VIEW" mode="view">
+        <fieldsetref name="TYPE:CHANGE:OVERVIEW"/>
+        <fieldsetref name="TYPE:CHANGE:FINANCES:OVERVIEW"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:OVERVIEW"/>
+    </form>
+    <form name="CHANGE:VIEW:CHANGE_NEW" mode="view">
+        <fieldsetref name="TYPE:CHANGE:OVERVIEW:NEW"/>
+        <fieldsetref name="TYPE:CHANGE:FINANCES:OVERVIEW"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:OVERVIEW"/>
+    </form>
+    <form name="CHANGE:VIEW:CHANGE_INCOMPLETE" mode="view">
+        <fieldsetref name="TYPE:CHANGE:OVERVIEW:NEW"/>
+        <fieldsetref name="TYPE:CHANGE:FINANCES:OVERVIEW"/>
+        <fieldsetref name="TYPE:CHANGE:PLANNING:OVERVIEW"/>
+    </form>
+
+    <fieldset name="TYPE:CHANGE:HIDDENFIELDS" showlegend="false">
+        <hidden name="key" value="form" persist="false"/>
+        <hidden name="objectClassName" value="ibanx.moc.ChangeRequestIF" persist="false"/>
+        <hidden name="orgContext"/>
+        <hidden name="businessObjectType" persist="false"/>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:TITLE" label="LABEL_SECTION_PROPERTIES">
+        <textfield maxLength="85" name="title" required="true" width="wide"/>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:DESCRIPTION" showlegend="false">
+        <textarea maxLength="1000" name="description" required="true" width="wide" label="problem"/>
+        <suggest name="owner" label="coordinatorUserId" minLength="0" maxLength="50">
+            <source class="userlist"/>
+        </suggest>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:DESCRIPTION:NEW" showlegend="false">
+        <textarea maxLength="1000" name="description" required="true" width="wide" label="problem"/>
+        <suggest name="owner" label="mocHandler" minLength="0" maxLength="50">
+            <source class="userlist"/>
+        </suggest>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:DESCRIPTION:EXECUTION" showlegend="false">
+        <textarea maxLength="1000" name="description" required="true" width="wide" label="problem"/>
+        <suggest name="owner" label="coordinatorUserId" minLength="0" maxLength="50">
+            <source class="userlist"/>
+        </suggest>
+        <suggest name="assignee" label="project_managerUserId" minLength="0" maxLength="50">
+            <source class="userlist"/>
+        </suggest>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:DOCUMENT" showlegend="false">
+        <document qualifier="changeRequest" removable="false"/>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:DOCUMENT:REMOVABLE" showlegend="false">
+        <document qualifier="changeRequest" removable="true"/>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:SOLUTION:DESCRIPTION" label="LABEL_SECTION_PROPERTIES_SOLUTION_DESCR">
+        <textarea name="solution" maxLength="1000" required="true" width="wide"/>
+        <textarea name="alternative" maxLength="1000" required="true" width="wide"/>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:CLASSIFICATION" label="LABEL_SECTION_PROPERTIES_CLASS">
+        <multiselect name="largeCategory">
+            <source class="valuelist" valuelistNameRef="largeCategory" display="description" order="ordering"/>
+        </multiselect>
+        <space name="name"/>
+        <multiselect name="mediumCategory">
+            <source class="valuelist" valuelistNameRef="mediumCategory" display="description" order="ordering"/>
+        </multiselect>
+        <space name="name"/>
+        <riskmatrix name="initialrisk" sources="changePeopleSafety,changeHealth,changeEnvironment,changeAssets,changeReputation,changeSecurity" entity="change" required="true"/>
+        <riskmatrix name="riskafterchange" sources="changePeopleSafety,changeHealth,changeEnvironment,changeAssets,changeReputation,changeSecurity" entity="change" required="true"/>
+        <textarea name="riskScenario" maxLength="1000" required="true" width="wide"/>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:OTHER_USERS" showlegend="false">
+        <select name="createdBy" label="initiatorUserId" mode="view">
+            <source class="userlist"/>
+        </select>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:FINANCES:CREATE" label="LABEL_SECTION_PROPERTIES_FINANCES">
+        <textfield maxLength="25" name="sapArId"/>
+        <textfield maskref="number" maxLength="7" name="sapId" value="0"/>
+        <textfield maskref="number" maxLength="25" name="roi" value="0"/>
+        <space name="name"/>
+        <select type="radio" name="roiTimespan">
+            <source class="valuelist" valuelistNameRef="changeRoi" display="description"/>
+        </select>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:FINANCES:BEFORE_APPROVAL" label="LABEL_SECTION_PROPERTIES_FINANCES">
+        <textfield maxLength="25" name="sapArId"/>
+        <textfield maskref="number" maxLength="7" name="sapId" value="0"/>
+        <textfield maskref="number" maxLength="25" name="roi" value="0"/>
+        <textfield maskref="number" maxLength="8" name="budgetEstimated" value="0" mode="view"/>
+        <select type="radio" name="roiTimespan">
+            <source class="valuelist" valuelistNameRef="changeRoi" display="description"/>
+        </select>
+        <textfield maskref="number" maxLength="8" name="budgetActual" value="0"/>
+        <space name="name"/>
+        <textfield maskref="number" maxLength="8" name="budgetPlanned" value="0"/>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:FINANCES:IMPLEMENTATION" label="LABEL_SECTION_PROPERTIES_FINANCES">
+        <textfield maxLength="25" name="sapArId" mode="view"/>
+        <textfield maskref="number" maxLength="7" name="sapId" value="0"/>
+        <textfield maskref="number" maxLength="25" name="roi" value="0" mode="view"/>
+        <textfield maskref="number" maxLength="8" name="budgetEstimated" value="0" mode="view"/>
+        <select type="radio" name="roiTimespan" mode="view">
+            <source class="valuelist" valuelistNameRef="changeRoi" display="description"/>
+        </select>
+        <textfield maskref="number" maxLength="8" name="budgetActual" value="0"/>
+        <space name="name"/>
+        <textfield maskref="number" maxLength="8" name="budgetPlanned" value="0"/>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:PLANNING:ONE" label="SECTION-PLANNING">
+        <multiselect name="emergencyByPass" label="empty">
+            <source class="inline" translationPattern="mocduration.%s">
+                <option value="EMERGENCY" discloses="TYPE_CHANGE_GATEKEEPERONCALL"/>
+            </source>
+        </multiselect>
+        <space name="name"/>
+        <select type="radio" required="true" name="duration" label="empty">
+            <source class="inline" translationPattern="mocduration.%s">
+                <option value="TEMPORARY"/>
+                <option value="PERMANENT"/>
+            </source>
+        </select>
+        <space name="name"/>
+        <multiselect name="inTurnAround" width="wide" label="empty">
+            <source class="inline" translationPattern="mocduration.%s">
+                <option value="INTURNAROUND"/>
+            </source>
+        </multiselect>
+    </fieldset>
+    <fieldset name="TYPE_CHANGE_GATEKEEPERONCALL" showlegend="false">
+        <suggest name="principal" minLength="0" maxLength="50" required="true">
+            <source class="userlist"/>
+        </suggest>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:PLANNING:TWO:CREATE" showlegend="false">
+        <date name="initialPlannedFinishedDate"/>
+        <space name="spacer"/>
+        <!--textfield maskref="number" name="priority" maxLength="1" value="1" required="true" / -->
+        <select type="radio" required="true" name="priority" width="wide">
+            <source class="inline" translationPattern="changePriority.%s">
+                <option value="1"/>
+                <option value="2"/>
+                <option value="3"/>
+            </source>
+        </select>
+        <textfield maskref="number" name="subPriority" maxLength="10" value="0" required="true"/>
+        <space name="spacer"/>
+        <checkbox name="gatekeeper" label="gatekeeperRequired"/>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:PLANNING:TWO:BEFORE_APPROVAL" showlegend="false">
+        <date name="initialPlannedFinishedDate"/>
+        <select required="true" name="flowId" width="wide" mode="view">
+            <source class="inline" translationPattern="moctype.%s">
+                <option value="small"/>
+                <option value="small-with-gatekeeping"/>
+                <option value="medium"/>
+                <option value="medium-with-gatekeeping"/>
+                <option value="medium-with-studies"/>
+                <option value="large"/>
+            </source>
+        </select>
+        <!--textfield maskref="number" name="priority" maxLength="1" value="1" required="true" / -->
+        <select type="radio" required="true" name="priority" width="wide">
+            <source class="inline" translationPattern="changePriority.%s">
+                <option value="1"/>
+                <option value="2"/>
+                <option value="3"/>
+            </source>
+        </select>
+        <textfield maskref="number" name="subPriority" maxLength="10" value="0" required="true"/>
+        <space name="spacer"/>
+        <textfield maskref="number" maxLength="8" name="budgetInHours" value="0" mode="view"/>
+        <space name="name"/>
+        <checkbox name="gatekeeper" label="gatekeeperRequired"/>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:PLANNING:TWO:IMPLEMENTATION" showlegend="false">
+        <date name="initialPlannedFinishedDate" mode="view"/>
+        <select required="true" name="flowId" width="wide" mode="view">
+            <source class="inline" translationPattern="moctype.%s">
+                <option value="small"/>
+                <option value="small-with-gatekeeping"/>
+                <option value="medium"/>
+                <option value="medium-with-gatekeeping"/>
+                <option value="medium-with-studies"/>
+                <option value="large"/>
+            </source>
+        </select>
+        <!--textfield maskref="number" name="priority" maxLength="1" value="1" required="true" mode="view" / -->
+        <select type="radio" required="true" name="priority" width="wide" mode="view">
+            <source class="inline" translationPattern="changePriority.%s">
+                <option value="1"/>
+                <option value="2"/>
+                <option value="3"/>
+            </source>
+        </select>
+        <textfield maskref="number" name="subPriority" maxLength="10" value="0" required="true" mode="view"/>
+        <space name="spacer"/>
+        <textfield maskref="number" maxLength="8" name="budgetInHours" value="0" mode="view"/>
+        <space name="name"/>
+        <checkbox name="gatekeeper" label="gatekeeperRequired" mode="view"/>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:OVERVIEW" label="SECTION-PROPERTIES">
+        <textfield name="title"/>
+
+        <multiselect required="true" name="largeCategory">
+            <source class="valuelist" valuelistNameRef="largeCategory" display="description" order="ordering"/>
+        </multiselect>
+        <space name="name"/>
+        <multiselect required="true" name="mediumCategory">
+            <source class="valuelist" valuelistNameRef="mediumCategory" display="description" order="ordering"/>
+        </multiselect>
+
+        <select name="createdBy" label="initiatorUserId" mode="view">
+            <source class="userlist"/>
+        </select>
+        <suggest name="owner" label="coordinatorUserId">
+            <source class="userlist"/>
+        </suggest>
+        <suggest name="assignee" label="project_managerUserId">
+            <source class="userlist"/>
+        </suggest>
+        <document qualifier="changeRequest" removable="false"/>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:OVERVIEW:NEW" label="SECTION-PROPERTIES">
+        <textfield name="title"/>
+
+        <multiselect required="true" name="largeCategory">
+            <source class="valuelist" valuelistNameRef="largeCategory" display="description" order="ordering"/>
+        </multiselect>
+        <space name="name"/>
+        <multiselect required="true" name="mediumCategory">
+            <source class="valuelist" valuelistNameRef="mediumCategory" display="description" order="ordering"/>
+        </multiselect>
+
+        <select name="createdBy" label="initiatorUserId" mode="view">
+            <source class="userlist"/>
+        </select>
+        <select name="owner" label="mocHandler" mode="view">
+            <source class="userlist"/>
+        </select>
+        <document qualifier="changeRequest" removable="false"/>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:FINANCES:OVERVIEW" showlegend="false">
+        <textfield maxLength="25" name="sapArId"/>
+        <textfield maskref="number" maxLength="7" name="sapId" value="0"/>
+    </fieldset>
+
+    <fieldset name="TYPE:CHANGE:PLANNING:OVERVIEW" showlegend="false">
+        <multiselect name="emergencyByPass" label="empty">
+            <source class="inline" translationPattern="mocduration.%s">
+                <option value="EMERGENCY" discloses="TYPE_CHANGE_GATEKEEPERONCALL"/>
+            </source>
+        </multiselect>
+        <space name="name"/>
+        <select type="radio" required="true" name="duration" label="empty">
+            <source class="inline" translationPattern="mocduration.%s">
+                <option value="TEMPORARY"/>
+                <option value="PERMANENT"/>
+            </source>
+        </select>
+        <space name="name"/>
+        <multiselect name="inTurnAround" width="wide" label="empty">
+            <source class="inline" translationPattern="mocduration.%s">
+                <option value="INTURNAROUND"/>
+            </source>
+        </multiselect>
+        <select required="true" name="flowId">
+            <source class="inline" translationPattern="moctype.%s">
+                <option value="small"/>
+                <option value="small-with-gatekeeping"/>
+                <option value="medium"/>
+                <option value="medium-with-gatekeeping"/>
+                <option value="medium-with-studies"/>
+                <option value="large"/>
+            </source>
+        </select>
+        <!--textfield maskref="number" name="priority" maxLength="1" value="1" required="true" / -->
+        <select type="radio" required="true" name="priority" width="wide">
+            <source class="inline" translationPattern="changePriority.%s">
+                <option value="1"/>
+                <option value="2"/>
+                <option value="3"/>
+            </source>
+        </select>
+        <textfield maskref="number" name="subPriority" maxLength="10" value="0" required="true"/>
+        <space name="spacer"/>
+    </fieldset>
+
+    <fieldset name="CHANGE_REQUEST:DESCRIPTION" label="LABEL_SECTION_PROPERTIES">
+        <textfield maxLength="85" name="title" required="true" width="wide"/>
+        <textarea maxLength="1000" name="description" required="true" width="wide"/>
+        <document qualifier="changeRequest"/>
+    </fieldset>
+
+</forms>

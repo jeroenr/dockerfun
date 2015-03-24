@@ -1,0 +1,2729 @@
+permit,WVG-251,null,2004-11-01 13:32:20,2004-11-01 13:32:20,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,O_AC,TANKENPARK,60A41,Werktuigbouw,WO12354,2004-11-01,2004-11-01,07:00,16:00,,null,1,null,null,PLANT1,true,false,GTI,1
+@startTransaction
+@method,set,permit,WVG-251,aantalUitvoerenden,2
+@method,set,permit,WVG-251,avBeslotenRuimteRequired,
+@method,set,permit,WVG-251,avGraafVergunningRequired,
+@method,set,permit,WVG-251,avHottapRequired,
+@method,set,permit,WVG-251,avPluglasRequired,
+@method,set,permit,WVG-251,avVrijeTekst1,
+@method,set,permit,WVG-251,avVrijeTekst1Required,
+@method,set,permit,WVG-251,avVrijeTekst2,
+@method,set,permit,WVG-251,avVrijeTekst2Required,
+@method,set,permit,WVG-251,confirm,false
+@method,set,permit,WVG-251,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-251,extraEisen,geen
+@method,set,permit,WVG-251,gezamenlijkAfsluiten,
+@method,set,permit,WVG-251,gmExplosiviteitContinueMeting,
+@method,set,permit,WVG-251,gmExplosiviteitLEL,
+@method,set,permit,WVG-251,gmExplosiviteitRequired,
+@method,set,permit,WVG-251,gmToxischContinueMeting,
+@method,set,permit,WVG-251,gmToxischMAC,
+@method,set,permit,WVG-251,gmToxischRequired,
+@method,set,permit,WVG-251,gmToxischStof,
+@method,set,permit,WVG-251,gmZuurstofContinueMeting,
+@method,set,permit,WVG-251,gmZuurstofPct,
+@method,set,permit,WVG-251,gmZuurstofRequired,
+@method,set,permit,WVG-251,invloedNaburigeWerkzaamheden,
+@method,set,permit,WVG-251,module,permit
+@method,set,permit,WVG-251,mogelijkeRisicos,
+@method,set,permit,WVG-251,mvAfkoppelenRequired,
+@method,set,permit,WVG-251,mvAfstekenRequired,
+@method,set,permit,WVG-251,mvAftappenRequired,
+@method,set,permit,WVG-251,mvAppElectrischBlokkeren,
+@method,set,permit,WVG-251,mvAppElectrischBlokkerenRequired,Yes
+@method,set,permit,WVG-251,mvAppElectrischVrijschakelen,
+@method,set,permit,WVG-251,mvAppElectrischVrijschakelenRequired,Yes
+@method,set,permit,WVG-251,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-251,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-251,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-251,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-251,mvControleOmgevingOpBrandbaarMateriaalRequired,
+@method,set,permit,WVG-251,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-251,mvDrukvrijRequired,
+@method,set,permit,WVG-251,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-251,mvInblokkenRequired,
+@method,set,permit,WVG-251,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-251,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-251,mvProduktvrijReady,Yes
+@method,set,permit,WVG-251,mvProduktvrijRequired,Yes
+@method,set,permit,WVG-251,mvSpoelenReady,Yes
+@method,set,permit,WVG-251,mvSpoelenRequired,Yes
+@method,set,permit,WVG-251,mvStomenRequired,
+@method,set,permit,WVG-251,objectKey,ibanx.permit.PermitIF:2736
+@method,set,permit,WVG-251,pbmAdembescherming,
+@method,set,permit,WVG-251,pbmAdembeschermingRequired,
+@method,set,permit,WVG-251,pbmBeschermendeKleding,
+@method,set,permit,WVG-251,pbmBeschermendeKledingRequired,
+@method,set,permit,WVG-251,pbmAdembeschermingText,
+@method,set,permit,WVG-251,pbmGasalarmering,
+@method,set,permit,WVG-251,pbmGasalarmeringRequired,
+@method,set,permit,WVG-251,pbmGehoorbeschermingRequired,
+@method,set,permit,WVG-251,pbmGelaatschermRequired,
+@method,set,permit,WVG-251,pbmHandArmbescherming,leren handschoenen
+@method,set,permit,WVG-251,pbmHandArmbeschermingRequired,Yes
+@method,set,permit,WVG-251,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-251,pbmValbeschermingRequired,Yes
+@method,set,permit,WVG-251,pbmVluchtmaskerBinnenHandbereikRequired,Yes
+@method,set,permit,WVG-251,pbmVrijeTekst1,
+@method,set,permit,WVG-251,pbmVrijeTekst1Required,
+@method,set,permit,WVG-251,pbmVrijeTekst2,
+@method,set,permit,WVG-251,pbmVrijeTekst2Required,
+@method,set,permit,WVG-251,Signature.name,Koot de Verstrekker
+@method,set,permit,WVG-251,Signature.signDate,01-11-2004
+@method,set,permit,WVG-251,Signature.signed,true
+@method,set,permit,WVG-251,specialeOperationeleAandachtspuntenVrijeTekst1,
+@method,set,permit,WVG-251,template,index.vm
+@method,set,permit,WVG-251,tools,Handgereedschap
+@method,set,permit,WVG-251,vehicleEquipment,Mobiele kraan
+@method,set,permit,WVG-251,verificatie,x
+@method,set,permit,WVG-251,vzmBrandwaterslangGereedRequired,
+@method,set,permit,WVG-251,vzmCommunicatiemiddelen,
+@method,set,permit,WVG-251,vzmCommunicatiemiddelenRequired,
+@method,set,permit,WVG-251,vzmGeforceerdeVentilatieRequired,
+@method,set,permit,WVG-251,vzmMangatwachtBrandwachtInzettenRequired,
+@method,set,permit,WVG-251,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-251,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-251,vzmPoederblusser,
+@method,set,permit,WVG-251,vzmPoederblusserRequired,
+@method,set,permit,WVG-251,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-251,vzmPuttenGotenRiolenAfdekkenRequired,Yes
+@method,set,permit,WVG-251,vzmVonkafschermingGebruikenRequired,
+@method,set,permit,WVG-251,vzmVrijeTekst1,afschermen installatie delen
+@method,set,permit,WVG-251,vzmVrijeTekst1Required,Yes
+@method,set,permit,WVG-251,vzmVrijeTekst2,
+@method,set,permit,WVG-251,vzmVrijeTekst2Required,
+@method,set,permit,WVG-251,vzmWerkplekAfzettenRequired,Yes
+@method,set,permit,WVG-251,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-251,vzmWerkplekBeveiligenValgevaarRequired,Yes
+@method,set,permit,WVG-251,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-251,workDescription,Vervangen productpomp
+@method,set,permit,WVG-251,wwBetredenBeslotenRuimteRequired,
+@method,set,permit,WVG-251,wwBrandenGutsenLassenRequired,
+@method,set,permit,WVG-251,wwGravenRequired,
+@method,set,permit,WVG-251,wwGritstralenRequired,
+@method,set,permit,WVG-251,wwHakkenBorenRequired,
+@method,set,permit,WVG-251,wwHijsenRequired,Yes
+@method,set,permit,WVG-251,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-251,wwInstrumentatieElectricalRequired,Yes
+@method,set,permit,WVG-251,wwMonterenDemonterenRequired,Yes
+@method,set,permit,WVG-251,wwOpenenInstallatieRequired,
+@method,set,permit,WVG-251,wwRontgenStralingRequired,
+@method,set,permit,WVG-251,wwSlijpenRequired,
+@method,set,permit,WVG-251,wwVacuumCleaningRequired,
+@method,set,permit,WVG-251,wwVrijeTekst1,
+@method,set,permit,WVG-251,wwVrijeTekst1Required,
+@endTransaction
+@addmarkup,permit,WVG-251,user4,null,melden bij uitlopen werkzaamheden,3,2004-11-01 13:50:47,user4,2004-11-01 13:50:47,user4,lifecycleIdentity,DELTALINQS_PERMIT_PROCESS,stateIdentity,O_AC
+!ph1,signature-pcq-2.x,B_VL,null,B_VL,WVG-251,null,null,null,null,false,true
+!ph2,signature-pcq-2.x,B_AV,null,B_AV,WVG-251,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph3,signature-pcq-2.x,B_OB,null,B_OB,WVG-251,Jans de Beheerder,null,null,2004-11-01,true,true
+!ph4,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-251,Frans de Brandwacht,null,null,2004-11-01,true,true
+!ph5,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-251,Frans Systeem Manager,null,null,2004-11-01,true,true
+!ph6,signature-pcq-2.x,B_VV,null,B_VV,WVG-251,Erik de Voorbereider,null,null,2004-11-01,true,true
+!ph7,signature-pcq-2.x,B_VS,null,B_VS,WVG-251,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph8,signature-pcq-2.x,B_VA,null,B_VA,WVG-251,null,null,null,null,false,true
+!ph9,audit,CREATE_EVENT,WVG-251 aangemaakt,user8,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph10,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-251 en de RBH met nummer RBH-251.,user8,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph11,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-251 en de TRA met nummer TRA-251.,user8,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph12,audit,LINK_EVENT,Koppeling gemaakt tussen de RBH met nummer RBH-251 en de TRA met nummer TRA-251.,user8,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph13,audit,PROMOTE_EVENT,Status van WVG-251 veranderd naar Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph14,audit,SAVE_EVENT,Eigenschappen van WVG-251 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph15,audit,PROMOTE_EVENT,Status van WVG-251 veranderd naar Bekrachtiging Aanvrager,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph16,audit,SAVE_EVENT,Eigenschappen van WVG-251 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph17,audit,SAVE_EVENT,Eigenschappen van WVG-251 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph18,audit,SETSTATE_EVENT,Status van WVG-251 veranderd naar Bepaal Risico,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph19,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-251,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph20,audit,PROMOTE_EVENT,Status van WVG-251 veranderd naar Accordering Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph21,audit,SAVE_EVENT,Eigenschappen van WVG-251 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph22,audit,PROMOTE_EVENT,Status van WVG-251 veranderd naar Maatregelen Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph23,audit,SAVE_EVENT,Eigenschappen van WVG-251 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph24,audit,PROMOTE_EVENT,Status van WVG-251 veranderd naar Bekrachtiging Operationeel Beheerder,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph25,audit,SAVE_EVENT,Eigenschappen van WVG-251 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph26,audit,SAVE_EVENT,Eigenschappen van WVG-251 aangepast,user5,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph27,audit,SETSTATE_EVENT,Status van WVG-251 veranderd naar Bekrachtiging Mede-ondertekenaar 1,user5,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph28,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-251,user5,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph29,audit,SAVE_EVENT,Eigenschappen van WVG-251 aangepast,user11,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph30,audit,SETSTATE_EVENT,Status van WVG-251 veranderd naar Bekrachtiging Mede-ondertekenaar 2,user11,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph31,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-251,user11,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph32,audit,SAVE_EVENT,Eigenschappen van WVG-251 aangepast,user6,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph33,audit,SETSTATE_EVENT,Status van WVG-251 veranderd naar Uitvoeren Voorbereidende Werkzaamheden,user6,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph34,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-251,user6,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph35,audit,PROMOTE_EVENT,Status van WVG-251 veranderd naar Bekrachtiging Vergunning Voorbereider,user10,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph36,audit,SAVE_EVENT,Eigenschappen van WVG-251 aangepast,user10,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph37,audit,SAVE_EVENT,Eigenschappen van WVG-251 aangepast,user10,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph38,audit,SETSTATE_EVENT,Status van WVG-251 veranderd naar Bekrachtiging Verstrekker,user10,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph39,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-251,user10,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph40,audit,SAVE_EVENT,Eigenschappen van WVG-251 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph41,audit,SETSTATE_EVENT,Status van WVG-251 veranderd naar Klaar voor Uitgifte,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph42,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-251,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph43,audit,SETSTATE_EVENT,Status van WVG-251 veranderd naar Actief,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+!ph44,audit,SAVE_EVENT,Eigenschappen van WVG-251 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-251
+permit,WVG-252,null,2004-11-01 13:53:54,2004-11-01 13:53:54,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,O_VA,TANKENPARK,60A41,Werktuigbouw,12345,2004-11-01,2004-11-01,07:00,16:00,Chloor,null,1,null,null,PLANT1,true,false,GTI,1
+@startTransaction
+@method,set,permit,WVG-252,aantalUitvoerenden,3
+@method,set,permit,WVG-252,avBeslotenRuimteRequired,
+@method,set,permit,WVG-252,avGraafVergunningRequired,
+@method,set,permit,WVG-252,avHottapRequired,
+@method,set,permit,WVG-252,avPluglasRequired,
+@method,set,permit,WVG-252,avVrijeTekst1,
+@method,set,permit,WVG-252,avVrijeTekst1Required,
+@method,set,permit,WVG-252,avVrijeTekst2,
+@method,set,permit,WVG-252,avVrijeTekst2Required,
+@method,set,permit,WVG-252,confirm,false
+@method,set,permit,WVG-252,doTakein.stateIdentity,B_VA
+@method,set,permit,WVG-252,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-252,eventSubmit_doTakein,OK
+@method,set,permit,WVG-252,extraEisen,geen
+@method,set,permit,WVG-252,gezamenlijkAfsluiten,Yes
+@method,set,permit,WVG-252,gmExplosiviteitContinueMeting,
+@method,set,permit,WVG-252,gmExplosiviteitLEL,
+@method,set,permit,WVG-252,gmExplosiviteitRequired,
+@method,set,permit,WVG-252,gmToxischContinueMeting,
+@method,set,permit,WVG-252,gmToxischMAC,
+@method,set,permit,WVG-252,gmToxischRequired,
+@method,set,permit,WVG-252,gmToxischStof,
+@method,set,permit,WVG-252,gmZuurstofContinueMeting,
+@method,set,permit,WVG-252,gmZuurstofPct,
+@method,set,permit,WVG-252,gmZuurstofRequired,
+@method,set,permit,WVG-252,invloedNaburigeWerkzaamheden,
+@method,set,permit,WVG-252,markup.body,
+@method,set,permit,WVG-252,module,permit
+@method,set,permit,WVG-252,mogelijkeRisicos,
+@method,set,permit,WVG-252,mvAfkoppelenRequired,
+@method,set,permit,WVG-252,mvAfstekenRequired,
+@method,set,permit,WVG-252,mvAftappenRequired,
+@method,set,permit,WVG-252,mvAppElectrischBlokkeren,
+@method,set,permit,WVG-252,mvAppElectrischBlokkerenRequired,Yes
+@method,set,permit,WVG-252,mvAppElectrischVrijschakelen,
+@method,set,permit,WVG-252,mvAppElectrischVrijschakelenRequired,Yes
+@method,set,permit,WVG-252,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-252,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-252,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-252,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-252,mvControleOmgevingOpBrandbaarMateriaalRequired,
+@method,set,permit,WVG-252,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-252,mvDrukvrijRequired,
+@method,set,permit,WVG-252,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-252,mvInblokkenRequired,
+@method,set,permit,WVG-252,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-252,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-252,mvProduktvrijReady,Yes
+@method,set,permit,WVG-252,mvProduktvrijRequired,Yes
+@method,set,permit,WVG-252,mvSpoelenReady,Yes
+@method,set,permit,WVG-252,mvSpoelenRequired,Yes
+@method,set,permit,WVG-252,mvStomenRequired,
+@method,set,permit,WVG-252,objectKey,ibanx.permit.PermitIF:3227
+@method,set,permit,WVG-252,pbmAdembescherming,persluchtmasker
+@method,set,permit,WVG-252,pbmAdembeschermingRequired,
+@method,set,permit,WVG-252,pbmBeschermendeKleding,
+@method,set,permit,WVG-252,pbmBeschermendeKledingRequired,
+@method,set,permit,WVG-252,pbmAdembeschermingText,
+@method,set,permit,WVG-252,pbmGasalarmering,
+@method,set,permit,WVG-252,pbmGasalarmeringRequired,
+@method,set,permit,WVG-252,pbmGehoorbeschermingRequired,
+@method,set,permit,WVG-252,pbmGelaatschermRequired,Yes
+@method,set,permit,WVG-252,pbmHandArmbescherming,leren handschoenen
+@method,set,permit,WVG-252,pbmHandArmbeschermingRequired,Yes
+@method,set,permit,WVG-252,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-252,pbmValbeschermingRequired,Yes
+@method,set,permit,WVG-252,pbmVluchtmaskerBinnenHandbereikRequired,Yes
+@method,set,permit,WVG-252,pbmVrijeTekst1,
+@method,set,permit,WVG-252,pbmVrijeTekst1Required,
+@method,set,permit,WVG-252,pbmVrijeTekst2,
+@method,set,permit,WVG-252,pbmVrijeTekst2Required,
+@method,set,permit,WVG-252,Signature.name,Koot de Verstrekker
+@method,set,permit,WVG-252,Signature.signDate,01-11-2004
+@method,set,permit,WVG-252,Signature.signed,true
+@method,set,permit,WVG-252,specialeOperationeleAandachtspuntenVrijeTekst1,
+@method,set,permit,WVG-252,template,index.vm
+@method,set,permit,WVG-252,tools,Handgereedschap
+@method,set,permit,WVG-252,vehicleEquipment,Mobiele kraan
+@method,set,permit,WVG-252,verificatie,x
+@method,set,permit,WVG-252,vzmBrandwaterslangGereedRequired,
+@method,set,permit,WVG-252,vzmCommunicatiemiddelen,
+@method,set,permit,WVG-252,vzmCommunicatiemiddelenRequired,
+@method,set,permit,WVG-252,vzmGeforceerdeVentilatieRequired,
+@method,set,permit,WVG-252,vzmMangatwachtBrandwachtInzettenRequired,
+@method,set,permit,WVG-252,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-252,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-252,vzmPoederblusser,
+@method,set,permit,WVG-252,vzmPoederblusserRequired,
+@method,set,permit,WVG-252,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-252,vzmPuttenGotenRiolenAfdekkenRequired,Yes
+@method,set,permit,WVG-252,vzmVonkafschermingGebruikenRequired,
+@method,set,permit,WVG-252,vzmVrijeTekst1,afschermen installatie delen
+@method,set,permit,WVG-252,vzmVrijeTekst1Required,Yes
+@method,set,permit,WVG-252,vzmVrijeTekst2,
+@method,set,permit,WVG-252,vzmVrijeTekst2Required,
+@method,set,permit,WVG-252,vzmWerkplekAfzettenRequired,Yes
+@method,set,permit,WVG-252,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-252,vzmWerkplekBeveiligenValgevaarRequired,Yes
+@method,set,permit,WVG-252,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-252,workDescription,Vervangen productpomp
+@method,set,permit,WVG-252,wwBetredenBeslotenRuimteRequired,
+@method,set,permit,WVG-252,wwBrandenGutsenLassenRequired,
+@method,set,permit,WVG-252,wwGravenRequired,
+@method,set,permit,WVG-252,wwGritstralenRequired,
+@method,set,permit,WVG-252,wwHakkenBorenRequired,
+@method,set,permit,WVG-252,wwHijsenRequired,Yes
+@method,set,permit,WVG-252,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-252,wwInstrumentatieElectricalRequired,Yes
+@method,set,permit,WVG-252,wwMonterenDemonterenRequired,Yes
+@method,set,permit,WVG-252,wwOpenenInstallatieRequired,
+@method,set,permit,WVG-252,wwRontgenStralingRequired,
+@method,set,permit,WVG-252,wwSlijpenRequired,
+@method,set,permit,WVG-252,wwVacuumCleaningRequired,
+@method,set,permit,WVG-252,wwVrijeTekst1,
+@method,set,permit,WVG-252,wwVrijeTekst1Required,
+@endTransaction
+!ph45,signature-pcq-2.x,B_VL,null,B_VL,WVG-252,null,null,null,null,false,true
+!ph46,signature-pcq-2.x,B_AV,null,B_AV,WVG-252,Jan de Aanvrager,null,null,2004-11-01,true,true
+!ph47,signature-pcq-2.x,B_OB,null,B_OB,WVG-252,null,null,null,null,false,false
+!ph48,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-252,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph49,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-252,Frans Systeem Manager,null,null,2004-11-01,true,true
+!ph50,signature-pcq-2.x,B_VV,null,B_VV,WVG-252,Erik de Voorbereider,null,null,2004-11-01,true,true
+!ph51,signature-pcq-2.x,B_VS,null,B_VS,WVG-252,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph52,signature-pcq-2.x,B_VA,null,B_VA,WVG-252,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph53,audit,COPY_EVENT,WVG-252 gekopieerd van WVG-251,user2,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph54,audit,PROMOTE_EVENT,Status van WVG-252 veranderd naar Maatregelen Houder,user2,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph55,audit,SAVE_EVENT,Eigenschappen van WVG-252 aangepast,user2,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph56,audit,PROMOTE_EVENT,Status van WVG-252 veranderd naar Bekrachtiging Aanvrager,user2,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph57,audit,SAVE_EVENT,Eigenschappen van WVG-252 aangepast,user2,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph58,audit,SAVE_EVENT,Eigenschappen van WVG-252 aangepast,user2,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph59,audit,SETSTATE_EVENT,Status van WVG-252 veranderd naar Bepaal Risico,user2,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph60,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-252,user2,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph61,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-252 en de RBH met nummer RBH-252.,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph62,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-252 en de TRA met nummer TRA-254.,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph63,audit,LINK_EVENT,Koppeling gemaakt tussen de RBH met nummer RBH-252 en de TRA met nummer TRA-254.,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph64,audit,PROMOTE_EVENT,Status van WVG-252 veranderd naar Accordering Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph65,audit,SAVE_EVENT,Eigenschappen van WVG-252 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph66,audit,PROMOTE_EVENT,Status van WVG-252 veranderd naar Maatregelen Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph67,audit,SAVE_EVENT,Eigenschappen van WVG-252 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph68,audit,PROMOTE_EVENT,Status van WVG-252 veranderd naar Bekrachtiging Mede-ondertekenaar 1,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph69,audit,SAVE_EVENT,Eigenschappen van WVG-252 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph70,audit,SAVE_EVENT,Eigenschappen van WVG-252 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph71,audit,SETSTATE_EVENT,Status van WVG-252 veranderd naar Bekrachtiging Mede-ondertekenaar 2,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph72,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-252,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph73,audit,SAVE_EVENT,Eigenschappen van WVG-252 aangepast,user6,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph74,audit,SETSTATE_EVENT,Status van WVG-252 veranderd naar Uitvoeren Voorbereidende Werkzaamheden,user6,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph75,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-252,user6,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph76,audit,PROMOTE_EVENT,Status van WVG-252 veranderd naar Bekrachtiging Vergunning Voorbereider,user10,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph77,audit,SAVE_EVENT,Eigenschappen van WVG-252 aangepast,user10,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph78,audit,SAVE_EVENT,Eigenschappen van WVG-252 aangepast,user10,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph79,audit,SETSTATE_EVENT,Status van WVG-252 veranderd naar Bekrachtiging Verstrekker,user10,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph80,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-252,user10,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph81,audit,SAVE_EVENT,Eigenschappen van WVG-252 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph82,audit,SETSTATE_EVENT,Status van WVG-252 veranderd naar Klaar voor Uitgifte,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph83,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-252,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph84,audit,SETSTATE_EVENT,Status van WVG-252 veranderd naar Actief,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph85,audit,SAVE_EVENT,Eigenschappen van WVG-252 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph86,audit,SETSTATE_EVENT,Status van WVG-252 veranderd naar Bekrachtiging Vergunning Afsluiten,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph87,audit,SAVE_EVENT,Eigenschappen van WVG-252 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph88,audit,SAVE_EVENT,Eigenschappen van WVG-252 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph89,audit,SETSTATE_EVENT,Status van WVG-252 veranderd naar Afgesloten,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+!ph90,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-252,user4,2004-11-01,ibanx.permit.Permit,WVG-252
+permit,WVG-253,null,2004-11-01 14:01:00,2004-11-01 14:01:00,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,O_AC,TANKENPARK,60A41,Werktuigbouw,,2004-11-02,2004-11-02,07:00,16:00,Chloor,null,1,null,null,PLANT1,true,false,GTI,1
+@startTransaction
+@method,set,permit,WVG-253,aantalUitvoerenden,3
+@method,set,permit,WVG-253,avBeslotenRuimteRequired,
+@method,set,permit,WVG-253,avGraafVergunningRequired,
+@method,set,permit,WVG-253,avHottapRequired,
+@method,set,permit,WVG-253,avPluglasRequired,
+@method,set,permit,WVG-253,avVrijeTekst1,
+@method,set,permit,WVG-253,avVrijeTekst1Required,
+@method,set,permit,WVG-253,avVrijeTekst2,
+@method,set,permit,WVG-253,avVrijeTekst2Required,
+@method,set,permit,WVG-253,confirm,false
+@method,set,permit,WVG-253,doTakein.stateIdentity,B_VA
+@method,set,permit,WVG-253,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-253,eventSubmit_doTakein,OK
+@method,set,permit,WVG-253,extraEisen,geen
+@method,set,permit,WVG-253,gezamenlijkAfsluiten,Yes
+@method,set,permit,WVG-253,gmExplosiviteitContinueMeting,
+@method,set,permit,WVG-253,gmExplosiviteitLEL,
+@method,set,permit,WVG-253,gmExplosiviteitRequired,
+@method,set,permit,WVG-253,gmToxischContinueMeting,
+@method,set,permit,WVG-253,gmToxischMAC,
+@method,set,permit,WVG-253,gmToxischRequired,
+@method,set,permit,WVG-253,gmToxischStof,
+@method,set,permit,WVG-253,gmZuurstofContinueMeting,
+@method,set,permit,WVG-253,gmZuurstofPct,
+@method,set,permit,WVG-253,gmZuurstofRequired,
+@method,set,permit,WVG-253,invloedNaburigeWerkzaamheden,
+@method,set,permit,WVG-253,markup.body,
+@method,set,permit,WVG-253,module,permit
+@method,set,permit,WVG-253,mogelijkeRisicos,
+@method,set,permit,WVG-253,mvAfkoppelenRequired,
+@method,set,permit,WVG-253,mvAfstekenRequired,
+@method,set,permit,WVG-253,mvAftappenRequired,
+@method,set,permit,WVG-253,mvAppElectrischBlokkeren,
+@method,set,permit,WVG-253,mvAppElectrischBlokkerenRequired,Yes
+@method,set,permit,WVG-253,mvAppElectrischVrijschakelen,
+@method,set,permit,WVG-253,mvAppElectrischVrijschakelenRequired,Yes
+@method,set,permit,WVG-253,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-253,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-253,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-253,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-253,mvControleOmgevingOpBrandbaarMateriaalRequired,
+@method,set,permit,WVG-253,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-253,mvDrukvrijRequired,
+@method,set,permit,WVG-253,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-253,mvInblokkenRequired,
+@method,set,permit,WVG-253,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-253,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-253,mvProduktvrijReady,Yes
+@method,set,permit,WVG-253,mvProduktvrijRequired,Yes
+@method,set,permit,WVG-253,mvSpoelenReady,Yes
+@method,set,permit,WVG-253,mvSpoelenRequired,Yes
+@method,set,permit,WVG-253,mvStomenRequired,
+@method,set,permit,WVG-253,objectKey,ibanx.permit.PermitIF:3539
+@method,set,permit,WVG-253,pbmAdembescherming,persluchtmasker
+@method,set,permit,WVG-253,pbmAdembeschermingRequired,
+@method,set,permit,WVG-253,pbmBeschermendeKleding,
+@method,set,permit,WVG-253,pbmBeschermendeKledingRequired,
+@method,set,permit,WVG-253,pbmAdembeschermingText,
+@method,set,permit,WVG-253,pbmGasalarmering,
+@method,set,permit,WVG-253,pbmGasalarmeringRequired,
+@method,set,permit,WVG-253,pbmGehoorbeschermingRequired,
+@method,set,permit,WVG-253,pbmGelaatschermRequired,Yes
+@method,set,permit,WVG-253,pbmHandArmbescherming,leren handschoenen
+@method,set,permit,WVG-253,pbmHandArmbeschermingRequired,Yes
+@method,set,permit,WVG-253,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-253,pbmValbeschermingRequired,Yes
+@method,set,permit,WVG-253,pbmVluchtmaskerBinnenHandbereikRequired,Yes
+@method,set,permit,WVG-253,pbmVrijeTekst1,
+@method,set,permit,WVG-253,pbmVrijeTekst1Required,
+@method,set,permit,WVG-253,pbmVrijeTekst2,
+@method,set,permit,WVG-253,pbmVrijeTekst2Required,
+@method,set,permit,WVG-253,Signature.name,Koot de Verstrekker
+@method,set,permit,WVG-253,Signature.signDate,02-11-2004
+@method,set,permit,WVG-253,Signature.signed,true
+@method,set,permit,WVG-253,specialeOperationeleAandachtspuntenVrijeTekst1,
+@method,set,permit,WVG-253,template,index.vm
+@method,set,permit,WVG-253,tools,Handgereedschap
+@method,set,permit,WVG-253,vehicleEquipment,Mobiele kraan
+@method,set,permit,WVG-253,verificatie,x
+@method,set,permit,WVG-253,vzmBrandwaterslangGereedRequired,
+@method,set,permit,WVG-253,vzmCommunicatiemiddelen,
+@method,set,permit,WVG-253,vzmCommunicatiemiddelenRequired,
+@method,set,permit,WVG-253,vzmGeforceerdeVentilatieRequired,
+@method,set,permit,WVG-253,vzmMangatwachtBrandwachtInzettenRequired,
+@method,set,permit,WVG-253,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-253,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-253,vzmPoederblusser,
+@method,set,permit,WVG-253,vzmPoederblusserRequired,
+@method,set,permit,WVG-253,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-253,vzmPuttenGotenRiolenAfdekkenRequired,Yes
+@method,set,permit,WVG-253,vzmVonkafschermingGebruikenRequired,
+@method,set,permit,WVG-253,vzmVrijeTekst1,afschermen installatie delen
+@method,set,permit,WVG-253,vzmVrijeTekst1Required,Yes
+@method,set,permit,WVG-253,vzmVrijeTekst2,
+@method,set,permit,WVG-253,vzmVrijeTekst2Required,
+@method,set,permit,WVG-253,vzmWerkplekAfzettenRequired,Yes
+@method,set,permit,WVG-253,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-253,vzmWerkplekBeveiligenValgevaarRequired,Yes
+@method,set,permit,WVG-253,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-253,workDescription,Vervangen productpomp
+@method,set,permit,WVG-253,wwBetredenBeslotenRuimteRequired,
+@method,set,permit,WVG-253,wwBrandenGutsenLassenRequired,
+@method,set,permit,WVG-253,wwGravenRequired,
+@method,set,permit,WVG-253,wwGritstralenRequired,
+@method,set,permit,WVG-253,wwHakkenBorenRequired,
+@method,set,permit,WVG-253,wwHijsenRequired,Yes
+@method,set,permit,WVG-253,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-253,wwInstrumentatieElectricalRequired,Yes
+@method,set,permit,WVG-253,wwMonterenDemonterenRequired,Yes
+@method,set,permit,WVG-253,wwOpenenInstallatieRequired,
+@method,set,permit,WVG-253,wwRontgenStralingRequired,
+@method,set,permit,WVG-253,wwSlijpenRequired,
+@method,set,permit,WVG-253,wwVacuumCleaningRequired,
+@method,set,permit,WVG-253,wwVrijeTekst1,
+@method,set,permit,WVG-253,wwVrijeTekst1Required,
+@endTransaction
+@addmarkup,permit,WVG-253,user4,null,geen,3,2004-11-02 10:38:18,user4,2004-11-02 10:38:18,user4,lifecycleIdentity,DELTALINQS_PERMIT_PROCESS,stateIdentity,O_AC
+!ph91,signature-pcq-2.x,B_VL,null,B_VL,WVG-253,null,null,null,null,false,true
+!ph92,signature-pcq-2.x,B_AV,null,B_AV,WVG-253,Jan de Aanvrager,null,null,2004-11-02,true,true
+!ph93,signature-pcq-2.x,B_OB,null,B_OB,WVG-253,null,null,null,null,false,false
+!ph94,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-253,Koot de Verstrekker,null,null,2004-11-02,true,true
+!ph95,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-253,Koot de Verstrekker,null,null,2004-11-02,true,true
+!ph96,signature-pcq-2.x,B_VV,null,B_VV,WVG-253,Koot de Verstrekker,null,null,2004-11-02,true,true
+!ph97,signature-pcq-2.x,B_VS,null,B_VS,WVG-253,Koot de Verstrekker,null,null,2004-11-02,true,true
+!ph98,signature-pcq-2.x,B_VA,null,B_VA,WVG-253,null,null,null,null,false,true
+!ph99,audit,COPY_EVENT,WVG-253 gekopieerd van WVG-252,user8,2004-11-01,ibanx.permit.Permit,WVG-253
+!ph100,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-253 en de RBH met nummer RBH-265.,user2,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph101,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-253 en de TRA met nummer TRA-268.,user2,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph102,audit,LINK_EVENT,Koppeling gemaakt tussen de RBH met nummer RBH-265 en de TRA met nummer TRA-268.,user2,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph103,audit,PROMOTE_EVENT,Status van WVG-253 veranderd naar Maatregelen Houder,user2,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph104,audit,SAVE_EVENT,Eigenschappen van WVG-253 aangepast,user2,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph105,audit,PROMOTE_EVENT,Status van WVG-253 veranderd naar Bekrachtiging Aanvrager,user2,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph106,audit,SAVE_EVENT,Eigenschappen van WVG-253 aangepast,user2,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph107,audit,SAVE_EVENT,Eigenschappen van WVG-253 aangepast,user2,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph108,audit,SETSTATE_EVENT,Status van WVG-253 veranderd naar Bepaal Risico,user2,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph109,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-253,user2,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph110,audit,UNLINK_EVENT,Koppeling verwijderd tussen de TRA met id 8446 en de vergunning met id 3539.,user2,2004-11-02,ibanx.permit.PermitIF,WVG-253
+!ph111,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-253 en de TRA met nummer TRA-252.,user2,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph112,audit,UNLINK_EVENT,Koppeling verwijderd tussen de TRA met id 3125 en de vergunning met id 3539.,user2,2004-11-02,ibanx.permit.PermitIF,WVG-253
+!ph113,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-253 en de TRA met nummer TRA-268.,user2,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph114,audit,PROMOTE_EVENT,Status van WVG-253 veranderd naar Accordering Maatregelen Houder,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph115,audit,SAVE_EVENT,Eigenschappen van WVG-253 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph116,audit,PROMOTE_EVENT,Status van WVG-253 veranderd naar Maatregelen Verstrekker,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph117,audit,SAVE_EVENT,Eigenschappen van WVG-253 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph118,audit,PROMOTE_EVENT,Status van WVG-253 veranderd naar Bekrachtiging Mede-ondertekenaar 1,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph119,audit,SAVE_EVENT,Eigenschappen van WVG-253 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph120,audit,SAVE_EVENT,Eigenschappen van WVG-253 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph121,audit,SETSTATE_EVENT,Status van WVG-253 veranderd naar Bekrachtiging Mede-ondertekenaar 2,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph122,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-253,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph123,audit,SAVE_EVENT,Eigenschappen van WVG-253 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph124,audit,SETSTATE_EVENT,Status van WVG-253 veranderd naar Uitvoeren Voorbereidende Werkzaamheden,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph125,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-253,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph126,audit,PROMOTE_EVENT,Status van WVG-253 veranderd naar Bekrachtiging Vergunning Voorbereider,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph127,audit,SAVE_EVENT,Eigenschappen van WVG-253 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph128,audit,SAVE_EVENT,Eigenschappen van WVG-253 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph129,audit,SETSTATE_EVENT,Status van WVG-253 veranderd naar Bekrachtiging Verstrekker,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph130,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-253,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph131,audit,SAVE_EVENT,Eigenschappen van WVG-253 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph132,audit,SETSTATE_EVENT,Status van WVG-253 veranderd naar Klaar voor Uitgifte,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph133,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-253,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph134,audit,SETSTATE_EVENT,Status van WVG-253 veranderd naar Actief,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+!ph135,audit,SAVE_EVENT,Eigenschappen van WVG-253 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-253
+permit,WVG-254,null,2004-11-01 14:01:05,2004-11-01 14:01:05,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,E_T,TANKENPARK,60A41,Werktuigbouw,,null,null,07:00,16:00,Chloor,null,1,null,null,PLANT1,true,false,GTI,0
+@startTransaction
+@method,set,permit,WVG-254,aantalUitvoerenden,
+@method,set,permit,WVG-254,avBeslotenRuimteRequired,
+@method,set,permit,WVG-254,avGraafVergunningRequired,
+@method,set,permit,WVG-254,avHottapRequired,
+@method,set,permit,WVG-254,avPluglasRequired,
+@method,set,permit,WVG-254,avVrijeTekst1,
+@method,set,permit,WVG-254,avVrijeTekst1Required,
+@method,set,permit,WVG-254,avVrijeTekst2,
+@method,set,permit,WVG-254,avVrijeTekst2Required,
+@method,set,permit,WVG-254,confirm,false
+@method,set,permit,WVG-254,doSave_as_template.stateIdentity,E_T
+@method,set,permit,WVG-254,doTakein.stateIdentity,B_VA
+@method,set,permit,WVG-254,eventSubmit_doSave_as_template,OK
+@method,set,permit,WVG-254,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-254,eventSubmit_doTakein,OK
+@method,set,permit,WVG-254,extraEisen,geen
+@method,set,permit,WVG-254,gezamenlijkAfsluiten,Yes
+@method,set,permit,WVG-254,gmExplosiviteitContinueMeting,
+@method,set,permit,WVG-254,gmExplosiviteitLEL,
+@method,set,permit,WVG-254,gmExplosiviteitRequired,
+@method,set,permit,WVG-254,gmToxischContinueMeting,
+@method,set,permit,WVG-254,gmToxischMAC,
+@method,set,permit,WVG-254,gmToxischRequired,
+@method,set,permit,WVG-254,gmToxischStof,
+@method,set,permit,WVG-254,gmZuurstofContinueMeting,
+@method,set,permit,WVG-254,gmZuurstofPct,
+@method,set,permit,WVG-254,gmZuurstofRequired,
+@method,set,permit,WVG-254,invloedNaburigeWerkzaamheden,
+@method,set,permit,WVG-254,markup.body,
+@method,set,permit,WVG-254,module,permit
+@method,set,permit,WVG-254,mogelijkeRisicos,
+@method,set,permit,WVG-254,mvAfkoppelenRequired,
+@method,set,permit,WVG-254,mvAfstekenRequired,
+@method,set,permit,WVG-254,mvAftappenRequired,
+@method,set,permit,WVG-254,mvAppElectrischBlokkeren,
+@method,set,permit,WVG-254,mvAppElectrischBlokkerenRequired,Yes
+@method,set,permit,WVG-254,mvAppElectrischVrijschakelen,
+@method,set,permit,WVG-254,mvAppElectrischVrijschakelenRequired,Yes
+@method,set,permit,WVG-254,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-254,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-254,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-254,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-254,mvControleOmgevingOpBrandbaarMateriaalRequired,
+@method,set,permit,WVG-254,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-254,mvDrukvrijRequired,
+@method,set,permit,WVG-254,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-254,mvInblokkenRequired,
+@method,set,permit,WVG-254,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-254,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-254,mvProduktvrijReady,Yes
+@method,set,permit,WVG-254,mvProduktvrijRequired,Yes
+@method,set,permit,WVG-254,mvSpoelenReady,Yes
+@method,set,permit,WVG-254,mvSpoelenRequired,Yes
+@method,set,permit,WVG-254,mvStomenRequired,
+@method,set,permit,WVG-254,objectKey,ibanx.permit.PermitIF:3539
+@method,set,permit,WVG-254,pbmAdembescherming,persluchtmasker
+@method,set,permit,WVG-254,pbmAdembeschermingRequired,
+@method,set,permit,WVG-254,pbmBeschermendeKleding,
+@method,set,permit,WVG-254,pbmBeschermendeKledingRequired,
+@method,set,permit,WVG-254,pbmAdembeschermingText,
+@method,set,permit,WVG-254,pbmGasalarmering,
+@method,set,permit,WVG-254,pbmGasalarmeringRequired,
+@method,set,permit,WVG-254,pbmGehoorbeschermingRequired,
+@method,set,permit,WVG-254,pbmGelaatschermRequired,Yes
+@method,set,permit,WVG-254,pbmHandArmbescherming,leren handschoenen
+@method,set,permit,WVG-254,pbmHandArmbeschermingRequired,Yes
+@method,set,permit,WVG-254,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-254,pbmValbeschermingRequired,Yes
+@method,set,permit,WVG-254,pbmVluchtmaskerBinnenHandbereikRequired,Yes
+@method,set,permit,WVG-254,pbmVrijeTekst1,
+@method,set,permit,WVG-254,pbmVrijeTekst1Required,
+@method,set,permit,WVG-254,pbmVrijeTekst2,
+@method,set,permit,WVG-254,pbmVrijeTekst2Required,
+@method,set,permit,WVG-254,Signature.name,Koot de Verstrekker
+@method,set,permit,WVG-254,Signature.signDate,01-11-2004
+@method,set,permit,WVG-254,Signature.signed,true
+@method,set,permit,WVG-254,specialeOperationeleAandachtspuntenVrijeTekst1,
+@method,set,permit,WVG-254,template,index.vm
+@method,set,permit,WVG-254,tools,Handgereedschap
+@method,set,permit,WVG-254,vehicleEquipment,Mobiele kraan
+@method,set,permit,WVG-254,verificatie,x
+@method,set,permit,WVG-254,vzmBrandwaterslangGereedRequired,
+@method,set,permit,WVG-254,vzmCommunicatiemiddelen,
+@method,set,permit,WVG-254,vzmCommunicatiemiddelenRequired,
+@method,set,permit,WVG-254,vzmGeforceerdeVentilatieRequired,
+@method,set,permit,WVG-254,vzmMangatwachtBrandwachtInzettenRequired,
+@method,set,permit,WVG-254,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-254,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-254,vzmPoederblusser,
+@method,set,permit,WVG-254,vzmPoederblusserRequired,
+@method,set,permit,WVG-254,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-254,vzmPuttenGotenRiolenAfdekkenRequired,Yes
+@method,set,permit,WVG-254,vzmVonkafschermingGebruikenRequired,
+@method,set,permit,WVG-254,vzmVrijeTekst1,afschermen installatie delen
+@method,set,permit,WVG-254,vzmVrijeTekst1Required,Yes
+@method,set,permit,WVG-254,vzmVrijeTekst2,
+@method,set,permit,WVG-254,vzmVrijeTekst2Required,
+@method,set,permit,WVG-254,vzmWerkplekAfzettenRequired,Yes
+@method,set,permit,WVG-254,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-254,vzmWerkplekBeveiligenValgevaarRequired,Yes
+@method,set,permit,WVG-254,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-254,workDescription,Vervangen pomp
+@method,set,permit,WVG-254,wwBetredenBeslotenRuimteRequired,
+@method,set,permit,WVG-254,wwBrandenGutsenLassenRequired,
+@method,set,permit,WVG-254,wwGravenRequired,
+@method,set,permit,WVG-254,wwGritstralenRequired,
+@method,set,permit,WVG-254,wwHakkenBorenRequired,
+@method,set,permit,WVG-254,wwHijsenRequired,Yes
+@method,set,permit,WVG-254,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-254,wwInstrumentatieElectricalRequired,Yes
+@method,set,permit,WVG-254,wwMonterenDemonterenRequired,Yes
+@method,set,permit,WVG-254,wwOpenenInstallatieRequired,
+@method,set,permit,WVG-254,wwRontgenStralingRequired,
+@method,set,permit,WVG-254,wwSlijpenRequired,
+@method,set,permit,WVG-254,wwVacuumCleaningRequired,
+@method,set,permit,WVG-254,wwVrijeTekst1,
+@method,set,permit,WVG-254,wwVrijeTekst1Required,
+@endTransaction
+!ph136,signature-pcq-2.x,B_VL,null,B_VL,WVG-254,null,null,null,null,false,true
+!ph137,signature-pcq-2.x,B_AV,null,B_AV,WVG-254,null,null,null,null,false,true
+!ph138,signature-pcq-2.x,B_OB,null,B_OB,WVG-254,null,null,null,null,false,false
+!ph139,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-254,null,null,null,null,false,true
+!ph140,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-254,null,null,null,null,false,true
+!ph141,signature-pcq-2.x,B_VV,null,B_VV,WVG-254,null,null,null,null,false,true
+!ph142,signature-pcq-2.x,B_VS,null,B_VS,WVG-254,null,null,null,null,false,true
+!ph143,signature-pcq-2.x,B_VA,null,B_VA,WVG-254,null,null,null,null,false,true
+!ph144,audit,COPY_EVENT,WVG-254 gekopieerd van WVG-253,user8,2004-11-01,ibanx.permit.Permit,WVG-254
+!ph145,audit,SETSTATE_EVENT,Status van WVG-254 veranderd naar Template,user8,2004-11-01,ibanx.permit.Permit,WVG-254
+!ph146,audit,SAVE_EVENT,Eigenschappen van WVG-254 aangepast,user8,2004-11-01,ibanx.permit.Permit,WVG-254
+!ph147,audit,SAVE_EVENT,Eigenschappen van WVG-254 aangepast,user8,2004-11-01,ibanx.permit.Permit,WVG-254
+permit,WVG-255,null,2004-11-01 14:02:42,2004-11-01 14:02:42,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,O_AC,DPA/300,18T01,Werktuigbouw,WO98765,2004-11-01,2004-11-01,07:00,16:00,H2SO4,null,1,null,null,PLANT1,true,false,Fabricom,2
+@startTransaction
+@method,set,permit,WVG-255,aantalUitvoerenden,2
+@method,set,permit,WVG-255,avBeslotenRuimteRequired,Yes
+@method,set,permit,WVG-255,avGraafVergunningRequired,
+@method,set,permit,WVG-255,avHottapRequired,
+@method,set,permit,WVG-255,avPluglasRequired,
+@method,set,permit,WVG-255,avVrijeTekst1,
+@method,set,permit,WVG-255,avVrijeTekst1Required,
+@method,set,permit,WVG-255,avVrijeTekst2,
+@method,set,permit,WVG-255,avVrijeTekst2Required,
+@method,set,permit,WVG-255,bijzRichtlijnenProcedureBeslotenRuimteRequired,Yes
+@method,set,permit,WVG-255,confirm,false
+@method,set,permit,WVG-255,doRequest_prolong.stateIdentity,B_VL
+@method,set,permit,WVG-255,eventSubmit_doRequest_prolong,OK
+@method,set,permit,WVG-255,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-255,extraEisen,geen
+@method,set,permit,WVG-255,gezamenlijkAfsluiten,
+@method,set,permit,WVG-255,gmExplosiviteitContinueMeting,Yes
+@method,set,permit,WVG-255,gmExplosiviteitLEL,
+@method,set,permit,WVG-255,gmExplosiviteitRequired,Yes
+@method,set,permit,WVG-255,gmToxischContinueMeting,
+@method,set,permit,WVG-255,gmToxischMAC,
+@method,set,permit,WVG-255,gmToxischRequired,
+@method,set,permit,WVG-255,gmToxischStof,
+@method,set,permit,WVG-255,gmZuurstofContinueMeting,Yes
+@method,set,permit,WVG-255,gmZuurstofPct,
+@method,set,permit,WVG-255,gmZuurstofRequired,No
+@method,set,permit,WVG-255,invloedNaburigeWerkzaamheden,
+@method,set,permit,WVG-255,markup.body,
+@method,set,permit,WVG-255,module,permit
+@method,set,permit,WVG-255,mogelijkeRisicos,
+@method,set,permit,WVG-255,mvAfkoppelenRequired,
+@method,set,permit,WVG-255,mvAfstekenRequired,
+@method,set,permit,WVG-255,mvAftappenRequired,
+@method,set,permit,WVG-255,mvAppElectrischBlokkeren,
+@method,set,permit,WVG-255,mvAppElectrischBlokkerenRequired,
+@method,set,permit,WVG-255,mvAppElectrischVrijschakelen,
+@method,set,permit,WVG-255,mvAppElectrischVrijschakelenRequired,
+@method,set,permit,WVG-255,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-255,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-255,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-255,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-255,mvControleOmgevingOpBrandbaarMateriaalRequired,Yes
+@method,set,permit,WVG-255,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-255,mvDrukvrijRequired,
+@method,set,permit,WVG-255,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-255,mvInblokkenRequired,
+@method,set,permit,WVG-255,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-255,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-255,mvProduktvrijReady,Yes
+@method,set,permit,WVG-255,mvProduktvrijRequired,Yes
+@method,set,permit,WVG-255,mvSpoelenReady,Yes
+@method,set,permit,WVG-255,mvSpoelenRequired,Yes
+@method,set,permit,WVG-255,mvStomenRequired,
+@method,set,permit,WVG-255,nextStateIdentity,O_KVU
+@method,set,permit,WVG-255,objectKey,ibanx.permit.PermitIF:3815
+@method,set,permit,WVG-255,pbmAdembescherming,
+@method,set,permit,WVG-255,pbmAdembeschermingRequired,
+@method,set,permit,WVG-255,pbmBeschermendeKleding,brandvertragende kleding
+@method,set,permit,WVG-255,pbmBeschermendeKledingRequired,Yes
+@method,set,permit,WVG-255,pbmAdembeschermingText,
+@method,set,permit,WVG-255,pbmGasalarmering,
+@method,set,permit,WVG-255,pbmGasalarmeringRequired,
+@method,set,permit,WVG-255,pbmGehoorbeschermingRequired,
+@method,set,permit,WVG-255,pbmGelaatschermRequired,
+@method,set,permit,WVG-255,pbmHandArmbescherming,leren handschoenen
+@method,set,permit,WVG-255,pbmHandArmbeschermingRequired,Yes
+@method,set,permit,WVG-255,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-255,pbmValbeschermingRequired,
+@method,set,permit,WVG-255,pbmVluchtmaskerBinnenHandbereikRequired,Yes
+@method,set,permit,WVG-255,pbmVrijeTekst1,
+@method,set,permit,WVG-255,pbmVrijeTekst1Required,
+@method,set,permit,WVG-255,pbmVrijeTekst2,
+@method,set,permit,WVG-255,pbmVrijeTekst2Required,
+@method,set,permit,WVG-255,Signature.name,Koot de Verstrekker
+@method,set,permit,WVG-255,Signature.signDate,01-11-2004
+@method,set,permit,WVG-255,Signature.signed,true
+@method,set,permit,WVG-255,specialeOperationeleAandachtspuntenVrijeTekst1,
+@method,set,permit,WVG-255,template,index.vm
+@method,set,permit,WVG-255,tools,slijptol\r\nlasapparatuur
+@method,set,permit,WVG-255,vehicleEquipment,
+@method,set,permit,WVG-255,verificatie,x
+@method,set,permit,WVG-255,vzmBrandwaterslangGereedRequired,Yes
+@method,set,permit,WVG-255,vzmCommunicatiemiddelen,
+@method,set,permit,WVG-255,vzmCommunicatiemiddelenRequired,Yes
+@method,set,permit,WVG-255,vzmGeforceerdeVentilatieRequired,Yes
+@method,set,permit,WVG-255,vzmMangatwachtBrandwachtInzettenRequired,Yes
+@method,set,permit,WVG-255,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-255,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-255,vzmPoederblusser,
+@method,set,permit,WVG-255,vzmPoederblusserRequired,Yes
+@method,set,permit,WVG-255,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-255,vzmPuttenGotenRiolenAfdekkenRequired,Yes
+@method,set,permit,WVG-255,vzmVonkafschermingGebruikenRequired,Yes
+@method,set,permit,WVG-255,vzmVrijeTekst1,
+@method,set,permit,WVG-255,vzmVrijeTekst1Required,
+@method,set,permit,WVG-255,vzmVrijeTekst2,
+@method,set,permit,WVG-255,vzmVrijeTekst2Required,
+@method,set,permit,WVG-255,vzmWerkplekAfzettenRequired,
+@method,set,permit,WVG-255,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-255,vzmWerkplekBeveiligenValgevaarRequired,
+@method,set,permit,WVG-255,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-255,workDescription,Laswerkzaamheden in tank
+@method,set,permit,WVG-255,wwBetredenBeslotenRuimteRequired,Yes
+@method,set,permit,WVG-255,wwBrandenGutsenLassenRequired,Yes
+@method,set,permit,WVG-255,wwGravenRequired,
+@method,set,permit,WVG-255,wwGritstralenRequired,
+@method,set,permit,WVG-255,wwHakkenBorenRequired,
+@method,set,permit,WVG-255,wwHijsenRequired,
+@method,set,permit,WVG-255,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-255,wwInstrumentatieElectricalRequired,
+@method,set,permit,WVG-255,wwMonterenDemonterenRequired,
+@method,set,permit,WVG-255,wwOpenenInstallatieRequired,Yes
+@method,set,permit,WVG-255,wwRontgenStralingRequired,
+@method,set,permit,WVG-255,wwSlijpenRequired,Yes
+@method,set,permit,WVG-255,wwVacuumCleaningRequired,
+@method,set,permit,WVG-255,wwVrijeTekst1,
+@method,set,permit,WVG-255,wwVrijeTekst1Required,
+@endTransaction
+!ph148,signature-pcq-2.x,B_VL,null,B_VL,WVG-255,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph149,signature-pcq-2.x,B_AV,null,B_AV,WVG-255,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph150,signature-pcq-2.x,B_OB,null,B_OB,WVG-255,Jans de Beheerder,null,null,2004-11-01,true,true
+!ph151,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-255,Frans de Brandwacht,null,null,2004-11-01,true,true
+!ph152,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-255,Frans Systeem Manager,null,null,2004-11-01,true,true
+!ph153,signature-pcq-2.x,B_VV,null,B_VV,WVG-255,Erik de Voorbereider,null,null,2004-11-01,true,true
+!ph154,signature-pcq-2.x,B_VS,null,B_VS,WVG-255,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph155,signature-pcq-2.x,B_VA,null,B_VA,WVG-255,null,null,null,null,false,true
+!ph156,audit,CREATE_EVENT,WVG-255 aangemaakt,user2,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph157,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-255 en de RBH met nummer RBH-253.,user2,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph158,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-255 en de TRA met nummer TRA-255.,user2,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph159,audit,LINK_EVENT,Koppeling gemaakt tussen de RBH met nummer RBH-253 en de TRA met nummer TRA-255.,user2,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph160,audit,PROMOTE_EVENT,Status van WVG-255 veranderd naar Maatregelen Houder,user8,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph161,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user8,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph162,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user8,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph163,audit,PROMOTE_EVENT,Status van WVG-255 veranderd naar Bekrachtiging Aanvrager,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph164,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph165,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph166,audit,SETSTATE_EVENT,Status van WVG-255 veranderd naar Bepaal Risico,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph167,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-255,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph168,audit,PROMOTE_EVENT,Status van WVG-255 veranderd naar Accordering Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph169,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph170,audit,PROMOTE_EVENT,Status van WVG-255 veranderd naar Maatregelen Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph171,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph172,audit,PROMOTE_EVENT,Status van WVG-255 veranderd naar Bekrachtiging Operationeel Beheerder,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph173,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph174,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user5,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph175,audit,SETSTATE_EVENT,Status van WVG-255 veranderd naar Bekrachtiging Mede-ondertekenaar 1,user5,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph176,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-255,user5,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph177,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user11,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph178,audit,SETSTATE_EVENT,Status van WVG-255 veranderd naar Bekrachtiging Mede-ondertekenaar 2,user11,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph179,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-255,user11,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph180,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user6,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph181,audit,SETSTATE_EVENT,Status van WVG-255 veranderd naar Uitvoeren Voorbereidende Werkzaamheden,user6,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph182,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-255,user6,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph183,audit,PROMOTE_EVENT,Status van WVG-255 veranderd naar Bekrachtiging Vergunning Voorbereider,user10,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph184,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user10,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph185,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user10,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph186,audit,SETSTATE_EVENT,Status van WVG-255 veranderd naar Bekrachtiging Verstrekker,user10,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph187,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-255,user10,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph188,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph189,audit,SETSTATE_EVENT,Status van WVG-255 veranderd naar Klaar voor Uitgifte,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph190,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-255,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph191,audit,SETSTATE_EVENT,Status van WVG-255 veranderd naar Actief,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph192,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph193,audit,SETSTATE_EVENT,Status van WVG-255 veranderd naar Bekrachtiging Verlenging,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph194,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph195,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph196,audit,SETSTATE_EVENT,Status van WVG-255 veranderd naar Klaar voor Uitgifte,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph197,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-255,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph198,audit,SETSTATE_EVENT,Status van WVG-255 veranderd naar Actief,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+!ph199,audit,SAVE_EVENT,Eigenschappen van WVG-255 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-255
+permit,WVG-257,null,2004-11-01 14:23:17,2004-11-01 14:23:17,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,E_G,DPA/300,18T01,Werktuigbouw,,null,null,07:00,16:00,H2SO4,null,1,null,null,PLANT1,true,false,Fabricom,0
+@startTransaction
+@method,set,permit,WVG-257,aantalUitvoerenden,
+@method,set,permit,WVG-257,avBeslotenRuimteRequired,Yes
+@method,set,permit,WVG-257,avGraafVergunningRequired,
+@method,set,permit,WVG-257,avHottapRequired,
+@method,set,permit,WVG-257,avPluglasRequired,
+@method,set,permit,WVG-257,avVrijeTekst1,
+@method,set,permit,WVG-257,avVrijeTekst1Required,
+@method,set,permit,WVG-257,avVrijeTekst2,
+@method,set,permit,WVG-257,avVrijeTekst2Required,
+@method,set,permit,WVG-257,bijzRichtlijnenProcedureBeslotenRuimteRequired,Yes
+@method,set,permit,WVG-257,confirm,false
+@method,set,permit,WVG-257,doReject.stateIdentity,E_G
+@method,set,permit,WVG-257,doRequest_prolong.stateIdentity,B_VL
+@method,set,permit,WVG-257,eventSubmit_doReject,OK
+@method,set,permit,WVG-257,eventSubmit_doRequest_prolong,OK
+@method,set,permit,WVG-257,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-257,extraEisen,geen
+@method,set,permit,WVG-257,gezamenlijkAfsluiten,
+@method,set,permit,WVG-257,gmExplosiviteitContinueMeting,Yes
+@method,set,permit,WVG-257,gmExplosiviteitLEL,
+@method,set,permit,WVG-257,gmExplosiviteitRequired,Yes
+@method,set,permit,WVG-257,gmToxischContinueMeting,
+@method,set,permit,WVG-257,gmToxischMAC,
+@method,set,permit,WVG-257,gmToxischRequired,
+@method,set,permit,WVG-257,gmToxischStof,
+@method,set,permit,WVG-257,gmZuurstofContinueMeting,Yes
+@method,set,permit,WVG-257,gmZuurstofPct,
+@method,set,permit,WVG-257,gmZuurstofRequired,No
+@method,set,permit,WVG-257,invloedNaburigeWerkzaamheden,
+@method,set,permit,WVG-257,markup.body,voorbereidende werkzaamhedn onvoldoende
+@method,set,permit,WVG-257,module,permit
+@method,set,permit,WVG-257,mogelijkeRisicos,
+@method,set,permit,WVG-257,mvAfkoppelenRequired,
+@method,set,permit,WVG-257,mvAfstekenRequired,
+@method,set,permit,WVG-257,mvAftappenRequired,
+@method,set,permit,WVG-257,mvAppElectrischBlokkeren,
+@method,set,permit,WVG-257,mvAppElectrischBlokkerenRequired,
+@method,set,permit,WVG-257,mvAppElectrischVrijschakelen,
+@method,set,permit,WVG-257,mvAppElectrischVrijschakelenRequired,
+@method,set,permit,WVG-257,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-257,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-257,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-257,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-257,mvControleOmgevingOpBrandbaarMateriaalRequired,Yes
+@method,set,permit,WVG-257,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-257,mvDrukvrijRequired,
+@method,set,permit,WVG-257,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-257,mvInblokkenRequired,
+@method,set,permit,WVG-257,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-257,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-257,mvProduktvrijReady,Yes
+@method,set,permit,WVG-257,mvProduktvrijRequired,Yes
+@method,set,permit,WVG-257,mvSpoelenReady,Yes
+@method,set,permit,WVG-257,mvSpoelenRequired,Yes
+@method,set,permit,WVG-257,mvStomenRequired,
+@method,set,permit,WVG-257,nextStateIdentity,O_KVU
+@method,set,permit,WVG-257,objectKey,ibanx.permit.PermitIF:4426
+@method,set,permit,WVG-257,pbmAdembescherming,
+@method,set,permit,WVG-257,pbmAdembeschermingRequired,
+@method,set,permit,WVG-257,pbmBeschermendeKleding,brandvertragende kleding
+@method,set,permit,WVG-257,pbmBeschermendeKledingRequired,Yes
+@method,set,permit,WVG-257,pbmAdembeschermingText,
+@method,set,permit,WVG-257,pbmGasalarmering,
+@method,set,permit,WVG-257,pbmGasalarmeringRequired,
+@method,set,permit,WVG-257,pbmGehoorbeschermingRequired,
+@method,set,permit,WVG-257,pbmGelaatschermRequired,
+@method,set,permit,WVG-257,pbmHandArmbescherming,leren handschoenen
+@method,set,permit,WVG-257,pbmHandArmbeschermingRequired,Yes
+@method,set,permit,WVG-257,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-257,pbmValbeschermingRequired,
+@method,set,permit,WVG-257,pbmVluchtmaskerBinnenHandbereikRequired,Yes
+@method,set,permit,WVG-257,pbmVrijeTekst1,
+@method,set,permit,WVG-257,pbmVrijeTekst1Required,
+@method,set,permit,WVG-257,pbmVrijeTekst2,
+@method,set,permit,WVG-257,pbmVrijeTekst2Required,
+@method,set,permit,WVG-257,Signature.name,Koot de Verstrekker
+@method,set,permit,WVG-257,Signature.signDate,01-11-2004
+@method,set,permit,WVG-257,Signature.signed,true
+@method,set,permit,WVG-257,specialeOperationeleAandachtspuntenVrijeTekst1,
+@method,set,permit,WVG-257,template,index.vm
+@method,set,permit,WVG-257,tools,Hogedruk reiniger
+@method,set,permit,WVG-257,vehicleEquipment,
+@method,set,permit,WVG-257,verificatie,x
+@method,set,permit,WVG-257,vzmBrandwaterslangGereedRequired,Yes
+@method,set,permit,WVG-257,vzmCommunicatiemiddelen,
+@method,set,permit,WVG-257,vzmCommunicatiemiddelenRequired,Yes
+@method,set,permit,WVG-257,vzmGeforceerdeVentilatieRequired,Yes
+@method,set,permit,WVG-257,vzmMangatwachtBrandwachtInzettenRequired,Yes
+@method,set,permit,WVG-257,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-257,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-257,vzmPoederblusser,
+@method,set,permit,WVG-257,vzmPoederblusserRequired,Yes
+@method,set,permit,WVG-257,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-257,vzmPuttenGotenRiolenAfdekkenRequired,Yes
+@method,set,permit,WVG-257,vzmVonkafschermingGebruikenRequired,Yes
+@method,set,permit,WVG-257,vzmVrijeTekst1,
+@method,set,permit,WVG-257,vzmVrijeTekst1Required,
+@method,set,permit,WVG-257,vzmVrijeTekst2,
+@method,set,permit,WVG-257,vzmVrijeTekst2Required,
+@method,set,permit,WVG-257,vzmWerkplekAfzettenRequired,
+@method,set,permit,WVG-257,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-257,vzmWerkplekBeveiligenValgevaarRequired,
+@method,set,permit,WVG-257,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-257,workDescription,Schoonmaakwerkzaamheden in tank
+@method,set,permit,WVG-257,wwBetredenBeslotenRuimteRequired,Yes
+@method,set,permit,WVG-257,wwBrandenGutsenLassenRequired,No
+@method,set,permit,WVG-257,wwGravenRequired,
+@method,set,permit,WVG-257,wwGritstralenRequired,
+@method,set,permit,WVG-257,wwHakkenBorenRequired,
+@method,set,permit,WVG-257,wwHijsenRequired,
+@method,set,permit,WVG-257,wwHogedrukSpuitenRequired,Yes
+@method,set,permit,WVG-257,wwInstrumentatieElectricalRequired,
+@method,set,permit,WVG-257,wwMonterenDemonterenRequired,
+@method,set,permit,WVG-257,wwOpenenInstallatieRequired,Yes
+@method,set,permit,WVG-257,wwRontgenStralingRequired,
+@method,set,permit,WVG-257,wwSlijpenRequired,No
+@method,set,permit,WVG-257,wwVacuumCleaningRequired,
+@method,set,permit,WVG-257,wwVrijeTekst1,
+@method,set,permit,WVG-257,wwVrijeTekst1Required,
+@endTransaction
+@addmarkup,permit,WVG-257,user4,null,voorbereidende werkzaamhedn onvoldoende,3,2004-11-01 14:31:38,user4,2004-11-01 14:31:38,user4,lifecycleIdentity,DELTALINQS_PERMIT_PROCESS,stateIdentity,E_G
+!ph221,signature-pcq-2.x,B_VL,null,B_VL,WVG-257,null,null,null,null,false,true
+!ph222,signature-pcq-2.x,B_AV,null,B_AV,WVG-257,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph223,signature-pcq-2.x,B_OB,null,B_OB,WVG-257,null,null,null,null,false,false
+!ph224,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-257,null,null,null,null,false,false
+!ph225,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-257,null,null,null,null,false,false
+!ph226,signature-pcq-2.x,B_VV,null,B_VV,WVG-257,null,null,null,null,false,true
+!ph227,signature-pcq-2.x,B_VS,null,B_VS,WVG-257,null,null,null,null,false,true
+!ph228,signature-pcq-2.x,B_VA,null,B_VA,WVG-257,null,null,null,null,false,true
+!ph229,audit,COPY_EVENT,WVG-257 gekopieerd van WVG-255,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph230,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-257 en de RBH met nummer RBH-254.,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph231,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-257 en de TRA met nummer TRA-258.,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph232,audit,LINK_EVENT,Koppeling gemaakt tussen de RBH met nummer RBH-254 en de TRA met nummer TRA-258.,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph233,audit,PROMOTE_EVENT,Status van WVG-257 veranderd naar Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph234,audit,SAVE_EVENT,Eigenschappen van WVG-257 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph235,audit,PROMOTE_EVENT,Status van WVG-257 veranderd naar Bekrachtiging Aanvrager,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph236,audit,SAVE_EVENT,Eigenschappen van WVG-257 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph237,audit,SAVE_EVENT,Eigenschappen van WVG-257 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph238,audit,SETSTATE_EVENT,Status van WVG-257 veranderd naar Bepaal Risico,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph239,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-257,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph240,audit,PROMOTE_EVENT,Status van WVG-257 veranderd naar Accordering Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph241,audit,SAVE_EVENT,Eigenschappen van WVG-257 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph242,audit,PROMOTE_EVENT,Status van WVG-257 veranderd naar Maatregelen Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph243,audit,SAVE_EVENT,Eigenschappen van WVG-257 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph244,audit,PROMOTE_EVENT,Status van WVG-257 veranderd naar Uitvoeren Voorbereidende Werkzaamheden,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph245,audit,SAVE_EVENT,Eigenschappen van WVG-257 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph246,audit,PROMOTE_EVENT,Status van WVG-257 veranderd naar Bekrachtiging Vergunning Voorbereider,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph247,audit,SAVE_EVENT,Eigenschappen van WVG-257 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph248,audit,SETSTATE_EVENT,Status van WVG-257 veranderd naar Geweigerd,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+!ph249,audit,SAVE_EVENT,Eigenschappen van WVG-257 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-257
+permit,WVG-260,null,2004-11-01 14:37:25,2004-11-01 14:37:25,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,E_I,AO2 GEBOUW,REA99,E&I,789456,2004-11-01,2004-11-01,07:00,09:00,Water,null,3,null,null,PLANT1,true,false,Croon,1
+@startTransaction
+@method,set,permit,WVG-260,aantalUitvoerenden,1
+@method,set,permit,WVG-260,avBeslotenRuimteRequired,
+@method,set,permit,WVG-260,avGraafVergunningRequired,
+@method,set,permit,WVG-260,avHottapRequired,
+@method,set,permit,WVG-260,avPluglasRequired,
+@method,set,permit,WVG-260,avVrijeTekst1,
+@method,set,permit,WVG-260,avVrijeTekst1Required,
+@method,set,permit,WVG-260,avVrijeTekst2,
+@method,set,permit,WVG-260,avVrijeTekst2Required,
+@method,set,permit,WVG-260,confirm,false
+@method,set,permit,WVG-260,doMake_invalid.stateIdentity,E_I
+@method,set,permit,WVG-260,eventSubmit_doMake_invalid,OK
+@method,set,permit,WVG-260,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-260,extraEisen,
+@method,set,permit,WVG-260,gezamenlijkAfsluiten,
+@method,set,permit,WVG-260,gmExplosiviteitContinueMeting,
+@method,set,permit,WVG-260,gmExplosiviteitLEL,
+@method,set,permit,WVG-260,gmExplosiviteitRequired,
+@method,set,permit,WVG-260,gmToxischContinueMeting,
+@method,set,permit,WVG-260,gmToxischMAC,
+@method,set,permit,WVG-260,gmToxischRequired,
+@method,set,permit,WVG-260,gmToxischStof,
+@method,set,permit,WVG-260,gmZuurstofContinueMeting,
+@method,set,permit,WVG-260,gmZuurstofPct,
+@method,set,permit,WVG-260,gmZuurstofRequired,
+@method,set,permit,WVG-260,invloedNaburigeWerkzaamheden,
+@method,set,permit,WVG-260,markup.body,Wegens productlekkage naast werkplek worden de werkzaamhedn stilgelegd
+@method,set,permit,WVG-260,module,permit
+@method,set,permit,WVG-260,mogelijkeRisicos,
+@method,set,permit,WVG-260,mvAfkoppelenRequired,
+@method,set,permit,WVG-260,mvAfstekenRequired,
+@method,set,permit,WVG-260,mvAftappenRequired,
+@method,set,permit,WVG-260,mvAppElectrischBlokkeren,
+@method,set,permit,WVG-260,mvAppElectrischBlokkerenRequired,
+@method,set,permit,WVG-260,mvAppElectrischVrijschakelen,
+@method,set,permit,WVG-260,mvAppElectrischVrijschakelenRequired,
+@method,set,permit,WVG-260,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-260,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-260,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-260,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-260,mvControleOmgevingOpBrandbaarMateriaalRequired,
+@method,set,permit,WVG-260,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-260,mvDrukvrijRequired,
+@method,set,permit,WVG-260,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-260,mvInblokkenRequired,
+@method,set,permit,WVG-260,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-260,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-260,mvProduktvrijRequired,
+@method,set,permit,WVG-260,mvSpoelenRequired,
+@method,set,permit,WVG-260,mvStomenRequired,
+@method,set,permit,WVG-260,objectKey,ibanx.permit.PermitIF:4800
+@method,set,permit,WVG-260,pbmAdembescherming,
+@method,set,permit,WVG-260,pbmAdembeschermingRequired,
+@method,set,permit,WVG-260,pbmBeschermendeKleding,
+@method,set,permit,WVG-260,pbmBeschermendeKledingRequired,
+@method,set,permit,WVG-260,pbmAdembeschermingText,
+@method,set,permit,WVG-260,pbmGasalarmering,h2so4 meting
+@method,set,permit,WVG-260,pbmGasalarmeringRequired,Yes
+@method,set,permit,WVG-260,pbmGehoorbeschermingRequired,
+@method,set,permit,WVG-260,pbmGelaatschermRequired,
+@method,set,permit,WVG-260,pbmHandArmbescherming,
+@method,set,permit,WVG-260,pbmHandArmbeschermingRequired,
+@method,set,permit,WVG-260,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-260,pbmValbeschermingRequired,
+@method,set,permit,WVG-260,pbmVluchtmaskerBinnenHandbereikRequired,Yes
+@method,set,permit,WVG-260,pbmVrijeTekst1,
+@method,set,permit,WVG-260,pbmVrijeTekst1Required,
+@method,set,permit,WVG-260,pbmVrijeTekst2,
+@method,set,permit,WVG-260,pbmVrijeTekst2Required,
+@method,set,permit,WVG-260,Signature.name,Koot de Verstrekker
+@method,set,permit,WVG-260,Signature.signDate,01-11-2004
+@method,set,permit,WVG-260,Signature.signed,true
+@method,set,permit,WVG-260,specialeOperationeleAandachtspuntenVrijeTekst1,
+@method,set,permit,WVG-260,template,index.vm
+@method,set,permit,WVG-260,tools,handgereedschap
+@method,set,permit,WVG-260,vehicleEquipment,
+@method,set,permit,WVG-260,verificatie,x
+@method,set,permit,WVG-260,vzmBrandwaterslangGereedRequired,
+@method,set,permit,WVG-260,vzmCommunicatiemiddelen,
+@method,set,permit,WVG-260,vzmCommunicatiemiddelenRequired,
+@method,set,permit,WVG-260,vzmGeforceerdeVentilatieRequired,
+@method,set,permit,WVG-260,vzmMangatwachtBrandwachtInzettenRequired,
+@method,set,permit,WVG-260,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-260,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-260,vzmPoederblusser,
+@method,set,permit,WVG-260,vzmPoederblusserRequired,
+@method,set,permit,WVG-260,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-260,vzmPuttenGotenRiolenAfdekkenRequired,
+@method,set,permit,WVG-260,vzmVonkafschermingGebruikenRequired,
+@method,set,permit,WVG-260,vzmVrijeTekst1,
+@method,set,permit,WVG-260,vzmVrijeTekst1Required,
+@method,set,permit,WVG-260,vzmVrijeTekst2,
+@method,set,permit,WVG-260,vzmVrijeTekst2Required,
+@method,set,permit,WVG-260,vzmWerkplekAfzettenRequired,
+@method,set,permit,WVG-260,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-260,vzmWerkplekBeveiligenValgevaarRequired,
+@method,set,permit,WVG-260,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-260,workDescription,uitwisselen temperature gauge
+@method,set,permit,WVG-260,wwBetredenBeslotenRuimteRequired,
+@method,set,permit,WVG-260,wwBrandenGutsenLassenRequired,
+@method,set,permit,WVG-260,wwGravenRequired,
+@method,set,permit,WVG-260,wwGritstralenRequired,
+@method,set,permit,WVG-260,wwHakkenBorenRequired,
+@method,set,permit,WVG-260,wwHijsenRequired,
+@method,set,permit,WVG-260,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-260,wwInstrumentatieElectricalRequired,Yes
+@method,set,permit,WVG-260,wwMonterenDemonterenRequired,Yes
+@method,set,permit,WVG-260,wwOpenenInstallatieRequired,
+@method,set,permit,WVG-260,wwRontgenStralingRequired,
+@method,set,permit,WVG-260,wwSlijpenRequired,
+@method,set,permit,WVG-260,wwVacuumCleaningRequired,
+@method,set,permit,WVG-260,wwVrijeTekst1,
+@method,set,permit,WVG-260,wwVrijeTekst1Required,
+@endTransaction
+@addmarkup,permit,WVG-260,user4,null,Wegens productlekkage naast werkplek worden de werkzaamhedn stilgelegd,3,2004-11-01 14:41:42,user4,2004-11-01 14:41:42,user4,lifecycleIdentity,DELTALINQS_PERMIT_PROCESS,stateIdentity,E_I
+!ph270,signature-pcq-2.x,B_VL,null,B_VL,WVG-260,null,null,null,null,false,true
+!ph271,signature-pcq-2.x,B_AV,null,B_AV,WVG-260,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph272,signature-pcq-2.x,B_OB,null,B_OB,WVG-260,null,null,null,null,false,false
+!ph273,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-260,null,null,null,null,false,false
+!ph274,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-260,null,null,null,null,false,false
+!ph275,signature-pcq-2.x,B_VV,null,B_VV,WVG-260,null,null,null,null,false,false
+!ph276,signature-pcq-2.x,B_VS,null,B_VS,WVG-260,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph277,signature-pcq-2.x,B_VA,null,B_VA,WVG-260,null,null,null,null,false,true
+!ph278,audit,CREATE_EVENT,WVG-260 aangemaakt,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph279,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-260 en de RBH met nummer RBH-255.,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph280,audit,PROMOTE_EVENT,Status van WVG-260 veranderd naar Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph281,audit,SAVE_EVENT,Eigenschappen van WVG-260 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph282,audit,PROMOTE_EVENT,Status van WVG-260 veranderd naar Bekrachtiging Aanvrager,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph283,audit,SAVE_EVENT,Eigenschappen van WVG-260 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph284,audit,SAVE_EVENT,Eigenschappen van WVG-260 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph285,audit,SETSTATE_EVENT,Status van WVG-260 veranderd naar Bepaal Risico,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph286,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-260,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph287,audit,PROMOTE_EVENT,Status van WVG-260 veranderd naar Accordering Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph288,audit,SAVE_EVENT,Eigenschappen van WVG-260 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph289,audit,PROMOTE_EVENT,Status van WVG-260 veranderd naar Maatregelen Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph290,audit,SAVE_EVENT,Eigenschappen van WVG-260 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph291,audit,PROMOTE_EVENT,Status van WVG-260 veranderd naar Uitvoeren Voorbereidende Werkzaamheden,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph292,audit,SAVE_EVENT,Eigenschappen van WVG-260 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph293,audit,PROMOTE_EVENT,Status van WVG-260 veranderd naar Bekrachtiging Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph294,audit,SAVE_EVENT,Eigenschappen van WVG-260 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph295,audit,SAVE_EVENT,Eigenschappen van WVG-260 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph296,audit,SETSTATE_EVENT,Status van WVG-260 veranderd naar Klaar voor Uitgifte,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph297,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-260,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph298,audit,SETSTATE_EVENT,Status van WVG-260 veranderd naar Actief,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph299,audit,SAVE_EVENT,Eigenschappen van WVG-260 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph300,audit,SETSTATE_EVENT,Status van WVG-260 veranderd naar Ingetrokken,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+!ph301,audit,SAVE_EVENT,Eigenschappen van WVG-260 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-260
+permit,WVG-261,null,2004-11-01 14:43:49,2004-11-01 14:43:49,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,O_VA,SFP,ACT08,E&I,,2004-11-01,2004-11-01,07:00,12:00,Water,null,3,null,null,PLANT1,true,false,Croon,2
+@startTransaction
+@method,set,permit,WVG-261,aantalUitvoerenden,3
+@method,set,permit,WVG-261,avBeslotenRuimteRequired,
+@method,set,permit,WVG-261,avGraafVergunningRequired,
+@method,set,permit,WVG-261,avHottapRequired,
+@method,set,permit,WVG-261,avPluglasRequired,
+@method,set,permit,WVG-261,avVrijeTekst1,
+@method,set,permit,WVG-261,avVrijeTekst1Required,
+@method,set,permit,WVG-261,avVrijeTekst2,
+@method,set,permit,WVG-261,avVrijeTekst2Required,
+@method,set,permit,WVG-261,confirm,false
+@method,set,permit,WVG-261,doMake_invalid.stateIdentity,E_I
+@method,set,permit,WVG-261,doRequest_prolong.stateIdentity,B_VL
+@method,set,permit,WVG-261,doTakein.stateIdentity,B_VA
+@method,set,permit,WVG-261,eventSubmit_doMake_invalid,OK
+@method,set,permit,WVG-261,eventSubmit_doRequest_prolong,OK
+@method,set,permit,WVG-261,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-261,eventSubmit_doTakein,OK
+@method,set,permit,WVG-261,extraEisen,
+@method,set,permit,WVG-261,gezamenlijkAfsluiten,Yes
+@method,set,permit,WVG-261,gmExplosiviteitContinueMeting,
+@method,set,permit,WVG-261,gmExplosiviteitLEL,
+@method,set,permit,WVG-261,gmExplosiviteitRequired,
+@method,set,permit,WVG-261,gmToxischContinueMeting,
+@method,set,permit,WVG-261,gmToxischMAC,
+@method,set,permit,WVG-261,gmToxischRequired,
+@method,set,permit,WVG-261,gmToxischStof,
+@method,set,permit,WVG-261,gmZuurstofContinueMeting,
+@method,set,permit,WVG-261,gmZuurstofPct,
+@method,set,permit,WVG-261,gmZuurstofRequired,
+@method,set,permit,WVG-261,invloedNaburigeWerkzaamheden,
+@method,set,permit,WVG-261,markup.body,
+@method,set,permit,WVG-261,module,permit
+@method,set,permit,WVG-261,mogelijkeRisicos,
+@method,set,permit,WVG-261,mvAfkoppelenRequired,
+@method,set,permit,WVG-261,mvAfstekenReady,Yes
+@method,set,permit,WVG-261,mvAfstekenRequired,Yes
+@method,set,permit,WVG-261,mvAftappenRequired,
+@method,set,permit,WVG-261,mvAppElectrischBlokkeren,
+@method,set,permit,WVG-261,mvAppElectrischBlokkerenRequired,
+@method,set,permit,WVG-261,mvAppElectrischVrijschakelen,
+@method,set,permit,WVG-261,mvAppElectrischVrijschakelenRequired,
+@method,set,permit,WVG-261,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-261,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-261,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-261,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-261,mvControleOmgevingOpBrandbaarMateriaalRequired,
+@method,set,permit,WVG-261,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-261,mvDrukvrijRequired,
+@method,set,permit,WVG-261,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-261,mvInblokkenRequired,
+@method,set,permit,WVG-261,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-261,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-261,mvProduktvrijReady,Yes
+@method,set,permit,WVG-261,mvProduktvrijRequired,Yes
+@method,set,permit,WVG-261,mvSpoelenReady,Yes
+@method,set,permit,WVG-261,mvSpoelenRequired,Yes
+@method,set,permit,WVG-261,mvStomenRequired,
+@method,set,permit,WVG-261,nextStateIdentity,O_KVU
+@method,set,permit,WVG-261,objectKey,ibanx.permit.PermitIF:4999
+@method,set,permit,WVG-261,pbmAdembescherming,
+@method,set,permit,WVG-261,pbmAdembeschermingRequired,
+@method,set,permit,WVG-261,pbmBeschermendeKleding,
+@method,set,permit,WVG-261,pbmBeschermendeKledingRequired,
+@method,set,permit,WVG-261,pbmAdembeschermingText,
+@method,set,permit,WVG-261,pbmGasalarmering,
+@method,set,permit,WVG-261,pbmGasalarmeringRequired,No
+@method,set,permit,WVG-261,pbmGehoorbeschermingRequired,
+@method,set,permit,WVG-261,pbmGelaatschermRequired,
+@method,set,permit,WVG-261,pbmHandArmbescherming,
+@method,set,permit,WVG-261,pbmHandArmbeschermingRequired,
+@method,set,permit,WVG-261,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-261,pbmValbeschermingRequired,
+@method,set,permit,WVG-261,pbmVluchtmaskerBinnenHandbereikRequired,Yes
+@method,set,permit,WVG-261,pbmVrijeTekst1,
+@method,set,permit,WVG-261,pbmVrijeTekst1Required,
+@method,set,permit,WVG-261,pbmVrijeTekst2,
+@method,set,permit,WVG-261,pbmVrijeTekst2Required,
+@method,set,permit,WVG-261,Signature.name,Koot de Verstrekker
+@method,set,permit,WVG-261,Signature.signDate,01-11-2004
+@method,set,permit,WVG-261,Signature.signed,true
+@method,set,permit,WVG-261,specialeOperationeleAandachtspuntenVrijeTekst1,
+@method,set,permit,WVG-261,template,index.vm
+@method,set,permit,WVG-261,tools,handgereedschap
+@method,set,permit,WVG-261,vehicleEquipment,
+@method,set,permit,WVG-261,verificatie,x
+@method,set,permit,WVG-261,vzmBrandwaterslangGereedRequired,
+@method,set,permit,WVG-261,vzmCommunicatiemiddelen,
+@method,set,permit,WVG-261,vzmCommunicatiemiddelenRequired,
+@method,set,permit,WVG-261,vzmGeforceerdeVentilatieRequired,
+@method,set,permit,WVG-261,vzmMangatwachtBrandwachtInzettenRequired,
+@method,set,permit,WVG-261,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-261,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-261,vzmPoederblusser,
+@method,set,permit,WVG-261,vzmPoederblusserRequired,
+@method,set,permit,WVG-261,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-261,vzmPuttenGotenRiolenAfdekkenRequired,
+@method,set,permit,WVG-261,vzmVonkafschermingGebruikenRequired,
+@method,set,permit,WVG-261,vzmVrijeTekst1,
+@method,set,permit,WVG-261,vzmVrijeTekst1Required,
+@method,set,permit,WVG-261,vzmVrijeTekst2,
+@method,set,permit,WVG-261,vzmVrijeTekst2Required,
+@method,set,permit,WVG-261,vzmWerkplekAfzettenRequired,
+@method,set,permit,WVG-261,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-261,vzmWerkplekBeveiligenValgevaarRequired,
+@method,set,permit,WVG-261,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-261,workDescription,uitwisselen flow meter
+@method,set,permit,WVG-261,wwBetredenBeslotenRuimteRequired,
+@method,set,permit,WVG-261,wwBrandenGutsenLassenRequired,
+@method,set,permit,WVG-261,wwGravenRequired,
+@method,set,permit,WVG-261,wwGritstralenRequired,
+@method,set,permit,WVG-261,wwHakkenBorenRequired,
+@method,set,permit,WVG-261,wwHijsenRequired,
+@method,set,permit,WVG-261,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-261,wwInstrumentatieElectricalRequired,Yes
+@method,set,permit,WVG-261,wwMonterenDemonterenRequired,Yes
+@method,set,permit,WVG-261,wwOpenenInstallatieRequired,
+@method,set,permit,WVG-261,wwRontgenStralingRequired,
+@method,set,permit,WVG-261,wwSlijpenRequired,
+@method,set,permit,WVG-261,wwVacuumCleaningRequired,
+@method,set,permit,WVG-261,wwVrijeTekst1,
+@method,set,permit,WVG-261,wwVrijeTekst1Required,
+@endTransaction
+@addmarkup,permit,WVG-261,user4,null,wegens uitlopenm werkzaamheden,3,2004-11-01 14:49:31,user4,2004-11-01 14:49:31,user4,lifecycleIdentity,DELTALINQS_PERMIT_PROCESS,stateIdentity,O_AC
+!ph302,signature-pcq-2.x,B_VL,null,B_VL,WVG-261,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph303,signature-pcq-2.x,B_AV,null,B_AV,WVG-261,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph304,signature-pcq-2.x,B_OB,null,B_OB,WVG-261,null,null,null,null,false,false
+!ph305,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-261,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph306,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-261,null,null,null,null,false,false
+!ph307,signature-pcq-2.x,B_VV,null,B_VV,WVG-261,null,null,null,null,false,false
+!ph308,signature-pcq-2.x,B_VS,null,B_VS,WVG-261,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph309,signature-pcq-2.x,B_VA,null,B_VA,WVG-261,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph310,audit,COPY_EVENT,WVG-261 gekopieerd van WVG-260,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph311,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-261 en de RBH met nummer RBH-256.,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph312,audit,LINK_EVENT,Koppeling gemaakt tussen de RBH met nummer RBH-256 en de TRA met nummer TRA-259.,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph313,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-261 en de TRA met nummer TRA-259.,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph314,audit,PROMOTE_EVENT,Status van WVG-261 veranderd naar Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph315,audit,SAVE_EVENT,Eigenschappen van WVG-261 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph316,audit,PROMOTE_EVENT,Status van WVG-261 veranderd naar Bekrachtiging Aanvrager,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph317,audit,SAVE_EVENT,Eigenschappen van WVG-261 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph318,audit,SAVE_EVENT,Eigenschappen van WVG-261 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph319,audit,SETSTATE_EVENT,Status van WVG-261 veranderd naar Bepaal Risico,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph320,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-261,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph321,audit,PROMOTE_EVENT,Status van WVG-261 veranderd naar Accordering Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph322,audit,SAVE_EVENT,Eigenschappen van WVG-261 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph323,audit,PROMOTE_EVENT,Status van WVG-261 veranderd naar Maatregelen Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph324,audit,SAVE_EVENT,Eigenschappen van WVG-261 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph325,audit,PROMOTE_EVENT,Status van WVG-261 veranderd naar Bekrachtiging Mede-ondertekenaar 1,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph326,audit,SAVE_EVENT,Eigenschappen van WVG-261 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph327,audit,SAVE_EVENT,Eigenschappen van WVG-261 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph328,audit,SETSTATE_EVENT,Status van WVG-261 veranderd naar Uitvoeren Voorbereidende Werkzaamheden,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph329,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-261,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph330,audit,PROMOTE_EVENT,Status van WVG-261 veranderd naar Bekrachtiging Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph331,audit,SAVE_EVENT,Eigenschappen van WVG-261 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph332,audit,SAVE_EVENT,Eigenschappen van WVG-261 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph333,audit,SETSTATE_EVENT,Status van WVG-261 veranderd naar Klaar voor Uitgifte,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph334,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-261,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph335,audit,SETSTATE_EVENT,Status van WVG-261 veranderd naar Actief,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph336,audit,SAVE_EVENT,Eigenschappen van WVG-261 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph337,audit,SETSTATE_EVENT,Status van WVG-261 veranderd naar Bekrachtiging Verlenging,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph338,audit,SAVE_EVENT,Eigenschappen van WVG-261 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph339,audit,SAVE_EVENT,Eigenschappen van WVG-261 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph340,audit,SETSTATE_EVENT,Status van WVG-261 veranderd naar Klaar voor Uitgifte,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph341,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-261,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph342,audit,SETSTATE_EVENT,Status van WVG-261 veranderd naar Actief,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph343,audit,SAVE_EVENT,Eigenschappen van WVG-261 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph344,audit,SETSTATE_EVENT,Status van WVG-261 veranderd naar Bekrachtiging Vergunning Afsluiten,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph345,audit,SAVE_EVENT,Eigenschappen van WVG-261 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph346,audit,SAVE_EVENT,Eigenschappen van WVG-261 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph347,audit,SETSTATE_EVENT,Status van WVG-261 veranderd naar Afgesloten,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+!ph348,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-261,user4,2004-11-01,ibanx.permit.Permit,WVG-261
+permit,WVG-262,null,2004-11-01 14:50:36,2004-11-01 14:50:36,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,E_G,P15-A,KANTOREN,Civiel,56858,2004-11-01,2004-11-02,07:00,16:00,,null,1,null,null,PLANT1,true,false,Verhey,0
+@startTransaction
+@method,set,permit,WVG-262,aantalUitvoerenden,3
+@method,set,permit,WVG-262,avBeslotenRuimteRequired,
+@method,set,permit,WVG-262,avGraafVergunningRequired,
+@method,set,permit,WVG-262,avHottapRequired,
+@method,set,permit,WVG-262,avPluglasRequired,
+@method,set,permit,WVG-262,avVrijeTekst1,
+@method,set,permit,WVG-262,avVrijeTekst1Required,
+@method,set,permit,WVG-262,avVrijeTekst2,
+@method,set,permit,WVG-262,avVrijeTekst2Required,
+@method,set,permit,WVG-262,confirm,false
+@method,set,permit,WVG-262,doReject.stateIdentity,E_G
+@method,set,permit,WVG-262,eventSubmit_doReject,OK
+@method,set,permit,WVG-262,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-262,extraEisen,
+@method,set,permit,WVG-262,gmExplosiviteitContinueMeting,
+@method,set,permit,WVG-262,gmExplosiviteitLEL,
+@method,set,permit,WVG-262,gmExplosiviteitRequired,
+@method,set,permit,WVG-262,gmToxischContinueMeting,
+@method,set,permit,WVG-262,gmToxischMAC,
+@method,set,permit,WVG-262,gmToxischRequired,
+@method,set,permit,WVG-262,gmToxischStof,
+@method,set,permit,WVG-262,gmZuurstofContinueMeting,
+@method,set,permit,WVG-262,gmZuurstofPct,
+@method,set,permit,WVG-262,gmZuurstofRequired,
+@method,set,permit,WVG-262,invloedNaburigeWerkzaamheden,
+@method,set,permit,WVG-262,markup.body,vergunning onvolledig ingevuld
+@method,set,permit,WVG-262,module,permit
+@method,set,permit,WVG-262,mogelijkeRisicos,
+@method,set,permit,WVG-262,mvAfkoppelenRequired,
+@method,set,permit,WVG-262,mvAfstekenRequired,
+@method,set,permit,WVG-262,mvAftappenRequired,
+@method,set,permit,WVG-262,mvAppElectrischBlokkeren,
+@method,set,permit,WVG-262,mvAppElectrischBlokkerenRequired,
+@method,set,permit,WVG-262,mvAppElectrischVrijschakelen,
+@method,set,permit,WVG-262,mvAppElectrischVrijschakelenRequired,
+@method,set,permit,WVG-262,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-262,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-262,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-262,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-262,mvControleOmgevingOpBrandbaarMateriaalRequired,
+@method,set,permit,WVG-262,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-262,mvDrukvrijRequired,
+@method,set,permit,WVG-262,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-262,mvInblokkenRequired,
+@method,set,permit,WVG-262,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-262,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-262,mvProduktvrijRequired,
+@method,set,permit,WVG-262,mvSpoelenRequired,
+@method,set,permit,WVG-262,mvStomenRequired,
+@method,set,permit,WVG-262,objectKey,ibanx.permit.PermitIF:5249
+@method,set,permit,WVG-262,pbmAdembescherming,
+@method,set,permit,WVG-262,pbmAdembeschermingRequired,
+@method,set,permit,WVG-262,pbmBeschermendeKleding,
+@method,set,permit,WVG-262,pbmBeschermendeKledingRequired,
+@method,set,permit,WVG-262,pbmAdembeschermingText,
+@method,set,permit,WVG-262,pbmGasalarmering,
+@method,set,permit,WVG-262,pbmGasalarmeringRequired,
+@method,set,permit,WVG-262,pbmGehoorbeschermingRequired,Yes
+@method,set,permit,WVG-262,pbmGelaatschermRequired,
+@method,set,permit,WVG-262,pbmHandArmbescherming,
+@method,set,permit,WVG-262,pbmHandArmbeschermingRequired,
+@method,set,permit,WVG-262,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-262,pbmValbeschermingRequired,
+@method,set,permit,WVG-262,pbmVluchtmaskerBinnenHandbereikRequired,
+@method,set,permit,WVG-262,pbmVrijeTekst1,
+@method,set,permit,WVG-262,pbmVrijeTekst1Required,
+@method,set,permit,WVG-262,pbmVrijeTekst2,
+@method,set,permit,WVG-262,pbmVrijeTekst2Required,
+@method,set,permit,WVG-262,Signature.name,Koot de Verstrekker
+@method,set,permit,WVG-262,Signature.signDate,01-11-2004
+@method,set,permit,WVG-262,Signature.signed,true
+@method,set,permit,WVG-262,specialeOperationeleAandachtspuntenVrijeTekst1,
+@method,set,permit,WVG-262,template,index.vm
+@method,set,permit,WVG-262,tools,handgereedschap\r\nbreekhamer (electrisch)\r\nboormachine
+@method,set,permit,WVG-262,vehicleEquipment,
+@method,set,permit,WVG-262,verificatie,x
+@method,set,permit,WVG-262,vzmBrandwaterslangGereedRequired,
+@method,set,permit,WVG-262,vzmCommunicatiemiddelen,
+@method,set,permit,WVG-262,vzmCommunicatiemiddelenRequired,
+@method,set,permit,WVG-262,vzmGeforceerdeVentilatieRequired,
+@method,set,permit,WVG-262,vzmMangatwachtBrandwachtInzettenRequired,
+@method,set,permit,WVG-262,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-262,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-262,vzmPoederblusser,
+@method,set,permit,WVG-262,vzmPoederblusserRequired,
+@method,set,permit,WVG-262,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-262,vzmPuttenGotenRiolenAfdekkenRequired,
+@method,set,permit,WVG-262,vzmVonkafschermingGebruikenRequired,
+@method,set,permit,WVG-262,vzmVrijeTekst1,
+@method,set,permit,WVG-262,vzmVrijeTekst1Required,
+@method,set,permit,WVG-262,vzmVrijeTekst2,
+@method,set,permit,WVG-262,vzmVrijeTekst2Required,
+@method,set,permit,WVG-262,vzmWerkplekAfzettenRequired,
+@method,set,permit,WVG-262,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-262,vzmWerkplekBeveiligenValgevaarRequired,
+@method,set,permit,WVG-262,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-262,workDescription,aanpassingen aan kantoren
+@method,set,permit,WVG-262,wwBetredenBeslotenRuimteRequired,
+@method,set,permit,WVG-262,wwBrandenGutsenLassenRequired,
+@method,set,permit,WVG-262,wwGravenRequired,
+@method,set,permit,WVG-262,wwGritstralenRequired,
+@method,set,permit,WVG-262,wwHakkenBorenRequired,Yes
+@method,set,permit,WVG-262,wwHijsenRequired,
+@method,set,permit,WVG-262,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-262,wwInstrumentatieElectricalRequired,
+@method,set,permit,WVG-262,wwMonterenDemonterenRequired,Yes
+@method,set,permit,WVG-262,wwOpenenInstallatieRequired,
+@method,set,permit,WVG-262,wwRontgenStralingRequired,
+@method,set,permit,WVG-262,wwSlijpenRequired,
+@method,set,permit,WVG-262,wwVacuumCleaningRequired,
+@method,set,permit,WVG-262,wwVrijeTekst1,
+@method,set,permit,WVG-262,wwVrijeTekst1Required,
+@endTransaction
+@addmarkup,permit,WVG-262,user4,null,vergunning onvolledig ingevuld,3,2004-11-01 14:56:54,user4,2004-11-01 14:56:54,user4,lifecycleIdentity,DELTALINQS_PERMIT_PROCESS,stateIdentity,E_G
+!ph349,signature-pcq-2.x,B_VL,null,B_VL,WVG-262,null,null,null,null,false,true
+!ph350,signature-pcq-2.x,B_AV,null,B_AV,WVG-262,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph351,signature-pcq-2.x,B_OB,null,B_OB,WVG-262,null,null,null,null,false,false
+!ph352,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-262,null,null,null,null,false,false
+!ph353,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-262,null,null,null,null,false,false
+!ph354,signature-pcq-2.x,B_VV,null,B_VV,WVG-262,null,null,null,null,false,false
+!ph355,signature-pcq-2.x,B_VS,null,B_VS,WVG-262,null,null,null,null,false,true
+!ph356,signature-pcq-2.x,B_VA,null,B_VA,WVG-262,null,null,null,null,false,true
+!ph357,audit,CREATE_EVENT,WVG-262 aangemaakt,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph358,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-262 en de RBH met nummer RBH-257.,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph359,audit,PROMOTE_EVENT,Status van WVG-262 veranderd naar Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph360,audit,SAVE_EVENT,Eigenschappen van WVG-262 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph361,audit,LINK_EVENT,Koppeling gemaakt tussen de RBH met nummer RBH-257 en de TRA met nummer TRA-260.,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph362,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-262 en de TRA met nummer TRA-260.,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph363,audit,PROMOTE_EVENT,Status van WVG-262 veranderd naar Bekrachtiging Aanvrager,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph364,audit,SAVE_EVENT,Eigenschappen van WVG-262 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph365,audit,SAVE_EVENT,Eigenschappen van WVG-262 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph366,audit,SETSTATE_EVENT,Status van WVG-262 veranderd naar Bepaal Risico,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph367,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-262,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph368,audit,PROMOTE_EVENT,Status van WVG-262 veranderd naar Accordering Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph369,audit,SAVE_EVENT,Eigenschappen van WVG-262 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph370,audit,PROMOTE_EVENT,Status van WVG-262 veranderd naar Maatregelen Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph371,audit,SAVE_EVENT,Eigenschappen van WVG-262 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph372,audit,PROMOTE_EVENT,Status van WVG-262 veranderd naar Uitvoeren Voorbereidende Werkzaamheden,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph373,audit,SAVE_EVENT,Eigenschappen van WVG-262 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph374,audit,PROMOTE_EVENT,Status van WVG-262 veranderd naar Bekrachtiging Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph375,audit,SAVE_EVENT,Eigenschappen van WVG-262 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph376,audit,SETSTATE_EVENT,Status van WVG-262 veranderd naar Geweigerd,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+!ph377,audit,SAVE_EVENT,Eigenschappen van WVG-262 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-262
+permit,WVG-263,null,2004-11-01 15:17:01,2004-11-01 15:17:01,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,O_VA,XF/210,59IM705,Civiel,159753,2004-11-01,2004-11-01,07:00,16:00,,null,3,null,null,PLANT1,true,false,betonwerk,1
+@startTransaction
+@method,set,permit,WVG-263,aantalUitvoerenden,2
+@method,set,permit,WVG-263,avBeslotenRuimteRequired,
+@method,set,permit,WVG-263,avGraafVergunningRequired,
+@method,set,permit,WVG-263,avHottapRequired,
+@method,set,permit,WVG-263,avPluglasRequired,
+@method,set,permit,WVG-263,avVrijeTekst1,
+@method,set,permit,WVG-263,avVrijeTekst1Required,
+@method,set,permit,WVG-263,avVrijeTekst2,
+@method,set,permit,WVG-263,avVrijeTekst2Required,
+@method,set,permit,WVG-263,confirm,false
+@method,set,permit,WVG-263,doTakein.stateIdentity,B_VA
+@method,set,permit,WVG-263,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-263,eventSubmit_doTakein,OK
+@method,set,permit,WVG-263,extraEisen,
+@method,set,permit,WVG-263,gezamenlijkAfsluiten,
+@method,set,permit,WVG-263,gmExplosiviteitContinueMeting,
+@method,set,permit,WVG-263,gmExplosiviteitLEL,
+@method,set,permit,WVG-263,gmExplosiviteitRequired,
+@method,set,permit,WVG-263,gmToxischContinueMeting,
+@method,set,permit,WVG-263,gmToxischMAC,
+@method,set,permit,WVG-263,gmToxischRequired,
+@method,set,permit,WVG-263,gmToxischStof,
+@method,set,permit,WVG-263,gmZuurstofContinueMeting,
+@method,set,permit,WVG-263,gmZuurstofPct,
+@method,set,permit,WVG-263,gmZuurstofRequired,
+@method,set,permit,WVG-263,invloedNaburigeWerkzaamheden,
+@method,set,permit,WVG-263,markup.body,werkzaamheden afgeronf\, all edoorgangen weer vrij
+@method,set,permit,WVG-263,module,permit
+@method,set,permit,WVG-263,mogelijkeRisicos,Diverse lokaties in de plant moeilijke rbereikbaar bij calamiteit
+@method,set,permit,WVG-263,mvAfkoppelenRequired,
+@method,set,permit,WVG-263,mvAfstekenRequired,
+@method,set,permit,WVG-263,mvAftappenRequired,
+@method,set,permit,WVG-263,mvAppElectrischBlokkeren,
+@method,set,permit,WVG-263,mvAppElectrischBlokkerenRequired,
+@method,set,permit,WVG-263,mvAppElectrischVrijschakelen,
+@method,set,permit,WVG-263,mvAppElectrischVrijschakelenRequired,
+@method,set,permit,WVG-263,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-263,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-263,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-263,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-263,mvControleOmgevingOpBrandbaarMateriaalRequired,
+@method,set,permit,WVG-263,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-263,mvDrukvrijRequired,
+@method,set,permit,WVG-263,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-263,mvInblokkenRequired,
+@method,set,permit,WVG-263,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-263,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-263,mvProduktvrijRequired,
+@method,set,permit,WVG-263,mvSpoelenRequired,
+@method,set,permit,WVG-263,mvStomenRequired,
+@method,set,permit,WVG-263,objectKey,ibanx.permit.PermitIF:5497
+@method,set,permit,WVG-263,pbmAdembescherming,
+@method,set,permit,WVG-263,pbmAdembeschermingRequired,
+@method,set,permit,WVG-263,pbmBeschermendeKleding,
+@method,set,permit,WVG-263,pbmBeschermendeKledingRequired,Yes
+@method,set,permit,WVG-263,pbmAdembeschermingText,
+@method,set,permit,WVG-263,pbmGasalarmering,
+@method,set,permit,WVG-263,pbmGasalarmeringRequired,
+@method,set,permit,WVG-263,pbmGehoorbeschermingRequired,Yes
+@method,set,permit,WVG-263,pbmGelaatschermRequired,
+@method,set,permit,WVG-263,pbmHandArmbescherming,leren handschoenen
+@method,set,permit,WVG-263,pbmHandArmbeschermingRequired,Yes
+@method,set,permit,WVG-263,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-263,pbmValbeschermingRequired,
+@method,set,permit,WVG-263,pbmVluchtmaskerBinnenHandbereikRequired,
+@method,set,permit,WVG-263,pbmVrijeTekst1,
+@method,set,permit,WVG-263,pbmVrijeTekst1Required,
+@method,set,permit,WVG-263,pbmVrijeTekst2,
+@method,set,permit,WVG-263,pbmVrijeTekst2Required,
+@method,set,permit,WVG-263,Signature.name,Koot de Verstrekker
+@method,set,permit,WVG-263,Signature.signDate,01-11-2004
+@method,set,permit,WVG-263,Signature.signed,true
+@method,set,permit,WVG-263,specialeOperationeleAandachtspuntenVrijeTekst1,doorgaande route afgesloten\, licht brandweer in over gedeeltelijke afsluiting
+@method,set,permit,WVG-263,template,index.vm
+@method,set,permit,WVG-263,tools,electrische boorhamer
+@method,set,permit,WVG-263,vehicleEquipment,
+@method,set,permit,WVG-263,verificatie,x
+@method,set,permit,WVG-263,vzmBrandwaterslangGereedRequired,
+@method,set,permit,WVG-263,vzmCommunicatiemiddelen,
+@method,set,permit,WVG-263,vzmCommunicatiemiddelenRequired,
+@method,set,permit,WVG-263,vzmGeforceerdeVentilatieRequired,
+@method,set,permit,WVG-263,vzmMangatwachtBrandwachtInzettenRequired,
+@method,set,permit,WVG-263,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-263,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-263,vzmPoederblusser,
+@method,set,permit,WVG-263,vzmPoederblusserRequired,
+@method,set,permit,WVG-263,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-263,vzmPuttenGotenRiolenAfdekkenRequired,
+@method,set,permit,WVG-263,vzmVonkafschermingGebruikenRequired,
+@method,set,permit,WVG-263,vzmVrijeTekst1,
+@method,set,permit,WVG-263,vzmVrijeTekst1Required,
+@method,set,permit,WVG-263,vzmVrijeTekst2,
+@method,set,permit,WVG-263,vzmVrijeTekst2Required,
+@method,set,permit,WVG-263,vzmWerkplekAfzettenRequired,
+@method,set,permit,WVG-263,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-263,vzmWerkplekBeveiligenValgevaarRequired,
+@method,set,permit,WVG-263,vzmWerkplekEnWerkstukNathoudenRequired,Yes
+@method,set,permit,WVG-263,workDescription,reparatie vloer
+@method,set,permit,WVG-263,wwBetredenBeslotenRuimteRequired,
+@method,set,permit,WVG-263,wwBrandenGutsenLassenRequired,
+@method,set,permit,WVG-263,wwGravenRequired,
+@method,set,permit,WVG-263,wwGritstralenRequired,
+@method,set,permit,WVG-263,wwHakkenBorenRequired,Yes
+@method,set,permit,WVG-263,wwHijsenRequired,
+@method,set,permit,WVG-263,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-263,wwInstrumentatieElectricalRequired,
+@method,set,permit,WVG-263,wwMonterenDemonterenRequired,
+@method,set,permit,WVG-263,wwOpenenInstallatieRequired,
+@method,set,permit,WVG-263,wwRontgenStralingRequired,
+@method,set,permit,WVG-263,wwSlijpenRequired,
+@method,set,permit,WVG-263,wwVacuumCleaningRequired,
+@method,set,permit,WVG-263,wwVrijeTekst1,
+@method,set,permit,WVG-263,wwVrijeTekst1Required,
+@endTransaction
+@addmarkup,permit,WVG-263,user4,null,bij uitlopen werkzaamheden ook brandweer verwittigen,3,2004-11-01 15:25:24,user4,2004-11-01 15:25:24,user4,lifecycleIdentity,DELTALINQS_PERMIT_PROCESS,stateIdentity,O_AC
+@addmarkup,permit,WVG-263,user4,null,werkzaamheden afgeronf\, all edoorgangen weer vrij,3,2004-11-01 15:25:49,user4,2004-11-01 15:25:49,user4,lifecycleIdentity,DELTALINQS_PERMIT_PROCESS,stateIdentity,B_VA
+!ph378,signature-pcq-2.x,B_VL,null,B_VL,WVG-263,null,null,null,null,false,true
+!ph379,signature-pcq-2.x,B_AV,null,B_AV,WVG-263,Jan de Aanvrager,null,null,2004-11-01,true,true
+!ph380,signature-pcq-2.x,B_OB,null,B_OB,WVG-263,Jans de Beheerder,null,null,2004-11-01,true,true
+!ph381,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-263,Frans de Brandwacht,null,null,2004-11-01,true,true
+!ph382,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-263,Frans Systeem Manager,null,null,2004-11-01,true,true
+!ph383,signature-pcq-2.x,B_VV,null,B_VV,WVG-263,Erik de Voorbereider,null,null,2004-11-01,true,true
+!ph384,signature-pcq-2.x,B_VS,null,B_VS,WVG-263,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph385,signature-pcq-2.x,B_VA,null,B_VA,WVG-263,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph386,audit,CREATE_EVENT,WVG-263 aangemaakt,user2,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph387,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-263 en de RBH met nummer RBH-258.,user2,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph388,audit,PROMOTE_EVENT,Status van WVG-263 veranderd naar Maatregelen Houder,user2,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph389,audit,SAVE_EVENT,Eigenschappen van WVG-263 aangepast,user2,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph390,audit,PROMOTE_EVENT,Status van WVG-263 veranderd naar Bekrachtiging Aanvrager,user2,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph391,audit,SAVE_EVENT,Eigenschappen van WVG-263 aangepast,user2,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph392,audit,SAVE_EVENT,Eigenschappen van WVG-263 aangepast,user2,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph393,audit,SETSTATE_EVENT,Status van WVG-263 veranderd naar Bepaal Risico,user2,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph394,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-263,user2,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph395,audit,PROMOTE_EVENT,Status van WVG-263 veranderd naar Accordering Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph396,audit,SAVE_EVENT,Eigenschappen van WVG-263 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph397,audit,PROMOTE_EVENT,Status van WVG-263 veranderd naar Maatregelen Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph398,audit,SAVE_EVENT,Eigenschappen van WVG-263 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph399,audit,PROMOTE_EVENT,Status van WVG-263 veranderd naar Bekrachtiging Operationeel Beheerder,user4,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph400,audit,SAVE_EVENT,Eigenschappen van WVG-263 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph401,audit,SAVE_EVENT,Eigenschappen van WVG-263 aangepast,user5,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph402,audit,SETSTATE_EVENT,Status van WVG-263 veranderd naar Bekrachtiging Mede-ondertekenaar 1,user5,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph403,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-263,user5,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph404,audit,SAVE_EVENT,Eigenschappen van WVG-263 aangepast,user11,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph405,audit,SETSTATE_EVENT,Status van WVG-263 veranderd naar Bekrachtiging Mede-ondertekenaar 2,user11,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph406,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-263,user11,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph407,audit,SAVE_EVENT,Eigenschappen van WVG-263 aangepast,user6,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph408,audit,SETSTATE_EVENT,Status van WVG-263 veranderd naar Uitvoeren Voorbereidende Werkzaamheden,user6,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph409,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-263,user6,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph410,audit,PROMOTE_EVENT,Status van WVG-263 veranderd naar Bekrachtiging Vergunning Voorbereider,user10,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph411,audit,SAVE_EVENT,Eigenschappen van WVG-263 aangepast,user10,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph412,audit,SAVE_EVENT,Eigenschappen van WVG-263 aangepast,user10,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph413,audit,SETSTATE_EVENT,Status van WVG-263 veranderd naar Bekrachtiging Verstrekker,user10,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph414,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-263,user10,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph415,audit,SAVE_EVENT,Eigenschappen van WVG-263 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph416,audit,SETSTATE_EVENT,Status van WVG-263 veranderd naar Klaar voor Uitgifte,user4,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph417,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-263,user4,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph418,audit,SETSTATE_EVENT,Status van WVG-263 veranderd naar Actief,user4,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph419,audit,SAVE_EVENT,Eigenschappen van WVG-263 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph420,audit,SETSTATE_EVENT,Status van WVG-263 veranderd naar Bekrachtiging Vergunning Afsluiten,user4,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph421,audit,SAVE_EVENT,Eigenschappen van WVG-263 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph422,audit,SAVE_EVENT,Eigenschappen van WVG-263 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph423,audit,SETSTATE_EVENT,Status van WVG-263 veranderd naar Afgesloten,user4,2004-11-01,ibanx.permit.Permit,WVG-263
+!ph424,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-263,user4,2004-11-01,ibanx.permit.Permit,WVG-263
+permit,WVG-264,null,2004-11-01 15:38:27,2004-11-01 15:38:27,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,O_AC,XF/200,METH-1,OPS,49731,2004-11-01,2004-11-02,07:00,16:00,,null,3,null,null,PLANT2,true,false,Booy Clean,2
+@startTransaction
+@method,set,permit,WVG-264,aantalUitvoerenden,4
+@method,set,permit,WVG-264,avBeslotenRuimteRequired,
+@method,set,permit,WVG-264,avGraafVergunningRequired,
+@method,set,permit,WVG-264,avHottapRequired,
+@method,set,permit,WVG-264,avPluglasRequired,
+@method,set,permit,WVG-264,avVrijeTekst1,
+@method,set,permit,WVG-264,avVrijeTekst1Required,
+@method,set,permit,WVG-264,avVrijeTekst2,
+@method,set,permit,WVG-264,avVrijeTekst2Required,
+@method,set,permit,WVG-264,confirm,false
+@method,set,permit,WVG-264,doRequest_prolong.stateIdentity,B_VL
+@method,set,permit,WVG-264,eventSubmit_doRequest_prolong,OK
+@method,set,permit,WVG-264,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-264,extraEisen,vluchtroutes bemoeilijkt door product op vloer. Deze routes eerst schoonmaken
+@method,set,permit,WVG-264,gezamenlijkAfsluiten,Yes
+@method,set,permit,WVG-264,gmExplosiviteitContinueMeting,
+@method,set,permit,WVG-264,gmExplosiviteitLEL,
+@method,set,permit,WVG-264,gmExplosiviteitRequired,
+@method,set,permit,WVG-264,gmToxischContinueMeting,
+@method,set,permit,WVG-264,gmToxischMAC,
+@method,set,permit,WVG-264,gmToxischRequired,
+@method,set,permit,WVG-264,gmToxischStof,
+@method,set,permit,WVG-264,gmZuurstofContinueMeting,
+@method,set,permit,WVG-264,gmZuurstofPct,
+@method,set,permit,WVG-264,gmZuurstofRequired,
+@method,set,permit,WVG-264,invloedNaburigeWerkzaamheden,
+@method,set,permit,WVG-264,markup.body,Vluchtroutes weer vrij. Overige delen van de vloer nog niet geheel opgeruimd
+@method,set,permit,WVG-264,module,permit
+@method,set,permit,WVG-264,mogelijkeRisicos,beperkte vluchtmogelijkheden door productspill.
+@method,set,permit,WVG-264,mvAfkoppelenRequired,
+@method,set,permit,WVG-264,mvAfstekenRequired,
+@method,set,permit,WVG-264,mvAftappenRequired,
+@method,set,permit,WVG-264,mvAppElectrischBlokkeren,
+@method,set,permit,WVG-264,mvAppElectrischBlokkerenRequired,
+@method,set,permit,WVG-264,mvAppElectrischVrijschakelen,
+@method,set,permit,WVG-264,mvAppElectrischVrijschakelenRequired,
+@method,set,permit,WVG-264,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-264,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-264,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-264,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-264,mvControleOmgevingOpBrandbaarMateriaalRequired,
+@method,set,permit,WVG-264,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-264,mvDrukvrijRequired,
+@method,set,permit,WVG-264,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-264,mvInblokkenRequired,
+@method,set,permit,WVG-264,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-264,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-264,mvProduktvrijRequired,
+@method,set,permit,WVG-264,mvSpoelenRequired,
+@method,set,permit,WVG-264,mvStomenRequired,
+@method,set,permit,WVG-264,nextStateIdentity,O_KVU
+@method,set,permit,WVG-264,objectKey,ibanx.permit.PermitIF:5917
+@method,set,permit,WVG-264,pbmAdembescherming,
+@method,set,permit,WVG-264,pbmAdembeschermingRequired,
+@method,set,permit,WVG-264,pbmBeschermendeKleding,
+@method,set,permit,WVG-264,pbmBeschermendeKledingRequired,
+@method,set,permit,WVG-264,pbmAdembeschermingText,
+@method,set,permit,WVG-264,pbmGasalarmering,
+@method,set,permit,WVG-264,pbmGasalarmeringRequired,
+@method,set,permit,WVG-264,pbmGehoorbeschermingRequired,Yes
+@method,set,permit,WVG-264,pbmGelaatschermRequired,Yes
+@method,set,permit,WVG-264,pbmHandArmbescherming,
+@method,set,permit,WVG-264,pbmHandArmbeschermingRequired,
+@method,set,permit,WVG-264,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-264,pbmValbeschermingRequired,
+@method,set,permit,WVG-264,pbmVluchtmaskerBinnenHandbereikRequired,Yes
+@method,set,permit,WVG-264,pbmVrijeTekst1,
+@method,set,permit,WVG-264,pbmVrijeTekst1Required,
+@method,set,permit,WVG-264,pbmVrijeTekst2,
+@method,set,permit,WVG-264,pbmVrijeTekst2Required,
+@method,set,permit,WVG-264,Signature.name,Koot de Verstrekker
+@method,set,permit,WVG-264,Signature.signDate,01-11-2004
+@method,set,permit,WVG-264,Signature.signed,true
+@method,set,permit,WVG-264,specialeOperationeleAandachtspuntenVrijeTekst1,Vluchtroutes eerst schoonmaken.
+@method,set,permit,WVG-264,template,index.vm
+@method,set,permit,WVG-264,tools,hogedruk / stoomreinigen
+@method,set,permit,WVG-264,vehicleEquipment,
+@method,set,permit,WVG-264,verificatie,x
+@method,set,permit,WVG-264,vzmBrandwaterslangGereedRequired,
+@method,set,permit,WVG-264,vzmCommunicatiemiddelen,portofoon
+@method,set,permit,WVG-264,vzmCommunicatiemiddelenRequired,Yes
+@method,set,permit,WVG-264,vzmGeforceerdeVentilatieRequired,
+@method,set,permit,WVG-264,vzmMangatwachtBrandwachtInzettenRequired,
+@method,set,permit,WVG-264,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-264,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-264,vzmPoederblusser,
+@method,set,permit,WVG-264,vzmPoederblusserRequired,
+@method,set,permit,WVG-264,vzmPuttenGotenRiolenAfdekkenAfstand,50
+@method,set,permit,WVG-264,vzmPuttenGotenRiolenAfdekkenRequired,Yes
+@method,set,permit,WVG-264,vzmVonkafschermingGebruikenRequired,
+@method,set,permit,WVG-264,vzmVrijeTekst1,
+@method,set,permit,WVG-264,vzmVrijeTekst1Required,
+@method,set,permit,WVG-264,vzmVrijeTekst2,
+@method,set,permit,WVG-264,vzmVrijeTekst2Required,
+@method,set,permit,WVG-264,vzmWerkplekAfzettenRequired,Yes
+@method,set,permit,WVG-264,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-264,vzmWerkplekBeveiligenValgevaarRequired,
+@method,set,permit,WVG-264,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-264,workDescription,schoonspuiten 3e vloer na spill
+@method,set,permit,WVG-264,wwBetredenBeslotenRuimteRequired,
+@method,set,permit,WVG-264,wwBrandenGutsenLassenRequired,
+@method,set,permit,WVG-264,wwGravenRequired,
+@method,set,permit,WVG-264,wwGritstralenRequired,
+@method,set,permit,WVG-264,wwHakkenBorenRequired,
+@method,set,permit,WVG-264,wwHijsenRequired,
+@method,set,permit,WVG-264,wwHogedrukSpuitenRequired,Yes
+@method,set,permit,WVG-264,wwInstrumentatieElectricalRequired,
+@method,set,permit,WVG-264,wwMonterenDemonterenRequired,
+@method,set,permit,WVG-264,wwOpenenInstallatieRequired,
+@method,set,permit,WVG-264,wwRontgenStralingRequired,
+@method,set,permit,WVG-264,wwSlijpenRequired,
+@method,set,permit,WVG-264,wwVacuumCleaningRequired,
+@method,set,permit,WVG-264,wwVrijeTekst1,
+@method,set,permit,WVG-264,wwVrijeTekst1Required,
+@endTransaction
+@addmarkup,permit,WVG-264,user4,null,bij uitlopen werkzaamhedn melden. OOk melden wanneer vluchtroutes weer beschikbaar zijn.,3,2004-11-01 15:43:23,user4,2004-11-01 15:43:23,user4,lifecycleIdentity,DELTALINQS_PERMIT_PROCESS,stateIdentity,O_AC
+@addmarkup,permit,WVG-264,user4,null,Vluchtroutes weer vrij. Overige delen van de vloer nog niet geheel opgeruimd,3,2004-11-01 15:43:53,user4,2004-11-01 15:43:53,user4,lifecycleIdentity,DELTALINQS_PERMIT_PROCESS,stateIdentity,B_VL
+!ph425,signature-pcq-2.x,B_VL,null,B_VL,WVG-264,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph426,signature-pcq-2.x,B_AV,null,B_AV,WVG-264,Karel Produktiechef,null,null,2004-11-01,true,true
+!ph427,signature-pcq-2.x,B_OB,null,B_OB,WVG-264,null,null,null,null,false,false
+!ph428,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-264,null,null,null,null,false,false
+!ph429,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-264,null,null,null,null,false,false
+!ph430,signature-pcq-2.x,B_VV,null,B_VV,WVG-264,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph431,signature-pcq-2.x,B_VS,null,B_VS,WVG-264,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph432,signature-pcq-2.x,B_VA,null,B_VA,WVG-264,null,null,null,null,false,true
+!ph433,audit,CREATE_EVENT,WVG-264 aangemaakt,user7,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph434,audit,PROMOTE_EVENT,Status van WVG-264 veranderd naar Maatregelen Houder,user7,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph435,audit,SAVE_EVENT,Eigenschappen van WVG-264 aangepast,user7,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph436,audit,PROMOTE_EVENT,Status van WVG-264 veranderd naar Bekrachtiging Aanvrager,user7,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph437,audit,SAVE_EVENT,Eigenschappen van WVG-264 aangepast,user7,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph438,audit,SAVE_EVENT,Eigenschappen van WVG-264 aangepast,user7,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph439,audit,SETSTATE_EVENT,Status van WVG-264 veranderd naar Bepaal Risico,user7,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph440,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-264,user7,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph441,audit,PROMOTE_EVENT,Status van WVG-264 veranderd naar Accordering Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph442,audit,SAVE_EVENT,Eigenschappen van WVG-264 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph443,audit,PROMOTE_EVENT,Status van WVG-264 veranderd naar Maatregelen Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph444,audit,SAVE_EVENT,Eigenschappen van WVG-264 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph445,audit,PROMOTE_EVENT,Status van WVG-264 veranderd naar Uitvoeren Voorbereidende Werkzaamheden,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph446,audit,SAVE_EVENT,Eigenschappen van WVG-264 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph447,audit,PROMOTE_EVENT,Status van WVG-264 veranderd naar Bekrachtiging Vergunning Voorbereider,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph448,audit,SAVE_EVENT,Eigenschappen van WVG-264 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph449,audit,SAVE_EVENT,Eigenschappen van WVG-264 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph450,audit,SETSTATE_EVENT,Status van WVG-264 veranderd naar Bekrachtiging Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph451,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-264,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph452,audit,SAVE_EVENT,Eigenschappen van WVG-264 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph453,audit,SETSTATE_EVENT,Status van WVG-264 veranderd naar Klaar voor Uitgifte,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph454,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-264,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph455,audit,SETSTATE_EVENT,Status van WVG-264 veranderd naar Actief,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph456,audit,SAVE_EVENT,Eigenschappen van WVG-264 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph457,audit,SETSTATE_EVENT,Status van WVG-264 veranderd naar Bekrachtiging Verlenging,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph458,audit,SAVE_EVENT,Eigenschappen van WVG-264 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph459,audit,SAVE_EVENT,Eigenschappen van WVG-264 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph460,audit,SETSTATE_EVENT,Status van WVG-264 veranderd naar Klaar voor Uitgifte,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph461,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-264,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph462,audit,SETSTATE_EVENT,Status van WVG-264 veranderd naar Actief,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+!ph463,audit,SAVE_EVENT,Eigenschappen van WVG-264 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-264
+permit,WVG-265,null,2004-11-01 15:45:29,2004-11-01 15:45:29,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,O_KVU,P15-A,CORR-14A,Civiel,A2356,2004-11-01,2004-11-12,07:00,16:00,,null,1,null,null,PLANT2,true,false,grondmij,2
+@startTransaction
+@method,set,permit,WVG-265,aantalUitvoerenden,4
+@method,set,permit,WVG-265,avBeslotenRuimteRequired,
+@method,set,permit,WVG-265,avGraafVergunningRequired,Yes
+@method,set,permit,WVG-265,avHottapRequired,
+@method,set,permit,WVG-265,avPluglasRequired,
+@method,set,permit,WVG-265,avVrijeTekst1,
+@method,set,permit,WVG-265,avVrijeTekst1Required,
+@method,set,permit,WVG-265,avVrijeTekst2,
+@method,set,permit,WVG-265,avVrijeTekst2Required,
+@method,set,permit,WVG-265,confirm,false
+@method,set,permit,WVG-265,doRequest_prolong.stateIdentity,B_VL
+@method,set,permit,WVG-265,eventSubmit_doRequest_prolong,OK
+@method,set,permit,WVG-265,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-265,extraEisen,iedere dag vergunning opnieuw laten controleren op gewijzigde werksituatie.
+@method,set,permit,WVG-265,gezamenlijkAfsluiten,Yes
+@method,set,permit,WVG-265,gmExplosiviteitContinueMeting,
+@method,set,permit,WVG-265,gmExplosiviteitLEL,
+@method,set,permit,WVG-265,gmExplosiviteitRequired,
+@method,set,permit,WVG-265,gmToxischContinueMeting,
+@method,set,permit,WVG-265,gmToxischMAC,
+@method,set,permit,WVG-265,gmToxischRequired,
+@method,set,permit,WVG-265,gmToxischStof,
+@method,set,permit,WVG-265,gmZuurstofContinueMeting,
+@method,set,permit,WVG-265,gmZuurstofPct,
+@method,set,permit,WVG-265,gmZuurstofRequired,
+@method,set,permit,WVG-265,invloedNaburigeWerkzaamheden,
+@method,set,permit,WVG-265,markup.body,werkzaamheden 3e dag\, wegen moeten vrijblijven ivm producttransport
+@method,set,permit,WVG-265,module,permit
+@method,set,permit,WVG-265,mogelijkeRisicos,doorgaande rijroutes tijdelijk gestremd
+@method,set,permit,WVG-265,mvAfkoppelenRequired,
+@method,set,permit,WVG-265,mvAfstekenRequired,
+@method,set,permit,WVG-265,mvAftappenRequired,
+@method,set,permit,WVG-265,mvAppElectrischBlokkeren,
+@method,set,permit,WVG-265,mvAppElectrischBlokkerenRequired,
+@method,set,permit,WVG-265,mvAppElectrischVrijschakelen,
+@method,set,permit,WVG-265,mvAppElectrischVrijschakelenRequired,
+@method,set,permit,WVG-265,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-265,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-265,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-265,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-265,mvControleOmgevingOpBrandbaarMateriaalRequired,
+@method,set,permit,WVG-265,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-265,mvDrukvrijRequired,
+@method,set,permit,WVG-265,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-265,mvInblokkenRequired,
+@method,set,permit,WVG-265,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-265,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-265,mvProduktvrijRequired,
+@method,set,permit,WVG-265,mvSpoelenRequired,
+@method,set,permit,WVG-265,mvStomenRequired,
+@method,set,permit,WVG-265,nextStateIdentity,O_KVU
+@method,set,permit,WVG-265,objectKey,ibanx.permit.PermitIF:6112
+@method,set,permit,WVG-265,pbmAdembescherming,
+@method,set,permit,WVG-265,pbmAdembeschermingRequired,
+@method,set,permit,WVG-265,pbmBeschermendeKleding,
+@method,set,permit,WVG-265,pbmBeschermendeKledingRequired,
+@method,set,permit,WVG-265,pbmAdembeschermingText,
+@method,set,permit,WVG-265,pbmGasalarmering,
+@method,set,permit,WVG-265,pbmGasalarmeringRequired,
+@method,set,permit,WVG-265,pbmGehoorbeschermingRequired,Yes
+@method,set,permit,WVG-265,pbmGelaatschermRequired,
+@method,set,permit,WVG-265,pbmHandArmbescherming,
+@method,set,permit,WVG-265,pbmHandArmbeschermingRequired,
+@method,set,permit,WVG-265,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-265,pbmValbeschermingRequired,
+@method,set,permit,WVG-265,pbmVluchtmaskerBinnenHandbereikRequired,Yes
+@method,set,permit,WVG-265,pbmVrijeTekst1,
+@method,set,permit,WVG-265,pbmVrijeTekst1Required,
+@method,set,permit,WVG-265,pbmVrijeTekst2,
+@method,set,permit,WVG-265,pbmVrijeTekst2Required,
+@method,set,permit,WVG-265,Signature.name,Koot de Verstrekker
+@method,set,permit,WVG-265,Signature.signDate,01-11-2004
+@method,set,permit,WVG-265,Signature.signed,true
+@method,set,permit,WVG-265,specialeOperationeleAandachtspuntenVrijeTekst1,stel brandweer op de hoogte van tijdelijke afsluiting van wegen
+@method,set,permit,WVG-265,template,index.vm
+@method,set,permit,WVG-265,tools,handmatig (voorgraven)
+@method,set,permit,WVG-265,vehicleEquipment,Graafmachine
+@method,set,permit,WVG-265,verificatie,x
+@method,set,permit,WVG-265,vzmBrandwaterslangGereedRequired,
+@method,set,permit,WVG-265,vzmCommunicatiemiddelen,
+@method,set,permit,WVG-265,vzmCommunicatiemiddelenRequired,
+@method,set,permit,WVG-265,vzmGeforceerdeVentilatieRequired,
+@method,set,permit,WVG-265,vzmMangatwachtBrandwachtInzettenRequired,
+@method,set,permit,WVG-265,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-265,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-265,vzmPoederblusser,
+@method,set,permit,WVG-265,vzmPoederblusserRequired,
+@method,set,permit,WVG-265,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-265,vzmPuttenGotenRiolenAfdekkenRequired,
+@method,set,permit,WVG-265,vzmVonkafschermingGebruikenRequired,
+@method,set,permit,WVG-265,vzmVrijeTekst1,voorgraven aan de hand van tekeningen
+@method,set,permit,WVG-265,vzmVrijeTekst1Required,Yes
+@method,set,permit,WVG-265,vzmVrijeTekst2,afdekplaten ruim over gleuf plaatsen
+@method,set,permit,WVG-265,vzmVrijeTekst2Required,Yes
+@method,set,permit,WVG-265,vzmWerkplekAfzettenRequired,Yes
+@method,set,permit,WVG-265,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-265,vzmWerkplekBeveiligenValgevaarRequired,Yes
+@method,set,permit,WVG-265,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-265,workDescription,graafwerkzaamheden voor nieuw riool
+@method,set,permit,WVG-265,wwBetredenBeslotenRuimteRequired,
+@method,set,permit,WVG-265,wwBrandenGutsenLassenRequired,
+@method,set,permit,WVG-265,wwGravenRequired,Yes
+@method,set,permit,WVG-265,wwGritstralenRequired,
+@method,set,permit,WVG-265,wwHakkenBorenRequired,
+@method,set,permit,WVG-265,wwHijsenRequired,
+@method,set,permit,WVG-265,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-265,wwInstrumentatieElectricalRequired,
+@method,set,permit,WVG-265,wwMonterenDemonterenRequired,
+@method,set,permit,WVG-265,wwOpenenInstallatieRequired,
+@method,set,permit,WVG-265,wwRontgenStralingRequired,
+@method,set,permit,WVG-265,wwSlijpenRequired,
+@method,set,permit,WVG-265,wwVacuumCleaningRequired,
+@method,set,permit,WVG-265,wwVrijeTekst1,
+@method,set,permit,WVG-265,wwVrijeTekst1Required,
+@endTransaction
+@addmarkup,permit,WVG-265,user4,null,Bij brandweer en CCR melden wanneer wegen (gedeeltelijk) worden afgesloten.,3,2004-11-01 15:59:19,user4,2004-11-01 15:59:19,user4,lifecycleIdentity,DELTALINQS_PERMIT_PROCESS,stateIdentity,O_AC
+@addmarkup,permit,WVG-265,user4,null,2e dag werkzaamheden\, condities ongewijzigd.,3,2004-11-01 15:59:48,user4,2004-11-01 15:59:48,user4,lifecycleIdentity,DELTALINQS_PERMIT_PROCESS,stateIdentity,B_VL
+@addmarkup,permit,WVG-265,user4,null,werkzaamheden 3e dag\, wegen moeten vrijblijven ivm producttransport,3,2004-11-01 16:00:54,user4,2004-11-01 16:00:54,user4,lifecycleIdentity,DELTALINQS_PERMIT_PROCESS,stateIdentity,B_VL
+!ph464,signature-pcq-2.x,B_VL,null,B_VL,WVG-265,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph465,signature-pcq-2.x,B_AV,null,B_AV,WVG-265,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph466,signature-pcq-2.x,B_OB,null,B_OB,WVG-265,Jans de Beheerder,null,null,2004-11-01,true,true
+!ph467,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-265,Frans de Brandwacht,null,null,2004-11-01,true,true
+!ph468,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-265,Frans Systeem Manager,null,null,2004-11-01,true,true
+!ph469,signature-pcq-2.x,B_VV,null,B_VV,WVG-265,Erik de Voorbereider,null,null,2004-11-01,true,true
+!ph470,signature-pcq-2.x,B_VS,null,B_VS,WVG-265,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph471,signature-pcq-2.x,B_VA,null,B_VA,WVG-265,null,null,null,null,false,true
+!ph472,audit,CREATE_EVENT,WVG-265 aangemaakt,user7,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph473,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-265 en de RBH met nummer RBH-259.,user7,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph474,audit,LINK_EVENT,Koppeling gemaakt tussen de RBH met nummer RBH-259 en de TRA met nummer TRA-262.,user7,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph475,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-265 en de TRA met nummer TRA-262.,user7,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph476,audit,PROMOTE_EVENT,Status van WVG-265 veranderd naar Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph477,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph478,audit,PROMOTE_EVENT,Status van WVG-265 veranderd naar Bekrachtiging Aanvrager,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph479,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph480,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph481,audit,SETSTATE_EVENT,Status van WVG-265 veranderd naar Bepaal Risico,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph482,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-265,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph483,audit,PROMOTE_EVENT,Status van WVG-265 veranderd naar Accordering Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph484,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph485,audit,PROMOTE_EVENT,Status van WVG-265 veranderd naar Maatregelen Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph486,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph487,audit,PROMOTE_EVENT,Status van WVG-265 veranderd naar Bekrachtiging Operationeel Beheerder,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph488,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph489,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user5,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph490,audit,SETSTATE_EVENT,Status van WVG-265 veranderd naar Bekrachtiging Mede-ondertekenaar 1,user5,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph491,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-265,user5,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph492,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user11,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph493,audit,SETSTATE_EVENT,Status van WVG-265 veranderd naar Bekrachtiging Mede-ondertekenaar 2,user11,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph494,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-265,user11,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph495,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user6,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph496,audit,SETSTATE_EVENT,Status van WVG-265 veranderd naar Uitvoeren Voorbereidende Werkzaamheden,user6,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph497,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-265,user6,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph498,audit,PROMOTE_EVENT,Status van WVG-265 veranderd naar Bekrachtiging Vergunning Voorbereider,user10,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph499,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user10,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph500,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user10,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph501,audit,SETSTATE_EVENT,Status van WVG-265 veranderd naar Bekrachtiging Verstrekker,user10,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph502,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-265,user10,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph503,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph504,audit,SETSTATE_EVENT,Status van WVG-265 veranderd naar Klaar voor Uitgifte,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph505,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-265,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph506,audit,SETSTATE_EVENT,Status van WVG-265 veranderd naar Actief,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph507,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph508,audit,SETSTATE_EVENT,Status van WVG-265 veranderd naar Bekrachtiging Verlenging,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph509,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph510,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph511,audit,SETSTATE_EVENT,Status van WVG-265 veranderd naar Klaar voor Uitgifte,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph512,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-265,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph513,audit,SETSTATE_EVENT,Status van WVG-265 veranderd naar Actief,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph514,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph515,audit,SETSTATE_EVENT,Status van WVG-265 veranderd naar Bekrachtiging Verlenging,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph516,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph517,audit,SAVE_EVENT,Eigenschappen van WVG-265 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph518,audit,SETSTATE_EVENT,Status van WVG-265 veranderd naar Klaar voor Uitgifte,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+!ph519,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-265,user4,2004-11-01,ibanx.permit.Permit,WVG-265
+permit,WVG-266,null,2004-11-01 16:31:46,2004-11-01 16:31:46,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,B_VA,P15-B,65A223,Electro,4,2004-11-01,2004-11-01,07:00,16:00,,null,1,null,null,PLANT2,true,false,GTI,1
+@startTransaction
+@method,set,permit,WVG-266,aantalUitvoerenden,2
+@method,set,permit,WVG-266,avBeslotenRuimteRequired,
+@method,set,permit,WVG-266,avGraafVergunningRequired,
+@method,set,permit,WVG-266,avHottapRequired,
+@method,set,permit,WVG-266,avPluglasRequired,
+@method,set,permit,WVG-266,avVrijeTekst1,
+@method,set,permit,WVG-266,avVrijeTekst1Required,
+@method,set,permit,WVG-266,avVrijeTekst2,
+@method,set,permit,WVG-266,avVrijeTekst2Required,
+@method,set,permit,WVG-266,confirm,false
+@method,set,permit,WVG-266,doTakein.stateIdentity,B_VA
+@method,set,permit,WVG-266,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-266,eventSubmit_doTakein,OK
+@method,set,permit,WVG-266,extraEisen,
+@method,set,permit,WVG-266,gezamenlijkAfsluiten,Yes
+@method,set,permit,WVG-266,gmExplosiviteitContinueMeting,
+@method,set,permit,WVG-266,gmExplosiviteitLEL,
+@method,set,permit,WVG-266,gmExplosiviteitRequired,
+@method,set,permit,WVG-266,gmToxischContinueMeting,
+@method,set,permit,WVG-266,gmToxischMAC,
+@method,set,permit,WVG-266,gmToxischRequired,
+@method,set,permit,WVG-266,gmToxischStof,
+@method,set,permit,WVG-266,gmZuurstofContinueMeting,
+@method,set,permit,WVG-266,gmZuurstofPct,
+@method,set,permit,WVG-266,gmZuurstofRequired,
+@method,set,permit,WVG-266,invloedNaburigeWerkzaamheden,
+@method,set,permit,WVG-266,markup.body,
+@method,set,permit,WVG-266,module,permit
+@method,set,permit,WVG-266,mogelijkeRisicos,
+@method,set,permit,WVG-266,mvAfkoppelenRequired,
+@method,set,permit,WVG-266,mvAfstekenRequired,
+@method,set,permit,WVG-266,mvAftappenRequired,
+@method,set,permit,WVG-266,mvAppElectrischBlokkeren,3
+@method,set,permit,WVG-266,mvAppElectrischBlokkerenRequired,Yes
+@method,set,permit,WVG-266,mvAppElectrischVrijschakelen,3
+@method,set,permit,WVG-266,mvAppElectrischVrijschakelenRequired,Yes
+@method,set,permit,WVG-266,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-266,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-266,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-266,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-266,mvControleOmgevingOpBrandbaarMateriaalRequired,
+@method,set,permit,WVG-266,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-266,mvDrukvrijRequired,
+@method,set,permit,WVG-266,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-266,mvInblokkenRequired,
+@method,set,permit,WVG-266,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-266,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-266,mvProduktvrijRequired,
+@method,set,permit,WVG-266,mvSpoelenRequired,
+@method,set,permit,WVG-266,mvStomenRequired,
+@method,set,permit,WVG-266,objectKey,ibanx.permit.PermitIF:6603
+@method,set,permit,WVG-266,pbmAdembescherming,
+@method,set,permit,WVG-266,pbmAdembeschermingRequired,
+@method,set,permit,WVG-266,pbmBeschermendeKleding,
+@method,set,permit,WVG-266,pbmBeschermendeKledingRequired,
+@method,set,permit,WVG-266,pbmAdembeschermingText,
+@method,set,permit,WVG-266,pbmGasalarmering,
+@method,set,permit,WVG-266,pbmGasalarmeringRequired,
+@method,set,permit,WVG-266,pbmGehoorbeschermingRequired,
+@method,set,permit,WVG-266,pbmGelaatschermRequired,
+@method,set,permit,WVG-266,pbmHandArmbescherming,
+@method,set,permit,WVG-266,pbmHandArmbeschermingRequired,
+@method,set,permit,WVG-266,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-266,pbmValbeschermingRequired,Yes
+@method,set,permit,WVG-266,pbmVluchtmaskerBinnenHandbereikRequired,Yes
+@method,set,permit,WVG-266,pbmVrijeTekst1,
+@method,set,permit,WVG-266,pbmVrijeTekst1Required,
+@method,set,permit,WVG-266,pbmVrijeTekst2,
+@method,set,permit,WVG-266,pbmVrijeTekst2Required,
+@method,set,permit,WVG-266,Signature.name,Koot de Verstrekker
+@method,set,permit,WVG-266,Signature.signDate,01-11-2004
+@method,set,permit,WVG-266,Signature.signed,true
+@method,set,permit,WVG-266,specialeOperationeleAandachtspuntenVrijeTekst1,
+@method,set,permit,WVG-266,template,index.vm
+@method,set,permit,WVG-266,tools,handgereedschap
+@method,set,permit,WVG-266,vehicleEquipment,takel
+@method,set,permit,WVG-266,verificatie,x
+@method,set,permit,WVG-266,vzmBrandwaterslangGereedRequired,
+@method,set,permit,WVG-266,vzmCommunicatiemiddelen,
+@method,set,permit,WVG-266,vzmCommunicatiemiddelenRequired,
+@method,set,permit,WVG-266,vzmGeforceerdeVentilatieRequired,
+@method,set,permit,WVG-266,vzmMangatwachtBrandwachtInzettenRequired,
+@method,set,permit,WVG-266,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-266,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-266,vzmPoederblusser,
+@method,set,permit,WVG-266,vzmPoederblusserRequired,
+@method,set,permit,WVG-266,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-266,vzmPuttenGotenRiolenAfdekkenRequired,
+@method,set,permit,WVG-266,vzmVonkafschermingGebruikenRequired,
+@method,set,permit,WVG-266,vzmVrijeTekst1,Motor goed in de takel hangen voor losmaken
+@method,set,permit,WVG-266,vzmVrijeTekst1Required,Yes
+@method,set,permit,WVG-266,vzmVrijeTekst2,installatie afschermen
+@method,set,permit,WVG-266,vzmVrijeTekst2Required,Yes
+@method,set,permit,WVG-266,vzmWerkplekAfzettenRequired,Yes
+@method,set,permit,WVG-266,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-266,vzmWerkplekBeveiligenValgevaarRequired,Yes
+@method,set,permit,WVG-266,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-266,workDescription,verwisselen E-motor op agitator
+@method,set,permit,WVG-266,wwBetredenBeslotenRuimteRequired,
+@method,set,permit,WVG-266,wwBrandenGutsenLassenRequired,
+@method,set,permit,WVG-266,wwGravenRequired,
+@method,set,permit,WVG-266,wwGritstralenRequired,
+@method,set,permit,WVG-266,wwHakkenBorenRequired,
+@method,set,permit,WVG-266,wwHijsenRequired,Yes
+@method,set,permit,WVG-266,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-266,wwInstrumentatieElectricalRequired,Yes
+@method,set,permit,WVG-266,wwMonterenDemonterenRequired,Yes
+@method,set,permit,WVG-266,wwOpenenInstallatieRequired,
+@method,set,permit,WVG-266,wwRontgenStralingRequired,
+@method,set,permit,WVG-266,wwSlijpenRequired,
+@method,set,permit,WVG-266,wwVacuumCleaningRequired,
+@method,set,permit,WVG-266,wwVrijeTekst1,
+@method,set,permit,WVG-266,wwVrijeTekst1Required,
+@endTransaction
+!ph520,signature-pcq-2.x,B_VL,null,B_VL,WVG-266,null,null,null,null,false,true
+!ph521,signature-pcq-2.x,B_AV,null,B_AV,WVG-266,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph522,signature-pcq-2.x,B_OB,null,B_OB,WVG-266,null,null,null,null,false,false
+!ph523,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-266,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph524,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-266,null,null,null,null,false,false
+!ph525,signature-pcq-2.x,B_VV,null,B_VV,WVG-266,null,null,null,null,false,false
+!ph526,signature-pcq-2.x,B_VS,null,B_VS,WVG-266,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph527,signature-pcq-2.x,B_VA,null,B_VA,WVG-266,null,null,null,null,false,true
+!ph528,audit,CREATE_EVENT,WVG-266 aangemaakt,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph529,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-266 en de TRA met nummer TRA-263.,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph530,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-266 en de RBH met nummer RBH-260.,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph531,audit,LINK_EVENT,Koppeling gemaakt tussen de RBH met nummer RBH-260 en de TRA met nummer TRA-263.,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph532,audit,PROMOTE_EVENT,Status van WVG-266 veranderd naar Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph533,audit,SAVE_EVENT,Eigenschappen van WVG-266 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph534,audit,PROMOTE_EVENT,Status van WVG-266 veranderd naar Bekrachtiging Aanvrager,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph535,audit,SAVE_EVENT,Eigenschappen van WVG-266 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph536,audit,SAVE_EVENT,Eigenschappen van WVG-266 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph537,audit,SETSTATE_EVENT,Status van WVG-266 veranderd naar Bepaal Risico,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph538,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-266,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph539,audit,PROMOTE_EVENT,Status van WVG-266 veranderd naar Accordering Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph540,audit,SAVE_EVENT,Eigenschappen van WVG-266 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph541,audit,PROMOTE_EVENT,Status van WVG-266 veranderd naar Maatregelen Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph542,audit,SAVE_EVENT,Eigenschappen van WVG-266 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph543,audit,PROMOTE_EVENT,Status van WVG-266 veranderd naar Bekrachtiging Mede-ondertekenaar 1,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph544,audit,SAVE_EVENT,Eigenschappen van WVG-266 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph545,audit,SAVE_EVENT,Eigenschappen van WVG-266 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph546,audit,SETSTATE_EVENT,Status van WVG-266 veranderd naar Uitvoeren Voorbereidende Werkzaamheden,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph547,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-266,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph548,audit,PROMOTE_EVENT,Status van WVG-266 veranderd naar Bekrachtiging Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph549,audit,SAVE_EVENT,Eigenschappen van WVG-266 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph550,audit,SAVE_EVENT,Eigenschappen van WVG-266 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph551,audit,SETSTATE_EVENT,Status van WVG-266 veranderd naar Klaar voor Uitgifte,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph552,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-266,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph553,audit,SETSTATE_EVENT,Status van WVG-266 veranderd naar Actief,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph554,audit,SAVE_EVENT,Eigenschappen van WVG-266 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph555,audit,SETSTATE_EVENT,Status van WVG-266 veranderd naar Bekrachtiging Vergunning Afsluiten,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+!ph556,audit,SAVE_EVENT,Eigenschappen van WVG-266 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-266
+permit,WVG-267,null,2004-11-01 16:45:35,2004-11-01 16:45:35,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,I_AMH,TANKENPARK,60A41,Derden,346,2004-11-01,2004-11-02,07:00,16:00,null,null,3,null,null,PLANT1,true,false,HCG,0
+@startTransaction
+@method,set,permit,WVG-267,aantalUitvoerenden,5
+@method,set,permit,WVG-267,avBeslotenRuimteRequired,
+@method,set,permit,WVG-267,avGraafVergunningRequired,
+@method,set,permit,WVG-267,avHottapRequired,Yes
+@method,set,permit,WVG-267,avPluglasRequired,Yes
+@method,set,permit,WVG-267,avVrijeTekst1,
+@method,set,permit,WVG-267,avVrijeTekst1Required,
+@method,set,permit,WVG-267,avVrijeTekst2,
+@method,set,permit,WVG-267,avVrijeTekst2Required,
+@method,set,permit,WVG-267,confirm,false
+@method,set,permit,WVG-267,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-267,module,permit
+@method,set,permit,WVG-267,objectKey,ibanx.permit.PermitIF:6821
+@method,set,permit,WVG-267,pbmAdembescherming,
+@method,set,permit,WVG-267,pbmAdembeschermingRequired,
+@method,set,permit,WVG-267,pbmBeschermendeKleding,
+@method,set,permit,WVG-267,pbmBeschermendeKledingRequired,
+@method,set,permit,WVG-267,pbmAdembeschermingText,
+@method,set,permit,WVG-267,pbmGasalarmering,
+@method,set,permit,WVG-267,pbmGasalarmeringRequired,
+@method,set,permit,WVG-267,pbmGehoorbeschermingRequired,
+@method,set,permit,WVG-267,pbmGelaatschermRequired,
+@method,set,permit,WVG-267,pbmHandArmbescherming,
+@method,set,permit,WVG-267,pbmHandArmbeschermingRequired,
+@method,set,permit,WVG-267,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-267,pbmValbeschermingRequired,Yes
+@method,set,permit,WVG-267,pbmVluchtmaskerBinnenHandbereikRequired,
+@method,set,permit,WVG-267,pbmVrijeTekst1,
+@method,set,permit,WVG-267,pbmVrijeTekst1Required,
+@method,set,permit,WVG-267,pbmVrijeTekst2,
+@method,set,permit,WVG-267,pbmVrijeTekst2Required,
+@method,set,permit,WVG-267,Signature.name,Kras QHSE Manager
+@method,set,permit,WVG-267,Signature.signDate,01-11-2004
+@method,set,permit,WVG-267,Signature.signed,true
+@method,set,permit,WVG-267,template,index.vm
+@method,set,permit,WVG-267,tools,
+@method,set,permit,WVG-267,vehicleEquipment,
+@method,set,permit,WVG-267,verificatie,x
+@method,set,permit,WVG-267,vzmBrandwaterslangGereedRequired,Yes
+@method,set,permit,WVG-267,vzmCommunicatiemiddelen,portofoon
+@method,set,permit,WVG-267,vzmCommunicatiemiddelenRequired,Yes
+@method,set,permit,WVG-267,vzmGeforceerdeVentilatieRequired,
+@method,set,permit,WVG-267,vzmMangatwachtBrandwachtInzettenRequired,
+@method,set,permit,WVG-267,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-267,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-267,vzmPoederblusser,
+@method,set,permit,WVG-267,vzmPoederblusserRequired,Yes
+@method,set,permit,WVG-267,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-267,vzmPuttenGotenRiolenAfdekkenRequired,
+@method,set,permit,WVG-267,vzmVonkafschermingGebruikenRequired,Yes
+@method,set,permit,WVG-267,vzmVrijeTekst1,
+@method,set,permit,WVG-267,vzmVrijeTekst1Required,
+@method,set,permit,WVG-267,vzmVrijeTekst2,
+@method,set,permit,WVG-267,vzmVrijeTekst2Required,
+@method,set,permit,WVG-267,vzmWerkplekAfzettenRequired,
+@method,set,permit,WVG-267,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-267,vzmWerkplekBeveiligenValgevaarRequired,Yes
+@method,set,permit,WVG-267,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-267,workDescription,omloopleiding plaatsen
+@method,set,permit,WVG-267,wwBetredenBeslotenRuimteRequired,
+@method,set,permit,WVG-267,wwBrandenGutsenLassenRequired,Yes
+@method,set,permit,WVG-267,wwGravenRequired,
+@method,set,permit,WVG-267,wwGritstralenRequired,
+@method,set,permit,WVG-267,wwHakkenBorenRequired,
+@method,set,permit,WVG-267,wwHijsenRequired,Yes
+@method,set,permit,WVG-267,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-267,wwInstrumentatieElectricalRequired,
+@method,set,permit,WVG-267,wwMonterenDemonterenRequired,Yes
+@method,set,permit,WVG-267,wwOpenenInstallatieRequired,
+@method,set,permit,WVG-267,wwRontgenStralingRequired,
+@method,set,permit,WVG-267,wwSlijpenRequired,Yes
+@method,set,permit,WVG-267,wwVacuumCleaningRequired,
+@method,set,permit,WVG-267,wwVrijeTekst1,
+@method,set,permit,WVG-267,wwVrijeTekst1Required,
+@endTransaction
+!ph557,signature-pcq-2.x,B_VL,null,B_VL,WVG-267,null,null,null,null,false,true
+!ph558,signature-pcq-2.x,B_AV,null,B_AV,WVG-267,Kras QHSE Manager,null,null,2004-11-01,true,true
+!ph559,signature-pcq-2.x,B_OB,null,B_OB,WVG-267,null,null,null,null,false,false
+!ph560,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-267,null,null,null,null,false,false
+!ph561,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-267,null,null,null,null,false,false
+!ph562,signature-pcq-2.x,B_VV,null,B_VV,WVG-267,null,null,null,null,false,false
+!ph563,signature-pcq-2.x,B_VS,null,B_VS,WVG-267,null,null,null,null,false,true
+!ph564,signature-pcq-2.x,B_VA,null,B_VA,WVG-267,null,null,null,null,false,true
+!ph565,audit,CREATE_EVENT,WVG-267 aangemaakt,user8,2004-11-01,ibanx.permit.Permit,WVG-267
+!ph566,audit,PROMOTE_EVENT,Status van WVG-267 veranderd naar Maatregelen Houder,user8,2004-11-01,ibanx.permit.Permit,WVG-267
+!ph567,audit,SAVE_EVENT,Eigenschappen van WVG-267 aangepast,user8,2004-11-01,ibanx.permit.Permit,WVG-267
+!ph568,audit,PROMOTE_EVENT,Status van WVG-267 veranderd naar Bekrachtiging Aanvrager,user8,2004-11-01,ibanx.permit.Permit,WVG-267
+!ph569,audit,SAVE_EVENT,Eigenschappen van WVG-267 aangepast,user8,2004-11-01,ibanx.permit.Permit,WVG-267
+!ph570,audit,SAVE_EVENT,Eigenschappen van WVG-267 aangepast,user8,2004-11-01,ibanx.permit.Permit,WVG-267
+!ph571,audit,SETSTATE_EVENT,Status van WVG-267 veranderd naar Bepaal Risico,user8,2004-11-01,ibanx.permit.Permit,WVG-267
+!ph572,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-267,user8,2004-11-01,ibanx.permit.Permit,WVG-267
+!ph573,audit,PROMOTE_EVENT,Status van WVG-267 veranderd naar Accordering Maatregelen Houder,user4,2004-11-12,ibanx.permit.Permit,WVG-267
+!ph574,audit,SAVE_EVENT,Eigenschappen van WVG-267 aangepast,user4,2004-11-12,ibanx.permit.Permit,WVG-267
+permit,WVG-268,null,2004-11-01 16:47:34,2004-11-01 16:47:34,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,I_MV,XF/210,09A05,E&I,5431,2004-11-01,2004-11-01,07:00,16:00,null,null,3,null,null,PLANT1,true,false,ABB,0
+@startTransaction
+@method,set,permit,WVG-268,aantalUitvoerenden,3
+@method,set,permit,WVG-268,avBeslotenRuimteRequired,
+@method,set,permit,WVG-268,avGraafVergunningRequired,
+@method,set,permit,WVG-268,avHottapRequired,
+@method,set,permit,WVG-268,avPluglasRequired,
+@method,set,permit,WVG-268,avVrijeTekst1,
+@method,set,permit,WVG-268,avVrijeTekst1Required,
+@method,set,permit,WVG-268,avVrijeTekst2,
+@method,set,permit,WVG-268,avVrijeTekst2Required,
+@method,set,permit,WVG-268,confirm,false
+@method,set,permit,WVG-268,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-268,extraEisen,
+@method,set,permit,WVG-268,module,permit
+@method,set,permit,WVG-268,objectKey,ibanx.permit.PermitIF:6913
+@method,set,permit,WVG-268,pbmAdembescherming,
+@method,set,permit,WVG-268,pbmAdembeschermingRequired,
+@method,set,permit,WVG-268,pbmBeschermendeKleding,
+@method,set,permit,WVG-268,pbmBeschermendeKledingRequired,
+@method,set,permit,WVG-268,pbmAdembeschermingText,
+@method,set,permit,WVG-268,pbmGasalarmering,
+@method,set,permit,WVG-268,pbmGasalarmeringRequired,
+@method,set,permit,WVG-268,pbmGehoorbeschermingRequired,
+@method,set,permit,WVG-268,pbmGelaatschermRequired,
+@method,set,permit,WVG-268,pbmHandArmbescherming,
+@method,set,permit,WVG-268,pbmHandArmbeschermingRequired,
+@method,set,permit,WVG-268,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-268,pbmValbeschermingRequired,
+@method,set,permit,WVG-268,pbmVluchtmaskerBinnenHandbereikRequired,Yes
+@method,set,permit,WVG-268,pbmVrijeTekst1,
+@method,set,permit,WVG-268,pbmVrijeTekst1Required,
+@method,set,permit,WVG-268,pbmVrijeTekst2,
+@method,set,permit,WVG-268,pbmVrijeTekst2Required,
+@method,set,permit,WVG-268,Signature.name,Kras QHSE Manager
+@method,set,permit,WVG-268,Signature.signDate,01-11-2004
+@method,set,permit,WVG-268,Signature.signed,true
+@method,set,permit,WVG-268,template,index.vm
+@method,set,permit,WVG-268,tools,handgereedschap
+@method,set,permit,WVG-268,vehicleEquipment,
+@method,set,permit,WVG-268,verificatie,x
+@method,set,permit,WVG-268,vzmBrandwaterslangGereedRequired,
+@method,set,permit,WVG-268,vzmCommunicatiemiddelen,mobilifoon
+@method,set,permit,WVG-268,vzmCommunicatiemiddelenRequired,Yes
+@method,set,permit,WVG-268,vzmGeforceerdeVentilatieRequired,
+@method,set,permit,WVG-268,vzmMangatwachtBrandwachtInzettenRequired,
+@method,set,permit,WVG-268,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-268,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-268,vzmPoederblusser,
+@method,set,permit,WVG-268,vzmPoederblusserRequired,
+@method,set,permit,WVG-268,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-268,vzmPuttenGotenRiolenAfdekkenRequired,
+@method,set,permit,WVG-268,vzmVonkafschermingGebruikenRequired,
+@method,set,permit,WVG-268,vzmVrijeTekst1,
+@method,set,permit,WVG-268,vzmVrijeTekst1Required,
+@method,set,permit,WVG-268,vzmVrijeTekst2,
+@method,set,permit,WVG-268,vzmVrijeTekst2Required,
+@method,set,permit,WVG-268,vzmWerkplekAfzettenRequired,
+@method,set,permit,WVG-268,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-268,vzmWerkplekBeveiligenValgevaarRequired,
+@method,set,permit,WVG-268,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-268,workDescription,E-kabels naar MCC vervangen
+@method,set,permit,WVG-268,wwBetredenBeslotenRuimteRequired,
+@method,set,permit,WVG-268,wwBrandenGutsenLassenRequired,
+@method,set,permit,WVG-268,wwGravenRequired,
+@method,set,permit,WVG-268,wwGritstralenRequired,
+@method,set,permit,WVG-268,wwHakkenBorenRequired,
+@method,set,permit,WVG-268,wwHijsenRequired,
+@method,set,permit,WVG-268,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-268,wwInstrumentatieElectricalRequired,Yes
+@method,set,permit,WVG-268,wwMonterenDemonterenRequired,Yes
+@method,set,permit,WVG-268,wwOpenenInstallatieRequired,
+@method,set,permit,WVG-268,wwRontgenStralingRequired,
+@method,set,permit,WVG-268,wwSlijpenRequired,
+@method,set,permit,WVG-268,wwVacuumCleaningRequired,
+@method,set,permit,WVG-268,wwVrijeTekst1,
+@method,set,permit,WVG-268,wwVrijeTekst1Required,
+@endTransaction
+!ph575,signature-pcq-2.x,B_VL,null,B_VL,WVG-268,null,null,null,null,false,true
+!ph576,signature-pcq-2.x,B_AV,null,B_AV,WVG-268,Kras QHSE Manager,null,null,2004-11-01,true,true
+!ph577,signature-pcq-2.x,B_OB,null,B_OB,WVG-268,null,null,null,null,false,false
+!ph578,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-268,null,null,null,null,false,true
+!ph579,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-268,null,null,null,null,false,false
+!ph580,signature-pcq-2.x,B_VV,null,B_VV,WVG-268,null,null,null,null,false,true
+!ph581,signature-pcq-2.x,B_VS,null,B_VS,WVG-268,null,null,null,null,false,true
+!ph582,signature-pcq-2.x,B_VA,null,B_VA,WVG-268,null,null,null,null,false,true
+!ph583,audit,CREATE_EVENT,WVG-268 aangemaakt,user8,2004-11-01,ibanx.permit.Permit,WVG-268
+!ph584,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-268 en de RBH met nummer RBH-261.,user8,2004-11-01,ibanx.permit.Permit,WVG-268
+!ph585,audit,PROMOTE_EVENT,Status van WVG-268 veranderd naar Maatregelen Houder,user8,2004-11-01,ibanx.permit.Permit,WVG-268
+!ph586,audit,SAVE_EVENT,Eigenschappen van WVG-268 aangepast,user8,2004-11-01,ibanx.permit.Permit,WVG-268
+!ph587,audit,PROMOTE_EVENT,Status van WVG-268 veranderd naar Bekrachtiging Aanvrager,user8,2004-11-01,ibanx.permit.Permit,WVG-268
+!ph588,audit,SAVE_EVENT,Eigenschappen van WVG-268 aangepast,user8,2004-11-01,ibanx.permit.Permit,WVG-268
+!ph589,audit,SAVE_EVENT,Eigenschappen van WVG-268 aangepast,user8,2004-11-01,ibanx.permit.Permit,WVG-268
+!ph590,audit,SETSTATE_EVENT,Status van WVG-268 veranderd naar Bepaal Risico,user8,2004-11-01,ibanx.permit.Permit,WVG-268
+!ph591,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-268,user8,2004-11-01,ibanx.permit.Permit,WVG-268
+!ph592,audit,PROMOTE_EVENT,Status van WVG-268 veranderd naar Accordering Maatregelen Houder,user8,2004-11-01,ibanx.permit.Permit,WVG-268
+!ph593,audit,SAVE_EVENT,Eigenschappen van WVG-268 aangepast,user8,2004-11-01,ibanx.permit.Permit,WVG-268
+!ph594,audit,PROMOTE_EVENT,Status van WVG-268 veranderd naar Maatregelen Verstrekker,user8,2004-11-01,ibanx.permit.Permit,WVG-268
+!ph595,audit,SAVE_EVENT,Eigenschappen van WVG-268 aangepast,user8,2004-11-01,ibanx.permit.Permit,WVG-268
+permit,WVG-269,null,2004-11-01 16:50:42,2004-11-01 16:50:42,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,O_AC,XF/210,09A05,E&I,,2004-11-01,2004-11-02,07:00,16:00,,null,1,null,null,PLANT1,true,false,ABB,1
+@startTransaction
+@method,set,permit,WVG-269,aantalUitvoerenden,2
+@method,set,permit,WVG-269,avBeslotenRuimteRequired,
+@method,set,permit,WVG-269,avGraafVergunningRequired,
+@method,set,permit,WVG-269,avHottapRequired,
+@method,set,permit,WVG-269,avPluglasRequired,
+@method,set,permit,WVG-269,avVrijeTekst1,
+@method,set,permit,WVG-269,avVrijeTekst1Required,
+@method,set,permit,WVG-269,avVrijeTekst2,
+@method,set,permit,WVG-269,avVrijeTekst2Required,
+@method,set,permit,WVG-269,confirm,false
+@method,set,permit,WVG-269,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-269,extraEisen,
+@method,set,permit,WVG-269,gezamenlijkAfsluiten,Yes
+@method,set,permit,WVG-269,gmExplosiviteitContinueMeting,
+@method,set,permit,WVG-269,gmExplosiviteitLEL,
+@method,set,permit,WVG-269,gmExplosiviteitRequired,
+@method,set,permit,WVG-269,gmToxischContinueMeting,
+@method,set,permit,WVG-269,gmToxischMAC,
+@method,set,permit,WVG-269,gmToxischRequired,
+@method,set,permit,WVG-269,gmToxischStof,
+@method,set,permit,WVG-269,gmZuurstofContinueMeting,
+@method,set,permit,WVG-269,gmZuurstofPct,
+@method,set,permit,WVG-269,gmZuurstofRequired,
+@method,set,permit,WVG-269,invloedNaburigeWerkzaamheden,
+@method,set,permit,WVG-269,module,permit
+@method,set,permit,WVG-269,mogelijkeRisicos,
+@method,set,permit,WVG-269,mvAfkoppelenRequired,
+@method,set,permit,WVG-269,mvAfstekenRequired,
+@method,set,permit,WVG-269,mvAftappenRequired,
+@method,set,permit,WVG-269,mvAppElectrischBlokkeren,
+@method,set,permit,WVG-269,mvAppElectrischBlokkerenRequired,
+@method,set,permit,WVG-269,mvAppElectrischVrijschakelen,
+@method,set,permit,WVG-269,mvAppElectrischVrijschakelenRequired,
+@method,set,permit,WVG-269,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-269,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-269,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-269,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-269,mvControleOmgevingOpBrandbaarMateriaalRequired,
+@method,set,permit,WVG-269,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-269,mvDrukvrijRequired,
+@method,set,permit,WVG-269,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-269,mvInblokkenRequired,
+@method,set,permit,WVG-269,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-269,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-269,mvProduktvrijRequired,
+@method,set,permit,WVG-269,mvSpoelenRequired,
+@method,set,permit,WVG-269,mvStomenRequired,
+@method,set,permit,WVG-269,objectKey,ibanx.permit.PermitIF:7057
+@method,set,permit,WVG-269,pbmAdembescherming,
+@method,set,permit,WVG-269,pbmAdembeschermingRequired,
+@method,set,permit,WVG-269,pbmBeschermendeKleding,
+@method,set,permit,WVG-269,pbmBeschermendeKledingRequired,
+@method,set,permit,WVG-269,pbmAdembeschermingText,
+@method,set,permit,WVG-269,pbmGasalarmering,
+@method,set,permit,WVG-269,pbmGasalarmeringRequired,
+@method,set,permit,WVG-269,pbmGehoorbeschermingRequired,
+@method,set,permit,WVG-269,pbmGelaatschermRequired,
+@method,set,permit,WVG-269,pbmHandArmbescherming,
+@method,set,permit,WVG-269,pbmHandArmbeschermingRequired,
+@method,set,permit,WVG-269,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-269,pbmValbeschermingRequired,
+@method,set,permit,WVG-269,pbmVluchtmaskerBinnenHandbereikRequired,Yes
+@method,set,permit,WVG-269,pbmVrijeTekst1,
+@method,set,permit,WVG-269,pbmVrijeTekst1Required,
+@method,set,permit,WVG-269,pbmVrijeTekst2,
+@method,set,permit,WVG-269,pbmVrijeTekst2Required,
+@method,set,permit,WVG-269,Signature.name,Koot de Verstrekker
+@method,set,permit,WVG-269,Signature.signDate,01-11-2004
+@method,set,permit,WVG-269,Signature.signed,true
+@method,set,permit,WVG-269,specialeOperationeleAandachtspuntenVrijeTekst1,
+@method,set,permit,WVG-269,template,index.vm
+@method,set,permit,WVG-269,tools,handgereedschap
+@method,set,permit,WVG-269,vehicleEquipment,
+@method,set,permit,WVG-269,verificatie,x
+@method,set,permit,WVG-269,vzmBrandwaterslangGereedRequired,
+@method,set,permit,WVG-269,vzmCommunicatiemiddelen,mobilifoon
+@method,set,permit,WVG-269,vzmCommunicatiemiddelenRequired,Yes
+@method,set,permit,WVG-269,vzmGeforceerdeVentilatieRequired,
+@method,set,permit,WVG-269,vzmMangatwachtBrandwachtInzettenRequired,
+@method,set,permit,WVG-269,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-269,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-269,vzmPoederblusser,
+@method,set,permit,WVG-269,vzmPoederblusserRequired,
+@method,set,permit,WVG-269,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-269,vzmPuttenGotenRiolenAfdekkenRequired,
+@method,set,permit,WVG-269,vzmVonkafschermingGebruikenRequired,
+@method,set,permit,WVG-269,vzmVrijeTekst1,
+@method,set,permit,WVG-269,vzmVrijeTekst1Required,
+@method,set,permit,WVG-269,vzmVrijeTekst2,
+@method,set,permit,WVG-269,vzmVrijeTekst2Required,
+@method,set,permit,WVG-269,vzmWerkplekAfzettenRequired,
+@method,set,permit,WVG-269,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-269,vzmWerkplekBeveiligenValgevaarRequired,
+@method,set,permit,WVG-269,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-269,workDescription,MCC vervangen
+@method,set,permit,WVG-269,wwBetredenBeslotenRuimteRequired,
+@method,set,permit,WVG-269,wwBrandenGutsenLassenRequired,
+@method,set,permit,WVG-269,wwGravenRequired,
+@method,set,permit,WVG-269,wwGritstralenRequired,
+@method,set,permit,WVG-269,wwHakkenBorenRequired,
+@method,set,permit,WVG-269,wwHijsenRequired,
+@method,set,permit,WVG-269,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-269,wwInstrumentatieElectricalRequired,Yes
+@method,set,permit,WVG-269,wwMonterenDemonterenRequired,Yes
+@method,set,permit,WVG-269,wwOpenenInstallatieRequired,
+@method,set,permit,WVG-269,wwRontgenStralingRequired,
+@method,set,permit,WVG-269,wwSlijpenRequired,
+@method,set,permit,WVG-269,wwVacuumCleaningRequired,
+@method,set,permit,WVG-269,wwVrijeTekst1,
+@method,set,permit,WVG-269,wwVrijeTekst1Required,
+@endTransaction
+!ph596,signature-pcq-2.x,B_VL,null,B_VL,WVG-269,null,null,null,null,false,true
+!ph597,signature-pcq-2.x,B_AV,null,B_AV,WVG-269,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph598,signature-pcq-2.x,B_OB,null,B_OB,WVG-269,null,null,null,null,false,false
+!ph599,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-269,null,null,null,null,false,false
+!ph600,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-269,null,null,null,null,false,false
+!ph601,signature-pcq-2.x,B_VV,null,B_VV,WVG-269,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph602,signature-pcq-2.x,B_VS,null,B_VS,WVG-269,Koot de Verstrekker,null,null,2004-11-01,true,true
+!ph603,signature-pcq-2.x,B_VA,null,B_VA,WVG-269,null,null,null,null,false,true
+!ph604,audit,COPY_EVENT,WVG-269 gekopieerd van WVG-268,user8,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph605,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-269 en de RBH met nummer RBH-262.,user8,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph606,audit,LINK_EVENT,Koppeling gemaakt tussen de RBH met nummer RBH-262 en de TRA met nummer TRA-265.,user8,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph607,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-269 en de TRA met nummer TRA-265.,user8,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph608,audit,PROMOTE_EVENT,Status van WVG-269 veranderd naar Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph609,audit,SAVE_EVENT,Eigenschappen van WVG-269 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph610,audit,PROMOTE_EVENT,Status van WVG-269 veranderd naar Bekrachtiging Aanvrager,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph611,audit,SAVE_EVENT,Eigenschappen van WVG-269 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph612,audit,SAVE_EVENT,Eigenschappen van WVG-269 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph613,audit,SETSTATE_EVENT,Status van WVG-269 veranderd naar Bepaal Risico,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph614,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-269,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph615,audit,PROMOTE_EVENT,Status van WVG-269 veranderd naar Accordering Maatregelen Houder,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph616,audit,SAVE_EVENT,Eigenschappen van WVG-269 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph617,audit,PROMOTE_EVENT,Status van WVG-269 veranderd naar Maatregelen Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph618,audit,SAVE_EVENT,Eigenschappen van WVG-269 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph619,audit,PROMOTE_EVENT,Status van WVG-269 veranderd naar Uitvoeren Voorbereidende Werkzaamheden,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph620,audit,SAVE_EVENT,Eigenschappen van WVG-269 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph621,audit,PROMOTE_EVENT,Status van WVG-269 veranderd naar Bekrachtiging Vergunning Voorbereider,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph622,audit,SAVE_EVENT,Eigenschappen van WVG-269 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph623,audit,SAVE_EVENT,Eigenschappen van WVG-269 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph624,audit,SETSTATE_EVENT,Status van WVG-269 veranderd naar Bekrachtiging Verstrekker,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph625,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-269,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph626,audit,SAVE_EVENT,Eigenschappen van WVG-269 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph627,audit,SETSTATE_EVENT,Status van WVG-269 veranderd naar Klaar voor Uitgifte,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph628,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-269,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph629,audit,SETSTATE_EVENT,Status van WVG-269 veranderd naar Actief,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+!ph630,audit,SAVE_EVENT,Eigenschappen van WVG-269 aangepast,user4,2004-11-01,ibanx.permit.Permit,WVG-269
+permit,WVG-270,null,2004-11-02 08:37:29,2004-11-02 08:37:29,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,O_VA,TANKENPARK,CORR-14A,Werktuigbouw,987456,2004-11-02,2004-11-02,07:00,16:00,,null,1,null,null,PLANT2,true,false,RTD,2
+@startTransaction
+@method,set,permit,WVG-270,aantalUitvoerenden,3
+@method,set,permit,WVG-270,avBeslotenRuimteRequired,Yes
+@method,set,permit,WVG-270,avGraafVergunningRequired,
+@method,set,permit,WVG-270,avHottapRequired,
+@method,set,permit,WVG-270,avPluglasRequired,
+@method,set,permit,WVG-270,avVrijeTekst1,
+@method,set,permit,WVG-270,avVrijeTekst1Required,
+@method,set,permit,WVG-270,avVrijeTekst2,
+@method,set,permit,WVG-270,avVrijeTekst2Required,
+@method,set,permit,WVG-270,bijzRichtlijnenProcedureBeslotenRuimteRequired,Yes
+@method,set,permit,WVG-270,confirm,false
+@method,set,permit,WVG-270,doMake_invalid.stateIdentity,E_I
+@method,set,permit,WVG-270,doResume.stateIdentity,O_AC
+@method,set,permit,WVG-270,doTakein.stateIdentity,B_VA
+@method,set,permit,WVG-270,eventSubmit_doMake_invalid,OK
+@method,set,permit,WVG-270,eventSubmit_doResume,OK
+@method,set,permit,WVG-270,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-270,eventSubmit_doTakein,OK
+@method,set,permit,WVG-270,extraEisen,
+@method,set,permit,WVG-270,gezamenlijkAfsluiten,Yes
+@method,set,permit,WVG-270,gmExplosiviteitContinueMeting,
+@method,set,permit,WVG-270,gmExplosiviteitLEL,
+@method,set,permit,WVG-270,gmExplosiviteitRequired,
+@method,set,permit,WVG-270,gmToxischContinueMeting,
+@method,set,permit,WVG-270,gmToxischMAC,
+@method,set,permit,WVG-270,gmToxischRequired,
+@method,set,permit,WVG-270,gmToxischStof,
+@method,set,permit,WVG-270,gmZuurstofContinueMeting,Yes
+@method,set,permit,WVG-270,gmZuurstofPct,
+@method,set,permit,WVG-270,gmZuurstofRequired,No
+@method,set,permit,WVG-270,invloedNaburigeWerkzaamheden,
+@method,set,permit,WVG-270,markup.body,einde werkzaamheden\, tank weer afgesloten
+@method,set,permit,WVG-270,module,permit
+@method,set,permit,WVG-270,mogelijkeRisicos,
+@method,set,permit,WVG-270,mvAfkoppelenRequired,
+@method,set,permit,WVG-270,mvAfstekenReady,Yes
+@method,set,permit,WVG-270,mvAfstekenRequired,Yes
+@method,set,permit,WVG-270,mvAftappenRequired,
+@method,set,permit,WVG-270,mvAppElectrischBlokkeren,
+@method,set,permit,WVG-270,mvAppElectrischBlokkerenRequired,
+@method,set,permit,WVG-270,mvAppElectrischVrijschakelen,
+@method,set,permit,WVG-270,mvAppElectrischVrijschakelenRequired,
+@method,set,permit,WVG-270,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-270,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-270,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-270,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-270,mvControleOmgevingOpBrandbaarMateriaalRequired,
+@method,set,permit,WVG-270,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-270,mvDrukvrijRequired,
+@method,set,permit,WVG-270,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-270,mvInblokkenRequired,
+@method,set,permit,WVG-270,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-270,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-270,mvProduktvrijReady,Yes
+@method,set,permit,WVG-270,mvProduktvrijRequired,Yes
+@method,set,permit,WVG-270,mvSpoelenReady,Yes
+@method,set,permit,WVG-270,mvSpoelenRequired,Yes
+@method,set,permit,WVG-270,mvStomenRequired,
+@method,set,permit,WVG-270,objectKey,ibanx.permit.PermitIF:7381
+@method,set,permit,WVG-270,pbmAdembescherming,
+@method,set,permit,WVG-270,pbmAdembeschermingRequired,
+@method,set,permit,WVG-270,pbmBeschermendeKleding,tegen straling
+@method,set,permit,WVG-270,pbmBeschermendeKledingRequired,Yes
+@method,set,permit,WVG-270,pbmAdembeschermingText,
+@method,set,permit,WVG-270,pbmGasalarmering,
+@method,set,permit,WVG-270,pbmGasalarmeringRequired,
+@method,set,permit,WVG-270,pbmGehoorbeschermingRequired,
+@method,set,permit,WVG-270,pbmGelaatschermRequired,
+@method,set,permit,WVG-270,pbmHandArmbescherming,
+@method,set,permit,WVG-270,pbmHandArmbeschermingRequired,
+@method,set,permit,WVG-270,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-270,pbmValbeschermingRequired,
+@method,set,permit,WVG-270,pbmVluchtmaskerBinnenHandbereikRequired,Yes
+@method,set,permit,WVG-270,pbmVrijeTekst1,
+@method,set,permit,WVG-270,pbmVrijeTekst1Required,
+@method,set,permit,WVG-270,pbmVrijeTekst2,
+@method,set,permit,WVG-270,pbmVrijeTekst2Required,
+@method,set,permit,WVG-270,Signature.name,Koot de Verstrekker
+@method,set,permit,WVG-270,Signature.signDate,02-11-2004
+@method,set,permit,WVG-270,Signature.signed,true
+@method,set,permit,WVG-270,specialeOperationeleAandachtspuntenVrijeTekst1,
+@method,set,permit,WVG-270,template,index.vm
+@method,set,permit,WVG-270,tools,handgereedschap\r\nRontgen apparatuur
+@method,set,permit,WVG-270,vehicleEquipment,
+@method,set,permit,WVG-270,verificatie,x
+@method,set,permit,WVG-270,vzmBrandwaterslangGereedRequired,
+@method,set,permit,WVG-270,vzmCommunicatiemiddelen,portofoon
+@method,set,permit,WVG-270,vzmCommunicatiemiddelenRequired,Yes
+@method,set,permit,WVG-270,vzmGeforceerdeVentilatieRequired,Yes
+@method,set,permit,WVG-270,vzmMangatwachtBrandwachtInzettenRequired,Yes
+@method,set,permit,WVG-270,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-270,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-270,vzmPoederblusser,
+@method,set,permit,WVG-270,vzmPoederblusserRequired,
+@method,set,permit,WVG-270,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-270,vzmPuttenGotenRiolenAfdekkenRequired,
+@method,set,permit,WVG-270,vzmVonkafschermingGebruikenRequired,
+@method,set,permit,WVG-270,vzmVrijeTekst1,
+@method,set,permit,WVG-270,vzmVrijeTekst1Required,
+@method,set,permit,WVG-270,vzmVrijeTekst2,
+@method,set,permit,WVG-270,vzmVrijeTekst2Required,
+@method,set,permit,WVG-270,vzmWerkplekAfzettenRequired,
+@method,set,permit,WVG-270,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-270,vzmWerkplekBeveiligenValgevaarRequired,
+@method,set,permit,WVG-270,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-270,workDescription,Inwendige inspectie Voorraad tank
+@method,set,permit,WVG-270,wwBetredenBeslotenRuimteRequired,Yes
+@method,set,permit,WVG-270,wwBrandenGutsenLassenRequired,
+@method,set,permit,WVG-270,wwGravenRequired,
+@method,set,permit,WVG-270,wwGritstralenRequired,No
+@method,set,permit,WVG-270,wwHakkenBorenRequired,
+@method,set,permit,WVG-270,wwHijsenRequired,
+@method,set,permit,WVG-270,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-270,wwInstrumentatieElectricalRequired,
+@method,set,permit,WVG-270,wwMonterenDemonterenRequired,
+@method,set,permit,WVG-270,wwOpenenInstallatieRequired,Yes
+@method,set,permit,WVG-270,wwRontgenStralingRequired,Yes
+@method,set,permit,WVG-270,wwSlijpenRequired,
+@method,set,permit,WVG-270,wwVacuumCleaningRequired,No
+@method,set,permit,WVG-270,wwVrijeTekst1,
+@method,set,permit,WVG-270,wwVrijeTekst1Required,
+@endTransaction
+@addmarkup,permit,WVG-270,user4,null,wegens brand bij naburige plant werkzaamheden gestaakt,3,2004-11-02 09:05:42,user4,2004-11-02 09:05:42,user4,lifecycleIdentity,DELTALINQS_PERMIT_PROCESS,stateIdentity,E_I
+@addmarkup,permit,WVG-270,user4,null,na nieuwe zuurstof meeting in tank kunnen de werkzaamheden worden hervat,3,2004-11-02 09:06:21,user4,2004-11-02 09:06:21,user4,lifecycleIdentity,DELTALINQS_PERMIT_PROCESS,stateIdentity,O_AC
+@addmarkup,permit,WVG-270,user4,null,einde werkzaamheden\, tank weer afgesloten,3,2004-11-02 09:06:43,user4,2004-11-02 09:06:43,user4,lifecycleIdentity,DELTALINQS_PERMIT_PROCESS,stateIdentity,B_VA
+!ph631,signature-pcq-2.x,B_VL,null,B_VL,WVG-270,null,null,null,null,false,true
+!ph632,signature-pcq-2.x,B_AV,null,B_AV,WVG-270,Koot de Verstrekker,null,null,2004-11-02,true,true
+!ph633,signature-pcq-2.x,B_OB,null,B_OB,WVG-270,Jans de Beheerder,null,null,2004-11-02,true,true
+!ph634,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-270,Frans de Brandwacht,null,null,2004-11-02,true,true
+!ph635,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-270,Frans Systeem Manager,null,null,2004-11-02,true,true
+!ph636,signature-pcq-2.x,B_VV,null,B_VV,WVG-270,Erik de Voorbereider,null,null,2004-11-02,true,true
+!ph637,signature-pcq-2.x,B_VS,null,B_VS,WVG-270,Koot de Verstrekker,null,null,2004-11-02,true,true
+!ph638,signature-pcq-2.x,B_VA,null,B_VA,WVG-270,Koot de Verstrekker,null,null,2004-11-02,true,true
+!ph639,audit,CREATE_EVENT,WVG-270 aangemaakt,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph640,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-270 en de RBH met nummer RBH-263.,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph641,audit,PROMOTE_EVENT,Status van WVG-270 veranderd naar Maatregelen Houder,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph642,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph643,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-270 en de TRA met nummer TRA-266.,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph644,audit,LINK_EVENT,Koppeling gemaakt tussen de RBH met nummer RBH-263 en de TRA met nummer TRA-266.,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph645,audit,PROMOTE_EVENT,Status van WVG-270 veranderd naar Bekrachtiging Aanvrager,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph646,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph647,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph648,audit,SETSTATE_EVENT,Status van WVG-270 veranderd naar Bepaal Risico,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph649,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-270,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph650,audit,PROMOTE_EVENT,Status van WVG-270 veranderd naar Accordering Maatregelen Houder,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph651,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph652,audit,PROMOTE_EVENT,Status van WVG-270 veranderd naar Maatregelen Verstrekker,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph653,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph654,audit,PROMOTE_EVENT,Status van WVG-270 veranderd naar Bekrachtiging Operationeel Beheerder,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph655,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph656,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user5,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph657,audit,SETSTATE_EVENT,Status van WVG-270 veranderd naar Bekrachtiging Mede-ondertekenaar 1,user5,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph658,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-270,user5,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph659,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user11,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph660,audit,SETSTATE_EVENT,Status van WVG-270 veranderd naar Bekrachtiging Mede-ondertekenaar 2,user11,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph661,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-270,user11,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph662,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user6,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph663,audit,SETSTATE_EVENT,Status van WVG-270 veranderd naar Uitvoeren Voorbereidende Werkzaamheden,user6,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph664,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-270,user6,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph665,audit,PROMOTE_EVENT,Status van WVG-270 veranderd naar Bekrachtiging Vergunning Voorbereider,user10,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph666,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user10,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph667,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user10,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph668,audit,SETSTATE_EVENT,Status van WVG-270 veranderd naar Bekrachtiging Verstrekker,user10,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph669,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-270,user10,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph670,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph671,audit,SETSTATE_EVENT,Status van WVG-270 veranderd naar Klaar voor Uitgifte,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph672,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-270,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph673,audit,SETSTATE_EVENT,Status van WVG-270 veranderd naar Actief,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph674,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph675,audit,SETSTATE_EVENT,Status van WVG-270 veranderd naar Ingetrokken,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph676,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph677,audit,SETSTATE_EVENT,Status van WVG-270 veranderd naar Actief,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph678,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph679,audit,SETSTATE_EVENT,Status van WVG-270 veranderd naar Bekrachtiging Vergunning Afsluiten,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph680,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph681,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph682,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph683,audit,SAVE_EVENT,Eigenschappen van WVG-270 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph684,audit,SETSTATE_EVENT,Status van WVG-270 veranderd naar Afgesloten,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+!ph685,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-270,user4,2004-11-02,ibanx.permit.Permit,WVG-270
+permit,WVG-275,null,2004-11-02 09:27:25,2004-11-02 09:27:25,null,null,DELTALINQS_PERMIT,DELTALINQS_PERMIT_PROCESS,O_AC,XF/210,CS-DCS,Instrumentatie,WO2498,2004-11-02,2004-11-02,07:00,16:00,Chloor,null,3,null,null,PLANT1,true,false,Croon,1
+@startTransaction
+@method,set,permit,WVG-275,aantalUitvoerenden,1
+@method,set,permit,WVG-275,avBeslotenRuimteRequired,
+@method,set,permit,WVG-275,avGraafVergunningRequired,
+@method,set,permit,WVG-275,avHottapRequired,
+@method,set,permit,WVG-275,avPluglasRequired,
+@method,set,permit,WVG-275,avVrijeTekst1,
+@method,set,permit,WVG-275,avVrijeTekst1Required,
+@method,set,permit,WVG-275,avVrijeTekst2,
+@method,set,permit,WVG-275,avVrijeTekst2Required,
+@method,set,permit,WVG-275,confirm,false
+@method,set,permit,WVG-275,eventSubmit_doSave_signed_promote,Bekrachtig
+@method,set,permit,WVG-275,extraEisen,
+@method,set,permit,WVG-275,gezamenlijkAfsluiten,
+@method,set,permit,WVG-275,gmExplosiviteitContinueMeting,
+@method,set,permit,WVG-275,gmExplosiviteitLEL,
+@method,set,permit,WVG-275,gmExplosiviteitRequired,
+@method,set,permit,WVG-275,gmToxischContinueMeting,
+@method,set,permit,WVG-275,gmToxischMAC,
+@method,set,permit,WVG-275,gmToxischRequired,
+@method,set,permit,WVG-275,gmToxischStof,
+@method,set,permit,WVG-275,gmZuurstofContinueMeting,
+@method,set,permit,WVG-275,gmZuurstofPct,
+@method,set,permit,WVG-275,gmZuurstofRequired,
+@method,set,permit,WVG-275,invloedNaburigeWerkzaamheden,werkzaamheden aan naast liggende leiding
+@method,set,permit,WVG-275,module,permit
+@method,set,permit,WVG-275,mogelijkeRisicos,elkaar in de weg lopen
+@method,set,permit,WVG-275,mvAfkoppelenRequired,
+@method,set,permit,WVG-275,mvAfstekenRequired,
+@method,set,permit,WVG-275,mvAftappenRequired,
+@method,set,permit,WVG-275,mvAppElectrischBlokkeren,
+@method,set,permit,WVG-275,mvAppElectrischBlokkerenRequired,
+@method,set,permit,WVG-275,mvAppElectrischVrijschakelen,
+@method,set,permit,WVG-275,mvAppElectrischVrijschakelenRequired,
+@method,set,permit,WVG-275,mvAppMechanischBlokkeren,
+@method,set,permit,WVG-275,mvAppMechanischBlokkerenRequired,
+@method,set,permit,WVG-275,mvBeslotenRuimteConditieRapport,
+@method,set,permit,WVG-275,mvBeslotenRuimteConditieRapportRequired,
+@method,set,permit,WVG-275,mvControleOmgevingOpBrandbaarMateriaalRequired,
+@method,set,permit,WVG-275,mvControlerenOpToxischeStoffenRequired,
+@method,set,permit,WVG-275,mvDrukvrijRequired,
+@method,set,permit,WVG-275,mvFlenzenLabelenRequired,
+@method,set,permit,WVG-275,mvInblokkenRequired,
+@method,set,permit,WVG-275,mvMilieubeschermendeMaatregelen,
+@method,set,permit,WVG-275,mvMilieubeschermendeMaatregelenRequired,
+@method,set,permit,WVG-275,mvProduktvrijRequired,
+@method,set,permit,WVG-275,mvSpoelenRequired,
+@method,set,permit,WVG-275,mvStomenRequired,
+@method,set,permit,WVG-275,objectKey,ibanx.permit.PermitIF:8194
+@method,set,permit,WVG-275,pbmAdembescherming,persluchtmasker
+@method,set,permit,WVG-275,pbmAdembeschermingRequired,
+@method,set,permit,WVG-275,pbmBeschermendeKleding,
+@method,set,permit,WVG-275,pbmBeschermendeKledingRequired,
+@method,set,permit,WVG-275,pbmAdembeschermingText,
+@method,set,permit,WVG-275,pbmGasalarmering,
+@method,set,permit,WVG-275,pbmGasalarmeringRequired,
+@method,set,permit,WVG-275,pbmGehoorbeschermingRequired,
+@method,set,permit,WVG-275,pbmGelaatschermRequired,Yes
+@method,set,permit,WVG-275,pbmHandArmbescherming,
+@method,set,permit,WVG-275,pbmHandArmbeschermingRequired,Yes
+@method,set,permit,WVG-275,pbmRuimzichtZuurbrilRequired,
+@method,set,permit,WVG-275,pbmValbeschermingRequired,
+@method,set,permit,WVG-275,pbmVluchtmaskerBinnenHandbereikRequired,Yes
+@method,set,permit,WVG-275,pbmVrijeTekst1,
+@method,set,permit,WVG-275,pbmVrijeTekst1Required,
+@method,set,permit,WVG-275,pbmVrijeTekst2,
+@method,set,permit,WVG-275,pbmVrijeTekst2Required,
+@method,set,permit,WVG-275,Signature.name,Koot de Verstrekker
+@method,set,permit,WVG-275,Signature.signDate,02-11-2004
+@method,set,permit,WVG-275,Signature.signed,true
+@method,set,permit,WVG-275,specialeOperationeleAandachtspuntenVrijeTekst1,Meerdere mensen aan het werk op zelfde lokatie
+@method,set,permit,WVG-275,template,index.vm
+@method,set,permit,WVG-275,tools,handgereedschap
+@method,set,permit,WVG-275,vehicleEquipment,
+@method,set,permit,WVG-275,verificatie,x
+@method,set,permit,WVG-275,vzmBrandwaterslangGereedRequired,
+@method,set,permit,WVG-275,vzmCommunicatiemiddelen,
+@method,set,permit,WVG-275,vzmCommunicatiemiddelenRequired,
+@method,set,permit,WVG-275,vzmGeforceerdeVentilatieRequired,
+@method,set,permit,WVG-275,vzmMangatwachtBrandwachtInzettenRequired,
+@method,set,permit,WVG-275,vzmOverigeBlusmiddelen,
+@method,set,permit,WVG-275,vzmOverigeBlusmiddelenRequired,
+@method,set,permit,WVG-275,vzmPoederblusser,
+@method,set,permit,WVG-275,vzmPoederblusserRequired,
+@method,set,permit,WVG-275,vzmPuttenGotenRiolenAfdekkenAfstand,0
+@method,set,permit,WVG-275,vzmPuttenGotenRiolenAfdekkenRequired,
+@method,set,permit,WVG-275,vzmVonkafschermingGebruikenRequired,
+@method,set,permit,WVG-275,vzmVrijeTekst1,
+@method,set,permit,WVG-275,vzmVrijeTekst1Required,
+@method,set,permit,WVG-275,vzmVrijeTekst2,
+@method,set,permit,WVG-275,vzmVrijeTekst2Required,
+@method,set,permit,WVG-275,vzmWerkplekAfzettenRequired,
+@method,set,permit,WVG-275,vzmWerkplekBeveiligenValgevaar,
+@method,set,permit,WVG-275,vzmWerkplekBeveiligenValgevaarRequired,
+@method,set,permit,WVG-275,vzmWerkplekEnWerkstukNathoudenRequired,
+@method,set,permit,WVG-275,workDescription,vervangen Flowswitch
+@method,set,permit,WVG-275,wwBetredenBeslotenRuimteRequired,
+@method,set,permit,WVG-275,wwBrandenGutsenLassenRequired,
+@method,set,permit,WVG-275,wwGravenRequired,
+@method,set,permit,WVG-275,wwGritstralenRequired,
+@method,set,permit,WVG-275,wwHakkenBorenRequired,
+@method,set,permit,WVG-275,wwHijsenRequired,
+@method,set,permit,WVG-275,wwHogedrukSpuitenRequired,
+@method,set,permit,WVG-275,wwInstrumentatieElectricalRequired,Yes
+@method,set,permit,WVG-275,wwMonterenDemonterenRequired,Yes
+@method,set,permit,WVG-275,wwOpenenInstallatieRequired,
+@method,set,permit,WVG-275,wwRontgenStralingRequired,
+@method,set,permit,WVG-275,wwSlijpenRequired,
+@method,set,permit,WVG-275,wwVacuumCleaningRequired,
+@method,set,permit,WVG-275,wwVrijeTekst1,
+@method,set,permit,WVG-275,wwVrijeTekst1Required,
+@endTransaction
+!ph739,signature-pcq-2.x,B_VL,null,B_VL,WVG-275,null,null,null,null,false,true
+!ph740,signature-pcq-2.x,B_AV,null,B_AV,WVG-275,Jan de Aanvrager,null,null,2004-11-02,true,true
+!ph741,signature-pcq-2.x,B_OB,null,B_OB,WVG-275,null,null,null,null,false,false
+!ph742,signature-pcq-2.x,B_MO1,null,B_MO1,WVG-275,null,null,null,null,false,false
+!ph743,signature-pcq-2.x,B_MO2,null,B_MO2,WVG-275,null,null,null,null,false,false
+!ph744,signature-pcq-2.x,B_VV,null,B_VV,WVG-275,null,null,null,null,false,false
+!ph745,signature-pcq-2.x,B_VS,null,B_VS,WVG-275,Koot de Verstrekker,null,null,2004-11-02,true,true
+!ph746,signature-pcq-2.x,B_VA,null,B_VA,WVG-275,null,null,null,null,false,true
+!ph747,audit,CREATE_EVENT,WVG-275 aangemaakt,user2,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph748,audit,LINK_EVENT,Koppeling gemaakt tussen de vergunning met nummer WVG-275 en de RBH met nummer RBH-264.,user2,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph749,audit,PROMOTE_EVENT,Status van WVG-275 veranderd naar Maatregelen Houder,user2,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph750,audit,SAVE_EVENT,Eigenschappen van WVG-275 aangepast,user2,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph751,audit,PROMOTE_EVENT,Status van WVG-275 veranderd naar Bekrachtiging Aanvrager,user2,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph752,audit,SAVE_EVENT,Eigenschappen van WVG-275 aangepast,user2,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph753,audit,SAVE_EVENT,Eigenschappen van WVG-275 aangepast,user2,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph754,audit,SETSTATE_EVENT,Status van WVG-275 veranderd naar Bepaal Risico,user2,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph755,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-275,user2,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph756,audit,PROMOTE_EVENT,Status van WVG-275 veranderd naar Accordering Maatregelen Houder,user4,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph757,audit,SAVE_EVENT,Eigenschappen van WVG-275 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph758,audit,PROMOTE_EVENT,Status van WVG-275 veranderd naar Maatregelen Verstrekker,user4,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph759,audit,SAVE_EVENT,Eigenschappen van WVG-275 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph760,audit,PROMOTE_EVENT,Status van WVG-275 veranderd naar Uitvoeren Voorbereidende Werkzaamheden,user4,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph761,audit,SAVE_EVENT,Eigenschappen van WVG-275 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph762,audit,PROMOTE_EVENT,Status van WVG-275 veranderd naar Bekrachtiging Verstrekker,user4,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph763,audit,SAVE_EVENT,Eigenschappen van WVG-275 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph764,audit,SAVE_EVENT,Eigenschappen van WVG-275 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph765,audit,SETSTATE_EVENT,Status van WVG-275 veranderd naar Klaar voor Uitgifte,user4,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph766,audit,SIGNEDPROMOTE_EVENT,Elektronische handtekening gezet ter bekrachtiging van WVG-275,user4,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph767,audit,SETSTATE_EVENT,Status van WVG-275 veranderd naar Actief,user4,2004-11-02,ibanx.permit.Permit,WVG-275
+!ph768,audit,SAVE_EVENT,Eigenschappen van WVG-275 aangepast,user4,2004-11-02,ibanx.permit.Permit,WVG-275

@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="yes" ?>
+<definition>
+    <portal>
+        <context id="default" title="Algemeen" uri="/action/SetMenuAction/menuId/700" collapsed="false">
+            <i18n>menuGeneral</i18n>
+            <role name="anonymous"/>
+            <role name="everyone"/>
+        </context>
+    </portal>
+    <menu>
+        <item id="700">
+            <i18n>menuLogEvents</i18n>
+            <action name="logbook.LogEventQuery">
+                <module>logevent</module>
+                <objectClassName>ibanx.logbook.LogEventIF</objectClassName>
+                <key>form</key>
+                <reportSpecId>logevent3</reportSpecId>
+            </action>
+            <context>default</context>
+        </item>
+    </menu>
+</definition>

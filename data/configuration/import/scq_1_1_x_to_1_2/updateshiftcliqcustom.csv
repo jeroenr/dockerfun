@@ -1,0 +1,131 @@
+#######################################################################################
+#                           FOR MIGRATION PURPOSES                                    #
+#                                                                                     #
+#      CONTAINS OLNY THE DIFFS BETWEEN THE NEW CUSTOM CONFIGURATION IN FILE           #
+#      config-3-shiftcliq-custom.csv AND THE OLD CONFIGURATION IN THE            #
+#      CURRENT DATABASE INSTANCE                                                      #
+#######################################################################################
+
+
+## register this import batch so it can only be imported once
+@register,scq1.1-1.2-scqcustomupdate
+
+#######################################################################################
+######## CONFIGURE CUSTOM TYPES  : COPY FROM config-3-shiftcliq-custom.csv #######
+#######################################################################################
+
+businessobjecttype,DETAIL_LOGEVENT,,Bijzonderheid,,,,,Bijzonderheid,ibanx.logbook.LogEventIF,DEFAULT_LOGEVENT_PROC,-1,,,GLOBAL,true,logbook\,logevent\,create.vm,logbook\,logevent\,copy.vm,logbook\,logevent\,view.vm,logbook\,logevent\,edit.vm,logbook\,logevent\,search.vm,false
+
+# defining available logitems for a logtype (change when applicable)
+@method,setRepeating,businessobjecttype,WACHTVERSLAG,availableLogitem,SIMPLE_LOGEVENT
+@method,setRepeating,businessobjecttype,WACHTVERSLAG,availableLogitem,DETAIL_LOGEVENT
+@method,setRepeating,businessobjecttype,OPERATORVERSLAG,availableLogitem,SIMPLE_LOGEVENT
+
+## indien van toepassing:
+## - communicatie verslag
+#@include,inc_commlog.csv
+
+## - instructies
+#@include,inc_def_instruction.csv
+
+# todo
+# delete valueitem_followup,followUp,NONE,Geen,Geen
+# import if not yet available : valueitem_followup,followUp,MISC,Overig,Overig
+
+
+###############################################################################################
+######## CONFIGURE CORE CUSTOM PICKLISTS : COPY FROM config-3-shiftcliq-custom.csv #######
+###############################################################################################
+
+# todo
+#@delete,vlist,group,downtimeType,0
+#@delete,vitem,groupName,subStatus,0
+
+valueitem_logdefinitions,logdefinitions,KEY1,Wachtverslag,PLANT1,CONTINUE_DIENST,,WACHTVERSLAG,true
+valueitem_logdefinitions,logdefinitions,KEY2,Operator verslag,PLANT1,CONTINUE_DIENST,1000,OPERATORVERSLAG,true
+valueitem_logdefinitions,logdefinitions,KEY3,Operator verslag,PLANT1,CONTINUE_DIENST,2000-3000,OPERATORVERSLAG,true
+valueitem_logdefinitions,logdefinitions,KEY4,Operator verslag,PLANT1,CONTINUE_DIENST,301-304,OPERATORVERSLAG,true
+valueitem_logdefinitions,logdefinitions,KEY5,Operator verslag,PLANT1,CONTINUE_DIENST,305-308,OPERATORVERSLAG,true
+
+valueitem_logdefinitions,logdefinitions,KEY6,Communicatie verslag,PLANT1,CONTINUE_DIENST,,COMMVERSLAG,true
+
+valueitem_logdefinitions,logdefinitions,KEY20,Wachtverslag,PLANT2,CONTINUE_DIENST,,WACHTVERSLAG,true
+valueitem_logdefinitions,logdefinitions,KEY21,Operator verslag,PLANT2,CONTINUE_DIENST,MK2&3,OPERATORVERSLAG,true
+valueitem_logdefinitions,logdefinitions,KEY22,Operator verslag,PLANT2,CONTINUE_DIENST,MK4,OPERATORVERSLAG,true
+valueitem_logdefinitions,logdefinitions,KEY23,Operator verslag,PLANT2,CONTINUE_DIENST,ONSITES,OPERATORVERSLAG,true
+
+
+#### TEMP FOR TESTING : REMOVE THEM REMOVE THEM REMOVE THEM
+valueitem_logdefinitions,logdefinitions,AKZO1,Wachtverslag,AKZO-MEB-DELFZIJL,CONTINUE_DIENST,,WACHTVERSLAG,true
+valueitem_logdefinitions,logdefinitions,AKZO2,Operator verslag,AKZO-MEB-DELFZIJL,CONTINUE_DIENST,,OPERATORVERSLAG,true
+
+valueitem_logdefinitions,logdefinitions,AZN1,Wachtverslag,AVI,CONTINUE_DIENST,,WACHTVERSLAG,true
+valueitem_logdefinitions,logdefinitions,AZN2,Operator verslag,AVI,CONTINUE_DIENST,,OPERATORVERSLAG,true
+#### TEMP FOR TESTING : REMOVE THEM REMOVE THEM REMOVE THEM
+
+##################################################################################################
+######## CONFIGURE REALLY CUSTOM PICKLISTS  : COPY FROM config-3-shiftcliq-custom.csv #######
+##################################################################################################
+
+# update picklists that have been added the abbreviation attribute like
+# categories and folloup
+
+# if they have a priorities on tasks and the picklist does not already have the value 'N.v.t.'
+#vitem,priorities,-1, N.v.t.
+
+vlist,notePriorities,Whiteboard prioriteiten,Keuzelijst whiteboard prioriteiten
+@delete,vitem,groupName,notePriorities,0
+vitem,notePriorities,1,Hoog
+vitem,notePriorities,3,Normaal
+
+#@delete,vlist,group,subType,0
+#vlist,subType,Subtypes,Keuzelijst subtype afwijkingen
+#@delete,vitem,groupName,subType,0
+### add NONE since we render picklist as radiobutton
+#vitem,subType,NONE, N.v.t.
+#vitem,subType,INSTR,Instrumentatie
+#vitem,subType,ELEC,Electrisch
+#vitem,subType,MECH,Mechanisch
+
+#@delete,vlist,group,subStatus,0
+#vlist,subStatus,Substatus,Keuzelijst substatus afwijkingen
+#@delete,vitem,groupName,subStatus,0
+### do NOT add NONE since we render picklist as checkbox
+###vitem,subStatus,NONE, N.v.t.
+#vitem,subStatus,MECHLOCK,Mechanisch vergrendeld
+#vitem,subStatus,ELECLOCK,Electrisch vergrendeld
+#vitem,subStatus,BLINDFLANGE,Geblind/gestoken
+#vitem,subStatus,DRIVENOUT,Uitgereden
+
+#@delete,vlist,group,availability,0
+#vlist,availability,Mate van beschikbaarheid,Keuzelijst beschikbaarheid typen
+#@delete,vitem,groupName,availability,0
+### add NONE since we render picklist as radiobutton
+#vitem,availability,NONE, N.v.t.
+#vitem,availability,NOTAVAILABLE,Niet
+#vitem,availability,LIMITED,Beperkt
+#vitem,availability,UNRELIABLE,Onbetrouwbaar
+
+
+#@delete,vlist,group,downtimeType,0
+#vlist,downtimeType,Downtime typen,Keuzelijst downtime typen
+#@delete,vitem,groupName,downtimeType,0
+#vitem,downtimeType,EDT,Emergency downtime
+#vitem,downtimeType,SDT,Scheduled downtime
+#vitem,downtimeType,CDT,Commercial downtime
+
+#################################################################################################
+######## CONFIGURE CUSTOM ROLEALLOCATIONS  : COPY FROM config-3-shiftcliq-custom.csv #######
+#################################################################################################
+
+#orgrolemap,<SITE>,onderhoudsmedewerker
+#orgrolemap,<SITE>,application_administrator
+#orgrolemap,<SITE>,system_administrator
+#orgrolemap,<SITE>,supergroover
+
+#orgrolemap,<PLANT>,onderhoudsmedewerker
+#orgrolemap,<PLANT>,ploegmedewerker
+#orgrolemap,<PLANT>,wachtverantwoordelijke
+#orgrolemap,<PLANT>,supergroover
+#orgrolemap,<PLANT>,application_administrator
+#orgrolemap,<PLANT>,productie_assistent

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE forms PUBLIC "-//iBanx//Dynamic Forms 1.0//-" "http://www.ibanx-hse.com/dtds/DynamicForms.dtd">
+<forms>
+    <form style="search" name="FILTER:INCIDENTACTIVITY" generatetag="false">
+        <fieldsetref name="GENERIC:FILTER:SECTION:PBS:INCIDENTACTIVITY"/>
+        <fieldsetref name="GENERIC:FILTER:INCIDENTACTIVITY:DETAILS"/>
+        <fieldsetref name="GENERIC:FILTER:INCIDENTACTIVITY:LAYOUT" />
+        <fieldsetref name="GENERIC:WHITELISTING:SEARCH" />
+    </form>
+
+    <fieldset name="GENERIC:FILTER:INCIDENTACTIVITY:DETAILS" showlegend="false">
+        <daterange name="startDate" />
+        <daterange name="dueDate" />
+    </fieldset>
+
+    <fieldset name="GENERIC:FILTER:INCIDENTACTIVITY:LAYOUT" showlegend="false">
+        <pagesize/>
+    </fieldset>
+
+    <form style="search" name="FILTER:INCIDENTACTIVITY:STATS" generatetag="false">
+        <fieldsetref name="GENERIC:FILTER:SECTION:PBS:INCIDENTACTIVITY"/>
+        <fieldsetref name="GENERIC:FILTER:INCIDENTACTIVITY:STATS:DETAILS"/>
+        <fieldsetref name="GENERIC:FILTER:INCIDENTACTIVITY:STATS:LAYOUT" />
+        <fieldsetref name="GENERIC:WHITELISTING:SEARCH" />
+    </form>
+
+    <fieldset name="GENERIC:FILTER:INCIDENTACTIVITY:STATS:DETAILS" showlegend="false">
+        <daterange name="startDate" />
+        <daterange name="dueDate" />
+    </fieldset>
+
+    <fieldset name="GENERIC:FILTER:INCIDENTACTIVITY:STATS:LAYOUT" showlegend="false">
+        <layout values="INCSTATSTRAFFICLIGHT" label="searchLayout"/>
+        <pagesize/>
+    </fieldset>
+
+    <fieldset name="GENERIC:FILTER:SECTION:PBS:INCIDENTACTIVITY" showlegend="false">
+        <suggest name="funcLevelOne" minLength="0" operator="equals" maxLength="50">
+            <source class="plantlist" display="description"/>
+        </suggest>
+    </fieldset>
+</forms>

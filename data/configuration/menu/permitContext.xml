@@ -1,0 +1,245 @@
+<?xml version="1.0" standalone="yes" ?>
+<definition>
+	<portal>
+		<context id="aanvraag" title="Aanvraag vergunning" uri="/action/SetMenuAction/menuId/300" collapsed="true" > <!-- advanced="true" -->
+			<i18n>menuRequestPermit</i18n>
+			<role name="aanvrager" />
+            <role name="verstrekker" />
+		</context>
+		<context id="verstrekking" title="Verstrekking vergunning" uri="/action/SetMenuAction/menuId/400" collapsed="true">
+			<i18n>menuIssuePermit</i18n>
+			<role name="verstrekker" />
+			<role name="voorbereider" />
+		</context>
+		<context id="ondertekening" title="Mede ondertekening" uri="/action/SetMenuAction/menuId/350" collapsed="true">
+			<i18n>menuSignPermit</i18n>
+			<role name="operationeel_beheerder" />
+			<role name="mede_ondertekenaar1" />
+			<role name="mede_ondertekenaar2" />
+			<role name="mede_ondertekenaar3" />
+		</context>
+		<context id="default" title="Algemeen" uri="/action/Query/queryspec/ACTIVE_PERMITS/module/permit/searchAdvancedSwitch/false" collapsed="false">
+			<i18n>menuGeneral</i18n>
+			<role name="anonymous" />
+		</context>
+		<context id="loggedin" title="Algemeen" uri="/action/Query/queryspec/ACTIVE_PERMITS/module/permit/searchAdvancedSwitch/false" collapsed="false">
+			<i18n>menuGeneral</i18n>
+			<role name="everyone" />
+		</context>        
+	</portal>
+
+	<menu>
+		<item id="100">
+			<i18n>permitDashboard</i18n>
+			<action name="PermitDashboard">
+				<module>permit</module>
+			</action>
+			<context>loggedin</context>
+            <context>default</context>
+		</item>
+		<item id="197" orgcontextrequired="true" advanced="true">
+            <i18n>menuNewRA</i18n>
+            <action name="ra.RAAction">
+            	<eventSubmit_doNew>x</eventSubmit_doNew>
+            </action>
+			<context>aanvraag</context>
+        </item>
+		<item id="198" advanced="true">
+			<i18n>createPermitFromTemplate</i18n>
+			<action name="Query">
+				<key>form</key>
+				<objectClassName>ibanx.permit.PermitIF</objectClassName>
+				<form.lifecycleState.name>E_T</form.lifecycleState.name>
+			</action>
+			<context>aanvraag</context>
+		</item>
+		<item id="200" advanced="true">
+			<i18n>DELTALINQS_STOP_PERMIT.newObject</i18n>
+			<action name="permit.PermitAction">
+				<objectClassName>ibanx.permit.PermitIF</objectClassName>
+				<eventSubmit_doNew>true</eventSubmit_doNew>
+				<boType>DELTALINQS_STOP_PERMIT</boType>
+			</action>
+			<context>aanvraag</context>
+		</item>
+		<item id="201" advanced="true">
+			<i18n>DELTALINQS_PERMIT.newObject</i18n>
+			<action name="permit.PermitAction">
+				<objectClassName>ibanx.permit.PermitIF</objectClassName>
+				<eventSubmit_doNew>true</eventSubmit_doNew>
+				<boType>DELTALINQS_PERMIT</boType>
+			</action>
+			<context>aanvraag</context>
+		</item>
+
+		<item id="203" advanced="true">
+			<i18n>PRESENCE_PERMIT.newObject</i18n>
+			<action name="permit.PermitAction">
+				<objectClassName>ibanx.permit.PermitIF</objectClassName>
+				<eventSubmit_doNew>true</eventSubmit_doNew>
+				<boType>PRESENCE_PERMIT</boType>
+			</action>
+			<context>aanvraag</context>
+		</item>
+
+		<item id="204">
+			<i18n>menuRequestedPermitsRequester</i18n>
+			<action name="Query">
+				<objectClassName>ibanx.permit.PermitIF</objectClassName>
+				<reportSpecId>R2</reportSpecId>
+				<key>form</key>
+				<form.lifecycleState.name>I_AW</form.lifecycleState.name>
+				<form.lifecycleState.name>I_MH</form.lifecycleState.name>
+				<form.lifecycleState.name>B_AV</form.lifecycleState.name>
+				<orderBy>dateModified</orderBy>
+				<ascending>false</ascending>
+			</action>
+			<context>aanvraag</context>
+            <context>default</context>
+		</item>
+
+		<item id="205">
+			<i18n>menuStandardPermits</i18n>
+			<action name="Query">
+				<objectClassName>ibanx.permit.PermitIF</objectClassName>
+				<reportSpecId>R1STD</reportSpecId>
+				<key>form</key>
+				<form.lifecycleState.name>E_T</form.lifecycleState.name>
+			</action>
+			<context>verstrekking</context>
+            <context>default</context>
+		</item>
+
+		<item id="350">
+			<i18n>menuPermitsToBeSigned</i18n>
+			<action name="Query">
+				<objectClassName>ibanx.permit.PermitIF</objectClassName>
+				<reportSpecId>R2</reportSpecId>
+				<key>form</key>
+				<form.lifecycleState.name>B_OB</form.lifecycleState.name>
+				<form.lifecycleState.name>B_MO1</form.lifecycleState.name>
+				<form.lifecycleState.name>B_MO2</form.lifecycleState.name>
+				<form.lifecycleState.name>B_MO3</form.lifecycleState.name>
+				<orderBy>dateModified</orderBy>
+				<ascending>false</ascending>
+			</action>
+			<context>ondertekening</context>
+            <context>default</context>
+		</item>
+
+		<item id="355">
+			<i18n>menuRejectedPermits</i18n>
+			<action name="Query">
+				<objectClassName>ibanx.permit.PermitIF</objectClassName>
+				<reportSpecId>R2</reportSpecId>
+				<key>form</key>
+				<form.lifecycleState.name>E_G</form.lifecycleState.name>
+				<orderBy>dateModified</orderBy>
+				<ascending>false</ascending>
+			</action>
+			<context>aanvraag</context>
+			<context>mede_ondertekenaar1</context>
+			<context>mede_ondertekenaar2</context>
+			<context>mede_ondertekenaar3</context>
+			<context>operationeel_beheerder</context>
+			<context>ondertekening</context>
+            <context>default</context>
+		</item>
+
+
+		<item id="400">
+			<i18n>menuRequestedPermitsIssuer</i18n>
+			<action name="Query">
+				<objectClassName>ibanx.permit.PermitIF</objectClassName>
+				<key>form</key>
+				<form.lifecycleState.name>I_MV</form.lifecycleState.name>
+				<form.lifecycleState.name>I_AMH</form.lifecycleState.name>
+				<form.lifecycleState.name>I_BR</form.lifecycleState.name>
+				<form.lifecycleState.name>I_VV</form.lifecycleState.name>
+				<form.lifecycleState.name>B_VV</form.lifecycleState.name>
+				<form.lifecycleState.name>B_OB</form.lifecycleState.name>
+				<form.lifecycleState.name>B_VS</form.lifecycleState.name>
+				<form.lifecycleState.name>O_KVU</form.lifecycleState.name>
+			</action>
+			<context>verstrekking</context>
+            <context>default</context>
+		</item>
+
+
+		<item id="570">
+			<i18n>menuPermitsReadyForHandout</i18n>
+			<action name="Query">
+				<objectClassName>ibanx.permit.PermitIF</objectClassName>
+				<key>form</key>
+				<form.lifecycleState.name>O_KVU</form.lifecycleState.name>
+			</action>
+			<context>verstrekking</context>
+            <context>default</context>
+		</item>
+
+		<item id="575" advanced="true">
+			<i18n>menuPermitsReadyToScan</i18n>
+			<action name="NullAction">
+				<template>permit,scanBarcode.vm</template>
+			</action>
+			<context>verstrekking</context>
+		</item>
+
+
+		<item id="660">
+			<i18n>menuPermitsToBeExtended</i18n>
+			<action name="Query">
+				<objectClassName>ibanx.permit.PermitIF</objectClassName>
+				<reportSpecId>R3</reportSpecId>
+				<key>form</key>
+				<form.lifecycleState.name>B_VL</form.lifecycleState.name>
+			</action>
+			<context>verstrekking</context>
+            <context>default</context>
+		</item>
+		<item id="680">
+			<i18n>menuPermitsWithdrawn</i18n>
+			<action name="Query">
+				<objectClassName>ibanx.permit.PermitIF</objectClassName>
+				<key>form</key>
+				<form.lifecycleState.name>E_I</form.lifecycleState.name>
+			</action>
+			<context>verstrekking</context>
+            <context>default</context>
+		</item>
+
+		<item id="695">
+			<i18n>menuPermitsCloseout</i18n>
+			<action name="Query">
+				<objectClassName>ibanx.permit.PermitIF</objectClassName>
+				<key>form</key>
+				<form.lifecycleState.name>B_VA</form.lifecycleState.name>
+			</action>
+			<context>verstrekking</context>
+            <context>default</context>
+		</item>
+
+
+		<item id="690">
+			<i18n>menuPermitsClosed</i18n>
+			<action name="Query">
+				<objectClassName>ibanx.permit.PermitIF</objectClassName>
+				<key>form</key>
+				<form.lifecycleState.name>O_VA</form.lifecycleState.name>
+			</action>
+			<context>verstrekking</context>
+            <context>default</context>
+		</item>
+
+		
+		<item id="1014">
+			<i18n>query</i18n>
+			<action name="SearchObject">
+				<objectClassName>ibanx.permit.PermitIF</objectClassName>
+			</action>
+			<context>default</context>
+			<context>loggedin</context>
+            <context>default</context>
+		</item>
+	</menu>
+</definition>

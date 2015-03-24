@@ -1,0 +1,12 @@
+@method,set,queryspec,ALL-VALID-USERS,key,form
+
+@delete,queryspec,number,ALL-NONSYSTEM-ORGS,0
+queryspec-pcq-2.x,,,,,ALL-NONSYSTEM-ORGS,Non system organizations,Non system organizations,sysadm,ibanx.org.Organization,true,1,GLOBAL,true
+@startTransaction
+@method,addColumn,queryspec,ALL-NONSYSTEM-ORGS,number
+@method,addColumn,queryspec,ALL-NONSYSTEM-ORGS,name
+@method,set,queryspec,ALL-NONSYSTEM-ORGS,key,form
+@method,set,queryspec,ALL-NONSYSTEM-ORGS,form.system,false
+@method,set,queryspec,ALL-NONSYSTEM-ORGS,operator.form.system,0
+@method,set,queryspec,ALL-NONSYSTEM-ORGS,disableAccessControl,true
+@endTransaction

@@ -1,0 +1,374 @@
+############### PERMISSIONS ####################################
+# 1,CREATE,Create,GLOBAL,true,true
+# 2,BROWSE,Browse,GLOBAL,true,true
+# 3,READ,Read,GLOBAL,true,true
+# 4,COPY,Copy,GLOBAL,true,true
+# 5,UPDATE,Update,GLOBAL,true,true
+# 6,DELETE,Delete,GLOBAL,true,true
+# 7,CHANGESTATE,Change state,GLOBAL,true,true
+# 8,VIEWACL,View ACL,GLOBAL,true,true
+# 9,CHANGEACL,Change ACL,GLOBAL,true,true
+# 10,VIEWAUDITTRAIL,View audittrail,GLOBAL,true,true
+
+################################################################
+## ISOLATION LISTS
+################################################################
+
+@delete,acl_v2,name,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,0
+acl_v2,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,State ACL for an isolationlist - Draft,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,anonymous,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,everyone,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,everyone,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,application_administrator,CREATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,application_administrator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,application_administrator,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,application_administrator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,application_administrator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,application_administrator,CREATE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,application_administrator,CREATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,application_administrator,UPDATE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,application_administrator,UPDATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,application_administrator,REMOVE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,application_administrator,REMOVE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,application_administrator,CREATE_CLAIMS
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,application_administrator,UPDATE_CLAIMS
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,application_administrator,REMOVE_CLAIMS
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,loto_creator,CREATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,loto_creator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,loto_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,loto_creator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,loto_creator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,loto_creator,CREATE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,loto_creator,CREATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,loto_creator,UPDATE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,loto_creator,UPDATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,loto_creator,REMOVE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,loto_creator,REMOVE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,loto_creator,CREATE_CLAIMS
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,loto_creator,UPDATE_CLAIMS
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,loto_creator,REMOVE_CLAIMS
+
+@delete,acl_v2,name,StateAcl DEFAULT_LOTO_LIST_PROCESS-PROPOSED,0
+acl_v2,StateAcl DEFAULT_LOTO_LIST_PROCESS-PROPOSED,State ACL for an isolationlist - Proposed,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-PROPOSED,anonymous,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-PROPOSED,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-PROPOSED,everyone,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-PROPOSED,everyone,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-PROPOSED,application_administrator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-PROPOSED,application_administrator,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-PROPOSED,application_administrator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-PROPOSED,application_administrator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-PROPOSED,loto_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-PROPOSED,loto_approver,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,0
+acl_v2,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,State ACL for an isolationlist - Isolate,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,anonymous,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,everyone,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,everyone,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,application_administrator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,application_administrator,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,application_administrator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,application_administrator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,application_administrator,EXECUTE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,application_administrator,MOVE_CLAIMS
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,loto_splitter,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,loto_splitter,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,loto_splitter,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,loto_splitter,DELETE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,loto_splitter,MOVE_CLAIMS
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,loto_issuer,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,loto_issuer,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,loto_issuer,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,loto_issuer,DELETE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,loto_issuer,EXECUTE_ISOLATION_ACTIVITIES
+
+@delete,acl_v2,name,StateAcl DEFAULT_LOTO_LIST_PROCESS-FOR_APPROVAL,0
+acl_v2,StateAcl DEFAULT_LOTO_LIST_PROCESS-FOR_APPROVAL,State ACL for an isolationlist - FOR_APPROVAL,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-FOR_APPROVAL,anonymous,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-FOR_APPROVAL,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-FOR_APPROVAL,everyone,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-FOR_APPROVAL,everyone,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-FOR_APPROVAL,application_administrator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-FOR_APPROVAL,application_administrator,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-FOR_APPROVAL,application_administrator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-FOR_APPROVAL,application_administrator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-FOR_APPROVAL,loto_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-FOR_APPROVAL,loto_issuer,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl DEFAULT_LOTO_LIST_PROCESS-ACTIVE,0
+acl_v2,StateAcl DEFAULT_LOTO_LIST_PROCESS-ACTIVE,State ACL for an isolationlist - Active,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ACTIVE,anonymous,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ACTIVE,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ACTIVE,everyone,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ACTIVE,everyone,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ACTIVE,application_administrator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ACTIVE,application_administrator,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ACTIVE,application_administrator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ACTIVE,application_administrator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ACTIVE,loto_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ACTIVE,loto_issuer,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ACTIVE,loto_approver,CREATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-ACTIVE,loto_approver,UPDATE_DE_ISOLATION_ACTIVITIES
+
+@delete,acl_v2,name,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,0
+acl_v2,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,State ACL for an isolationlist - De-isolate,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,anonymous,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,everyone,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,everyone,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,application_administrator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,application_administrator,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,application_administrator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,application_administrator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,application_administrator,UPDATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,application_administrator,EXECUTE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,application_administrator,MOVE_CLAIMS
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,loto_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,loto_issuer,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,loto_issuer,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,loto_issuer,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,loto_issuer,DELETE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,loto_issuer,UPDATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,loto_issuer,EXECUTE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,loto_approver,CREATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,loto_approver,UPDATE_DE_ISOLATION_ACTIVITIES
+
+@delete,acl_v2,name,StateAcl DEFAULT_LOTO_LIST_PROCESS-CLOSED,0
+acl_v2,StateAcl DEFAULT_LOTO_LIST_PROCESS-CLOSED,State ACL for an isolationlist - Closed,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-CLOSED,anonymous,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-CLOSED,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-CLOSED,everyone,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-CLOSED,everyone,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-CLOSED,application_administrator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-CLOSED,application_administrator,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-CLOSED,application_administrator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-CLOSED,application_administrator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-CLOSED,loto_creator,COPY
+
+@delete,acl_v2,name,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,0
+acl_v2,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,State ACL for an isolationlist - INCOMPLETE,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,anonymous,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,everyone,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,everyone,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,application_administrator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,application_administrator,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,application_administrator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,application_administrator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,application_administrator,CREATE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,application_administrator,CREATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,application_administrator,UPDATE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,application_administrator,UPDATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,application_administrator,REMOVE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,application_administrator,REMOVE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,application_administrator,CREATE_CLAIMS
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,application_administrator,UPDATE_CLAIMS
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,application_administrator,REMOVE_CLAIMS
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,loto_creator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,loto_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,loto_creator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,loto_creator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,loto_creator,CREATE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,loto_creator,CREATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,loto_creator,UPDATE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,loto_creator,UPDATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,loto_creator,REMOVE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,loto_creator,REMOVE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,loto_creator,CREATE_CLAIMS
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,loto_creator,UPDATE_CLAIMS
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,loto_creator,REMOVE_CLAIMS
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,loto_approver,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,loto_approver,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl DEFAULT_LOTO_LIST_PROCESS-REJECTED,0
+acl_v2,StateAcl DEFAULT_LOTO_LIST_PROCESS-REJECTED,State ACL for an isolationlist - Rejected,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-REJECTED,anonymous,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-REJECTED,anonymous,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-REJECTED,everyone,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-REJECTED,everyone,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-REJECTED,application_administrator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-REJECTED,application_administrator,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-REJECTED,application_administrator,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-REJECTED,application_administrator,DELETE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-REJECTED,loto_creator,COPY
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-REJECTED,loto_approver,CHANGESTATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-REJECTED,loto_approver,DELETE
+
+@delete,acl_v2,name,StateAcl DEFAULT_LOTO_LIST_PROCESS-DELETED,0
+acl_v2,StateAcl DEFAULT_LOTO_LIST_PROCESS-DELETED,State ACL for an isolationlist - DELETED,null,2,GLOBAL,true,true,false
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DELETED,application_administrator,READ
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DELETED,application_administrator,BROWSE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DELETED,application_administrator,UPDATE
+roleperm,StateAcl DEFAULT_LOTO_LIST_PROCESS-DELETED,application_administrator,CHANGESTATE
+
+lifecycle_v2,DEFAULT_LOTO_LIST_PROCESS,ibanx.lifecycle.Lifecycle,Process Isolationlists,Process Isolationlists,GLOBAL,true,false
+!phDLLP_DRAFT,lifecyclestate_v4,DEFAULT_LOTO_LIST_PROCESS,DRAFT,Draft,null,false,false,1,StateAcl DEFAULT_LOTO_LIST_PROCESS-DRAFT,white
+@method,set,lifecyclestate_v4,!phDLLP_DRAFT,phase,define
+!phDLLP_PROPOSED,lifecyclestate_v4,DEFAULT_LOTO_LIST_PROCESS,PROPOSED,Proposed,null,false,false,2,StateAcl DEFAULT_LOTO_LIST_PROCESS-PROPOSED,white
+@method,set,lifecyclestate_v4,!phDLLP_PROPOSED,phase,define
+## made it a signature state for hexion : should we do this in here (PCQ-2832)
+## NOTE : be aware to change the signatures in the demo list data import file as well
+!phDLLP_ISOLATE,lifecyclestate_v4,DEFAULT_LOTO_LIST_PROCESS,ISOLATE,Isolate,null,false,true,3,StateAcl DEFAULT_LOTO_LIST_PROCESS-ISOLATE,yellow
+@method,set,lifecyclestate_v4,!phDLLP_ISOLATE,phase,isolation
+## not required for hexion : should we do this in here (PCQ-2832)
+## NOTE : be aware to change the signatures in the demo list data import file as well
+#!phDLLP_FOR_APPROVAL,lifecyclestate_v4,DEFAULT_LOTO_LIST_PROCESS,FOR_APPROVAL,FOR_APPROVAL,null,false,true,4,StateAcl DEFAULT_LOTO_LIST_PROCESS-FOR_APPROVAL,yellow
+#@method,set,lifecyclestate_v4,!phDLLP_FOR_APPROVAL,phase,isolation
+!phDLLP_ACTIVE,lifecyclestate_v4,DEFAULT_LOTO_LIST_PROCESS,ACTIVE,Active,null,false,false,4,StateAcl DEFAULT_LOTO_LIST_PROCESS-ACTIVE,green
+@method,set,lifecyclestate_v4,!phDLLP_ACTIVE,phase,isolation
+
+!phDLLP_DE_ISOLATE,lifecyclestate_v4,DEFAULT_LOTO_LIST_PROCESS,DE_ISOLATE,De-isolate,null,false,false,5,StateAcl DEFAULT_LOTO_LIST_PROCESS-DE_ISOLATE,pink
+@method,set,lifecyclestate_v4,!phDLLP_DE_ISOLATE,phase,de-isolation
+
+!phDLLP_CLOSED,lifecyclestate_v4,DEFAULT_LOTO_LIST_PROCESS,CLOSED,Closed,null,false,false,6,StateAcl DEFAULT_LOTO_LIST_PROCESS-CLOSED,red
+
+!phDLLP_INCOMPLETE,lifecyclestate_v4,DEFAULT_LOTO_LIST_PROCESS,INCOMPLETE,Incomplete,null,true,false,1,StateAcl DEFAULT_LOTO_LIST_PROCESS-INCOMPLETE,red
+@method,set,lifecyclestate_v4,!phDLLP_INCOMPLETE,phase,define
+!phDLLP_REJECTED,lifecyclestate_v4,DEFAULT_LOTO_LIST_PROCESS,REJECTED,Rejected,null,true,false,2,StateAcl DEFAULT_LOTO_LIST_PROCESS-REJECTED,red
+!phDLLP_DELETED,lifecyclestate_v4,DEFAULT_LOTO_LIST_PROCESS,DELETED,Deleted,null,true,false,3,StateAcl DEFAULT_LOTO_LIST_PROCESS-DELETED,red
+
+
+
+########################## TEMPLATE PROCESS ###################################
+
+@delete,acl_v2,name,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,0
+acl_v2,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,State ACL for a template isolationlist - Draft,null,2,GLOBAL,true,true,false
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,anonymous,READ
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,anonymous,BROWSE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,everyone,READ
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,everyone,BROWSE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,application_administrator,CREATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,application_administrator,UPDATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,application_administrator,COPY
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,application_administrator,CHANGESTATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,application_administrator,DELETE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,application_administrator,CREATE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,application_administrator,CREATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,application_administrator,UPDATE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,application_administrator,UPDATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,application_administrator,REMOVE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,application_administrator,REMOVE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,application_administrator,CREATE_CLAIMS
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,application_administrator,UPDATE_CLAIMS
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,application_administrator,REMOVE_CLAIMS
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,loto_list_template_creator,CREATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,loto_list_template_creator,UPDATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,loto_list_template_creator,COPY
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,loto_list_template_creator,CHANGESTATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,loto_list_template_creator,DELETE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,loto_list_template_creator,CREATE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,loto_list_template_creator,CREATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,loto_list_template_creator,UPDATE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,loto_list_template_creator,UPDATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,loto_list_template_creator,REMOVE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,loto_list_template_creator,REMOVE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,loto_list_template_creator,CREATE_CLAIMS
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,loto_list_template_creator,UPDATE_CLAIMS
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT,loto_list_template_creator,REMOVE_CLAIMS
+
+@delete,acl_v2,name,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE,0
+acl_v2,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE,State ACL for a template isolationlist - Active,null,2,GLOBAL,true,true,false
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE,anonymous,READ
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE,anonymous,BROWSE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE,everyone,READ
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE,everyone,BROWSE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE,application_administrator,UPDATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE,application_administrator,COPY
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE,application_administrator,CHANGESTATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE,application_administrator,DELETE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE,loto_list_template_creator,UPDATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE,loto_list_template_creator,COPY
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE,loto_list_template_creator,CHANGESTATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE,loto_list_template_creator,DELETE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE,loto_creator,COPY
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE,loto_list_template_creator,CHANGESTATE
+
+@delete,acl_v2,name,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,0
+acl_v2,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,State ACL for a template isolationlist - Inactive,null,2,GLOBAL,true,true,false
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,anonymous,READ
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,anonymous,BROWSE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,everyone,READ
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,everyone,BROWSE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,application_administrator,UPDATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,application_administrator,COPY
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,application_administrator,CHANGESTATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,application_administrator,DELETE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,loto_list_template_creator,UPDATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,loto_list_template_creator,COPY
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,loto_list_template_creator,CHANGESTATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,loto_list_template_creator,DELETE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,loto_list_template_creator,CREATE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,loto_list_template_creator,REMOVE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,loto_list_template_creator,UPDATE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,loto_list_template_creator,CREATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,loto_list_template_creator,REMOVE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,loto_list_template_creator,UPDATE_DE_ISOLATION_ACTIVITIES
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,loto_list_template_creator,CREATE_CLAIMS
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,loto_list_template_creator,REMOVE_CLAIMS
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE,loto_list_template_creator,UPDATE_CLAIMS
+
+@delete,acl_v2,name,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DELETED,0
+acl_v2,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DELETED,State ACL for a template isolationlist - Deleted,null,2,GLOBAL,true,true,false
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DELETED,anonymous,READ
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DELETED,anonymous,BROWSE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DELETED,everyone,READ
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DELETED,everyone,BROWSE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DELETED,application_administrator,UPDATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DELETED,application_administrator,CHANGESTATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DELETED,loto_list_template_creator,UPDATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DELETED,loto_list_template_creator,CHANGESTATE
+roleperm,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DELETED,loto_list_template_creator,DELETE
+
+lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,ibanx.lifecycle.Lifecycle,Process Template Isolationlists,Process Template Isolationlists,GLOBAL,true,false
+@startTransaction
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,CREATE_ISOLATION_ACTIVITIES
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,CREATE_DE_ISOLATION_ACTIVITIES
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,UPDATE_ISOLATION_ACTIVITIES
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,UPDATE_DE_ISOLATION_ACTIVITIES
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,EXECUTE_ISOLATION_ACTIVITIES
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,EXECUTE_DE_ISOLATION_ACTIVITIES
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,REMOVE_ISOLATION_ACTIVITIES
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,REMOVE_DE_ISOLATION_ACTIVITIES
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,CREATE_CLAIMS
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,UPDATE_CLAIMS
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,REMOVE_CLAIMS
+@method,setRepeating,lifecycle_v2,TEMPLATE_LOTO_LIST_PROCESS,permission,MOVE_CLAIMS
+@endTransaction
+
+lifecyclestate_v4,TEMPLATE_LOTO_LIST_PROCESS,TEMPLATE_DRAFT,Draft,null,false,false,1,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DRAFT
+lifecyclestate_v4,TEMPLATE_LOTO_LIST_PROCESS,TEMPLATE_ACTIVE,Active,null,false,false,2,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_ACTIVE
+lifecyclestate_v4,TEMPLATE_LOTO_LIST_PROCESS,TEMPLATE_INACTIVE,Inactive,null,false,false,3,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_INACTIVE
+lifecyclestate_v4,TEMPLATE_LOTO_LIST_PROCESS,TEMPLATE_DELETED,Deleted,null,true,false,1,StateAcl TEMPLATE_LOTO_LIST_PROCESS-TEMPLATE_DELETED
+
+##################### types ######################################################
+
+@delete,businessobjecttype-pcq-2.x,number,MULTI_DISCIPLINE_ISOLATION_LIST,0
+businessobjecttype-pcq-2.x,,,,,MULTI_DISCIPLINE_ISOLATION_LIST,LoToList Multi-Discipline,LoToList Multi-Discipline,ibanx.loto.IsolationListIF,DEFAULT_LOTO_LIST_PROCESS,null,-1,null,GLOBAL,true,null,null,null,null,null,false
+@startTransaction
+@method,set,businessobjecttype-pcq-2.x,MULTI_DISCIPLINE_ISOLATION_LIST,class0,ISOLATIONLIST
+@method,set,businessobjecttype-pcq-2.x,MULTI_DISCIPLINE_ISOLATION_LIST,templateLifecycle,TEMPLATE_LOTO_LIST_PROCESS
+@endTransaction
+
+#@delete,businessobjecttype-pcq-2.x,number,DEFAULT_ISOLATION_LIST,0
+#businessobjecttype-pcq-2.x,,,,,DEFAULT_ISOLATION_LIST,LoToList Mechanical,LoToList Mechanical,ibanx.loto.IsolationListIF,DEFAULT_LOTO_LIST_PROCESS,null,-1,null,GLOBAL,true,null,null,null,null,null,false
+#@startTransaction
+#@method,set,businessobjecttype-pcq-2.x,DEFAULT_ISOLATION_LIST,class0,ISOLATIONLIST
+#@method,set,businessobjecttype-pcq-2.x,DEFAULT_ISOLATION_LIST,templateLifecycle,TEMPLATE_LOTO_LIST_PROCESS
+#@endTransaction
+
+#@delete,businessobjecttype-pcq-2.x,number,EI_ISOLATION_LIST,0
+#businessobjecttype-pcq-2.x,,,,,EI_ISOLATION_LIST,LoToList E&I,LoToList E&I,ibanx.loto.IsolationListIF,DEFAULT_LOTO_LIST_PROCESS,null,-1,null,GLOBAL,true,null,null,null,null,null,false
+#@startTransaction
+#@method,set,businessobjecttype-pcq-2.x,EI_ISOLATION_LIST,class0,ISOLATIONLIST
+#@method,set,businessobjecttype-pcq-2.x,EI_ISOLATION_LIST,templateLifecycle,TEMPLATE_LOTO_LIST_PROCESS
+#@endTransaction
+
+#@delete,businessobjecttype-pcq-2.x,number,SAFETY_ISOLATION_LIST,0
+#businessobjecttype-pcq-2.x,,,,,SAFETY_ISOLATION_LIST,LoToList Safeties,LoToList Safeties,ibanx.loto.IsolationListIF,DEFAULT_LOTO_LIST_PROCESS,null,-1,null,GLOBAL,true,null,null,null,null,null,false
+#@startTransaction
+#@method,set,businessobjecttype-pcq-2.x,SAFETY_ISOLATION_LIST,class0,ISOLATIONLIST
+#@method,set,businessobjecttype-pcq-2.x,SAFETY_ISOLATION_LIST,templateLifecycle,TEMPLATE_LOTO_LIST_PROCESS
+#@endTransaction

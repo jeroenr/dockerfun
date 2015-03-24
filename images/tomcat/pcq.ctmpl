@@ -8,8 +8,8 @@
 	<ResourceLink global="jdbc/unite" name="jdbc/unite" type="javax.sql.DataSource"/>
 	<Environment name="documentAttachmentUri" value="http://{{key "host/ip"}}:{{.Port}}/jackrabbit-webapp-2.2.13/rmi" type="java.lang.String" override="false"/>	
 	
-	<Environment name="uniteConfigurationDirectory" value="/home/user/configuration" type="java.lang.String" override="false"/>
-	<Environment name="uniteApplicationDataDirectory" value="/home/user/application-data" type="java.lang.String" override="false"/>
+	<Environment name="uniteConfigurationDirectory" value="/configuration" type="java.lang.String" override="false"/>
+	<Environment name="uniteApplicationDataDirectory" value="/application-data" type="java.lang.String" override="false"/>
 	
     <!-- <Resource name="mail/uniteSession" auth="Container" type="javax.mail.Session" mail.smtp.host="localhost" mail.smtp.port="3025"	/> -->
 
