@@ -34,8 +34,8 @@
     <FileSystem class="org.apache.jackrabbit.core.fs.db.DbFileSystem">
 	  		<param name="driver" value="com.mysql.jdbc.Driver"/>
   			<param name="url" value="jdbc:mysql://jackrabbitdb:3306/unite_repository"/>
-  			<param name="user" value="root"/>
-  			<param name="password" value="root"/>
+  			<param name="user" value="admin"/>
+  			<param name="password" value="password"/>
   			<param name="schema" value="mysql"/>
   			<param name="schemaObjectPrefix" value="fs_repo_"/>
 	</FileSystem>
@@ -97,8 +97,8 @@
         <FileSystem class="org.apache.jackrabbit.core.fs.db.DbFileSystem">
 	  		<param name="driver" value="com.mysql.jdbc.Driver"/>
   			<param name="url" value="jdbc:mysql://jackrabbitdb:3306/unite_repository"/>
-  			<param name="user" value="root"/>
-  			<param name="password" value="root"/>
+  			<param name="user" value="admin"/>
+  			<param name="password" value="password"/>
   			<param name="schema" value="mysql"/>
   			<param name="schemaObjectPrefix" value="fs_workspace_"/>
 		</FileSystem>
@@ -115,8 +115,8 @@
         <PersistenceManager class="org.apache.jackrabbit.core.persistence.bundle.MySqlPersistenceManager">
 		  <param name="driver" value="com.mysql.jdbc.Driver"/>
 		  <param name="url" value="jdbc:mysql://jackrabbitdb:3306/unite_repository"/>
-		  <param name="user" value="root" />
-  		  <param name="password" value="root" />
+		  <param name="user" value="admin" />
+  		  <param name="password" value="password" />
 		  <param name="schema" value="mysql"/>
 		  <param name="schemaObjectPrefix" value="pm_workspace_"/>
 		  <param name="externalBLOBs" value="false"/>
@@ -149,8 +149,8 @@
         <FileSystem class="org.apache.jackrabbit.core.fs.db.DbFileSystem">
 	  		<param name="driver" value="com.mysql.jdbc.Driver"/>
   			<param name="url" value="jdbc:mysql://jackrabbitdb:3306/unite_repository"/>
-  			<param name="user" value="root"/>
-  			<param name="password" value="root"/>
+  			<param name="user" value="admin"/>
+  			<param name="password" value="password"/>
   			<param name="schema" value="mysql"/>
   			<param name="schemaObjectPrefix" value="fs_version_"/>
 		</FileSystem>
@@ -169,8 +169,8 @@
         <PersistenceManager class="org.apache.jackrabbit.core.persistence.bundle.MySqlPersistenceManager">
 		  <param name="driver" value="com.mysql.jdbc.Driver"/>
 		  <param name="url" value="jdbc:mysql://jackrabbitdb:3306/unite_repository"/>
-		  <param name="user" value="root" />
-  		  <param name="password" value="root" />
+		  <param name="user" value="admin" />
+  		  <param name="password" value="password" />
 		  <param name="schema" value="mysql"/>
 		  <param name="schemaObjectPrefix" value="pm_version_"/>
 		  <param name="externalBLOBs" value="false"/>
