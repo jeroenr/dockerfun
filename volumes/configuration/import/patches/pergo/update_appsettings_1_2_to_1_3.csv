@@ -1,7 +1,0 @@
-
-## delete old cache settings
-@delete,appsetting,key,all.useShortTermCache.enabled,=
-@delete,appsetting,key,all.useLongTermCache.enabled,=
-@delete,appsetting,key,all.cache.timeoutShort,=
-@delete,appsetting,key,all.cache.timeoutLong,=
-

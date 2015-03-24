@@ -1,6 +1,0 @@
-
-
-## HIM-786 : add two new breakout query options
-configurationSetting,shift.dashboard.breakout.all_open_and_inprogress_tasks.template,screens/logbook/common/INC_VIEW_dashboard_boq_alle_open_en_onderhande_taken.vm
-
-configurationSetting,shift.dashboard.breakout.open_and_inprogress_tasks_in_shift.template,screens/logbook/common/INC_VIEW_dashboard_boq_open_en_onderhande_taken_in_dienst.vm

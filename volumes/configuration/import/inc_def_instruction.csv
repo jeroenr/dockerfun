@@ -1,8 +1,0 @@
-#########################################################################
-##                                                                     ##
-## CONFIGURATIE VOOR INSTRUCTIES                                       ##
-##                                                                     ##
-#########################################################################
-
-
-businessobjecttype,DEFAULT_INSTRUCTION,,Dagelijkse instructie,,,,,Dagelijkse instructie,ibanx.logbook.InstructionIF,DEFAULT_INSTRUCTION_PROC,-1,,,GLOBAL,true,logbook\,instruction\,create.vm,logbook\,instruction\,copy.vm,logbook\,instruction\,view.vm,logbook\,instruction\,edit.vm,logbook\,instruction\,search.vm,false

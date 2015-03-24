@@ -1,7 +1,0 @@
-@delete,vlist,name,followUp,0
-@delete,vitem,groupName,followUp,0
-vlist,followUp,Followup,Keuzelijst Followup
-vitem,followUp,MISC,Diversen
-vitem,followUp,IMPROVEMENT,MoC
-vitem,followUp,WA,Werkorder
-vitem,followUp,REPORT_INCIDENT,Rapporteer incident

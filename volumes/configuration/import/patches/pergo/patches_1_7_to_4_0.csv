@@ -1,5 +1,0 @@
-@include,patches/pergo/update_kernel_1_7_to_4_0.csv
-@include,patches/pergo/update_core_1_7_to_4_0.csv
-
-
-

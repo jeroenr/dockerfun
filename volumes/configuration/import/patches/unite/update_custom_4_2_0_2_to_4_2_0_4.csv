@@ -1,2 +1,0 @@
-
-@SQL,UPDATE IBANX_PREFERENCE SET PREFKEY = 'all.takeover.shiftchooser.enabled' WHERE PREFKEY = 'logevent.takeover.shiftchooser.enabled'

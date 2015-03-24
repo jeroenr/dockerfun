@@ -1,4 +1,0 @@
-
-## incomment if this customer uses the fixed picklist name 'pbmAdembescherming'
-#@SQL,UPDATE IBANX_VALUE_LIST SET GROUP_NAME = 'pbmAdembescherming' WHERE GROUP_NAME = 'pbmAdembeschermingRequired'
-#@SQL,UPDATE IBANX_VALUE_ITEM SET GROUP_NAME = 'pbmAdembescherming' WHERE GROUP_NAME = 'pbmAdembeschermingRequired'

@@ -1,7 +1,0 @@
-## include this in local patch or un directly from import console with: @include,patches/patches_1_2_5_to_1_2_6.csv
-
-
-@include,patches/pergo/update_appsettings_1_2_5_to_1_2_6.csv
-
-## update rosterschedules
-@patch,general,SCQ_1_2_5_TO_1_2_6
