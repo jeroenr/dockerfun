@@ -9,6 +9,10 @@ RUN chmod +x /usr/local/bin/consul-template
 RUN rmdir consul-template_0.7.0_linux_amd64
 RUN rm consul-template_0.7.0_linux_amd64.tar.gz
 
-VOLUME ["/usr/local/bin/"]
+ADD ./consul /consul
+
+RUN mkdir -p /consul && chmod -R 700 /consul && chown -R 1000:1000 /consul
+
+VOLUME ["/usr/local/bin/","/consul"]
 
 CMD /bin/sh
