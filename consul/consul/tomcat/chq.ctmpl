@@ -1,4 +1,4 @@
-{{with $tag := env "TAG" }}{{range service (print $tag ".tomcat-8080")}}<?xml version="1.0" encoding="UTF-8"?>                                  
+{{with $tag := env "TAG" }}{{range service (print $tag ".nginx-80")}}<?xml version="1.0" encoding="UTF-8"?>                                  
 	<Context privileged="true" useHttpOnly="false">
 	<Logger suffix=".txt" prefix="logs/webapp_chq" className="org.apache.catalina.logger.FileLogger" timestamp="true" />
 	
