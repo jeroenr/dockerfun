@@ -21,5 +21,5 @@ sleep 2
 # Start tomcat
 TOMCAT_ID=$(docker run -d --volumes-from ${DATA_ID} --volumes-from ${CONSUL_ID} -p 8080 -e SERVICE_TAGS=${RUN_ID} -e TAG=${RUN_ID} --link $MYSQL_ID:unitedb --link $MYSQL_ID:jackrabbitdb ibanx/tomcat)
 
-
+echo $(docker port ${NGINX_ID} | sed 's/.*://')
 
