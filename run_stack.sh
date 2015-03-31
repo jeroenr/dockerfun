@@ -21,5 +21,6 @@ sleep 2
 # Start tomcat
 TOMCAT_ID=$(docker run -d --volumes-from ${DATA_ID} --volumes-from ${CONSUL_ID} -p 8080 -e SERVICE_TAGS=${RUN_ID} -e TAG=${RUN_ID} --link $MYSQL_ID:unitedb --link $MYSQL_ID:jackrabbitdb ibanx/tomcat)
 
-echo $(docker port ${NGINX_ID} | sed 's/.*://')
+PORT=$(docker port ${NGINX_ID} | sed 's/.*://')
 
+echo $(echo "{\"id\": ${RUN_ID}, \"port\": ${PORT}, \"containers\": [\"${CONSUL_ID}\", \"${DATA_ID}\", \"${MYSQL_ID}\", \"${NGINX_ID}\", \"${TOMCAT_ID}\"], \"containers_as_string\": \"${CONSUL_ID} ${DATA_ID} ${MYSQL_ID} ${NGINX_ID} ${TOMCAT_ID}\"}" | jq .)
