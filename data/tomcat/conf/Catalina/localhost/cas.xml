@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Context>
-    <ResourceLink global="jdbc/unite" name="jdbc/unite" type="javax.sql.DataSource"/>
-    
-    <!-- customer logo, defaults to empty image. Size max 196px x 60px, does not resize background (not possible) -->
-    <Environment name="customerLogoLocation" value="images/customer.gif" type="java.lang.String" override="false" />
-</Context>
