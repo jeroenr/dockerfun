@@ -1,8 +1,0 @@
-@include,dev_license.csv
-
-## remove delete button for users
-@delete,roleperm,acl.name,StateAcl USER_STATE-VALID,=,permission,6,=
-@delete,roleperm,acl.name,StateAcl USER_STATE-INVALID,=,permission,6,=
-
-@delete,roleperm,acl.name,StateAcl SYSTEM_USER_STATE-VALID,=,permission,6,=
-@delete,roleperm,acl.name,StateAcl SYSTEM_USER_STATE-INVALID,=,permission,6,=

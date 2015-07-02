@@ -1,9 +1,0 @@
-role,teamleader,scq,nl::wachtchef;en::team lead
-role,teammember,scq,nl::ploeglid;en::team member
-
-numberingscheme,,,,,identity-incident,identity-incident,0,1,1,IN-,,0,true,,GLOBAL,true,false
-sequence,identity-incident,0,1,1,false
-
-numberingscheme,,,,,identity-incident-activity,identity-incident-activity,0,1,1,IA-,,0,true,,GLOBAL,true,false
-sequence,identity-incident-activity,0,1,1,false
-

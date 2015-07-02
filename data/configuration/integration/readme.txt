@@ -1,1 +1,0 @@
-put the rule files used by the (sap) synchronization component in this folder
