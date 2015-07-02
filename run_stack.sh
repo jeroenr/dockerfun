@@ -18,6 +18,8 @@ NGINX_ID=$(docker run -d --volumes-from ${DATA_ID} --volumes-from ${CONSUL_ID} -
 
 MONGO_ID=$(docker run -d -P -e SERVICE_TAGS=${RUN_ID} -e TAG=${RUN_ID} mongo)
 
-SEARCH_STATS_ID=$(docker run -e SERVICE_TAGS=${RUN_ID} -e TAG=${RUN_ID} -d -P --volumes-from ${DATA_ID} --link $MONGO_ID:testdb search-stats-docker)
+sleep 5 # wait for mongo container
+
+SEARCH_STATS_ID=$(docker run -e SERVICE_TAGS=${RUN_ID} -e TAG=${RUN_ID} -d -P --volumes-from ${DATA_ID} --link ${MONGO_ID}:testdb search-stats-docker)
 
 
